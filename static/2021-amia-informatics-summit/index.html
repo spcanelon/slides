@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Silvia P. Canelón, PhD" />
+    <meta name="date" content="2021-03-23" />
+    <script src="index_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="index_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="index_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="index_files/panelset-0.2.6/panelset.js"></script>
+    <script src="index_files/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="index_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="index_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="index_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="index_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/silvia.css" type="text/css" />
+    <link rel="stylesheet" href="css/silvia-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+
+class: title-slide, left, top
+background-image: url(img/AMIA-logo.png), url(img/AMIA-title-slide-1.png)
+background-size: 200px, cover
+background-position: 18% 13%, center
+
+
+# The Impact of Sickle Cell Status on&lt;br&gt;Adverse Delivery Outcomes Using&lt;br&gt;Electronic Health Record Data
+## S17: Applied Clinical Research Informatics
+### **Silvia P. Canelón, PhD**
+### University of Pennsylvania
+### <svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @spcanelon **#IS21**
+
+&lt;!--S17: Oral Presentations - Applied CRI: Solving Real World Problems, March 23, 2021 from 11:30 AM to 1:00 PM--&gt;
+
+---
+class: middle, center, inverse
+
+.pull-left-equal[
+
+.center[
+# About me
+
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px" alt="Profile of Silvia Canelón"/&gt;
+
+**Postdoctoral Research Scientist&lt;br&gt;University of Pennsylvania**
+
+&lt;img src="img/DBEI_PSOM_color_darkbkg.png" width="72%" style="display: block; margin: auto;" /&gt;
+
+_I have no relevant relationships&lt;br&gt;with commercial interests to disclose_
+
+]]
+
+--
+
+.pull-right-equal[
+
+### Principal Investigator
+
+Mary Regina Boland, MPhil, PhD, FAMIA
+
+### Collaborator
+
+Samantha Butts, MSCE, MD
+
+### Boland Lab
+
+Lena Davidson &amp;#8226; Jessica Meeker&lt;br&gt;
+Aditya Kashyap &amp;#8226; Bernadette D'Alonzo&lt;br&gt;
+Becca Morse &amp;#8226; Sarah Tadlock &amp;#8226; Ella Poole&lt;br&gt;
+Jessica Liu &amp;#8226; Abigail Bretzin&lt;br&gt;&lt;br&gt;
+]
+
+---
+layout: true
+
+&lt;a class="footer-link" href="http://bit.ly/AMIA-sickle-cell"&gt;&lt;strong&gt;bit.ly/AMIA-sickle-cell&lt;/strong&gt;
+&amp;#8226; Silvia P. Canelón &amp;#8226; 2021 AMIA Informatics Summit&lt;/a&gt;
+&lt;!-- this adds the link footer to all slides, depends on footer-link class in css--&gt;
+
+---
+class: middle
+
+# Learning objectives
+
+----
+
+### Understand how electronic health record (**EHR**) data were leveraged&lt;br&gt; to study the impact of **sickle cell disease** on adverse:
+
+- ### delivery outcomes including **stillbirth** 
+- ### hematological outcomes like **blood transfusion** and **hemorrhage**&lt;br&gt;during delivery.
+
+---
+class: highlight-last-item
+
+# Motivation
+
+- ### Pregnant people are often underrepresented in clinical research,&lt;br&gt;as are ethnic and racial minorities
+
+--
+
+- ### Those pregnant with sickle cell have been shown to be at an&lt;br&gt;increased risk of adverse outcomes [1]
+
+--
+
+- ### The granularity of our dataset enables the study of pregnancy-specific contributions to the risk of a clinical complication at the time of delivery
+
+--
+
+- ### We estimate a higher incidence of sickle cell trait at Penn Medicine (~9.8%) compared to national estimates (~7.7%) [2]
+
+
+.footnote[
+1. Barfield WD, Barradas DT, Manning SE, et al. Am J Prev Med. 2010;38:S542–9
+2. Centers for Disease Control and Prevention. Data &amp; Statistics on Sickle Cell Disease. 2017
+]
+
+???
+The size of our dataset makes studying pregnancy outcomes among people with sickle cell trait and sickle cell disease feasible
+
+---
+class: highlight-last-item
+
+# Analysis
+
+1. ### Used our MADDIE algorithm [1] to identify **63,334 distinct deliveries**&lt;br&gt;from EHR of **1,060,000 female patients** with visits to&lt;br&gt;Penn Medicine between **2010-2017**
+
+--
+
+2. ### Identified **delivery and hematological outcomes of interest** &lt;br&gt;occurring within the patients' delivery episode(s)
+
+--
+
+3. ### Constructed **generalized logistic regression model** to assess&lt;br&gt;the risk of a variety of predictors on delivery and hematological outcomes
+
+.footnote[
+1\. [Canelón et al. Int J Med Inform (2020)](https://silvia.rbind.io/publication/maddie-ehr-delivery-episode-algorithm/)]
+
+---
+&lt;!--background-image: url(img/SickleCellDiagram.png)
+background-size: 50%--&gt;
+
+.pull-left-equal[
+# Sickle cell disease
+
+- Complex inherited genetic disorder and&lt;br&gt;most common hemoglobinopathy&lt;br&gt;in the U.S., affecting ~100,000 people [1]
+- Primarily affects individuals of African ancestry and is associated with high lifetime morbidity and premature mortality [2]
+- Inheriting one hemoglobin S gene results in **sickle cell trait**; inheriting two abnormal genes results in **sickle cell disease**
+- The disease is characterized by abnormal hemoglobin and "sickle" red blood cells
+
+.footnote[
+1\. Centers for Disease Control and Prevention. Data &amp; Statistics on Sickle Cell Disease. 2017&lt;br&gt;
+2\. Kuo K, Caughey AB. Am J Obstet Gynecol. 2016;215(4)]
+]
+
+.pull-right-equal[
+
+&lt;img src="img/SickleCellDiagram.png" title="Healthy red blood cells vs. sickle red blood cells. Healthy red blood cells allow unrestricted blood flow whereas sickle red blood cells are shaped like a 'sickle', hard, and sticky which leads to obstructed blood flow. Image source: yourgenome.org." alt="Healthy red blood cells vs. sickle red blood cells. Healthy red blood cells allow unrestricted blood flow whereas sickle red blood cells are shaped like a 'sickle', hard, and sticky which leads to obstructed blood flow. Image source: yourgenome.org." width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+???
+The sickle cells die early, which causes a constant shortage of red blood cells, or anemia.
+
+Sickle cells are also hard and sticky and block capillaries causing myriad downstream effects including debilitating pain and other serious problems such as infection, acute chest syndrome, and stroke.
+
+To help prevent these complications and manage their condition, people with sickle cell often require blood transfusions.
+
+People with sickle cell trait still produce sickle cells, but perhaps not at a level that would result in detectable symptoms
+
+Alt-text: Healthy red blood cells vs. sickle red blood cells. Healthy red blood cells allow unrestricted blood flow whereas sickle red blood cells are shaped like a 'sickle', hard, and sticky which leads to obstructed blood flow. Image source: yourgenome.org.
+
+---
+background-image: url(img/StudyOverview.png)
+background-size: 70%
+background-position: 50% 70%
+class: left
+
+# Study overview
+
+???
+Process diagram describing the steps taken in the study: 
+
+1. Identifying patients with deliveries within the Electronic Health Record dataset using ICD codes for delivery
+2. Using the MADDIE algorithm to identify distinct deliveries per patient
+3. Using ICD codes to identify patients with a sickle cell diagnosis, sickle cell trait OR sickle cell disease
+
+---
+background-image: url(img/PregTimeline-1.png)
+background-size: 85%
+background-position: 50% 150px
+
+# Identifying delivery episodes with the MADDIE algorithm
+
+???
+Diagram depicting a patient's timeline of delivery encounters with the Penn Medicine health system. Delivery ICD codes are assigned on multiple days surrounding the true date of delivery. The MADDIE algorithm assumes that delivery encounters separated by 180 days or more can be considered to be a part of distinct delivery episodes, or distinct pregnancies.
+
+---
+background-image: url(img/PregTimeline-2.png)
+background-size: 85%
+background-position: 50% 150px
+
+# Identifying outcomes within delivery episodes
+
+???
+Same diagram depicting a patient's timeline of deliveries, but this version also includes icons pregnancy-related outcomes mapped onto distinct delivery episodes (outcomes also identified using ICD codes).
+
+---
+
+.left-col-narrow[
+# Patient population at Penn Medicine
+]
+
+.right-col-wide[
+
+&lt;table class=" lightable-paper lightable-hover" style="font-size: 20px; font-family: Source Sans Pro; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Patients (%) &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Deliveries (%) &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; All Patients &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 50560 (100.0) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 63334 (100.0) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; No Sickle Cell &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 48492 (95.9) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 60637 (95.7) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: #edcdd6 !important;width: 10em; "&gt; Sickle Cell Mutation &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: #edcdd6 !important;width: 8em; "&gt; 2068 (4.1) &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: #edcdd6 !important;width: 8em; "&gt; 2697 (4.3) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 10em; " indentlevel="1"&gt; Sickle Cell Trait &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 1904 (3.8) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 2482 (3.9) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 10em; " indentlevel="1"&gt; Sickle Cell Disease &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 164 (0.3) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 215 (0.3) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table class=" lightable-paper lightable-hover" style="font-size: 20px; font-family: Source Sans Pro; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Race/Ethnicity &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Patients (%) &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Deliveries (%) &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="7"&gt;&lt;td colspan="3" style="border-bottom: 1px solid;"&gt;&lt;strong&gt;Sickle Cell Mutation&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 14em; " indentlevel="1"&gt; All Patients &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 2068 (100.0) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 2697 (100.0) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 14em; " indentlevel="1"&gt; Hispanic &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 53 (2.6) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 62 (2.3) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;color: black !important;background-color: #edcdd6 !important;width: 14em; " indentlevel="1"&gt; Black/African American &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: #edcdd6 !important;width: 8em; "&gt; 1921 (92.9) &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: #edcdd6 !important;width: 8em; "&gt; 2518 (93.4) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 14em; " indentlevel="1"&gt; Asian &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 11 (0.5) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 14 (0.5) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 14em; " indentlevel="1"&gt; Other or Mixed &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 31 (1.5) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 40 (1.5) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 14em; " indentlevel="1"&gt; Unknown &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 21 (1.0) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 22 (0.8) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 14em; " indentlevel="1"&gt; White &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 38 (1.8) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 8em; "&gt; 49 (1.8) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; All race/ethnicity descriptions are 'Non-Hispanic' unless otherwise indicated&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+
+]
+
+---
+# Logistic regression model
+
+.pull-left-equal[
+
+### Delivery outcomes
+
+- C-Section
+- Preterm birth
+- Stillbirth
+
+### Hematological outcomes
+
+- Blood transfusion
+- Hemorrhage
+- Pain crisis
+
+]
+
+--
+
+.pull-right-equal[
+### Predictors
+- **Sickle cell status (SCT, SCD)**
+- **No. of pain crisis before delivery**
+- **No. of blood transfusions before delivery**
+- Delivery episode
+- Prior C-section
+- Multiple birth diagnosis
+- Patient age
+- Marital status
+- Race/ethnicity
+- Blood type and blood Rh factor
+- Year
+]
+
+
+---
+# Logistic regression model
+
+.pull-left-equal[
+
+### Delivery outcomes
+
+- C-Section
+- Preterm birth
+- .highlight[Stillbirth]
+
+### Hematological outcomes
+
+- .highlight[Blood transfusion]
+- .highlight[Hemorrhage]
+- Pain crisis
+
+]
+
+.pull-right-equal[
+### Predictors
+- **Sickle cell status (SCT, SCD)**
+- **No. of pain crisis before delivery**
+- **No. of blood transfusions before delivery**
+- Delivery episode
+- Prior C-section
+- Multiple birth diagnosis
+- Patient age
+- Marital status
+- Race/ethnicity
+- Blood type and blood Rh factor
+- Year
+]
+
+---
+background-image: url(img/season-stillbirth.png)
+background-size: 70%
+background-position: 50% 50%
+
+.white[
+
+# Stillbirth: Rates over time
+]
+
+
+
+???
+Line graph showing stillbirth rates from 2010-2017 and broken down by seasons (e.g. January to March, April to June, etc.). Stillbirth rates oscillated with a max around ~1.1% in 2012 and a low of ~0.4% in 2013
+
+---
+background-image: url(img/ForestPlot_Stillbirth-Sig.png)
+background-size: 70%
+background-position: 50% 50%
+
+# Stillbirth: Model results
+
+
+
+.footnote[
+**Non-significant predictors:** Number of pain crisis before delivery; number of blood transfusions before delivery;&lt;br&gt;delivery episode; patient age; blood type; blood Rh factor, year
+]
+
+???
+The odds of having a stillbirth for someone who identifies as Black/African American versus not is considerably lower for those with SC versus those without
+
+Alt-text: Please navigate to the slide titled "[Tables of significant model results](#table-view)" for an interactive table view of these results 
+
+---
+background-image: url(img/season-blood-transfusion.png)
+background-size: 70%
+background-position: 50% 50%
+
+.white[
+# Blood transfusion: Rates over time
+]
+
+
+
+???
+Line graph showing blood transfusion rates from 2010-2017 and broken down by seasons. Blood transfusion rates oscillated with a "reasonable" low ~1.2% in 2010 and high around ~2.8% in 2015. "Unreasonable" lows near 0% are found in 2016 and 2017 but these are due to a change in ICD coding practices. Please see Limitations slide for more details.
+
+---
+
+# Blood transfusion: Model results
+
+&lt;img src="img/ForestPlot_BloodTransfusion-Sig.png" title="Forest plot showing sickle cell disease (aOR 47.1) increased the risk of blood transfusion during delivery. Please see presenter notes for link to table presentation." alt="Forest plot showing sickle cell disease (aOR 47.1) increased the risk of blood transfusion during delivery. Please see presenter notes for link to table presentation." width="83%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+**Non-significant predictors:** Marital status
+]
+
+???
+Alt-text: Please navigate to the slide titled "[Tables of significant model results](#table-view)" for an interactive table view of these results 
+
+---
+background-image: url(img/season-hemorrhage.png)
+background-size: 70%
+background-position: 50% 50%
+
+.white[
+# Hemorrhage: Rates over time
+]
+
+
+???
+Line graph showing hemorrhage rates from 2010-2017 and broken down by seasons. Hemorrhage rates with a high of ~11% in 2012, a low of ~5.4% in 2015, and hovering around ~6% from 2013-2017.
+
+---
+# Hemorrhage: Model results
+
+&lt;img src="img/ForestPlot_Hemorrhage-Sig.png" title="Forest plot showing that neither sickle cell trait nor sickle cell disease were associated with an increased risk of hemorrhage during delivery. Please see presenter notes for link to table presentation." alt="Forest plot showing that neither sickle cell trait nor sickle cell disease were associated with an increased risk of hemorrhage during delivery. Please see presenter notes for link to table presentation." width="88%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+**Non-significant predictors:** Sickle cell status, number of pain crisis before delivery; number of blood transfusions before delivery;&lt;br&gt;delivery episode; patient age; blood type; blood Rh factor
+]
+
+???
+Alt-text: Please navigate to the slide titled "[Tables of significant model results](#table-view)" for an interactive table view of these results 
+
+---
+# Limitations
+
+--
+
+- ### The study did not include data on hemoglobin variants which would help
+  - ### Confirm sickle cell status
+  - ### Identify additional patients with homozygous sickle cell disease
+  - ### Identify heterozygous patients that are asymptomatic
+  
+--
+
+- ### Billing codes (e.g. ICD-9/10) are imperfect at capturing clinical conditions
+
+--
+
+- ### Blood transfusion capture after the transition to ICD-10 was limited&lt;br&gt;by a change in coding practices [1]
+
+.footnote[
+1\. [AIM Severe Maternal Morbidity (SMM) Data Alert for Blood Transfusions. 2016](https://www.cmqcc.org/sites/default/files/AIM-SMM-Data-Alert-Blood-Transfusions-v4-15-2016%20%284%29.pdf)
+]
+
+???
+In April of 2016 the Alliance for Innovation on Maternal Health (AIM) issued a data alert for blood transfusions after hearing that hospitals were electing not to code blood transfusions due to the complexity of codes accompanying ICD-10. 
+
+The alert is linked on this slide and includes coding guidance to support staff 
+
+---
+class: middle, highlight-last-item
+
+# Conclusions
+
+--
+
+----
+
+- ### Patients with sickle cell disease were not found to be at increased risk of hemorrhage, a severe maternal morbidity.
+
+--
+
+- ### Pregnancies of patients with sickle cell were at increased risk&lt;br&gt;of blood transfusions and stillbirth.
+
+--
+
+- ### These results underscore the need for systemic support for comprehensive coordinated care for sickle cell patients,&lt;br&gt;particularly during pregnancy and delivery
+
+---
+class: inverse
+
+# Publication
+
+----
+
+## You'll be able to view the full results and read more&lt;br&gt;about the study in our upcoming preprint.
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg> Stay tuned for updates on the webpage for this talk:&lt;br&gt;[The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data](https://silvia.rbind.io/talk/2021-03-22-amia-informatics-summit/)
+
+---
+class: top, left, no-slide-number
+layout: false
+background-image: url(img/AMIA-title-slide-2.png)
+background-size: cover
+
+
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px" alt="Profile of Silvia Canelón"/&gt;
+
+
+# Thank you!
+
+.left[
+[<svg aria-label="Link" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Link</title><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg> silvia.rbind.io](https://silvia.rbind.io)&lt;br&gt;
+[<svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @spcanelon](https://twitter.com/spcanelon)&lt;br&gt;
+[<svg aria-label="GitHub" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> @spcanelon](https://github.com/spcanelon)&lt;br/&gt;
+]
+
+.footnote[
+This presentation was made using the&lt;br&gt;AMIA template and the following R packages:&lt;br&gt; [xaringan](https://github.com/yihui/xaringan#xaringan), [xaringanExtra](https://github.com/gadenbuie/xaringanExtra#xaringanextra), [kableExtra](https://haozhu233.github.io/kableExtra/), and [forester](https://github.com/rdboyes/forester).
+]
+
+---
+exclude: false
+name: table-view
+
+.left-col-narrow[
+# Tables of significant model results
+]
+
+
+
+
+
+
+.right-col-wide[
+.panelset[
+
+.panel[.panel-name[Stillbirth]
+&lt;table class=" lightable-paper lightable-hover" style="font-size: 18px; font-family: Source Sans Pro; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Predictor &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Adjusted OR &amp;amp; 95% CI &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Sickle Cell Status &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Sickle Cell Trait &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 12em; "&gt; 8.94 (1.05 to 75.79) * &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Sickle Cell Disease &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 12em; "&gt; 26.40 (2.48 to &amp;gt;100) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Prior C-Section: Yes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.44 (0.22 to 0.78) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Multiple Birth Diagnosis: Yes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 4.68 (3.48 to 6.29) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Marital Status: Married &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.72 (0.57 to 0.91) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Race/Ethnicity &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Black/African American × Sickle Cell &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 12em; "&gt; 0.11 (0.01 to 0.93) * &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; * pvalue &amp;lt; 0.05, ** p-value &amp;lt; 0.01, *** p-value &amp;lt; 0.001&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+
+]&lt;!--end of panel--&gt;
+
+.panel[.panel-name[Blood transfusion]
+
+&lt;table class=" lightable-paper lightable-hover" style="font-size: 18px; font-family: Source Sans Pro; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Predictor &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Adjusted OR &amp;amp; 95% CI &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Sickle Cell Status &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Sickle Cell Disease &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 12em; "&gt; 47.07 (5.33 to &amp;gt;100) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 22em; "&gt; Number of Pain Crises Before Delivery &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 12em; "&gt; 0.90 (0.82 to 0.99) * &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 22em; "&gt; Number of Blood Tranfusions Before Delivery &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;width: 12em; "&gt; 1.70 (1.28 to 2.27) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Prior C-Section: Yes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 2.58 (1.87 to 3.56) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Delivery Episode &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.64 (0.53 to 0.79) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Multiple Birth Diagnosis: Yes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 2.91 (2.24 to 3.77) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Patient Age &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.02 (1.01 to 1.03) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Race/Ethnicity &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Asian &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.89 (1.01 to 3.52) * &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Blood Type (reference: Blood Type O) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Blood Type A &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.16 (1.00 to 1.34) * &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Blood Rh Factor (reference: Rh Positive) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Rh Negative &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.27 (1.03 to 1.57) * &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Year (reference: 2010) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2013 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.43 (1.14 to 1.79) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2014 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.34 (1.07 to 1.68) * &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2016 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.01 (0.00 to 0.05) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2017 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.06 (0.02 to 0.17) *** &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; * pvalue &amp;lt; 0.05, ** p-value &amp;lt; 0.01, *** p-value &amp;lt; 0.001&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+
+]&lt;!--end of panel--&gt;
+
+.panel[.panel-name[Hemorrhage]
+
+&lt;table class=" lightable-paper lightable-hover" style="font-size: 18px; font-family: Source Sans Pro; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Predictor &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Adjusted OR &amp;amp; 95% CI &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Prior C-Section: Yes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.73 (0.61 to 0.87) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Multiple Birth Diagnosis: Yes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.71 (1.46 to 2.00) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Race/Ethnicity &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; Asian &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.50 (1.15 to 1.95) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; "&gt; Year (reference: 2010) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2011 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.22 (1.09 to 1.35) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2012 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 1.25 (1.12 to 1.39) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2014 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.84 (0.74 to 0.94) ** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2015 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.79 (0.70 to 0.89) *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 22em; padding-left: 2em;" indentlevel="1"&gt; 2016 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 12em; "&gt; 0.89 (0.79 to 1.00) * &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; * pvalue &amp;lt; 0.05, ** p-value &amp;lt; 0.01, *** p-value &amp;lt; 0.001&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+
+]&lt;!--end of panel--&gt;
+
+]&lt;!--end of panelset--&gt;
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

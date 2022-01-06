@@ -1,0 +1,78 @@
+---
+title: "Slides"
+description: Slide Listing
+draft: false
+# layout options are standard (default) or wide-body
+layout: standard
+show_title_as_headline: true
+---
+
+```{r echo=FALSE, eval=TRUE}
+# resource: https://github.com/presentable-user2021/website/blob/aa9c53fd4bdb5de9cdc5165a8c9ab783992ad2c0/content/slides.Rmarkdown
+#slides <- fs::dir_ls(here::here("static"), regexp = "Rmd$")
+# slides <- fs::dir_ls(here::here("static"), recurse = TRUE, glob = "*.Rmd")
+# #slides <- slides[!grepl("demo", slides)]
+# slides <- sort(slides)
+# 
+# htmltools::tags$ul(
+#   purrr::map(slides, function(path) {
+#     fs::path_ext(path) <- "html"
+#     htmltools::tags$li(
+#       htmltools::tags$a(
+#         href = fs::path_rel(path, here::here("static")),
+#         fs::path_rel(path, here::here("static"))
+#         #fs::path_ext_remove(fs::path_rel(path))
+#         )
+#     )
+#   })
+# )
+
+names <- c(
+  "one slide deck",
+  "two slide deck"
+)
+
+urls <- c(
+  "www.silviacanelon.com",
+  "www.silvia.rbind.io"
+)
+
+slides <- dplyr::tibble(
+  presentation = names,
+  link = urls
+)
+
+htmltools::tags$ul(
+  htmltools::tags$li(
+    htmltools::tags$a(
+      href = "https://github.com/spcanelon/csvConf2021/blob/main/README.md#html-slide-deck",
+      "2021-05-04 Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"
+      )
+    ),
+   htmltools::tags$li(
+    htmltools::tags$a(
+      href = "2021-amia-informatics-summit/index.html",
+      "2021-03-21 The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data"
+      )
+    ),
+  htmltools::tags$li(
+    htmltools::tags$a(
+      href = "http://tiny.cc/rladies-phl-teaching-spc",
+      "2021-02-18 From Learn-R to Teach-R: An Expert Panel on Effective R Instruction"
+      )
+    ),
+    htmltools::tags$li(
+    htmltools::tags$a(
+      href = "introduccion-xaringan/index.html",
+      "2020-12-17 Introducción al Paquete xaringan",
+      )
+    ),
+  htmltools::tags$li(
+    htmltools::tags$a(
+      href = "tour-of-the-tidyverse/index.html",
+      "2020-08-31 Tour of the Tidyverse"
+      )
+    )
+)
+
+```

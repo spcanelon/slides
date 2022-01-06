@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://slides.silviacanelon.com/"
 theme = "hugo-apero"
 languageCode = "en"
 #title = "Hugo Apéro"

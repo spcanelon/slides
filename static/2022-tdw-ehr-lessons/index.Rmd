@@ -182,7 +182,7 @@ knitr::include_graphics("img/DBEI_PSOM_color_darkbkg.png")
 ---
 layout: true
 
-<a class="footer-link" href="http://silviacanelon.com/2022-tdw-ehr-lessons"><strong>slides.silviacanelon/2022-tdw-ehr-lessons</strong>
+<a class="footer-link" href="http://slides.silviacanelon.com/2022-tdw-ehr-lessons"><strong>slides.silviacanelon/2022-tdw-ehr-lessons</strong>
 &#8226; 2022 Toronto Data Workshop</a>
 <!-- this adds the link footer to all slides, depends on footer-link class in css-->
 
@@ -235,6 +235,7 @@ knitr::include_graphics("img/EHR_example_Penn.png")
 ---
 background-image: url(img/EHR_example.png)
 background-size: contain
+background-position: top
 
 <span role="img" aria-label="Mock medical chart for patient Mickey Mouse, contains ICD codes, medication, allergies, among other things"></span>
 
@@ -297,7 +298,10 @@ background-position: 130% 50%
 - Ended with 50,560 patients with deliveries & 63,334 distinct deliveries
 ]
 
-<span role="img" aria-label="Process diagram describing the steps our algorithm takes to identify patients with deliveries within the Electronic Health Record dataset. The algorithm uses unique patient identifiers, dates of encounter with a Penn Medicine clinic, ICD codes, and temporal information to extract delivery episode details."></span>
+<span role="img" aria-label="Diagram depicting a patient's timeline of delivery encounters with the Penn Medicine health system. Delivery ICD codes are assigned on multiple days surrounding the true date of delivery. The MADDIE algorithm assumes that delivery encounters separated by 180 days or more can be considered to be a part of distinct delivery episodes, or distinct pregnancies."></span>
+
+.footnote[[Development and evaluation of MADDIE: Method to Acquire<br> Delivery Date Information from Electronic health records](https://www-sciencedirect-com.proxy.library.upenn.edu/science/article/pii/S1386505620309588?via%3Dihub)
+]
 
 <div id="square"></div>
 
@@ -308,14 +312,7 @@ background-position: 50% 150px
 
 # Identifying outcomes within delivery episodes
 
-
-
-.footnote[
-[Development and evaluation of MADDIE: Method to Acquire<br> Delivery Date Information from Electronic health records](https://www-sciencedirect-com.proxy.library.upenn.edu/science/article/pii/S1386505620309588?via%3Dihub)
-]
-
-???
-
+<span role="img" aria-label="Same diagram depicting a patient's timeline of deliveries, but this version also includes icons for pregnancy-related outcomes mapped onto distinct delivery episodes (outcomes also identified using ICD codes)."></span>
 
 ---
 class: middle
@@ -331,7 +328,7 @@ class: middle
 
 - We imported curated ICD codes from an external spreadsheet
 - We subset our patient records using the imported ICD codes
-- We should be left with patients with fallopian tube procedures in our records, but they are missing 🤔
+- We should be left with patients with fallopian tube procedures in our records, but they are missing. Why? 🤔
 
 | Code | Code description | Function
 |:--- | :--- | :-- |
@@ -339,7 +336,7 @@ class: middle
 |66.0| Salpingotomy and salpingostomy| Specific code
 
 --
-**Cuprit:** Excel cut off the trailing zero from all codes in the spreadsheet!
+**Culprit:** Excel cut off the trailing zero from all codes in the spreadsheet!
 
 ---
 class: right
@@ -373,7 +370,7 @@ What happened in<br>October-December<br>of 2015?
 
 --
 
-**Culprit:** [A change in<br> ICD coding practices!](https://www.cmqcc.org/sites/default/files/AIM-SMM-Data-Alert-Blood-Transfusions-v4-15-2016%20%284%29.pdf)
+**Culprit:** [A change<br>in ICD coding<br> practices!](https://www.cmqcc.org/sites/default/files/AIM-SMM-Data-Alert-Blood-Transfusions-v4-15-2016%20%284%29.pdf)
 
 
 ???
@@ -387,19 +384,18 @@ class: middle
 # Data privacy
 --
 
-- Mental health data is protected
+- Mental health and childrens' data can have extra protections
 --
 
-- Childrens' data is protected
---
-
-- Even after anonymizing data, reidentification is possible: [You’re very easy to track down, even when your data has been anonymized | MIT Technology Review](https://www.technologyreview.com/2019/07/23/134090/youre-very-easy-to-track-down-even-when-your-data-has-been-anonymized/)
+- Even after anonymizing data, reidentification is possible:
+  - [You’re very easy to track down, even when your data has been anonymized | MIT Technology Review](https://www.technologyreview.com/2019/07/23/134090/youre-very-easy-to-track-down-even-when-your-data-has-been-anonymized/)
+  - [Matching Known Patients to Health Records in Washington State Data | arXiv.org](https://arxiv.org/abs/1307.1370)
 --
 
 - HIPAA protections do not necessarily apply to law enforcement: [Policing the Emergency Room - Ji Seon Song - Harvard Law Review](https://harvardlawreview.org/2021/06/policing-the-emergency-room/)
 --
 
-- Sometimes when studying OUD and opioid prescription patterns a lot of information is scrubbed from the clinical notes, perhaps for political reasons
+- Sometimes information is scrubbed from the clinical notes before researchers use it, perhaps for political reasons (e.g. when studying opioid prescription patterns)
 
 ???
 Institute doesn't want to be associated in some kind of negative way
@@ -408,19 +404,29 @@ Institute doesn't want to be associated in some kind of negative way
 class: inverse, middle, left
 
 .pull-left-equal[
-> If you're interested in learning more about EHR data:
+> If you're interested in learning more about EHR data, check out:
 
-> - [Toronto Data Workshop - Irene Duah-Kessie](https://www.youtube.com/watch?v=xwWvOeSXu5o)
+> - [Irene Duah-Kessie - 2021 Toronto Data Workshop](https://www.youtube.com/watch?v=xwWvOeSXu5o)
 ]
 --
 .pull-right-equal[
 <img style="border-radius: 50%;" src="https://www.silviacanelon.com/about/sidebar/avatar.png" width="170px"/>
 # Thank you!
 
-### Here is where you can find me...
+Here is where you can find me...
 
 .right[
 [silviacanelon.com `r fontawesome::fa("link")`](https://www.silviacanelon.com)<br/>
 [@spcanelon `r fontawesome::fa("twitter", a11y="sem")`](https://twitter.com/spcanelon)<br/>
 [@spcanelon `r fontawesome::fa("github", a11y="sem")`](https://github.com/spcanelon)<br/>
 ]]
+
+---
+
+# Resources that came up during Q&A
+
+- Book recommendations:
+  - [How We Show Up — Mia Birdsong](https://www.miabirdsong.com/how-we-show-up)
+  - [Race After Technology — Ruha Benjamin](https://www.ruhabenjamin.com/race-after-technology)
+- On scraping data from Twitter and analyzing using NLP techniques: [Pharmacovigilance on twitter? Mining tweets for adverse drug reactions](https://asu.pure.elsevier.com/en/publications/pharmacovigilance-on-twitter-mining-tweets-for-adverse-drug-react)
+- On tips for working with and avoiding spreadsheet-type errors:<br>[Data Organization in Spreadsheets](https://www-tandfonline-com.proxy.library.upenn.edu/doi/full/10.1080/00031305.2017.1375989)

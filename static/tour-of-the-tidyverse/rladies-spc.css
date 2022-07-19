@@ -4,6 +4,7 @@ h1, h2, h3 {
 }
 a, a > code {
   color: #88398a;
+  text-decoration: underline;
 }
 
 .inverse {
@@ -24,8 +25,11 @@ a, a > code {
   color: #ECEFF4;
 }
 .title-slide h2, .title-slide h3 {
-  color: #ECEFF4; 
+  color: #ECEFF4;
   line-height: 1em;
+}
+.title-slide a {
+  color: white;
 }
 
 /* about me slide */
@@ -40,7 +44,7 @@ a, a > code {
   opacity: 1;
 }
 .about-me h2, .about-me h3 {
-  color: #562457; 
+  color: #562457;
   line-height: 1em;
   font-weight: 400;
 }
@@ -117,7 +121,7 @@ a, a > code {
 /* inline code highlighting */
 /* https://github.com/yihui/xaringan/wiki/Inline-code-highlighting */
 
-.remark-code-line-highlighted { 
+.remark-code-line-highlighted {
   /*background-color: rgba(136, 57, 138, 0.3); */
   background-color: rgba(204, 189, 204, 0.6);
 }

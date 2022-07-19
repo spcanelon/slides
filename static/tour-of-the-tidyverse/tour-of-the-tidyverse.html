@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Silvia Canelón, PhD" />
     <meta name="date" content="2020-08-31" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
@@ -19,7 +20,6 @@
     <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <script src="libs/fitvids/fitvids.min.js"></script>
-    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="rladies-spc.css" type="text/css" />
     <link rel="stylesheet" href="rladies-fonts-spc.css" type="text/css" />
   </head>
@@ -32,14 +32,15 @@
 
 class: title-slide, center, bottom
 
+
 &lt;img src="images/lter_penguins.png" width="400" /&gt;
 # An Antarctic Tour of the Tidyverse
 
 ## R-Ladies Chicago
 
-### Silvia Canelón, PhD
+### Silvia Canelón, PhD &amp;#8226; August 31, 2020
 
-### August 31, 2020
+### <svg aria-label="GitHub" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> repo: [spcanelon/tour-of-the-tidyverse](https://github.com/spcanelon/tour-of-the-tidyverse)
 
 
 ---
@@ -51,12 +52,12 @@ class: about-me, middle, center
 
 ### University of Pennsylvania, Philadelphia, PA, USA
 
-&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar_hu5008cfaae4fe27558f3c3604a254cbf4_10721386_270x270_fill_lanczos_center_2.png" width="150px"/&gt;
+&lt;img style="border-radius: 50%;" src="https://www.silviacanelon.com/about/sidebar/avatar.png" width="150px"/&gt;
 
 
-[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)&lt;br/&gt;
-[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)&lt;br/&gt;
-[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)  
+[<svg aria-label="Link" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Link</title><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg> silviacanelon.com](https://www.silviacanelon.com)&lt;br/&gt;
+[<svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @spcanelon](https://twitter.com/spcanelon)&lt;br/&gt;
+[<svg aria-label="GitHub" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> @spcanelon](https://github.com/spcanelon)  
 
 .footnote[&lt;span&gt;Photo by &lt;a href="https://unsplash.com/@lukehuff?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;lucas huffman&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/antarctica?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;&lt;/span&gt;]
 
@@ -114,6 +115,12 @@ background-size: 1150px
 
 
 
+
+
+
+
+
+
 class: penguin-tour
 
 &lt;img src="images/pptx/01-readr.png" width="1200" /&gt;
@@ -150,7 +157,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png)
 ]
 
@@ -207,15 +214,17 @@ Lucky for us, the `palmerpenguins` 📦 compiles data from all three species tog
 # saves package tibble into global environment
 penguins &lt;- palmerpenguins::penguins 
 head(penguins)
-## # A tibble: 6 x 8
-##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year
-##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt;  &lt;int&gt;
-## 1 Adelie  Torgersen           39.1          18.7               181        3750 male    2007
-## 2 Adelie  Torgersen           39.5          17.4               186        3800 female  2007
-## 3 Adelie  Torgersen           40.3          18                 195        3250 female  2007
-## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;    2007
-## 5 Adelie  Torgersen           36.7          19.3               193        3450 female  2007
-## 6 Adelie  Torgersen           39.3          20.6               190        3650 male    2007
+## # A tibble: 6 × 8
+##   species island    bill_length_mm bill_depth_mm
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Adelie  Torgersen           39.1          18.7
+## 2 Adelie  Torgersen           39.5          17.4
+## 3 Adelie  Torgersen           40.3          18  
+## 4 Adelie  Torgersen           NA            NA  
+## 5 Adelie  Torgersen           36.7          19.3
+## 6 Adelie  Torgersen           39.3          20.6
+## # … with 4 more variables: flipper_length_mm &lt;int&gt;,
+## #   body_mass_g &lt;int&gt;, sex &lt;fct&gt;, year &lt;int&gt;
 ```
 ]
 .pull-right[
@@ -224,22 +233,34 @@ head(penguins)
 ```r
 penguins_raw &lt;- palmerpenguins::penguins_raw
 head(penguins_raw)
-## # A tibble: 6 x 17
-##   studyName `Sample Number` Species Region Island Stage `Individual ID` `Clutch Complet… `Date Egg` `Culmen Length … `Culmen Depth (… `Flipper Length…
-##   &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;            &lt;date&gt;                &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
-## 1 PAL0708                 1 Adelie… Anvers Torge… Adul… N1A1            Yes              2007-11-11             39.1             18.7              181
-## 2 PAL0708                 2 Adelie… Anvers Torge… Adul… N1A2            Yes              2007-11-11             39.5             17.4              186
-## 3 PAL0708                 3 Adelie… Anvers Torge… Adul… N2A1            Yes              2007-11-16             40.3             18                195
-## 4 PAL0708                 4 Adelie… Anvers Torge… Adul… N2A2            Yes              2007-11-16             NA               NA                 NA
-## 5 PAL0708                 5 Adelie… Anvers Torge… Adul… N3A1            Yes              2007-11-16             36.7             19.3              193
-## 6 PAL0708                 6 Adelie… Anvers Torge… Adul… N3A2            Yes              2007-11-16             39.3             20.6              190
-## # … with 5 more variables: `Body Mass (g)` &lt;dbl&gt;, Sex &lt;chr&gt;, `Delta 15 N (o/oo)` &lt;dbl&gt;, `Delta 13 C (o/oo)` &lt;dbl&gt;, Comments &lt;chr&gt;
+## # A tibble: 6 × 17
+##   studyName `Sample Number` Species    Region Island Stage
+##   &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;
+## 1 PAL0708                 1 Adelie Pe… Anvers Torge… Adul…
+## 2 PAL0708                 2 Adelie Pe… Anvers Torge… Adul…
+## 3 PAL0708                 3 Adelie Pe… Anvers Torge… Adul…
+## 4 PAL0708                 4 Adelie Pe… Anvers Torge… Adul…
+## 5 PAL0708                 5 Adelie Pe… Anvers Torge… Adul…
+## 6 PAL0708                 6 Adelie Pe… Anvers Torge… Adul…
+## # … with 11 more variables: `Individual ID` &lt;chr&gt;,
+## #   `Clutch Completion` &lt;chr&gt;, `Date Egg` &lt;date&gt;,
+## #   `Culmen Length (mm)` &lt;dbl&gt;,
+## #   `Culmen Depth (mm)` &lt;dbl&gt;,
+## #   `Flipper Length (mm)` &lt;dbl&gt;, `Body Mass (g)` &lt;dbl&gt;,
+## #   Sex &lt;chr&gt;, `Delta 15 N (o/oo)` &lt;dbl&gt;,
+## #   `Delta 13 C (o/oo)` &lt;dbl&gt;, Comments &lt;chr&gt;
 ```
 ]
 ]
 ]
 
 ---
+
+
+
+
+
+
 
 
 
@@ -269,7 +290,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF (tidyr): https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF (tidyr): https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png)
 ]
 
@@ -312,152 +333,280 @@ as.data.frame(penguins)
 
 ```r
 as_tibble(penguins)
-## # A tibble: 344 x 8
-##    species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year
-##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt;  &lt;int&gt;
-##  1 Adelie  Torgersen           39.1          18.7               181        3750 male    2007
-##  2 Adelie  Torgersen           39.5          17.4               186        3800 female  2007
-##  3 Adelie  Torgersen           40.3          18                 195        3250 female  2007
-##  4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;    2007
-##  5 Adelie  Torgersen           36.7          19.3               193        3450 female  2007
-##  6 Adelie  Torgersen           39.3          20.6               190        3650 male    2007
-##  7 Adelie  Torgersen           38.9          17.8               181        3625 female  2007
-##  8 Adelie  Torgersen           39.2          19.6               195        4675 male    2007
-##  9 Adelie  Torgersen           34.1          18.1               193        3475 &lt;NA&gt;    2007
-## 10 Adelie  Torgersen           42            20.2               190        4250 &lt;NA&gt;    2007
-## # … with 334 more rows
+## # A tibble: 344 × 8
+##    species island    bill_length_mm bill_depth_mm
+##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+##  1 Adelie  Torgersen           39.1          18.7
+##  2 Adelie  Torgersen           39.5          17.4
+##  3 Adelie  Torgersen           40.3          18  
+##  4 Adelie  Torgersen           NA            NA  
+##  5 Adelie  Torgersen           36.7          19.3
+##  6 Adelie  Torgersen           39.3          20.6
+##  7 Adelie  Torgersen           38.9          17.8
+##  8 Adelie  Torgersen           39.2          19.6
+##  9 Adelie  Torgersen           34.1          18.1
+## 10 Adelie  Torgersen           42            20.2
+## # … with 334 more rows, and 4 more variables:
+## #   flipper_length_mm &lt;int&gt;, body_mass_g &lt;int&gt;,
+## #   sex &lt;fct&gt;, year &lt;int&gt;
 ```
 ]
 .pull-right[
 
 ```r
 as.data.frame(penguins)
-##     species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex year
-## 1    Adelie Torgersen           39.1          18.7               181        3750   male 2007
-## 2    Adelie Torgersen           39.5          17.4               186        3800 female 2007
-## 3    Adelie Torgersen           40.3          18.0               195        3250 female 2007
-## 4    Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt; 2007
-## 5    Adelie Torgersen           36.7          19.3               193        3450 female 2007
-## 6    Adelie Torgersen           39.3          20.6               190        3650   male 2007
-## 7    Adelie Torgersen           38.9          17.8               181        3625 female 2007
-## 8    Adelie Torgersen           39.2          19.6               195        4675   male 2007
-## 9    Adelie Torgersen           34.1          18.1               193        3475   &lt;NA&gt; 2007
-## 10   Adelie Torgersen           42.0          20.2               190        4250   &lt;NA&gt; 2007
-## 11   Adelie Torgersen           37.8          17.1               186        3300   &lt;NA&gt; 2007
-## 12   Adelie Torgersen           37.8          17.3               180        3700   &lt;NA&gt; 2007
-## 13   Adelie Torgersen           41.1          17.6               182        3200 female 2007
-## 14   Adelie Torgersen           38.6          21.2               191        3800   male 2007
-## 15   Adelie Torgersen           34.6          21.1               198        4400   male 2007
-## 16   Adelie Torgersen           36.6          17.8               185        3700 female 2007
-## 17   Adelie Torgersen           38.7          19.0               195        3450 female 2007
-## 18   Adelie Torgersen           42.5          20.7               197        4500   male 2007
-## 19   Adelie Torgersen           34.4          18.4               184        3325 female 2007
-## 20   Adelie Torgersen           46.0          21.5               194        4200   male 2007
-## 21   Adelie    Biscoe           37.8          18.3               174        3400 female 2007
-## 22   Adelie    Biscoe           37.7          18.7               180        3600   male 2007
-## 23   Adelie    Biscoe           35.9          19.2               189        3800 female 2007
-## 24   Adelie    Biscoe           38.2          18.1               185        3950   male 2007
-## 25   Adelie    Biscoe           38.8          17.2               180        3800   male 2007
-## 26   Adelie    Biscoe           35.3          18.9               187        3800 female 2007
-## 27   Adelie    Biscoe           40.6          18.6               183        3550   male 2007
-## 28   Adelie    Biscoe           40.5          17.9               187        3200 female 2007
-## 29   Adelie    Biscoe           37.9          18.6               172        3150 female 2007
-## 30   Adelie    Biscoe           40.5          18.9               180        3950   male 2007
-## 31   Adelie     Dream           39.5          16.7               178        3250 female 2007
-## 32   Adelie     Dream           37.2          18.1               178        3900   male 2007
-## 33   Adelie     Dream           39.5          17.8               188        3300 female 2007
-## 34   Adelie     Dream           40.9          18.9               184        3900   male 2007
-## 35   Adelie     Dream           36.4          17.0               195        3325 female 2007
-## 36   Adelie     Dream           39.2          21.1               196        4150   male 2007
-## 37   Adelie     Dream           38.8          20.0               190        3950   male 2007
-## 38   Adelie     Dream           42.2          18.5               180        3550 female 2007
-## 39   Adelie     Dream           37.6          19.3               181        3300 female 2007
-## 40   Adelie     Dream           39.8          19.1               184        4650   male 2007
-## 41   Adelie     Dream           36.5          18.0               182        3150 female 2007
-## 42   Adelie     Dream           40.8          18.4               195        3900   male 2007
-## 43   Adelie     Dream           36.0          18.5               186        3100 female 2007
-## 44   Adelie     Dream           44.1          19.7               196        4400   male 2007
-## 45   Adelie     Dream           37.0          16.9               185        3000 female 2007
-## 46   Adelie     Dream           39.6          18.8               190        4600   male 2007
-## 47   Adelie     Dream           41.1          19.0               182        3425   male 2007
-## 48   Adelie     Dream           37.5          18.9               179        2975   &lt;NA&gt; 2007
-## 49   Adelie     Dream           36.0          17.9               190        3450 female 2007
-## 50   Adelie     Dream           42.3          21.2               191        4150   male 2007
-## 51   Adelie    Biscoe           39.6          17.7               186        3500 female 2008
-## 52   Adelie    Biscoe           40.1          18.9               188        4300   male 2008
-## 53   Adelie    Biscoe           35.0          17.9               190        3450 female 2008
-## 54   Adelie    Biscoe           42.0          19.5               200        4050   male 2008
-## 55   Adelie    Biscoe           34.5          18.1               187        2900 female 2008
-## 56   Adelie    Biscoe           41.4          18.6               191        3700   male 2008
-## 57   Adelie    Biscoe           39.0          17.5               186        3550 female 2008
-## 58   Adelie    Biscoe           40.6          18.8               193        3800   male 2008
-## 59   Adelie    Biscoe           36.5          16.6               181        2850 female 2008
-## 60   Adelie    Biscoe           37.6          19.1               194        3750   male 2008
-## 61   Adelie    Biscoe           35.7          16.9               185        3150 female 2008
-## 62   Adelie    Biscoe           41.3          21.1               195        4400   male 2008
-## 63   Adelie    Biscoe           37.6          17.0               185        3600 female 2008
-## 64   Adelie    Biscoe           41.1          18.2               192        4050   male 2008
-## 65   Adelie    Biscoe           36.4          17.1               184        2850 female 2008
-## 66   Adelie    Biscoe           41.6          18.0               192        3950   male 2008
-## 67   Adelie    Biscoe           35.5          16.2               195        3350 female 2008
-## 68   Adelie    Biscoe           41.1          19.1               188        4100   male 2008
-## 69   Adelie Torgersen           35.9          16.6               190        3050 female 2008
-## 70   Adelie Torgersen           41.8          19.4               198        4450   male 2008
-## 71   Adelie Torgersen           33.5          19.0               190        3600 female 2008
-## 72   Adelie Torgersen           39.7          18.4               190        3900   male 2008
-## 73   Adelie Torgersen           39.6          17.2               196        3550 female 2008
-## 74   Adelie Torgersen           45.8          18.9               197        4150   male 2008
-## 75   Adelie Torgersen           35.5          17.5               190        3700 female 2008
-## 76   Adelie Torgersen           42.8          18.5               195        4250   male 2008
-## 77   Adelie Torgersen           40.9          16.8               191        3700 female 2008
-## 78   Adelie Torgersen           37.2          19.4               184        3900   male 2008
-## 79   Adelie Torgersen           36.2          16.1               187        3550 female 2008
-## 80   Adelie Torgersen           42.1          19.1               195        4000   male 2008
-## 81   Adelie Torgersen           34.6          17.2               189        3200 female 2008
-## 82   Adelie Torgersen           42.9          17.6               196        4700   male 2008
-## 83   Adelie Torgersen           36.7          18.8               187        3800 female 2008
-## 84   Adelie Torgersen           35.1          19.4               193        4200   male 2008
-## 85   Adelie     Dream           37.3          17.8               191        3350 female 2008
-## 86   Adelie     Dream           41.3          20.3               194        3550   male 2008
-## 87   Adelie     Dream           36.3          19.5               190        3800   male 2008
-## 88   Adelie     Dream           36.9          18.6               189        3500 female 2008
-## 89   Adelie     Dream           38.3          19.2               189        3950   male 2008
-## 90   Adelie     Dream           38.9          18.8               190        3600 female 2008
-## 91   Adelie     Dream           35.7          18.0               202        3550 female 2008
-## 92   Adelie     Dream           41.1          18.1               205        4300   male 2008
-## 93   Adelie     Dream           34.0          17.1               185        3400 female 2008
-## 94   Adelie     Dream           39.6          18.1               186        4450   male 2008
-## 95   Adelie     Dream           36.2          17.3               187        3300 female 2008
-## 96   Adelie     Dream           40.8          18.9               208        4300   male 2008
-## 97   Adelie     Dream           38.1          18.6               190        3700 female 2008
-## 98   Adelie     Dream           40.3          18.5               196        4350   male 2008
-## 99   Adelie     Dream           33.1          16.1               178        2900 female 2008
-## 100  Adelie     Dream           43.2          18.5               192        4100   male 2008
-## 101  Adelie    Biscoe           35.0          17.9               192        3725 female 2009
-## 102  Adelie    Biscoe           41.0          20.0               203        4725   male 2009
-## 103  Adelie    Biscoe           37.7          16.0               183        3075 female 2009
-## 104  Adelie    Biscoe           37.8          20.0               190        4250   male 2009
-## 105  Adelie    Biscoe           37.9          18.6               193        2925 female 2009
-## 106  Adelie    Biscoe           39.7          18.9               184        3550   male 2009
-## 107  Adelie    Biscoe           38.6          17.2               199        3750 female 2009
-## 108  Adelie    Biscoe           38.2          20.0               190        3900   male 2009
-## 109  Adelie    Biscoe           38.1          17.0               181        3175 female 2009
-## 110  Adelie    Biscoe           43.2          19.0               197        4775   male 2009
-## 111  Adelie    Biscoe           38.1          16.5               198        3825 female 2009
-## 112  Adelie    Biscoe           45.6          20.3               191        4600   male 2009
-## 113  Adelie    Biscoe           39.7          17.7               193        3200 female 2009
-## 114  Adelie    Biscoe           42.2          19.5               197        4275   male 2009
-## 115  Adelie    Biscoe           39.6          20.7               191        3900 female 2009
-## 116  Adelie    Biscoe           42.7          18.3               196        4075   male 2009
-## 117  Adelie Torgersen           38.6          17.0               188        2900 female 2009
-## 118  Adelie Torgersen           37.3          20.5               199        3775   male 2009
-## 119  Adelie Torgersen           35.7          17.0               189        3350 female 2009
-## 120  Adelie Torgersen           41.1          18.6               189        3325   male 2009
-## 121  Adelie Torgersen           36.2          17.2               187        3150 female 2009
-## 122  Adelie Torgersen           37.7          19.8               198        3500   male 2009
-## 123  Adelie Torgersen           40.2          17.0               176        3450 female 2009
-## 124  Adelie Torgersen           41.4          18.5               202        3875   male 2009
-## 125  Adelie Torgersen           35.2          15.9               186        3050 female 2009
+##     species    island bill_length_mm bill_depth_mm
+## 1    Adelie Torgersen           39.1          18.7
+## 2    Adelie Torgersen           39.5          17.4
+## 3    Adelie Torgersen           40.3          18.0
+## 4    Adelie Torgersen             NA            NA
+## 5    Adelie Torgersen           36.7          19.3
+## 6    Adelie Torgersen           39.3          20.6
+## 7    Adelie Torgersen           38.9          17.8
+## 8    Adelie Torgersen           39.2          19.6
+## 9    Adelie Torgersen           34.1          18.1
+## 10   Adelie Torgersen           42.0          20.2
+## 11   Adelie Torgersen           37.8          17.1
+## 12   Adelie Torgersen           37.8          17.3
+## 13   Adelie Torgersen           41.1          17.6
+## 14   Adelie Torgersen           38.6          21.2
+## 15   Adelie Torgersen           34.6          21.1
+## 16   Adelie Torgersen           36.6          17.8
+## 17   Adelie Torgersen           38.7          19.0
+## 18   Adelie Torgersen           42.5          20.7
+## 19   Adelie Torgersen           34.4          18.4
+## 20   Adelie Torgersen           46.0          21.5
+## 21   Adelie    Biscoe           37.8          18.3
+## 22   Adelie    Biscoe           37.7          18.7
+## 23   Adelie    Biscoe           35.9          19.2
+## 24   Adelie    Biscoe           38.2          18.1
+## 25   Adelie    Biscoe           38.8          17.2
+## 26   Adelie    Biscoe           35.3          18.9
+## 27   Adelie    Biscoe           40.6          18.6
+## 28   Adelie    Biscoe           40.5          17.9
+## 29   Adelie    Biscoe           37.9          18.6
+## 30   Adelie    Biscoe           40.5          18.9
+## 31   Adelie     Dream           39.5          16.7
+## 32   Adelie     Dream           37.2          18.1
+## 33   Adelie     Dream           39.5          17.8
+## 34   Adelie     Dream           40.9          18.9
+## 35   Adelie     Dream           36.4          17.0
+## 36   Adelie     Dream           39.2          21.1
+## 37   Adelie     Dream           38.8          20.0
+## 38   Adelie     Dream           42.2          18.5
+## 39   Adelie     Dream           37.6          19.3
+## 40   Adelie     Dream           39.8          19.1
+## 41   Adelie     Dream           36.5          18.0
+## 42   Adelie     Dream           40.8          18.4
+## 43   Adelie     Dream           36.0          18.5
+## 44   Adelie     Dream           44.1          19.7
+## 45   Adelie     Dream           37.0          16.9
+## 46   Adelie     Dream           39.6          18.8
+## 47   Adelie     Dream           41.1          19.0
+## 48   Adelie     Dream           37.5          18.9
+## 49   Adelie     Dream           36.0          17.9
+## 50   Adelie     Dream           42.3          21.2
+## 51   Adelie    Biscoe           39.6          17.7
+## 52   Adelie    Biscoe           40.1          18.9
+## 53   Adelie    Biscoe           35.0          17.9
+## 54   Adelie    Biscoe           42.0          19.5
+## 55   Adelie    Biscoe           34.5          18.1
+## 56   Adelie    Biscoe           41.4          18.6
+## 57   Adelie    Biscoe           39.0          17.5
+## 58   Adelie    Biscoe           40.6          18.8
+## 59   Adelie    Biscoe           36.5          16.6
+## 60   Adelie    Biscoe           37.6          19.1
+## 61   Adelie    Biscoe           35.7          16.9
+## 62   Adelie    Biscoe           41.3          21.1
+## 63   Adelie    Biscoe           37.6          17.0
+## 64   Adelie    Biscoe           41.1          18.2
+## 65   Adelie    Biscoe           36.4          17.1
+## 66   Adelie    Biscoe           41.6          18.0
+## 67   Adelie    Biscoe           35.5          16.2
+## 68   Adelie    Biscoe           41.1          19.1
+## 69   Adelie Torgersen           35.9          16.6
+## 70   Adelie Torgersen           41.8          19.4
+## 71   Adelie Torgersen           33.5          19.0
+## 72   Adelie Torgersen           39.7          18.4
+## 73   Adelie Torgersen           39.6          17.2
+## 74   Adelie Torgersen           45.8          18.9
+## 75   Adelie Torgersen           35.5          17.5
+## 76   Adelie Torgersen           42.8          18.5
+## 77   Adelie Torgersen           40.9          16.8
+## 78   Adelie Torgersen           37.2          19.4
+## 79   Adelie Torgersen           36.2          16.1
+## 80   Adelie Torgersen           42.1          19.1
+## 81   Adelie Torgersen           34.6          17.2
+## 82   Adelie Torgersen           42.9          17.6
+## 83   Adelie Torgersen           36.7          18.8
+## 84   Adelie Torgersen           35.1          19.4
+## 85   Adelie     Dream           37.3          17.8
+## 86   Adelie     Dream           41.3          20.3
+## 87   Adelie     Dream           36.3          19.5
+## 88   Adelie     Dream           36.9          18.6
+## 89   Adelie     Dream           38.3          19.2
+## 90   Adelie     Dream           38.9          18.8
+## 91   Adelie     Dream           35.7          18.0
+## 92   Adelie     Dream           41.1          18.1
+## 93   Adelie     Dream           34.0          17.1
+## 94   Adelie     Dream           39.6          18.1
+## 95   Adelie     Dream           36.2          17.3
+## 96   Adelie     Dream           40.8          18.9
+## 97   Adelie     Dream           38.1          18.6
+## 98   Adelie     Dream           40.3          18.5
+## 99   Adelie     Dream           33.1          16.1
+## 100  Adelie     Dream           43.2          18.5
+## 101  Adelie    Biscoe           35.0          17.9
+## 102  Adelie    Biscoe           41.0          20.0
+## 103  Adelie    Biscoe           37.7          16.0
+## 104  Adelie    Biscoe           37.8          20.0
+## 105  Adelie    Biscoe           37.9          18.6
+## 106  Adelie    Biscoe           39.7          18.9
+## 107  Adelie    Biscoe           38.6          17.2
+## 108  Adelie    Biscoe           38.2          20.0
+## 109  Adelie    Biscoe           38.1          17.0
+## 110  Adelie    Biscoe           43.2          19.0
+## 111  Adelie    Biscoe           38.1          16.5
+## 112  Adelie    Biscoe           45.6          20.3
+## 113  Adelie    Biscoe           39.7          17.7
+## 114  Adelie    Biscoe           42.2          19.5
+## 115  Adelie    Biscoe           39.6          20.7
+## 116  Adelie    Biscoe           42.7          18.3
+## 117  Adelie Torgersen           38.6          17.0
+## 118  Adelie Torgersen           37.3          20.5
+## 119  Adelie Torgersen           35.7          17.0
+## 120  Adelie Torgersen           41.1          18.6
+## 121  Adelie Torgersen           36.2          17.2
+## 122  Adelie Torgersen           37.7          19.8
+## 123  Adelie Torgersen           40.2          17.0
+## 124  Adelie Torgersen           41.4          18.5
+## 125  Adelie Torgersen           35.2          15.9
+##     flipper_length_mm body_mass_g    sex year
+## 1                 181        3750   male 2007
+## 2                 186        3800 female 2007
+## 3                 195        3250 female 2007
+## 4                  NA          NA   &lt;NA&gt; 2007
+## 5                 193        3450 female 2007
+## 6                 190        3650   male 2007
+## 7                 181        3625 female 2007
+## 8                 195        4675   male 2007
+## 9                 193        3475   &lt;NA&gt; 2007
+## 10                190        4250   &lt;NA&gt; 2007
+## 11                186        3300   &lt;NA&gt; 2007
+## 12                180        3700   &lt;NA&gt; 2007
+## 13                182        3200 female 2007
+## 14                191        3800   male 2007
+## 15                198        4400   male 2007
+## 16                185        3700 female 2007
+## 17                195        3450 female 2007
+## 18                197        4500   male 2007
+## 19                184        3325 female 2007
+## 20                194        4200   male 2007
+## 21                174        3400 female 2007
+## 22                180        3600   male 2007
+## 23                189        3800 female 2007
+## 24                185        3950   male 2007
+## 25                180        3800   male 2007
+## 26                187        3800 female 2007
+## 27                183        3550   male 2007
+## 28                187        3200 female 2007
+## 29                172        3150 female 2007
+## 30                180        3950   male 2007
+## 31                178        3250 female 2007
+## 32                178        3900   male 2007
+## 33                188        3300 female 2007
+## 34                184        3900   male 2007
+## 35                195        3325 female 2007
+## 36                196        4150   male 2007
+## 37                190        3950   male 2007
+## 38                180        3550 female 2007
+## 39                181        3300 female 2007
+## 40                184        4650   male 2007
+## 41                182        3150 female 2007
+## 42                195        3900   male 2007
+## 43                186        3100 female 2007
+## 44                196        4400   male 2007
+## 45                185        3000 female 2007
+## 46                190        4600   male 2007
+## 47                182        3425   male 2007
+## 48                179        2975   &lt;NA&gt; 2007
+## 49                190        3450 female 2007
+## 50                191        4150   male 2007
+## 51                186        3500 female 2008
+## 52                188        4300   male 2008
+## 53                190        3450 female 2008
+## 54                200        4050   male 2008
+## 55                187        2900 female 2008
+## 56                191        3700   male 2008
+## 57                186        3550 female 2008
+## 58                193        3800   male 2008
+## 59                181        2850 female 2008
+## 60                194        3750   male 2008
+## 61                185        3150 female 2008
+## 62                195        4400   male 2008
+## 63                185        3600 female 2008
+## 64                192        4050   male 2008
+## 65                184        2850 female 2008
+## 66                192        3950   male 2008
+## 67                195        3350 female 2008
+## 68                188        4100   male 2008
+## 69                190        3050 female 2008
+## 70                198        4450   male 2008
+## 71                190        3600 female 2008
+## 72                190        3900   male 2008
+## 73                196        3550 female 2008
+## 74                197        4150   male 2008
+## 75                190        3700 female 2008
+## 76                195        4250   male 2008
+## 77                191        3700 female 2008
+## 78                184        3900   male 2008
+## 79                187        3550 female 2008
+## 80                195        4000   male 2008
+## 81                189        3200 female 2008
+## 82                196        4700   male 2008
+## 83                187        3800 female 2008
+## 84                193        4200   male 2008
+## 85                191        3350 female 2008
+## 86                194        3550   male 2008
+## 87                190        3800   male 2008
+## 88                189        3500 female 2008
+## 89                189        3950   male 2008
+## 90                190        3600 female 2008
+## 91                202        3550 female 2008
+## 92                205        4300   male 2008
+## 93                185        3400 female 2008
+## 94                186        4450   male 2008
+## 95                187        3300 female 2008
+## 96                208        4300   male 2008
+## 97                190        3700 female 2008
+## 98                196        4350   male 2008
+## 99                178        2900 female 2008
+## 100               192        4100   male 2008
+## 101               192        3725 female 2009
+## 102               203        4725   male 2009
+## 103               183        3075 female 2009
+## 104               190        4250   male 2009
+## 105               193        2925 female 2009
+## 106               184        3550   male 2009
+## 107               199        3750 female 2009
+## 108               190        3900   male 2009
+## 109               181        3175 female 2009
+## 110               197        4775   male 2009
+## 111               198        3825 female 2009
+## 112               191        4600   male 2009
+## 113               193        3200 female 2009
+## 114               197        4275   male 2009
+## 115               191        3900 female 2009
+## 116               196        4075   male 2009
+## 117               188        2900 female 2009
+## 118               199        3775   male 2009
+## 119               189        3350 female 2009
+## 120               189        3325   male 2009
+## 121               187        3150 female 2009
+## 122               198        3500   male 2009
+## 123               176        3450 female 2009
+## 124               202        3875   male 2009
+## 125               186        3050 female 2009
 ##  [ reached 'max' / getOption("max.print") -- omitted 219 rows ]
 ```
 ]
@@ -493,6 +642,12 @@ vignette("tibble")
 
 
 
+
+
+
+
+
+
 class: penguin-tour
 
 &lt;img src="images/pptx/03-ggplot2.png" width="1200" /&gt;
@@ -516,7 +671,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-visualization-cheatsheet-thumbs.png)
 ]
 
@@ -559,14 +714,14 @@ View(penguins)
 glimpse(penguins)
 ## Rows: 344
 ## Columns: 8
-## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie…
-## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, To…
-## $ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, 37.8, 37.8, 41.1, 38.6, 34.6, 36.6, 38.7, 42.5, 34.4, 46.0, 37.8, 37.7, 35.9…
-## $ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, 17.1, 17.3, 17.6, 21.2, 21.1, 17.8, 19.0, 20.7, 18.4, 21.5, 18.3, 18.7, 19.2…
-## $ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, 180, 182, 191, 198, 185, 195, 197, 184, 194, 174, 180, 189, 185, 180, 187, 183, …
-## $ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 4250, 3300, 3700, 3200, 3800, 4400, 3700, 3450, 4500, 3325, 4200, 3400, 3600, 3800…
-## $ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male, NA, NA, NA, NA, female, male, male, female, female, male, female, male, female, …
-## $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20…
+## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie…
+## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgerse…
+## $ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39…
+## $ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20…
+## $ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 1…
+## $ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 36…
+## $ sex               &lt;fct&gt; male, female, female, NA, fema…
+## $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, …
 ```
 ]
 ]
@@ -585,7 +740,7 @@ ggplot(data = penguins,
 ]
 
 .pull-right[
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-18-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-18-1.png" width="504" /&gt;
 ]
 ]
 
@@ -601,7 +756,7 @@ ggplot(data = penguins,
 ]
 
 .pull-right[
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-20-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-20-1.png" width="504" /&gt;
 ]
 ]
 
@@ -619,7 +774,7 @@ ggplot(data = penguins,
 ]
 
 .pull-right[
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-22-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-22-1.png" width="504" /&gt;
 ]
 ]
 
@@ -635,12 +790,18 @@ ggplot(data = penguins,
 ]
 
 .pull-right[
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-23-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-23-1.png" width="504" /&gt;
 ]
 ]
 ]
 
 ---
+
+
+
+
+
+
 
 
 
@@ -683,7 +844,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-transformation-cheatsheet-thumbs.png)
 ]
 
@@ -718,7 +879,7 @@ background-size: 80px
 
 ```r
 select(penguins, species, sex, body_mass_g)
-## # A tibble: 344 x 3
+## # A tibble: 344 × 3
 ##    species sex    body_mass_g
 ##    &lt;fct&gt;   &lt;fct&gt;        &lt;int&gt;
 ##  1 Adelie  male          3750
@@ -740,7 +901,7 @@ select(penguins, species, sex, body_mass_g)
 ```r
 penguins %&gt;%
   select(species, sex, body_mass_g)
-## # A tibble: 344 x 3
+## # A tibble: 344 × 3
 ##    species sex    body_mass_g
 ##    &lt;fct&gt;   &lt;fct&gt;        &lt;int&gt;
 ##  1 Adelie  male          3750
@@ -768,14 +929,14 @@ We can use `arrange()` to arrange our data in descending order by **body_mass_g*
 glimpse(penguins)
 ## Rows: 344
 ## Columns: 8
-## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie…
-## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, To…
-## $ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, 37.8, 37.8, 41.1, 38.6, 34.6, 36.6, 38.7, 42.5, 34.4, 46.0, 37.8, 37.7, 35.9…
-## $ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, 17.1, 17.3, 17.6, 21.2, 21.1, 17.8, 19.0, 20.7, 18.4, 21.5, 18.3, 18.7, 19.2…
-## $ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, 180, 182, 191, 198, 185, 195, 197, 184, 194, 174, 180, 189, 185, 180, 187, 183, …
-## $ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 4250, 3300, 3700, 3200, 3800, 4400, 3700, 3450, 4500, 3325, 4200, 3400, 3600, 3800…
-## $ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male, NA, NA, NA, NA, female, male, male, female, female, male, female, male, female, …
-## $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20…
+## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie…
+## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgerse…
+## $ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39…
+## $ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20…
+## $ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 1…
+## $ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 36…
+## $ sex               &lt;fct&gt; male, female, female, NA, fema…
+## $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, …
 ```
 ]
 .pull-right[
@@ -784,7 +945,7 @@ glimpse(penguins)
 penguins %&gt;%
   select(species, sex, body_mass_g) %&gt;%
 * arrange(desc(body_mass_g))
-## # A tibble: 344 x 3
+## # A tibble: 344 × 3
 ##    species sex   body_mass_g
 ##    &lt;fct&gt;   &lt;fct&gt;       &lt;int&gt;
 ##  1 Gentoo  male         6300
@@ -816,7 +977,7 @@ penguins %&gt;%
   select(species, sex, body_mass_g) %&gt;%
 * group_by(species, sex) %&gt;%
 * summarize(mean = mean(body_mass_g))
-## # A tibble: 8 x 3
+## # A tibble: 8 × 3
 ## # Groups:   species [3]
 ##   species   sex     mean
 ##   &lt;fct&gt;     &lt;fct&gt;  &lt;dbl&gt;
@@ -855,7 +1016,7 @@ penguins %&gt;%
 * ungroup() %&gt;%
   group_by(species, sex, n_species) %&gt;%
   summarize(n = n())
-## # A tibble: 8 x 4
+## # A tibble: 8 × 4
 ## # Groups:   species, sex [8]
 ##   species   sex    n_species     n
 ##   &lt;fct&gt;     &lt;fct&gt;      &lt;int&gt; &lt;int&gt;
@@ -888,7 +1049,7 @@ penguins %&gt;%
   count(species, sex) %&gt;%
 * add_count(species, wt = n,
 *           name = "n_species")
-## # A tibble: 8 x 4
+## # A tibble: 8 × 4
 ##   species   sex        n n_species
 ##   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;     &lt;int&gt;
 ## 1 Adelie    female    73       152
@@ -918,7 +1079,7 @@ penguins %&gt;%
   add_count(species, wt = n, 
             name = "n_species") %&gt;%
 * mutate(prop = n/n_species*100)
-## # A tibble: 8 x 5
+## # A tibble: 8 × 5
 ##   species   sex        n n_species  prop
 ##   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;     &lt;int&gt; &lt;dbl&gt;
 ## 1 Adelie    female    73       152 48.0 
@@ -947,7 +1108,7 @@ penguins %&gt;%
             name = "n_species") %&gt;%
   mutate(prop = n/n_species*100) %&gt;%
 * filter(species == "Chinstrap")
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   species   sex        n n_species  prop
 ##   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;     &lt;int&gt; &lt;dbl&gt;
 ## 1 Chinstrap female    34        68    50
@@ -959,6 +1120,12 @@ penguins %&gt;%
 ]
 
 ---
+
+
+
+
+
+
 
 
 
@@ -986,7 +1153,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/factors.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/factors.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/forcats-cheatsheet-thumbs.png)
 ]
 
@@ -1045,20 +1212,22 @@ penguins_new &lt;-
 *          factor(year,
 *                 levels = unique(year)))
 penguins_new
-## # A tibble: 344 x 9
-##    species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year year_factor
-##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;      
-##  1 Adelie  Torgersen           39.1          18.7               181        3750 male    2007 2007       
-##  2 Adelie  Torgersen           39.5          17.4               186        3800 female  2007 2007       
-##  3 Adelie  Torgersen           40.3          18                 195        3250 female  2007 2007       
-##  4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;    2007 2007       
-##  5 Adelie  Torgersen           36.7          19.3               193        3450 female  2007 2007       
-##  6 Adelie  Torgersen           39.3          20.6               190        3650 male    2007 2007       
-##  7 Adelie  Torgersen           38.9          17.8               181        3625 female  2007 2007       
-##  8 Adelie  Torgersen           39.2          19.6               195        4675 male    2007 2007       
-##  9 Adelie  Torgersen           34.1          18.1               193        3475 &lt;NA&gt;    2007 2007       
-## 10 Adelie  Torgersen           42            20.2               190        4250 &lt;NA&gt;    2007 2007       
-## # … with 334 more rows
+## # A tibble: 344 × 9
+##    species island    bill_length_mm bill_depth_mm
+##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+##  1 Adelie  Torgersen           39.1          18.7
+##  2 Adelie  Torgersen           39.5          17.4
+##  3 Adelie  Torgersen           40.3          18  
+##  4 Adelie  Torgersen           NA            NA  
+##  5 Adelie  Torgersen           36.7          19.3
+##  6 Adelie  Torgersen           39.3          20.6
+##  7 Adelie  Torgersen           38.9          17.8
+##  8 Adelie  Torgersen           39.2          19.6
+##  9 Adelie  Torgersen           34.1          18.1
+## 10 Adelie  Torgersen           42            20.2
+## # … with 334 more rows, and 5 more variables:
+## #   flipper_length_mm &lt;int&gt;, body_mass_g &lt;int&gt;,
+## #   sex &lt;fct&gt;, year &lt;int&gt;, year_factor &lt;fct&gt;
 ```
 ]
 
@@ -1076,6 +1245,12 @@ levels(penguins_new$year_factor)
 ]
 
 ---
+
+
+
+
+
+
 
 
 
@@ -1117,7 +1292,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/strings.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/strings.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/strings-cheatsheet-thumbs.png)
 ]
 
@@ -1151,7 +1326,7 @@ background-size: 80px
 penguins %&gt;%
   select(species, island) %&gt;%
 * mutate(ISLAND = str_to_upper(island))
-## # A tibble: 344 x 3
+## # A tibble: 344 × 3
 ##    species island    ISLAND   
 ##    &lt;fct&gt;   &lt;fct&gt;     &lt;chr&gt;    
 ##  1 Adelie  Torgersen TORGERSEN
@@ -1177,7 +1352,7 @@ penguins %&gt;%
   select(species, island) %&gt;%
   mutate(ISLAND = str_to_upper(island)) %&gt;%
 * mutate(species_island = str_c(species, ISLAND, sep = "_"))
-## # A tibble: 344 x 4
+## # A tibble: 344 × 4
 ##    species island    ISLAND    species_island  
 ##    &lt;fct&gt;   &lt;fct&gt;     &lt;chr&gt;     &lt;chr&gt;           
 ##  1 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
@@ -1196,6 +1371,12 @@ penguins %&gt;%
 ]
 
 ---
+
+
+
+
+
+
 
 
 
@@ -1229,7 +1410,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png)
 ]
 
@@ -1266,20 +1447,22 @@ We can pretend that `penguins` wasn't tidy and that it looked instead like `unti
 untidy_penguins &lt;- 
   penguins %&gt;% pivot_wider(names_from = sex, values_from = body_mass_g)
 untidy_penguins
-## # A tibble: 344 x 9
-##    species island    bill_length_mm bill_depth_mm flipper_length_mm  year  male female  `NA`
-##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;
-##  1 Adelie  Torgersen           39.1          18.7               181  2007  3750     NA    NA
-##  2 Adelie  Torgersen           39.5          17.4               186  2007    NA   3800    NA
-##  3 Adelie  Torgersen           40.3          18                 195  2007    NA   3250    NA
-##  4 Adelie  Torgersen           NA            NA                  NA  2007    NA     NA    NA
-##  5 Adelie  Torgersen           36.7          19.3               193  2007    NA   3450    NA
-##  6 Adelie  Torgersen           39.3          20.6               190  2007  3650     NA    NA
-##  7 Adelie  Torgersen           38.9          17.8               181  2007    NA   3625    NA
-##  8 Adelie  Torgersen           39.2          19.6               195  2007  4675     NA    NA
-##  9 Adelie  Torgersen           34.1          18.1               193  2007    NA     NA  3475
-## 10 Adelie  Torgersen           42            20.2               190  2007    NA     NA  4250
-## # … with 334 more rows
+## # A tibble: 344 × 9
+##    species island    bill_length_mm bill_depth_mm
+##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+##  1 Adelie  Torgersen           39.1          18.7
+##  2 Adelie  Torgersen           39.5          17.4
+##  3 Adelie  Torgersen           40.3          18  
+##  4 Adelie  Torgersen           NA            NA  
+##  5 Adelie  Torgersen           36.7          19.3
+##  6 Adelie  Torgersen           39.3          20.6
+##  7 Adelie  Torgersen           38.9          17.8
+##  8 Adelie  Torgersen           39.2          19.6
+##  9 Adelie  Torgersen           34.1          18.1
+## 10 Adelie  Torgersen           42            20.2
+## # … with 334 more rows, and 5 more variables:
+## #   flipper_length_mm &lt;int&gt;, year &lt;int&gt;, male &lt;int&gt;,
+## #   female &lt;int&gt;, `NA` &lt;int&gt;
 ```
 
 ]
@@ -1296,25 +1479,33 @@ untidy_penguins %&gt;%
 * pivot_longer(cols = male:`NA`,
 *              names_to = "sex",
 *              values_to = "body_mass_g")
-## # A tibble: 1,032 x 8
-##    species island    bill_length_mm bill_depth_mm flipper_length_mm  year sex    body_mass_g
-##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt; &lt;int&gt; &lt;chr&gt;        &lt;int&gt;
-##  1 Adelie  Torgersen           39.1          18.7               181  2007 male          3750
-##  2 Adelie  Torgersen           39.1          18.7               181  2007 female          NA
-##  3 Adelie  Torgersen           39.1          18.7               181  2007 NA              NA
-##  4 Adelie  Torgersen           39.5          17.4               186  2007 male            NA
-##  5 Adelie  Torgersen           39.5          17.4               186  2007 female        3800
-##  6 Adelie  Torgersen           39.5          17.4               186  2007 NA              NA
-##  7 Adelie  Torgersen           40.3          18                 195  2007 male            NA
-##  8 Adelie  Torgersen           40.3          18                 195  2007 female        3250
-##  9 Adelie  Torgersen           40.3          18                 195  2007 NA              NA
-## 10 Adelie  Torgersen           NA            NA                  NA  2007 male            NA
-## # … with 1,022 more rows
+## # A tibble: 1,032 × 8
+##    species island    bill_length_mm bill_depth_mm
+##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+##  1 Adelie  Torgersen           39.1          18.7
+##  2 Adelie  Torgersen           39.1          18.7
+##  3 Adelie  Torgersen           39.1          18.7
+##  4 Adelie  Torgersen           39.5          17.4
+##  5 Adelie  Torgersen           39.5          17.4
+##  6 Adelie  Torgersen           39.5          17.4
+##  7 Adelie  Torgersen           40.3          18  
+##  8 Adelie  Torgersen           40.3          18  
+##  9 Adelie  Torgersen           40.3          18  
+## 10 Adelie  Torgersen           NA            NA  
+## # … with 1,022 more rows, and 4 more variables:
+## #   flipper_length_mm &lt;int&gt;, year &lt;int&gt;, sex &lt;chr&gt;,
+## #   body_mass_g &lt;int&gt;
 ```
 ]
 ]
 
 ---
+
+
+
+
+
+
 
 
 
@@ -1354,7 +1545,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-<i class="fas  fa-file-pdf "></i> PDF: https://github.com/rstudio/cheatsheets/raw/master/purrr.pdf
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"/></svg> PDF: https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/purrr-cheatsheet-thumbs.png)
 ]
 
@@ -1396,12 +1587,12 @@ background-size: 80px
 
 .pull-left[
 ### Let's turn this plot
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-50-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-50-1.png" width="504" /&gt;
 ]
 
 .pull-right[
 ### Into this one!
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-51-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-51-1.png" width="504" /&gt;
 
 .panel[.panel-name[Option 1]
 
@@ -1428,7 +1619,7 @@ penguins %&gt;%
 ]
 
 .pull-right[
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-54-1.png" width="504" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-54-1.png" width="504" /&gt;
 ]
 ]
 
@@ -1445,7 +1636,7 @@ penguins %&gt;%
 * scale_fill_manual(values = nord::nord_palettes$frost)
 ```
 
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-55-1.png" width="360" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-55-1.png" width="360" /&gt;
 ]
 
 .pull-right[
@@ -1458,7 +1649,7 @@ penguins %&gt;%
 * nord::scale_fill_nord(palette = "frost")
 ```
 
-&lt;img src="2020-rladies-chi-tidyverse_files/figure-html/unnamed-chunk-56-1.png" width="360" /&gt;
+&lt;img src="tour-of-the-tidyverse_files/figure-html/unnamed-chunk-56-1.png" width="360" /&gt;
 ]
 ]
 
@@ -1514,6 +1705,7 @@ class: about-me, middle, center
 # Thank you! 
 
 ## Any questions?
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -1563,6 +1755,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

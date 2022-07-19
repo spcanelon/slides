@@ -46,7 +46,7 @@ background-size: 80px
 
 .panel[.panel-name[Cheatsheet]
 
-`r icon::fa("file-pdf")` PDF: https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf
+`r fontawesome::fa("file-pdf")` PDF: https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf
 ![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-transformation-cheatsheet-thumbs.png)
 ]
 

@@ -46,6 +46,11 @@ h4, h5, h6 {
   @extend .f7;
 }
 
+.card-subtitle {
+  @extend .f7;
+  margin-top: 0.5em;
+}
+
 p {
   @extend .f6, .measure, .lh-copy, .center;
   text-align: center;

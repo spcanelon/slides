@@ -46,3 +46,5 @@ format:
     monobackgroundcolor: "#FFFFFF"
     backgroundcolor: "#fffbf2"
 
+execute:
+  freeze: auto

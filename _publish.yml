@@ -1,0 +1,5 @@
+# created manually following: https://quarto.org/docs/publishing/netlify.html#publish.yml
+- source: project
+  netlify:
+    - id: "5c210691-e674-4309-ad99-9bbe8fca4dcc"
+      url: "https://slides.silviacanelon.com"

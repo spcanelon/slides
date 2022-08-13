@@ -25,64 +25,55 @@ h4, h5, h6 {
   font-weight: 300;
 }
 
-h1.title {
-  font-size: 3em;
-  text-align: center;
-  //display: grid;
-  //height: 50vh;
-  //margin: 0;
-  //place-items: center center;
+#title-block-header.quarto-title-block.default {
+  @extend .mb4;
+  .quarto-title .title {
+    @extend .f1, .lh-solid, .center, .fw4, .mt5, .mb2;
+    text-align: center;
+    //font-size: 3em;
+    //display: grid;
+    //height: 50vh;
+    //margin: 0;
+    //place-items: center center;
+  }
+}
+
+.card-title {
+  @extend .f6;
+}
+
+.listing-date {
+  @extend .f7;
 }
 
 p {
+  @extend .f6, .measure, .lh-copy, .center;
   text-align: center;
-  font-size: 1em;
-  font-weight: lighter;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 30em;
 }
 
 // Navigation bar
 
-.navbar {
-  //position: sticky;
-  //top: 0;
-  will-change: transform;
-  transition: transform 200ms linear;
-  opacity: .9;
+#quarto-header {
+  @extend .o-90;
 }
 
-.navbar-dark .navbar-nav .nav-link {
- color: $spc-secondary;
- text-transform: uppercase;
- letter-spacing: 0.1em;
- font-weight: lighter;
+#navbarCollapse {
+  @extend .mt3;
+  .navbar-nav {
+    .nav-link {
+      text-transform: uppercase;
+      color: $spc-secondary;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      @extend .f6, .dib, .pv1, .ph2;
+    }
+    .nav-link:hover {
+      text-decoration: underline 1px;
+      // WIP: transition: text-decoration .15s ease-in;
+    }
+  }
 }
 
-.navbar-nav .nav-link:hover {
-  color: $spc-secondary !important;
-  text-decoration: underline 1px;
-  // WIP: transition: $spc-secondary .15s ease-in;
+.navbar-brand {
+  @extend .mt2;
 }
-
-//LINKS (WIP)
-//Docs: http://tachyons.io/docs/elements/links/
-
-/*
-.link {
-  text-decoration: none;
-  transition: color .15s ease-in;
-}
-
-.link:link,
-.link:visited {
-  transition: color .15s ease-in;
-}
-.link:hover   {
-  transition: color .15s ease-in;
-}
-.link:active  {
-  transition: color .15s ease-in;
-}
-*/

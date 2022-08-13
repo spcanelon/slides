@@ -111,17 +111,17 @@ background-size: 80px
 <div class="flex" style="margin: 0 0em;">
   <div class="column">
     <h3> Chinstrap </h3>
-    <img src="images/penguin_chinstrap.jpg" style="width: 100%;">
+    <img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_chinstrap.jpg?raw=true" style="width: 100%;">
   </div>
   
   <div class="column" style="margin: 0 1em;">
     <h3> Gentoo </h3>
-    <img src="images/penguin_gentoo.jpg" style="">
+    <img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_gentoo.jpg?raw=true" style="">
   </div>
   
   <div class="column" style="margin: 0 0em;">
     <h3> Adélie </h3>
-    <img src="images/penguin_adelie.jpg" style="">
+    <img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_adelie.jpg?raw=true" style="">
   </div>
 </div>
 

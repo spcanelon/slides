@@ -1,0 +1,15 @@
+---
+title: "Slides"
+listing:
+  contents:
+    - "*/index.qmd"
+    - "*/metadata.yml"
+  type: grid
+  fields: [date, title, image]
+  sort: "date desc"
+  image-height: 100%
+  #image-placeholder: featured-default.png
+page-layout: full
+---
+
+This gallery features publicly available slide decks.

@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "*.Rmd"
+    - "!2021-amia-informatics-summit/"
+    - "!2022-tdw-ehr-lessons/"
+    - "!introduccion-xaringan/"
+    - "!tour-of-the-tidyverse/"
+
+website:
+  title: "Slides | Silvia Canelón"
+  search: false
+  favicon: img/logo_rounded.ico
+  navbar:
+    title: false
+    logo: img/logo_rounded.png
+    logo-alt: "Home"
+    right:
+      - icon: github
+        href: https://github.com/spcanelon/slides
+        aria-label: GitHub repo
+    left:
+      - text: Silvia Canelón
+        href: https://www.silviacanelon.com
+
+  site-url: https://slides.silviacanelon.com
+  description: 'Collection of publicly available slide decks created by Silvia Canelón.'
+
+  opengraph: true
+  twitter-card:
+    creator: "@spcanelon"
+    image: "/images/twitter-card.png"
+
+format:
+  # https://quarto.org/docs/output-formats/html-themes.html#basic-options
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    mainfont: "Red Hat Text"
+    fontcolor: "#002642"
+    linkcolor: "#A23E02"
+    monofont: "Consolas"
+    monobackgroundcolor: "#FFFFFF"
+    backgroundcolor: "#fffbf2"
+

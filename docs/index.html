@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.0.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -56,9 +56,9 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-subtitle','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-subtitle","listing-author","listing-date","listing-image","listing-path"],
+      searchColumns: ["listing-title","listing-subtitle","listing-author","listing-date","listing-image","listing-path","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -139,13 +139,16 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>This gallery features publicly available slide decks.</p>
+<p class="f7 measure lh-copy tc center i">
+Written by Silvia Canelón
+</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="April 27, 2022">
+<div class="g-col-1" data-index="0" data-categories="pptx" data-listing-date-sort="April 27, 2022">
 <a href="https://www.silviacanelon.com/talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -155,6 +158,14 @@ ul.task-list{list-style: none;}
 <h5 class="no-anchor card-title listing-title">
 Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records
 </h5>
+<div class="card-subtitle listing-subtitle">
+2022 DBEI &amp; CCEB Research Day
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('pptx'); return false;">
+pptx
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Apr 27, 2022
@@ -164,7 +175,7 @@ Apr 27, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="2022-02-11">
+<div class="g-col-1" data-index="1" data-categories="xaringan" data-listing-date-sort="2022-02-11">
 <a href="./2022-tdw-ehr-lessons/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -172,8 +183,16 @@ Apr 27, 2022
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Lessons Learned from the EHR
+Lessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records
 </h5>
+<div class="card-subtitle listing-subtitle">
+Toronto Data Workshop
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+xaringan
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Feb 11, 2022
@@ -183,7 +202,7 @@ Feb 11, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="2021-05-04">
+<div class="g-col-1" data-index="2" data-categories="xaringan" data-listing-date-sort="2021-05-04">
 <a href="https://spcanelon.github.io/csvConf2021/slides" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -193,6 +212,14 @@ Feb 11, 2022
 <h5 class="no-anchor card-title listing-title">
 Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community
 </h5>
+<div class="card-subtitle listing-subtitle">
+csv, conf, v6
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+xaringan
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 May 4, 2021
@@ -202,7 +229,7 @@ May 4, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="2021-03-23">
+<div class="g-col-1" data-index="3" data-categories="xaringan" data-listing-date-sort="2021-03-23">
 <a href="./2022-amia-informatics-summit/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -212,6 +239,14 @@ May 4, 2021
 <h5 class="no-anchor card-title listing-title">
 The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data
 </h5>
+<div class="card-subtitle listing-subtitle">
+2021 AMIA Informatics Summit
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+xaringan
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Mar 23, 2021
@@ -221,7 +256,7 @@ Mar 23, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="2021-02-18">
+<div class="g-col-1" data-index="4" data-categories="google" data-listing-date-sort="2021-02-18">
 <a href="http://tiny.cc/rladies-phl-teaching-spc" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -231,6 +266,14 @@ Mar 23, 2021
 <h5 class="no-anchor card-title listing-title">
 From Learn-R to Teach-R: An Expert Panel on Effective R Instruction
 </h5>
+<div class="card-subtitle listing-subtitle">
+R-Ladies Philly
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('google'); return false;">
+google
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Feb 18, 2021
@@ -240,7 +283,7 @@ Feb 18, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="2020-12-17">
+<div class="g-col-1" data-index="5" data-categories="xaringan" data-listing-date-sort="2020-12-17">
 <a href="./introduccion-xaringan/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -250,6 +293,14 @@ Feb 18, 2021
 <h5 class="no-anchor card-title listing-title">
 Introducción al paquete xaringan
 </h5>
+<div class="card-subtitle listing-subtitle">
+R-Ladies Xalapa
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+xaringan
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Dec 17, 2020
@@ -259,7 +310,7 @@ Dec 17, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-date-sort="2020-08-31">
+<div class="g-col-1" data-index="6" data-categories="xaringan" data-listing-date-sort="2020-08-31">
 <a href="./tour-of-the-tidyverse/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -269,6 +320,14 @@ Dec 17, 2020
 <h5 class="no-anchor card-title listing-title">
 An Antarctic Tour of the Tidyverse
 </h5>
+<div class="card-subtitle listing-subtitle">
+R-Ladies Chicago
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+xaringan
+</div>
+</div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Aug 31, 2020

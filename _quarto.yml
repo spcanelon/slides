@@ -16,7 +16,7 @@ website:
   navbar:
     title: false
     logo: img/logo_rounded.png
-    logo-alt: "Home"
+    logo-alt: "Home" #doesn't seem to show up
     right:
       - icon: github
         href: https://github.com/spcanelon/slides

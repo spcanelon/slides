@@ -4,3 +4,5 @@ Thumbs.db
 /public/
 /resources/
 .Rhistory
+
+/.quarto/

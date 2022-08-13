@@ -1,5 +1,8 @@
 title: "Introducción al paquete xaringan"
+subtitle: "R-Ladies Xalapa"
 author: "Silvia Canelón, PhD"
 date: 2020-12-17
 image: /introduccion-xaringan/featured.png
 path: /introduccion-xaringan/index.html
+categories:
+  - xaringan

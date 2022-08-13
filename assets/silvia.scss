@@ -1,0 +1,84 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;1,400&display=swap');
+
+// import tachyons
+// https://github.com/tachyons-css/tachyons-sass
+@import "tachyons.scss";
+
+// https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+$spc-bg: #fffbf2;
+$spc-bg-dark: #FAF0E3;
+$spc-primary: #002642;
+$spc-primary-light: #2E4963 ;
+$spc-secondary: #A23E02;
+$spc-secondary-light: #936c10;
+
+$navbar-bg: $spc-bg;
+
+/*-- scss:rules --*/
+h1, h2, h3 {
+  font-family: "Petrona", serif;
+}
+
+h4, h5, h6 {
+  font-family: "Red Hat Text", Sans-Serif;
+  font-weight: 300;
+}
+
+#title-block-header.quarto-title-block.default {
+  @extend .mb4;
+  .quarto-title .title {
+    @extend .f1, .lh-solid, .center, .fw4, .mt5, .mb2;
+    text-align: center;
+    //font-size: 3em;
+    //display: grid;
+    //height: 50vh;
+    //margin: 0;
+    //place-items: center center;
+  }
+}
+
+.card-title {
+  @extend .f6;
+}
+
+.listing-date {
+  @extend .f7;
+}
+
+.card-subtitle {
+  @extend .f7;
+  margin-top: 0.5em;
+}
+
+p {
+  @extend .f6, .measure, .lh-copy, .center;
+  text-align: center;
+}
+
+// Navigation bar
+
+#quarto-header {
+  @extend .o-90;
+}
+
+#navbarCollapse {
+  @extend .mt3;
+  .navbar-nav {
+    .nav-link {
+      text-transform: uppercase;
+      color: $spc-secondary;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      @extend .f6, .dib, .pv1, .ph2;
+    }
+    .nav-link:hover {
+      text-decoration: underline 1px;
+      // WIP: transition: text-decoration .15s ease-in;
+    }
+  }
+}
+
+.navbar-brand {
+  @extend .mt2;
+}

@@ -1,0 +1,84 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;1,400&display=swap');
+
+// https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+$spc-bg: #fffbf2;
+$spc-bg-dark: #FAF0E3;
+$spc-primary: #002642;
+$spc-primary-light: #2E4963 ;
+$spc-secondary: #A23E02;
+$spc-secondary-light: #936c10;
+
+$navbar-bg: $spc-bg;
+
+/*-- scss:rules --*/
+h1, h2, h3 {
+  font-family: "Petrona", serif;
+}
+
+h4, h5, h6 {
+  font-family: "Red Hat Text", Sans-Serif;
+  font-weight: 300;
+}
+
+h1.title {
+  font-size: 3em;
+  text-align: center;
+  //display: grid;
+  //height: 50vh;
+  //margin: 0;
+  //place-items: center center;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: lighter;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 30em;
+}
+
+// Navigation bar
+
+.navbar {
+  //position: sticky;
+  //top: 0;
+  will-change: transform;
+  transition: transform 200ms linear;
+  opacity: .9;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+ color: $spc-secondary;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ font-weight: lighter;
+}
+
+.navbar-nav .nav-link:hover {
+  color: $spc-secondary !important;
+  text-decoration: underline 1px;
+  // WIP: transition: $spc-secondary .15s ease-in;
+}
+
+//LINKS (WIP)
+//Docs: http://tachyons.io/docs/elements/links/
+
+/*
+.link {
+  text-decoration: none;
+  transition: color .15s ease-in;
+}
+
+.link:link,
+.link:visited {
+  transition: color .15s ease-in;
+}
+.link:hover   {
+  transition: color .15s ease-in;
+}
+.link:active  {
+  transition: color .15s ease-in;
+}
+*/

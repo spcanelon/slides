@@ -1,6 +1,10 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;1,400&display=swap');
 
+// import tachyons
+// https://github.com/tachyons-css/tachyons-sass
+@import "tachyons.scss";
+
 // https://quarto.org/docs/output-formats/html-themes.html#sass-variables
 $spc-bg: #fffbf2;
 $spc-bg-dark: #FAF0E3;

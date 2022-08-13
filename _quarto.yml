@@ -38,7 +38,7 @@ format:
   html:
     theme:
       - cosmo
-      - styles.scss
+      - assets/silvia.scss
     mainfont: "Red Hat Text"
     fontcolor: "#002642"
     linkcolor: "#A23E02"

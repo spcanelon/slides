@@ -5,10 +5,11 @@ listing:
     - "*/index.qmd"
     - "*/metadata.yml"
   type: grid
-  fields: [date, title, image]
+  fields: [date, title, image, categories]
   sort: "date desc"
   image-height: 100%
   #image-placeholder: featured-default.png
+  #categories: unnumbered 
 page-layout: full
 ---
 

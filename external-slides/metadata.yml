@@ -4,14 +4,20 @@
   date: "April 27, 2022"
   image: https://github.com/spcanelon/silvia/blob/main/content/talk/2022-04-27-dbei-research-day/featured.png?raw=true
   path: https://www.silviacanelon.com/talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
+  categories:
+    - pptx
 - title: "Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"
   subtitle: "csv, conf, v6"
   date: 2021-05-04
   image: external-slides/2021-data-viz-accessibility.png
   path: https://spcanelon.github.io/csvConf2021/slides
+  categories:
+    - xaringan
 - title: "From Learn-R to Teach-R: An Expert Panel on Effective R Instruction"
   subtitle: "R-Ladies Philly"
   date: 2021-02-18
   image: https://silvia.rbind.io/talk/2021-r-teaching-panel/featured.png
   path: http://tiny.cc/rladies-phl-teaching-spc
+  categories:
+    - google
 

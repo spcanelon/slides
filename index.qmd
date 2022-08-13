@@ -9,6 +9,7 @@ listing:
   sort: "date desc"
   image-height: 100%
   #image-placeholder: featured-default.png
+  #categories: unnumbered 
 page-layout: full
 ---
 

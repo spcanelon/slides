@@ -1,0 +1,65 @@
+# Internal slide decks
+- title: "An Antarctic Tour of the Tidyverse"
+  subtitle: "Quarto RevealJS Remix"
+  author: "Silvia Canelón, PhD"
+  date: 2022-08-14
+  image: /tour-of-the-tidyverse-revealjs/featured.png
+  path: /tour-of-the-tidyverse-revealjs/index.qmd
+  categories:
+    - revealjs
+- title: "Lessons Learned from the EHR: Things I've Learned from Working with Electronic Health Records"
+  subtitle: "Toronto Data Workshop"
+  author: "Silvia Canelón, PhD"
+  date: 2022-02-11
+  image: /2022-tdw-ehr-lessons/featured.png
+  path: /2022-tdw-ehr-lessons/index.html
+  categories:
+    - xaringan
+- title: "The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data"
+  subtitle: "2021 AMIA Informatics Summit"
+  author: "Silvia Canelón, PhD"
+  date: 2021-03-23
+  image: /2021-amia-informatics-summit/featured.png
+  path: /2021-amia-informatics-summit/index.html
+  categories:
+    - xaringan
+- title: "Introducción al paquete xaringan"
+  subtitle: "R-Ladies Xalapa"
+  author: "Silvia Canelón, PhD"
+  date: 2020-12-17
+  image: /introduccion-xaringan/featured.png
+  path: /introduccion-xaringan/index.html
+  categories:
+    - xaringan
+- title: "An Antarctic Tour of the Tidyverse"
+  subtitle: "R-Ladies Chicago"
+  author: "Silvia Canelón, PhD"
+  date: 2020-08-31
+  image: /tour-of-the-tidyverse/featured.png
+  path: /tour-of-the-tidyverse/index.html
+  categories:
+    - xaringan
+
+# External slide decks
+- title: "Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records"
+  subtitle: "2022 DBEI & CCEB Research Day"
+  date: 2022-04-27
+  image: https://github.com/spcanelon/silvia/blob/main/content/talk/2022-04-27-dbei-research-day/featured.png?raw=true
+  path: https://www.silviacanelon.com/talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
+  categories:
+    - pptx
+- title: "Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"
+  author: "Silvia Canelón, PhD & Liz Hare, PhD"
+  subtitle: "csv, conf, v6"
+  date: 2021-05-04
+  image: img/2021-data-viz-accessibility.png
+  path: https://spcanelon.github.io/csvConf2021/slides
+  categories:
+    - xaringan
+- title: "From Learn-R to Teach-R: An Expert Panel on Effective R Instruction"
+  subtitle: "R-Ladies Philly"
+  date: 2021-02-18
+  image: https://silvia.rbind.io/talk/2021-r-teaching-panel/featured.png
+  path: http://tiny.cc/rladies-phl-teaching-spc
+  categories:
+    - google

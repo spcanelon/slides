@@ -31,7 +31,7 @@ website:
   opengraph: true
   twitter-card:
     creator: "@spcanelon"
-    image: "/images/twitter-card.png"
+    image: "/img/social-card.png"
 
 format:
   # https://quarto.org/docs/output-formats/html-themes.html#basic-options

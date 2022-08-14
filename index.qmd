@@ -2,13 +2,12 @@
 title: "Slides"
 listing:
   contents:
-    - "*/index.qmd"
-    - "*/metadata.yml"
+    - "metadata.yml"
   type: grid
   fields: [date, title, subtitle, image, categories]
   sort: "date desc"
   image-height: 100%
-  #image-placeholder: featured-default.png
+  image-placeholder: img/social-card.png
   #categories: unnumbered 
 page-layout: full
 ---

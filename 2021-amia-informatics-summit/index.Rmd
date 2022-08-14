@@ -68,8 +68,14 @@ xaringanExtra::style_share_again(
   share_buttons = c("twitter", "linkedin", "pocket")
 )
 
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, comment = NA, 
-                      dpi = 300, fig.align = "center", out.width = '72%', cache = FALSE)
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE, 
+                      comment = NA, 
+                      dpi = 300, 
+                      fig.align = "center", 
+                      out.width = '72%', 
+                      cache = FALSE)
 
 options(scipen = 999)
 ```
@@ -94,10 +100,11 @@ summary_race <- read_rds("data/distribution_race.rds")
 
 
 class: title-slide, left, top
-background-image: url(img/AMIA-logo.png), url(img/AMIA-title-slide-1.png)
-background-size: 200px, cover
-background-position: 18% 13%, center
+background-image: url(img/AMIA-title-slide-1.png)
+background-size: cover
+background-position: center
 
+<img style="position: absolute; top: 18%; left: 15%;" src="img/AMIA-logo.png" width="200px" alt="AMIA"/>
 
 # The Impact of Sickle Cell Status on<br>Adverse Delivery Outcomes Using<br>Electronic Health Record Data
 ## `r rmarkdown::metadata$session`

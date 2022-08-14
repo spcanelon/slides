@@ -4,34 +4,6 @@
     "href": "index.html",
     "title": "Slides",
     "section": "",
-    "text": "Written by Silvia Canelón\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nQuarto RevealJS Remix\n\n\n\nrevealjs\n\n\n\n\nAug 14, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\n2022 DBEI & CCEB Research Day\n\n\n\npptx\n\n\n\n\nApr 27, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records\n\n\nToronto Data Workshop\n\n\n\nxaringan\n\n\n\n\nFeb 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\ncsv, conf, v6\n\n\n\nxaringan\n\n\n\n\nMay 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\n2021 AMIA Informatics Summit\n\n\n\nxaringan\n\n\n\n\nMar 23, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nR-Ladies Philly\n\n\n\ngoogle\n\n\n\n\nFeb 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción al paquete xaringan\n\n\nR-Ladies Xalapa\n\n\n\nxaringan\n\n\n\n\nDec 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nR-Ladies Chicago\n\n\n\nxaringan\n\n\n\n\nAug 31, 2020\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "tour-of-the-tidyverse-revealjs/index.html#silvia-canelón-phd-r-ladies-chicago",
-    "href": "tour-of-the-tidyverse-revealjs/index.html#silvia-canelón-phd-r-ladies-chicago",
-    "title": "An Antarctic Tour of the Tidyverse",
-    "section": "Silvia Canelón, PhD • R-Ladies Chicago",
-    "text": "Silvia Canelón, PhD • R-Ladies Chicago"
-  },
-  {
-    "objectID": "tour-of-the-tidyverse-revealjs/index.html#repo-spcanelontour-of-the-tidyverse",
-    "href": "tour-of-the-tidyverse-revealjs/index.html#repo-spcanelontour-of-the-tidyverse",
-    "title": "An Antarctic Tour of the Tidyverse",
-    "section": "GitHub repo: spcanelon/tour-of-the-tidyverse",
-    "text": "GitHub repo: spcanelon/tour-of-the-tidyverse"
-  },
-  {
-    "objectID": "tour-of-the-tidyverse-revealjs/index.html#silvia-canelón",
-    "href": "tour-of-the-tidyverse-revealjs/index.html#silvia-canelón",
-    "title": "An Antarctic Tour of the Tidyverse",
-    "section": "Silvia Canelón",
-    "text": "Silvia Canelón\nPostdoctoral Research Scientist\nUniversity of Pennsylvania, Philadelphia, PA, USA\n\nLink silviacanelon.com Twitter @spcanelon GitHub @spcanelon\n\nPhoto by Lucas Huffman on Unsplash"
-  },
-  {
-    "objectID": "tour-of-the-tidyverse-revealjs/index.html#slide-title",
-    "href": "tour-of-the-tidyverse-revealjs/index.html#slide-title",
-    "title": "An Antarctic Tour of the Tidyverse",
-    "section": "Slide Title",
-    "text": "Slide Title\n\nGreen 1\nBrown\nPurple\n\n\n\n\n\n\n\n\nSome additional commentary of more peripheral interest.\nA footnote"
+    "text": "Written by Silvia Canelón\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\n2022 DBEI & CCEB Research Day\n\n\n\npptx\n\n\n\n\nApr 27, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records\n\n\nToronto Data Workshop\n\n\n\nxaringan\n\n\n\n\nFeb 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\ncsv, conf, v6\n\n\n\nxaringan\n\n\n\n\nMay 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\n2021 AMIA Informatics Summit\n\n\n\nxaringan\n\n\n\n\nMar 23, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nR-Ladies Philly\n\n\n\ngoogle\n\n\n\n\nFeb 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción al paquete xaringan\n\n\nR-Ladies Xalapa\n\n\n\nxaringan\n\n\n\n\nDec 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nR-Ladies Chicago\n\n\n\nxaringan\n\n\n\n\nAug 31, 2020\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

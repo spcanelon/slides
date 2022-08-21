@@ -1,7 +1,9 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;1,400&display=swap');
 
-// import tachyons
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+// import tachyons ------------------------------------------------------------
 // https://github.com/tachyons-css/tachyons-sass
 @import "tachyons.scss";
 
@@ -21,7 +23,7 @@ h1, h2, h3 {
 }
 
 h4, h5, h6 {
-  font-family: "Red Hat Text", Sans-Serif;
+  font-family: 'Red Hat Text', sans-serif;
   font-weight: 300;
 }
 

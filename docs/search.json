@@ -4,6 +4,97 @@
     "href": "index.html",
     "title": "Slides",
     "section": "",
-    "text": "Written by Silvia Canelón\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\n2022 DBEI & CCEB Research Day\n\n\n\npptx\n\n\n\n\nApr 27, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records\n\n\nToronto Data Workshop\n\n\n\nxaringan\n\n\n\n\nFeb 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\ncsv, conf, v6\n\n\n\nxaringan\n\n\n\n\nMay 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\n2021 AMIA Informatics Summit\n\n\n\nxaringan\n\n\n\n\nMar 23, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nR-Ladies Philly\n\n\n\ngoogle\n\n\n\n\nFeb 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción al paquete xaringan\n\n\nR-Ladies Xalapa\n\n\n\nxaringan\n\n\n\n\nDec 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nR-Ladies Chicago\n\n\n\nxaringan\n\n\n\n\nAug 31, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Written by Silvia Canelón\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\n2022 DBEI & CCEB Research Day\n\n\n\npptx\n\n\n\n\nApr 27, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records\n\n\nToronto Data Workshop\n\n\n\nxaringan\n\n\n\n\nFeb 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\ncsv, conf, v6\n\n\n\nxaringan\n\n\n\n\nMay 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\n2021 AMIA Informatics Summit\n\n\n\nxaringan\n\n\n\n\nMar 23, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-Ladies Themed xaringan Template\n\n\nR-Ladies Global\n\n\n\nxaringan\n\n\n\n\nMar 16, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nR-Ladies Philly\n\n\n\ngoogle\n\n\n\n\nFeb 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción al paquete xaringan\n\n\nR-Ladies Xalapa\n\n\n\nxaringan\n\n\n\n\nDec 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Your Work with xaringan: The Beyond\n\n\n2020 NHS-R Conference\n\n\n\nxaringan\n\n\n\n\nNov 5, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Your Work with xaringan: The Basics\n\n\n2020 NHS-R Conference\n\n\n\nxaringan\n\n\n\n\nNov 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNHS-R xaringan Theme\n\n\nCustom CSS for the NHS-R Community\n\n\n\nxaringan\n\n\n\n\nOct 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing lubridate to work with time intervals\n\n\nRStudio Instructor Certification Teaching Exam\n\n\n\nxaringan\n\n\n\n\nSep 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nR-Ladies Chicago\n\n\n\nxaringan\n\n\n\n\nAug 31, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/01-readr.html#section",
+    "href": "tour-of-the-tidyverse-revealjs/01-readr.html#section",
+    "title": "Slides | Silvia Canelón",
+    "section": "",
+    "text": "Photo by James Eades on Unsplash"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/01-readr.html#readr-info",
+    "href": "tour-of-the-tidyverse-revealjs/01-readr.html#readr-info",
+    "title": "Slides | Silvia Canelón",
+    "section": "readr: info",
+    "text": "readr: info\n\nOverviewCheatsheetReading\n\n\n\n\nImporting data is the very first step!\nYou can use readr to import rectangular data.\n\nYou can import…\n\ncomma separated (CSV) files with read_csv()\ntab separated files with read_tsv()\ngeneral delimited files with read_delim()\nfixed width files with read_fwf()\ntabular files where columns are separated by white-space with read_table()\nweb log files with read_log()\n\n\n\n\n\n PDF: https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf \n\n\n\n\n\n\n\nR for Data Science: Ch 11 Data import\nPackage documentation: https://readr.tidyverse.org/"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/01-readr.html#readr-exercise",
+    "href": "tour-of-the-tidyverse-revealjs/01-readr.html#readr-exercise",
+    "title": "Slides | Silvia Canelón",
+    "section": "readr: exercise",
+    "text": "readr: exercise\n\nRead data inSave data\n\n\nBoth options below will get you the same dataset!\nOption 1\n\n# option 1: load using URL ----\nraw_adelie_url <- read_csv(\"https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.219.3&entityid=002f3893385f710df69eeebe893144ff\")\n\nOption 2\n\n# option 2: load using filepath ----\nraw_adelie_filepath <- read_csv(\"tutorial/raw_adelie.csv\")\n\n\n\n\nLucky for us, the palmerpenguins 📦 compiles data from all three species together for us!\npenguins contains a clean dataset\n\npenguins <- \n  palmerpenguins::penguins \n\nhead(penguins)\n## # A tibble: 6 × 8\n##   species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year\n##   <fct>   <fct>              <dbl>         <dbl>       <int>   <int> <fct> <int>\n## 1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007\n## 2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007\n## 3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007\n## 4 Adelie  Torgersen           NA            NA            NA      NA <NA>   2007\n## 5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007\n## 6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007\n## # … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g\n\n\n\n\npenguins_raw contains raw data\n\npenguins_raw <- \n  palmerpenguins::penguins_raw\n\nhead(penguins_raw)\n## # A tibble: 6 × 17\n##   study…¹ Sampl…² Species Region Island Stage Indiv…³ Clutc…⁴ `Date Egg` Culme…⁵\n##   <chr>     <dbl> <chr>   <chr>  <chr>  <chr> <chr>   <chr>   <date>       <dbl>\n## 1 PAL0708       1 Adelie… Anvers Torge… Adul… N1A1    Yes     2007-11-11    39.1\n## 2 PAL0708       2 Adelie… Anvers Torge… Adul… N1A2    Yes     2007-11-11    39.5\n## 3 PAL0708       3 Adelie… Anvers Torge… Adul… N2A1    Yes     2007-11-16    40.3\n## 4 PAL0708       4 Adelie… Anvers Torge… Adul… N2A2    Yes     2007-11-16    NA  \n## 5 PAL0708       5 Adelie… Anvers Torge… Adul… N3A1    Yes     2007-11-16    36.7\n## 6 PAL0708       6 Adelie… Anvers Torge… Adul… N3A2    Yes     2007-11-16    39.3\n## # … with 7 more variables: `Culmen Depth (mm)` <dbl>,\n## #   `Flipper Length (mm)` <dbl>, `Body Mass (g)` <dbl>, Sex <chr>,\n## #   `Delta 15 N (o/oo)` <dbl>, `Delta 13 C (o/oo)` <dbl>, Comments <chr>, and\n## #   abbreviated variable names ¹​studyName, ²​`Sample Number`, ³​`Individual ID`,\n## #   ⁴​`Clutch Completion`, ⁵​`Culmen Length (mm)`\n## # ℹ Use `colnames()` to see all variable names"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#silvia-canelón",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#silvia-canelón",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "Silvia Canelón",
+    "text": "Silvia Canelón\nPostdoctoral Research Scientist\nUniversity of Pennsylvania, Philadelphia, PA, USA\n\nLink silviacanelon.com Twitter @spcanelon GitHub @spcanelon\n\nPhoto by Lucas Huffman on Unsplash"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#acknowledgments",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#acknowledgments",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nSlides adapted from xaringan slides created for an R-Ladies Chicago tutorial\nSlides made using the Quarto revealjs format\npalmerpenguins 📦 developed by Drs. Allison Horst, Alison Hill, and Kristen Gorman.\nPenguin artwork by Allison Horst (@allison_horst)\nPhotographs from various photographers on Unsplash, and noted on the relevant slide"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#meet-our-penguin-friends",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#meet-our-penguin-friends",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "Meet our penguin friends!",
+    "text": "Meet our penguin friends!\n\n\nChinstrap\n\n\nGentoo\n\n\nAdélie\n\n\n\n\n🐧Photos by Long Ma on Unsplash"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#collection-of-r-packages-including-these-8-core-packages-and-more",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#collection-of-r-packages-including-these-8-core-packages-and-more",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "Collection of R packages, including  these 8 core packages (and more!)",
+    "text": "Collection of R packages, including  these 8 core packages (and more!)"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#section",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#section",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "",
+    "text": "Photo by James Eades on Unsplash"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#readr-info",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#readr-info",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "readr: info",
+    "text": "readr: info\n\nOverviewCheatsheetReading\n\n\n\n\nImporting data is the very first step!\nYou can use readr to import rectangular data.\n\nYou can import…\n\ncomma separated (CSV) files with read_csv()\ntab separated files with read_tsv()\ngeneral delimited files with read_delim()\nfixed width files with read_fwf()\ntabular files where columns are separated by white-space with read_table()\nweb log files with read_log()\n\n\n\n\n\n PDF: https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf \n\n\n\n\n\n\n\nR for Data Science: Ch 11 Data import\nPackage documentation: https://readr.tidyverse.org/"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/index.html#readr-exercise",
+    "href": "tour-of-the-tidyverse-revealjs/index.html#readr-exercise",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "readr: exercise",
+    "text": "readr: exercise\n\nRead data inSave data\n\n\nBoth options below will get you the same dataset!\nOption 1\n\n# option 1: load using URL ----\nraw_adelie_url <- read_csv(\"https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.219.3&entityid=002f3893385f710df69eeebe893144ff\")\n\nOption 2\n\n# option 2: load using filepath ----\nraw_adelie_filepath <- read_csv(\"tutorial/raw_adelie.csv\")\n\n\n\n\nLucky for us, the palmerpenguins 📦 compiles data from all three species together for us!\npenguins contains a clean dataset ::: {.cell}\npenguins <- \n  palmerpenguins::penguins \n\nhead(penguins)\n## # A tibble: 6 × 8\n##   species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year\n##   <fct>   <fct>              <dbl>         <dbl>       <int>   <int> <fct> <int>\n## 1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007\n## 2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007\n## 3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007\n## 4 Adelie  Torgersen           NA            NA            NA      NA <NA>   2007\n## 5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007\n## 6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007\n## # … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g\n\n\n\n\n\n\npenguins_raw contains raw data ::: {.cell}\npenguins_raw <- \n  palmerpenguins::penguins_raw\n\nhead(penguins_raw)\n## # A tibble: 6 × 17\n##   study…¹ Sampl…² Species Region Island Stage Indiv…³ Clutc…⁴ `Date Egg` Culme…⁵\n##   <chr>     <dbl> <chr>   <chr>  <chr>  <chr> <chr>   <chr>   <date>       <dbl>\n## 1 PAL0708       1 Adelie… Anvers Torge… Adul… N1A1    Yes     2007-11-11    39.1\n## 2 PAL0708       2 Adelie… Anvers Torge… Adul… N1A2    Yes     2007-11-11    39.5\n## 3 PAL0708       3 Adelie… Anvers Torge… Adul… N2A1    Yes     2007-11-16    40.3\n## 4 PAL0708       4 Adelie… Anvers Torge… Adul… N2A2    Yes     2007-11-16    NA  \n## 5 PAL0708       5 Adelie… Anvers Torge… Adul… N3A1    Yes     2007-11-16    36.7\n## 6 PAL0708       6 Adelie… Anvers Torge… Adul… N3A2    Yes     2007-11-16    39.3\n## # … with 7 more variables: `Culmen Depth (mm)` <dbl>,\n## #   `Flipper Length (mm)` <dbl>, `Body Mass (g)` <dbl>, Sex <chr>,\n## #   `Delta 15 N (o/oo)` <dbl>, `Delta 13 C (o/oo)` <dbl>, Comments <chr>, and\n## #   abbreviated variable names ¹​studyName, ²​`Sample Number`, ³​`Individual ID`,\n## #   ⁴​`Clutch Completion`, ⁵​`Culmen Length (mm)`\n## # ℹ Use `colnames()` to see all variable names\n\n\n\n\n::::\n:::"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/test.html#an-antarctic-tour-of-the-tidyverse",
+    "href": "tour-of-the-tidyverse-revealjs/test.html#an-antarctic-tour-of-the-tidyverse",
+    "title": "test",
+    "section": "An Antarctic Tour of the Tidyverse",
+    "text": "An Antarctic Tour of the Tidyverse"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/test.html#silvia-canelón",
+    "href": "tour-of-the-tidyverse-revealjs/test.html#silvia-canelón",
+    "title": "test",
+    "section": "Silvia Canelón",
+    "text": "Silvia Canelón"
+  },
+  {
+    "objectID": "tour-of-the-tidyverse-revealjs/test.html#slide-3",
+    "href": "tour-of-the-tidyverse-revealjs/test.html#slide-3",
+    "title": "test",
+    "section": "Slide 3",
+    "text": "Slide 3"
   }
 ]

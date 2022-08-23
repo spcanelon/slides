@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://slides.silviacanelon.com/index.html</loc>
-    <lastmod>2022-08-14T18:52:04.155Z</lastmod>
+    <lastmod>2022-08-21T20:17:52.344Z</lastmod>
+  </url>
+  <url>
+    <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-revealjs/index.html</loc>
+    <lastmod>2022-08-23T03:59:26.958Z</lastmod>
+  </url>
+  <url>
+    <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-revealjs/01-readr.html</loc>
+    <lastmod>2022-08-23T00:35:43.313Z</lastmod>
+  </url>
+  <url>
+    <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-revealjs/02-tibble.html</loc>
+    <lastmod>2022-08-23T02:27:39.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-revealjs/03-ggplot2.html</loc>
+    <lastmod>2022-08-23T03:56:12.355Z</lastmod>
   </url>
 </urlset>

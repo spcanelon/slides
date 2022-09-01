@@ -46,6 +46,9 @@ library(prismatic)
 
 - [Penguin illustrations by Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 
+- This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
+
 ## Meet our penguin friends!
 
 ::: {#penguins layout-ncol=3}

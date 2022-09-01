@@ -64,7 +64,7 @@ University of Pennsylvania, Philadelphia, PA, USA
 Photo by [Lucas Huffman](https://unsplash.com/@lukehuff?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/antarctica?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 :::
 
-## Acknowledgments {.center}
+## Before we begin {.center}
 
 - Slides adapted from xaringan slides created for an [R-Ladies Chicago tutorial](https://github.com/spcanelon/tour-of-the-tidyverse)
 
@@ -75,6 +75,9 @@ Photo by [Lucas Huffman](https://unsplash.com/@lukehuff?utm_source=unsplash&amp;
 - [Penguin illustrations by Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 
 - Photographs from various photographers on Unsplash, and noted on the relevant slide
+
+- This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Slide navigation {.center}
 

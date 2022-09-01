@@ -1,4 +1,12 @@
 # Internal slide decks
+- title: "An Antarctic Tour of the Tidyverse v2.0"
+  subtitle: "Quarto RevealJS Remix"
+  author: "Silvia Canelón, PhD"
+  date: 2022-08-31
+  image: /tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png
+  path: /tour-of-the-tidyverse-v2/index.qmd
+  categories:
+    - revealjs
 - title: "Lessons Learned from the EHR: Things I've Learned from Working with Electronic Health Records"
   subtitle: "Toronto Data Workshop"
   author: "Silvia Canelón, PhD"

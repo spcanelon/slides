@@ -8,11 +8,11 @@ listing:
   sort: "date desc"
   image-height: 100%
   image-placeholder: img/social-card.png
-  #categories: unnumbered 
+  #categories: unnumbered
 page-layout: full
 include-in-header: assets/umami.html
 ---
 
-This gallery features publicly available slide decks.
+<p class="f6 measure lh-copy tc center">This gallery features publicly available slide decks.</p>
 
 <p class="f7 measure lh-copy tc center i">Written by Silvia Canelón</p>

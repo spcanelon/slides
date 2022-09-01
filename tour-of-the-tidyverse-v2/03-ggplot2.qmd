@@ -1,0 +1,152 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    df-print: default
+execute: 
+  echo: true
+---
+
+# 03-ggplot2 {visibility="hidden"}
+
+```{r include=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/03-ggplot2.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins have reached the ggplot2 package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## ggplot2: info {background-image="images/hex/ggplot2.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview {.center}
+
+<br><br>
+
+#### `ggplot2` uses the "Grammar of Graphics" and layers graphical components together to help us create a plot
+
+Let's start by making a simple plot of our data!
+
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf>
+![](images/cheatsheet/03-ggplot2.png){width=100% fig-alt="ggplot2 cheatsheet"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300" fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+### R for Data Science: [Ch 3 Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+
+### Package documentation: <https://ggplot2.tidyverse.org>
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## ggplot2: exercise {background-image="images/hex/ggplot2.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### View the data
+
+Get a full view of the dataset:
+
+```{r}
+#| eval: false
+
+View(penguins)
+```
+
+<br>
+Or catch a `glimpse`:
+
+```{r}
+glimpse(penguins)
+```
+
+### Scatterplot
+
+Let's see if body mass varies by penguin sex using `geom_point()`
+
+```{r scatterplot}
+#| fig-height: 4.5
+#| fig-alt: A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable.
+ggplot(data = penguins, aes(x = sex, y = body_mass_g)) + 
+  geom_point()
+```
+
+### Boxplot
+
+Let's see if body mass varies by penguin sex, this time with `geom_boxplot()`
+
+```{r boxplot}
+#| code-line-numbers: "2"
+#| fig-height: 4.5
+#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers.
+
+ggplot(data = penguins, aes(x = sex, y = body_mass_g)) +
+  geom_boxplot()
+```
+
+### By Species
+
+Let's see if body mass varies by penguin sex, and now fill the boxplots <br>according to penguin species
+
+```{r by-species}
+#| code-line-numbers: "2"
+#| fig-height: 4.25
+#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category.
+
+ggplot(data = penguins, aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species))
+```
+
+### Chat
+
+#### The boxplot filled by species helps us see...
+
+- Gentoo penguins have higher body mass than Adélie and Chinstrap penguins
+- Higher body mass among male Gentoo penguins compared to female penguins
+- Pattern not as discernible when comparing Adélie and Chinstrap penguins
+- No `NA`s among Chinstrap penguin data points! **sex** was available for each observation
+
+
+```{r ref.label="by-species"}
+#| echo: false
+#| fig-height: 3.5
+#| fig-alt: Same boxplot as the previous tab. Any additional data insights are listed in the text of this slide.
+```
+
+:::
+<!--end panels-->

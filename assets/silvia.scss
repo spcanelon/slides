@@ -1,5 +1,6 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
@@ -14,8 +15,17 @@ $spc-primary: #002642;
 $spc-primary-light: #2E4963 ;
 $spc-secondary: #A23E02;
 $spc-secondary-light: #936c10;
+$spc-green: #B9C680;
+$spc-green-light: #eef1e0;
 
 $navbar-bg: $spc-bg;
+
+// inline code
+$code-bg: $spc-green-light;
+$code-color: #434f54;
+
+// code blocks
+$code-block-bg: white;
 
 /*-- scss:rules --*/
 h1, h2, h3 {
@@ -53,11 +63,6 @@ h4, h5, h6 {
   margin-top: 0.5em;
 }
 
-p {
-  @extend .f6, .measure, .lh-copy, .center;
-  text-align: center;
-}
-
 // Navigation bar
 
 #quarto-header {
@@ -83,4 +88,36 @@ p {
 
 .navbar-brand {
   @extend .mt2;
+}
+
+// all code
+code {
+  font-family: Consolas, monaco, "Fira Mono", monospace;
+}
+
+// inline code
+p code:not(.sourceCode) {
+  border: 1px solid #b9c680;
+  @extend .f6, .pa1, .ba, .bw1 , .br1;
+}
+
+// code block
+pre > code.sourceCode {
+  background-color: white;
+}
+
+pre.sourceCode {
+  border: 1px solid #ebebeb;
+}
+
+// captions (needs to be applied to asides too)
+
+.panel-caption, .figure-caption, figcaption {
+  color: $spc-primary-light;
+}
+
+// link hover
+a:hover {
+    color: $spc-secondary;
+    text-decoration: none;
 }

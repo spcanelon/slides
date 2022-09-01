@@ -1,0 +1,321 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    width: 1050
+    height: 700
+execute: 
+  echo: true
+---
+
+# 04-dplyr {visibility="hidden"}
+
+```{r include=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/04-dplyr.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins have reached the dplyr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## dplyr: info {background-image="images/hex/dplyr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview {.center}
+
+:::: {.columns}
+
+::: {.column}
+
+#### Data transformation helps you get the data in exactly the right form you need 
+
+With `dplyr` you can:
+
+- create new variables
+- create summaries
+- rename variables
+- reorder observations
+- ...and more!
+
+:::
+
+::: {.column}
+
+- Pick observations by their values with `filter()`.
+- Reorder the rows with `arrange()`.
+- Pick variables by their names `select()`.
+- Create new variables with functions of existing variables with `mutate()`.
+- Collapse many values down to a single summary with `summarize()`.
+- `group_by()` gets the above functions to operate group-by-group rather than on the entire dataset. 
+- and `count()` + `add_count()` simplify `group_by()` + `summarize()` when you just want to count
+
+:::
+
+::::
+<!--end columns-->
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf>
+![](images/cheatsheet/04-dplyr.png){width=100% fig-alt="dplyr cheatsheet"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300" fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+### R for Data Science: [Ch 11 Data transformation](https://r4ds.had.co.nz/transform.html)
+
+### Package documentation: <https://dplyr.tidyverse.org>
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## dplyr: exercise {background-image="images/hex/dplyr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Select
+
+#### Can you spot the difference in these operations?{.center-x}
+
+:::: {.columns}
+
+::: {.column}
+
+```{r}
+select(penguins, 
+       species,
+       sex,
+       body_mass_g)
+```
+
+:::
+
+::: {.column}
+
+```{r}
+penguins |> 
+  select(species,
+         sex,
+         body_mass_g)
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Arrange
+
+We can use `arrange()` to arrange our data in descending order by **body_mass_g**
+
+:::: {.columns}
+
+::: {.column width=45%}
+
+```{r}
+#| collapse: true
+glimpse(penguins)
+```
+
+:::
+
+::: {.column width=55%}
+
+```{r}
+#| code-line-numbers: "3"
+penguins |>
+  select(species, sex, body_mass_g) |>
+  arrange(desc(body_mass_g))
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Group By & Summarize
+
+:::: {.columns}
+
+::: {.column width=45%}
+
+We can use `group_by()` to group our data by **species** and **sex**
+
+We can use `summarize()` to calculate the average **body_mass_g** for each grouping
+
+:::
+
+::: {.column width=55%}
+```{r}
+#| code-line-numbers: "3|4"
+penguins |>
+  select(species, sex, body_mass_g) |>
+  group_by(species, sex) |>         
+  summarize(mean = mean(body_mass_g))
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Count 1
+
+If we're just interested in _counting_ the observations in each grouping, we can group and summarize with special functions `count()` and `add_count()`.
+
+----
+
+:::: {.columns}
+
+::: {.column width=45%}
+
+Counting can be done with `group_by()` and `summarize()`, but it's a little cumbersome. 
+
+It involves...
+
+1. using `mutate()` to create an intermediate variable **n_species** that adds up all observations per **species**, and
+1. an `ungroup()`-ing step
+
+:::
+
+::: {.column width=55%}
+
+```{r}
+#| code-line-numbers: "3-4"
+penguins |> 
+  group_by(species) |>
+  mutate(n_species = n()) |> 
+  ungroup() |> 
+  group_by(species, sex, n_species) |>
+  summarize(n = n())
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Count 2
+
+If we're just interested in _counting_ the observations in each grouping, we can group and summarize with special functions `count()` and `add_count()`.
+
+----
+
+:::: {.columns}
+
+::: {.column width=45%}
+
+In contrast, `count()` and `add_count()` offer a simplified approach
+
+::: {.small-text}
+Example kindly [contributed by Alison Hill](https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2)
+:::
+
+:::
+
+::: {.column width=55%}
+
+```{r}
+#| code-line-numbers: "3-4"
+penguins |>
+  count(species, sex) |>
+  add_count(species, wt = n, 
+            name = "n_species")
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Mutate
+
+:::: {.columns}
+
+::: {.column width=45%}
+We can add to our counting example by using `mutate()` to create a new variable **prop**
+
+**prop** represents the proportion of penguins of each **sex**, grouped by **species**
+
+::: {.small-text}
+
+Example kindly [contributed by Alison Hill](https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2)
+
+:::
+
+:::
+
+::: {.column width=55%}
+```{r}
+#| code-line-numbers: "5"
+penguins |>
+  count(species, sex) |>
+  add_count(species, wt = n, 
+            name = "n_species") |>
+  mutate(prop = n/n_species*100)
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Filter
+
+:::: {.columns}
+
+::: {.column width=45%}
+
+Finally, we can filter rows to only show us **Chinstrap** penguin summaries by adding `filter()` to our pipeline
+
+:::
+
+::: {.column width=55%}
+
+```{r}
+#| code-line-numbers: "6"
+penguins |>
+  count(species, sex) |>
+  add_count(species, wt = n, 
+            name = "n_species") |>
+  mutate(prop = n/n_species*100) |>
+  filter(species == "Chinstrap")
+```
+
+:::
+
+::::
+<!--end columns-->
+
+:::
+<!--end panels-->

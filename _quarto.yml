@@ -46,5 +46,7 @@ format:
     monobackgroundcolor: "#FFFFFF"
     backgroundcolor: "#fffbf2"
 
+    code-link: true
+
 execute:
   freeze: auto

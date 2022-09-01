@@ -10,6 +10,7 @@ listing:
   image-placeholder: img/social-card.png
   #categories: unnumbered
 page-layout: full
+include-in-header: assets/umami.html
 ---
 
 <p class="f6 measure lh-copy tc center">This gallery features publicly available slide decks.</p>

@@ -56,10 +56,49 @@
   path: https://spcanelon.github.io/csvConf2021/slides
   categories:
     - xaringan
+- title: "R-Ladies Themed xaringan Template"
+  subtitle: "R-Ladies Global"
+  author: "Silvia Canelón, PhD"
+  date: 2021-03-16
+  image: img/2021-rladies-xaringan-template.png
+  path: https://spcanelon.github.io/RLadies-xaringan-template
+  categories:
+    - xaringan
 - title: "From Learn-R to Teach-R: An Expert Panel on Effective R Instruction"
   subtitle: "R-Ladies Philly"
   date: 2021-02-18
-  image: https://silvia.rbind.io/talk/2021-r-teaching-panel/featured.png
+  image: img/2021-r-teaching-panel.png
   path: http://tiny.cc/rladies-phl-teaching-spc
   categories:
     - google
+- title: "Sharing Your Work with xaringan: The Beyond"
+  subtitle: "2020 NHS-R Conference"
+  author: "Silvia Canelón, PhD"
+  date: 2020-11-05
+  image: https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/slides/day-02-cover-image.png?raw=true
+  path: https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html
+  categories:
+    - xaringan
+- title: "Sharing Your Work with xaringan: The Basics"
+  subtitle: "2020 NHS-R Conference"
+  author: "Silvia Canelón, PhD"
+  date: 2020-11-03
+  image: https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/slides/day-01-cover-image.png?raw=true
+  path: https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html
+  categories:
+    - xaringan
+- title: "NHS-R xaringan Theme"
+  subtitle: "Custom CSS for the NHS-R Community"
+  author: "Silvia Canelón, PhD"
+  date: 2020-10-23
+  image: img/2020-nhsr-theme.png
+  path: https://spcanelon.github.io/xaringan-basics-and-beyond/nhsr-theme/sample-16-9.html
+  categories:
+    - xaringan
+- title: "Using lubridate to work with time intervals"
+  subtitle: "RStudio Instructor Certification Teaching Exam"
+  date: 2020-09-17
+  image: img/2020-rit-teaching-exam.png
+  path: https://spcanelon.github.io/rit-teaching-exam/#1
+  categories:
+    - xaringan

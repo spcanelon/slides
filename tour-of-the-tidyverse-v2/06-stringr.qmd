@@ -1,0 +1,126 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    df-print: default
+execute: 
+  echo: true
+---
+
+# 06-stringr {visibility="hidden"}
+
+```{r}
+#| include: false
+library(tidyverse)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/06-stringr.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins have reached the stringr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## stringr: info {background-image="images/hex/stringr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview {.center}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width=48%}
+
+#### `stringr` helps us manipulate strings! 
+
+The package includes many functions to help us with **regular expressions**, which are a concise language for describing patterns in strings.
+
+:::
+
+::: {.column width=50%}
+ 
+### These functions help us
+
+-  detect matches
+-  subset strings
+-  manage string lengths
+-  mutate strings
+-  join and split strings
+-  order strings
+-  ...and more!
+
+:::
+
+::::
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/strings.pdf>
+![](images/cheatsheet/06-stringr.png){fig-alt="stringr cheatsheet"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300" fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br><br>
+
+#### R for Data Science: [Ch 14 Strings](https://r4ds.had.co.nz/strings.html)
+
+#### Package documentation: <https://stringr.tidyverse.org>
+
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## stringr: exercise {background-image="images/hex/stringr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Mutate
+
+#### What does this chunk do?
+```{r}
+#| code-line-numbers: "3"
+penguins |>
+  select(species, island) |>
+  mutate(ISLAND = str_to_upper(island))
+```
+
+### Join
+
+#### How about this one?
+```{r}
+#| code-line-numbers: "4"
+penguins |>
+  select(species, island) |>
+  mutate(ISLAND = str_to_upper(island)) |>
+  mutate(species_island = str_c(species, ISLAND, sep = "_"))
+```
+
+:::
+<!--end panels-->

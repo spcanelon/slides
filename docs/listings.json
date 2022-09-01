@@ -1,6 +1,8 @@
 [
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/tour-of-the-tidyverse-v2/index.html"
+    ]
   }
 ]

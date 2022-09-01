@@ -1,0 +1,131 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    df-print: default
+execute: 
+  echo: true
+---
+
+# 02-tibble {visibility="hidden"}
+
+```{r include=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/02-tibble.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins have reached the tibble package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## tibble: info {background-image="images/hex/tibble.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview {.center}
+
+<br><br>
+
+#### A `tibble` is much like the `dataframe` in base R,<br>but optimized for use in the Tidyverse.{.center}
+
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf>
+![](images/cheatsheet/02-tibble-tidyr.png){width=65% fig-alt="The tibble package shares a cheatsheet with the tidyr package"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300" fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+### R for Data Science: [Ch 10 Tibbles](https://r4ds.had.co.nz/tibbles.html)
+
+### Package documentation: <https://tibble.tidyverse.org>
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## tibble: exercise {background-image="images/hex/tibble.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Code
+
+#### Let's take a look at the differences! {.center-x}
+
+```{r}
+#| eval: false
+
+# try each of these commands in the console and see if 
+# you can spot the differences!
+
+as_tibble(penguins)
+as.data.frame(penguins)
+```
+
+### Result
+
+
+```{r}
+as_tibble(penguins) |> head(4)
+```
+
+<br>
+
+```{r}
+as.data.frame(penguins) |> head(4)
+```
+
+### Chat
+
+#### What differences do you see?
+
+You might see a `tibble` prints:
+
+- variable classes
+- only 10 rows
+- only as many columns as can fit on the screen
+- `NA`s are highlighted in console so they're easy to spot (font highlighting and styling in `tibble`)
+
+Not so much a concern in an R Markdown file, but noticeable in the console
+
+This enhanced print method makes it easier to work with large datasets
+
+### More
+
+There are a couple of other main differences, namely in **subsetting** and **recycling**
+
+Check them out in [`vignette("tibble")`](https://tibble.tidyverse.org/articles/tibble.html)
+
+```{r eval=FALSE}
+vignette("tibble")
+```
+
+:::
+<!--end panels-->

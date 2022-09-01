@@ -1,0 +1,125 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    df-print: default
+execute: 
+  echo: true
+---
+
+# 05-forcats {visibility="hidden"}
+
+```{r include=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/05-forcats.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins have reached the forcats package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## forcats: info {background-image="images/hex/forcats.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview {.center}
+
+<br><br>
+
+#### `forcats` helps us work with **categorical variables** or factors 
+
+These are variables that have a fixed and known set of possible values, like **species**, **island**, and **sex** in our `penguins` dataset
+
+
+### Cheatsheet
+
+{{< fa file-pdf >}} <https://github.com/rstudio/cheatsheets/raw/main/factors.pdf>
+![](images/cheatsheet/05-forcats.png){width=60% fig-alt="forcats cheatsheet"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300" fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+#### R for Data Science: [Ch 15 Factors](https://r4ds.had.co.nz/factors.html)
+
+#### Package documentation: <https://forcats.tidyverse.org>
+
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## forcats: exercise {background-image="images/hex/forcats.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Code
+
+Currently the **year** variable in `penguins` is continuous from 2007 to 2009
+
+Usually this isn't what we want and we might want to turn it into a categorical variable instead
+
+The `factor()` function is perfect for this
+
+```{r}
+penguins |> mutate(year_factor = factor(year, levels = unique(year)))
+```
+
+### Result
+
+The result is a new variable **year_factor** with factor levels **2007**, **2008**, and **2009**
+
+```{r}
+penguins_new <- penguins |> mutate(year_factor = factor(year, levels = unique(year)))
+penguins_new |> head()
+```
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+```{r}
+class(penguins_new$year_factor)
+```
+
+:::
+
+::: {.column width=50%}
+
+```{r}
+levels(penguins_new$year_factor)
+```
+
+:::
+
+::::
+<!--end columns-->
+
+:::
+<!--end panels-->

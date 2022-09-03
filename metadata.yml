@@ -102,3 +102,10 @@
   path: https://spcanelon.github.io/rit-teaching-exam/#1
   categories:
     - xaringan
+- title: "Chapter 5: Data transformation"
+  subtitle: "R for Data Science Book Club"
+  date: 2020-08-21
+  image: img/2020-r4ds.png
+  path: https://r4ds.github.io/bookclub-R_for_Data_Science/Presentations/Week04/Cohort1/Chapter5Slides.html
+  categories:
+    - xaringan

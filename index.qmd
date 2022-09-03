@@ -13,6 +13,6 @@ page-layout: full
 include-in-header: assets/umami.html
 ---
 
-<p class="f6 measure lh-copy tc center">This gallery features a collection of slide decks made with<br>a variety of publishing tools</p>
+<p class="f6 measure lh-copy tc center">TESTING GH CI - This gallery features a collection of slide decks made with<br>a variety of publishing tools</p>
 
 <p class="f7 measure lh-copy tc center i">Written by Silvia Canelón</p>

@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "2022-ccd-sips/index-2.html#philly-center-city-district-sips-2022-an-interactive-map",
-    "href": "2022-ccd-sips/index-2.html#philly-center-city-district-sips-2022-an-interactive-map",
-    "title": "Slides | Silvia Canelón",
-    "section": "Philly Center City District Sips 2022: An Interactive Map",
-    "text": "Philly Center City District Sips 2022: An Interactive Map\nR-Ladies Philly • 2022-09-29\nSilvia Canelón, PhD"
-  },
-  {
     "objectID": "2022-ccd-sips/index.html#philly-center-city-district-sips-2022-an-interactive-map",
     "href": "2022-ccd-sips/index.html#philly-center-city-district-sips-2022-an-interactive-map",
     "title": "Slides | Silvia Canelón",
@@ -14,46 +7,11 @@
     "text": "Philly Center City District Sips 2022: An Interactive Map\nR-Ladies Philly • September 29, 2022\nSilvia Canelón, PhD\n(slides coming soon!)\n\n\nslides.silviacanelon.com/2022-ccd-sips"
   },
   {
-    "objectID": "2022-ccd-sips/index.html#silvia-canelón",
-    "href": "2022-ccd-sips/index.html#silvia-canelón",
-    "title": "Slides | Silvia Canelón",
-    "section": "Silvia Canelón",
-    "text": "Silvia Canelón\nData Analyst @ Penn Urban Health Lab\nUniversity of Pennsylvania, Philadelphia, PA, USA\n\nLink\n silviacanelon.comTwitter\n@spcanelonGitHub\n@spcanelon"
-  },
-  {
-    "objectID": "2022-ccd-sips/index.html#before-we-begin",
-    "href": "2022-ccd-sips/index.html#before-we-begin",
-    "title": "Slides | Silvia Canelón",
-    "section": "Before we begin",
-    "text": "Before we begin\n\nSlides adapted from a blog tutorial\nSlides made using the Quarto revealjs format\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License"
-  },
-  {
-    "objectID": "2022-ccd-sips/index.html#slide-navigation",
-    "href": "2022-ccd-sips/index.html#slide-navigation",
-    "title": "Slides | Silvia Canelón",
-    "section": "Slide navigation",
-    "text": "Slide navigation\nWelcome to the workshop!\nThis is meant to be a fun and light introduction to webscraping, geocoding, and map-making\n\nA table of contents for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen\nMany of these slides feature the use of interactive tabs to organize content"
-  },
-  {
-    "objectID": "2022-ccd-sips/index.html#meet-our-penguin-friends",
-    "href": "2022-ccd-sips/index.html#meet-our-penguin-friends",
-    "title": "Slides | Silvia Canelón",
-    "section": "Meet our penguin friends!",
-    "text": "Meet our penguin friends!\n\n\n\nChinstrap\n\n\nGentoo\n\n\nAdélie\n\n\n\n\n🐧 Photos by Long Ma on Unsplash"
-  },
-  {
-    "objectID": "2022-ccd-sips/index.html#collection-of-r-packages-including-these-9-core-packages-and-more",
-    "href": "2022-ccd-sips/index.html#collection-of-r-packages-including-these-9-core-packages-and-more",
-    "title": "Slides | Silvia Canelón",
-    "section": "Collection of R packages, including  these 9 core packages (and more!)",
-    "text": "Collection of R packages, including  these 9 core packages (and more!)"
-  },
-  {
-    "objectID": "2022-ccd-sips/index.html#thanks-for-following-along",
-    "href": "2022-ccd-sips/index.html#thanks-for-following-along",
-    "title": "Slides | Silvia Canelón",
-    "section": "Thanks for following along!",
-    "text": "Thanks for following along!\n\nLink\n silviacanelon.com\n\n\nTwitter\n@spcanelon\n\nGitHub\n@spcanelon\n\n\nslides.silviacanelon.com/2022-ccd-sips"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Written by Silvia Canelón\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilly Center City District Sips 2022: An Interactive Map\n\n\nR-Ladies Philly\n\n\n\nrevealjs\n\n\n\n\nSep 29, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse v2.0\n\n\nQuarto RevealJS Remix\n\n\n\nrevealjs\n\n\n\n\nAug 31, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\n2022 DBEI & CCEB Research Day\n\n\n\npptx\n\n\n\n\nApr 27, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records\n\n\nToronto Data Workshop\n\n\n\nxaringan\n\n\n\n\nFeb 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\ncsv, conf, v6\n\n\n\nxaringan\n\n\n\n\nMay 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\n2021 AMIA Informatics Summit\n\n\n\nxaringan\n\n\n\n\nMar 23, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-Ladies Themed xaringan Template\n\n\nR-Ladies Global\n\n\n\nxaringan\n\n\n\n\nMar 16, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nR-Ladies Philly\n\n\n\ngoogle\n\n\n\n\nFeb 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción al paquete xaringan\n\n\nR-Ladies Xalapa\n\n\n\nxaringan\n\n\n\n\nDec 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Your Work with xaringan: The Beyond\n\n\n2020 NHS-R Conference\n\n\n\nxaringan\n\n\n\n\nNov 5, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Your Work with xaringan: The Basics\n\n\n2020 NHS-R Conference\n\n\n\nxaringan\n\n\n\n\nNov 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNHS-R xaringan Theme\n\n\nCustom CSS for the NHS-R Community\n\n\n\nxaringan\n\n\n\n\nOct 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing lubridate to work with time intervals\n\n\nRStudio Instructor Certification Teaching Exam\n\n\n\nxaringan\n\n\n\n\nSep 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nR-Ladies Chicago\n\n\n\nxaringan\n\n\n\n\nAug 31, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChapter 5: Data transformation\n\n\nR for Data Science Book Club\n\n\n\nxaringan\n\n\n\n\nAug 21, 2020\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tour-of-the-tidyverse-v2/01-readr.html#section",
@@ -558,96 +516,5 @@
     "title": "An Antarctic Tour of the Tidyverse v2.0",
     "section": "lubridate \n",
     "text": "lubridate \n\n\n\n\nOur penguin friends are ending their tour with the lubridate package!\n\n\n\n\n\n\nlubridate helps us work with dates and times, including\n\na date like August 31, 2022\n\na time like 10:35 am\n\na date-time like 2022-08-31 10:35:00\n\n\nYou can…\n\nconvert strings or numbers to date-times\nget and set components of a date-time\nround date-times\nadd or subtract periods to model events that happen at specific clock times\nadd or substract durations to model a physical process\nwork with time intervals\n\nCheatsheet\n PDF: https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf \nReading\n\n\n\n\n\n\n\nR for Data Science: Ch 16 Dates and times\n\nPackage documentation: https://lubridate.tidyverse.org\n\n\n\n\n\nExercise\nRead data in\nRecall that palmperpenguins includes raw data as well\n\npenguins_raw <- palmerpenguins::penguins_raw\npenguins_raw\n\n# A tibble: 344 × 17\n   studyName Sample Num…¹ Species Region Island Stage Indiv…² Clutc…³ `Date Egg`\n   <chr>            <dbl> <chr>   <chr>  <chr>  <chr> <chr>   <chr>   <date>    \n 1 PAL0708              1 Adelie… Anvers Torge… Adul… N1A1    Yes     2007-11-11\n 2 PAL0708              2 Adelie… Anvers Torge… Adul… N1A2    Yes     2007-11-11\n 3 PAL0708              3 Adelie… Anvers Torge… Adul… N2A1    Yes     2007-11-16\n 4 PAL0708              4 Adelie… Anvers Torge… Adul… N2A2    Yes     2007-11-16\n 5 PAL0708              5 Adelie… Anvers Torge… Adul… N3A1    Yes     2007-11-16\n 6 PAL0708              6 Adelie… Anvers Torge… Adul… N3A2    Yes     2007-11-16\n 7 PAL0708              7 Adelie… Anvers Torge… Adul… N4A1    No      2007-11-15\n 8 PAL0708              8 Adelie… Anvers Torge… Adul… N4A2    No      2007-11-15\n 9 PAL0708              9 Adelie… Anvers Torge… Adul… N5A1    Yes     2007-11-09\n10 PAL0708             10 Adelie… Anvers Torge… Adul… N5A2    Yes     2007-11-09\n# … with 334 more rows, 8 more variables: `Culmen Length (mm)` <dbl>,\n#   `Culmen Depth (mm)` <dbl>, `Flipper Length (mm)` <dbl>,\n#   `Body Mass (g)` <dbl>, Sex <chr>, `Delta 15 N (o/oo)` <dbl>,\n#   `Delta 13 C (o/oo)` <dbl>, Comments <chr>, and abbreviated variable names\n#   ¹​`Sample Number`, ²​`Individual ID`, ³​`Clutch Completion`\n\n\nView date-times\nIn the raw data, Date Egg is the date that a penguin nest in the study was observed with 1 egg\nCheck out ?penguins_raw to learn more about the other variables in this dataset\n\npenguins_raw |> select(Species, Sex, `Date Egg`)\n\n# A tibble: 344 × 3\n   Species                             Sex    `Date Egg`\n   <chr>                               <chr>  <date>    \n 1 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-11\n 2 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-11\n 3 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16\n 4 Adelie Penguin (Pygoscelis adeliae) <NA>   2007-11-16\n 5 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16\n 6 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-16\n 7 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-15\n 8 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-15\n 9 Adelie Penguin (Pygoscelis adeliae) <NA>   2007-11-09\n10 Adelie Penguin (Pygoscelis adeliae) <NA>   2007-11-09\n# … with 334 more rows\n\n\nGet date components\nWe can use year(), month(), and day() to extract different components from Date Egg\nIn addition, month() provides some options to let us decide whether we want the month displayed as a character string, and whether we want that string abbreviated\n\npenguins_raw |> \n  select(Species, Sex, `Date Egg`) |> \n  mutate(Year = year(`Date Egg`),\n         Month = month(`Date Egg`, \n                       label = TRUE,\n                       abbr = FALSE),\n         Day = day(`Date Egg`))\n\n# A tibble: 344 × 6\n   Species                             Sex    `Date Egg`  Year Month      Day\n   <chr>                               <chr>  <date>     <dbl> <ord>    <int>\n 1 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-11  2007 November    11\n 2 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-11  2007 November    11\n 3 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16  2007 November    16\n 4 Adelie Penguin (Pygoscelis adeliae) <NA>   2007-11-16  2007 November    16\n 5 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16  2007 November    16\n 6 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-16  2007 November    16\n 7 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-15  2007 November    15\n 8 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-15  2007 November    15\n 9 Adelie Penguin (Pygoscelis adeliae) <NA>   2007-11-09  2007 November     9\n10 Adelie Penguin (Pygoscelis adeliae) <NA>   2007-11-09  2007 November     9\n# … with 334 more rows\n\n\nThat concludes the tutorial, thanks for following along!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Written by Silvia Canelón\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilly Center City District Sips 2022: An Interactive Map\n\n\nR-Ladies Philly\n\n\n\nrevealjs\n\n\n\n\nSep 29, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse v2.0\n\n\nQuarto RevealJS Remix\n\n\n\nrevealjs\n\n\n\n\nAug 31, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\n2022 DBEI & CCEB Research Day\n\n\n\npptx\n\n\n\n\nApr 27, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records\n\n\nToronto Data Workshop\n\n\n\nxaringan\n\n\n\n\nFeb 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\ncsv, conf, v6\n\n\n\nxaringan\n\n\n\n\nMay 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\n2021 AMIA Informatics Summit\n\n\n\nxaringan\n\n\n\n\nMar 23, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-Ladies Themed xaringan Template\n\n\nR-Ladies Global\n\n\n\nxaringan\n\n\n\n\nMar 16, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nR-Ladies Philly\n\n\n\ngoogle\n\n\n\n\nFeb 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción al paquete xaringan\n\n\nR-Ladies Xalapa\n\n\n\nxaringan\n\n\n\n\nDec 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Your Work with xaringan: The Beyond\n\n\n2020 NHS-R Conference\n\n\n\nxaringan\n\n\n\n\nNov 5, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Your Work with xaringan: The Basics\n\n\n2020 NHS-R Conference\n\n\n\nxaringan\n\n\n\n\nNov 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNHS-R xaringan Theme\n\n\nCustom CSS for the NHS-R Community\n\n\n\nxaringan\n\n\n\n\nOct 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing lubridate to work with time intervals\n\n\nRStudio Instructor Certification Teaching Exam\n\n\n\nxaringan\n\n\n\n\nSep 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nR-Ladies Chicago\n\n\n\nxaringan\n\n\n\n\nAug 31, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChapter 5: Data transformation\n\n\nR for Data Science Book Club\n\n\n\nxaringan\n\n\n\n\nAug 21, 2020\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#slide-2",
-    "href": "2022-ccd-sips/index-2.html#slide-2",
-    "title": "Slides | Silvia Canelón",
-    "section": "Slide 2",
-    "text": "Slide 2\nSilvia Canelon"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#r-ladies-philly-2022-09-29",
-    "href": "2022-ccd-sips/index-2.html#r-ladies-philly-2022-09-29",
-    "title": "Slides | Silvia Canelón",
-    "section": "R-Ladies Philly • 2022-09-29",
-    "text": "R-Ladies Philly • 2022-09-29"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#silvia-canelón-phd",
-    "href": "2022-ccd-sips/index-2.html#silvia-canelón-phd",
-    "title": "Slides | Silvia Canelón",
-    "section": "Silvia Canelón, PhD",
-    "text": "Silvia Canelón, PhD"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#silvia-canelon",
-    "href": "2022-ccd-sips/index-2.html#silvia-canelon",
-    "title": "Slides | Silvia Canelón",
-    "section": "Silvia Canelon",
-    "text": "Silvia Canelon\n\n\nslides.silviacanelon.com/2022-ccd-sips"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#slide-3",
-    "href": "2022-ccd-sips/index-2.html#slide-3",
-    "title": "Slides | Silvia Canelón",
-    "section": "Slide 3",
-    "text": "Slide 3"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#slide-4",
-    "href": "2022-ccd-sips/index-2.html#slide-4",
-    "title": "Slides | Silvia Canelón",
-    "section": "Slide 4",
-    "text": "Slide 4\n\n\nslides.silviacanelon.com/2022-ccd-sips"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#silvia-canelón",
-    "href": "2022-ccd-sips/index-2.html#silvia-canelón",
-    "title": "Slides | Silvia Canelón",
-    "section": "Silvia Canelón",
-    "text": "Silvia Canelón\nData Analyst @ Penn Urban Health Lab\nUniversity of Pennsylvania, Philadelphia, PA, USA\n\nLink\n silviacanelon.comTwitter\n@spcanelonGitHub\n@spcanelon"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#before-we-begin",
-    "href": "2022-ccd-sips/index-2.html#before-we-begin",
-    "title": "Slides | Silvia Canelón",
-    "section": "Before we begin",
-    "text": "Before we begin\n\nSlides adapted from a blog tutorial\nSlides made using the Quarto revealjs format\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#slide-navigation",
-    "href": "2022-ccd-sips/index-2.html#slide-navigation",
-    "title": "Slides | Silvia Canelón",
-    "section": "Slide navigation",
-    "text": "Slide navigation\nWelcome to the workshop!\nThis is meant to be a fun and light introduction to webscraping, geocoding, and map-making\n\nA table of contents for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen\nMany of these slides feature the use of interactive tabs to organize content"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#content",
-    "href": "2022-ccd-sips/index-2.html#content",
-    "title": "Slides | Silvia Canelón",
-    "section": "Content",
-    "text": "Content"
-  },
-  {
-    "objectID": "2022-ccd-sips/index-2.html#thanks-for-following-along",
-    "href": "2022-ccd-sips/index-2.html#thanks-for-following-along",
-    "title": "Slides | Silvia Canelón",
-    "section": "Thanks for following along!",
-    "text": "Thanks for following along!\n\nLink\n silviacanelon.com\n\n\nTwitter\n@spcanelon\n\nGitHub\n@spcanelon\n\n\nslides.silviacanelon.com/2022-ccd-sips"
-  },
-  {
-    "objectID": "2022-ccd-sips/index.html#content",
-    "href": "2022-ccd-sips/index.html#content",
-    "title": "Slides | Silvia Canelón",
-    "section": "Content",
-    "text": "Content"
   }
 ]

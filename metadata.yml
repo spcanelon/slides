@@ -4,7 +4,7 @@
   author: "Silvia Canelón, PhD"
   date: 2022-09-29
   image: /2022-ccd-sips/img/featured.png
-  path: /2022-ccd-sips/index-2.qmd
+  path: /2022-ccd-sips/index.qmd
   categories:
    - revealjs
 - title: "An Antarctic Tour of the Tidyverse v2.0"

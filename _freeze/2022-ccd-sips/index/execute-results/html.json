@@ -1,0 +1,18 @@
+{
+  "hash": "825ea13f7f412d1118bd1d61b0e85679",
+  "result": {
+    "markdown": "---\npagetitle: \"Philly Center City District Sips 2022 | Silvia Canelón\"\nauthor: Silvia Canelón, PhD\ndate: September 29, 2022\nformat:\n  revealjs:\n    self-contained: false \n    theme: [\"default\", \"css/custom.scss\"]\n    history: false\n    code-overflow: wrap\n    df-print: default\n    touch: true\n    footer: \"[slides.silviacanelon.com/2022-ccd-sips]()\"\n    preview-links: true\n    code-link: true\nexecute: \n  echo: true\n---\n\n\n## Philly Center City District Sips 2022:<br> An Interactive Map {.center .center-x background-image=\"img/map.png\" background-color=\"black\"}\n\n### R-Ladies Philly &#8226; September 29, 2022\n\n### Silvia Canelón, PhD\n\n(slides coming soon!)\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    function fireSlideChanged(previousSlide, currentSlide) {\n\n      // dispatch for htmlwidgets\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for reveal\n    if (window.Reveal) {\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\n        fireSlideChanged(event.previousSlide, event.currentSlide);\n      });\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

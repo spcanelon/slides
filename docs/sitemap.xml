@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://slides.silviacanelon.com/index.html</loc>
-    <lastmod>2022-09-03T21:49:20.535Z</lastmod>
+    <loc>https://slides.silviacanelon.com/2022-ccd-sips/index-2.html</loc>
+    <lastmod>2022-09-26T23:26:30.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://slides.silviacanelon.com/2022-ccd-sips/index.html</loc>
+    <lastmod>2022-09-27T02:18:19.639Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/01-readr.html</loc>
-    <lastmod>2022-09-03T21:49:21.116Z</lastmod>
+    <lastmod>2022-09-26T00:31:25.081Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/02-tibble.html</loc>
-    <lastmod>2022-09-03T21:49:21.689Z</lastmod>
+    <lastmod>2022-09-26T00:31:25.568Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/03-ggplot2.html</loc>
-    <lastmod>2022-09-03T21:49:22.209Z</lastmod>
+    <lastmod>2022-09-26T00:31:26.051Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/04-dplyr.html</loc>
-    <lastmod>2022-09-03T21:49:22.752Z</lastmod>
+    <lastmod>2022-09-26T00:31:26.700Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/05-forcats.html</loc>
-    <lastmod>2022-09-03T21:49:23.203Z</lastmod>
+    <lastmod>2022-09-26T00:31:27.187Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/06-stringr.html</loc>
-    <lastmod>2022-09-03T21:49:23.629Z</lastmod>
+    <lastmod>2022-09-26T00:31:27.665Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/07-tidyr.html</loc>
-    <lastmod>2022-09-03T21:49:24.076Z</lastmod>
+    <lastmod>2022-09-26T00:31:28.183Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/08-purrr.html</loc>
-    <lastmod>2022-09-03T21:49:24.560Z</lastmod>
+    <lastmod>2022-09-26T00:31:28.715Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/09-lubridate.html</loc>
-    <lastmod>2022-09-03T21:49:25.029Z</lastmod>
+    <lastmod>2022-09-26T00:31:29.200Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/index.html</loc>
-    <lastmod>2022-09-03T21:49:26.827Z</lastmod>
+    <lastmod>2022-09-27T02:17:46.523Z</lastmod>
   </url>
   <url>
     <loc>https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/tutorial/index.html</loc>
-    <lastmod>2022-09-03T21:49:28.818Z</lastmod>
+    <lastmod>2022-09-26T00:31:33.640Z</lastmod>
+  </url>
+  <url>
+    <loc>https://slides.silviacanelon.com/index.html</loc>
+    <lastmod>2022-09-26T23:19:51.476Z</lastmod>
   </url>
 </urlset>

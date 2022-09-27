@@ -1,0 +1,144 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital@0;1&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Ovo&family=Roboto+Serif:ital,opsz,wght@0,8..144,300;0,8..144,400;1,8..144,300;1,8..144,400&display=swap');
+
+
+// fonts
+$font-family-sans-serif: "Red Hat Text", "Fira Sans" sans-serif !default;
+$font-family-monospace: "Fira Mono", "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// colors
+
+// R-Ladies color palette
+$rl-black: #181818;
+$rl-gray: #d3d3d3;
+$rl-purple-bright: #88398A;
+$primary: #00857A;
+$primary-light: lighten($primary, 80);
+
+$body-bg: #ffffff !default;
+$body-color: black !default;
+$link-color: darken($primary, 5) !default;
+
+// alternate colors for when the background changes
+$dark-bg-text-color: #fff !default;
+$dark-bg-link-color: #42affa !default;
+$dark-bg-code-color: #ffa07a !default;
+
+// headings
+$presentation-heading-font: "Roboto Serif", sans-serif !default;
+$presentation-heading-color: $primary !default;
+$presentation-h1-font-size: 2.2em !default; //2.5em
+$presentation-h2-font-size: 1.8em !default; //1.6em
+$presentation-h3-font-size: 1.2em !default; //1.3em
+$presentation-h4-font-size: 1.15em !default; //1.3em
+
+$presentation-font-size-root: 25px !default;
+$presentation-font-smaller: 0.7 !default;
+$presentation-line-height: 1.25em !default;
+
+// code blocks
+$code-block-bg: $body-bg !default;
+$code-block-border-color: lighten($body-color, 60%) !default;
+$code-block-font-size: 0.8em !default;
+
+$dark-bg-text-color: $primary;
+
+/*-- scss:rules --*/
+
+// links
+.reveal a {
+  text-decoration: underline;
+}
+
+.reveal a:hover {
+  text-decoration: none;
+}
+
+// title slide
+.custom {
+  background-color: red;
+  background-image: url("img/map.png");
+  background-size: cover;
+  //background-color: #181830;
+  padding: 1em 1em 1em 1em;
+  border-radius: 0.5em;
+  opacity: 85% !important;
+  h2, h3 {
+    color: $primary !important;
+  }
+}
+
+.reveal {
+  h2 {
+    font-family: "Roboto Serif", serif;
+  }
+
+  h3, h4 {
+  font-family: "Red Hat Text", "Fira Sans", sans-serif;
+  }
+
+  //.title-slide h2 {
+  //  font-size: $revealjs-h2-font-size;
+  //}
+
+  h3 {
+    color: black;
+  }
+
+}
+
+.center-x {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+// inline code
+.reveal code {
+  color: $primary;
+  background-color: $primary-light;
+}
+
+// smaller text
+.small-text {
+  font-size: 80%;
+}
+
+// horizontal bar
+
+hr {
+  color: $primary;
+}
+
+// panel tabs
+
+// line under tabs
+.panel-tabset [role="tablist"] {
+  border-bottom-width: 1px;
+}
+
+// inactive tabs
+.panel-tabset [role="tab"] {
+  border-color: #fff #fff transparent; // top sides bottom
+}
+
+// hover
+.panel-tabset [role="tab"]:hover:not([aria-selected="true"]) {
+  border-color: #b1b1b1 #b1b1b1 transparent; // top sides bottom
+}
+
+// selected tab
+.panel-tabset [role="tab"][aria-selected="true"] {
+ // border-bottom-color: #fff !important;
+}

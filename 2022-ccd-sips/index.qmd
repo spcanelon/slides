@@ -1,0 +1,27 @@
+---
+pagetitle: "Philly Center City District Sips 2022 | Silvia Canelón"
+author: Silvia Canelón, PhD
+date: September 29, 2022
+format:
+  revealjs:
+    self-contained: false 
+    theme: ["default", "css/custom.scss"]
+    history: false
+    code-overflow: wrap
+    df-print: default
+    touch: true
+    footer: "[slides.silviacanelon.com/2022-ccd-sips]()"
+    preview-links: true
+    code-link: true
+execute: 
+  echo: true
+---
+
+## Philly Center City District Sips 2022:<br> An Interactive Map {.center .center-x background-image="img/map.png" background-color="black"}
+
+### R-Ladies Philly &#8226; `r rmarkdown::metadata$date`
+
+### `r rmarkdown::metadata$author`
+
+(slides coming soon!)
+

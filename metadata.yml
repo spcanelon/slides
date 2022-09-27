@@ -1,4 +1,12 @@
 # Internal slide decks
+- title: "Philly Center City District Sips 2022: An Interactive Map"
+  subtitle: "R-Ladies Philly"
+  author: "Silvia Canelón, PhD"
+  date: 2022-09-29
+  image: /2022-ccd-sips/img/featured.png
+  path: /2022-ccd-sips/index-2.qmd
+  categories:
+   - revealjs
 - title: "An Antarctic Tour of the Tidyverse v2.0"
   subtitle: "Quarto RevealJS Remix"
   author: "Silvia Canelón, PhD"

@@ -56,18 +56,21 @@ University of Pennsylvania, Philadelphia, PA, US
 
 This is meant to be a fun and light introduction to webscraping, geocoding, and map-making
 
--   Many thanks to [R-Ladies Philly](https://www.rladiesphilly.org) for inviting me to give this workshop!
+- Many thanks to [R-Ladies Philly](https://www.rladiesphilly.org) for inviting me to give this workshop!
 
--   A **table of contents** for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen
+- Materials can be found on [GitHub](https://github.com/spcanelon/2022-ccd-sips) and in an [RStudio Cloud project](https://rstudio.cloud/content/4597043)
 
--   Some slides feature the use of **interactive tabs** to organize content
+- Content is adapted from a written [blog tutorial](https://silviacanelon.com/blog/2022-ccd-sips)
 
 ::: {.fragment}
--   Slides for this workshop are adapted from a written [blog tutorial](https://silviacanelon.com/blog/2022-ccd-sips)
 
--   Slides were made using the [Quarto revealjs format](https://quarto.org/docs/presentations/revealjs/)
+- A **table of contents** for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen
 
--   This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
+- Some slides feature the use of **interactive tabs** to organize content
+
+- Slides were made using the [Quarto revealjs format](https://quarto.org/docs/presentations/revealjs/)
+
+- This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
 :::
 
 ## The motivation<br>

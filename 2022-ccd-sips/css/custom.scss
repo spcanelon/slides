@@ -16,9 +16,11 @@ $font-family-monospace: "Roboto Mono", "Noto Sans Mono", Menlo, Monaco, Consolas
 $rl-black: #181818;
 $rl-gray: #d3d3d3;
 $rl-purple-bright: #88398A;
-$primary: #00857A;
-$primary-light: lighten($primary, 80);
-$secondary: #2b547e;
+$primary: #114264;
+$primary-light: #cfd9e0;
+$secondary: #00857A;
+$secondary-light: #E5F2F1;
+$secondary-dark: #004F49;
 
 $body-bg: #ffffff !default;
 $body-color: black !default;
@@ -48,13 +50,16 @@ $code-block-font-size: 0.8em !default;
 
 $dark-bg-text-color: $primary;
 
+// highlighting
+$selection-bg: $primary;
+
 /*-- scss:rules --*/
 
 // title slide
-section#philly-center-city-district-sips-2022-an-interactive-map {
+.title-slide {
   background-color: white;
-  //opacity: .85;
-  padding: 1em 1em 1em 1em;
+  //opacity: .85 !important;  issue: carries over to rest of section
+  //padding: 1em 1em 1em 1em; issue: adds padding to background img
   border-radius: 0.5em;
   h2 {font-size: 2em;}
   h3 {font-size: 1.5em;}
@@ -135,3 +140,48 @@ hr {
 .panel-tabset [role="tab"][aria-selected="true"] {
  // border-bottom-color: #fff !important;
 }
+
+// inline code
+
+.reveal code {
+  color: $secondary-dark;
+  background-color: $secondary-light;
+  //border: 1px solid $secondary;
+  padding: 2 2 2 2px;
+  border-radius: 1px;
+}
+
+// code block
+
+div.sourceCode {
+  //margin: 0.25em 0 0 0 !important;
+  border: 2px solid $primary-light !important;
+  border-radius: 0px !important;
+}
+
+// footer
+.reveal .footer a {
+  color: $secondary !important;
+}
+
+// odds & ends
+
+.h3-size {font-size: $presentation-h3-font-size;}
+
+.fade {opacity: 0.5;}
+
+.pad {padding: 1em 1em 1em 1em;}
+
+.margin-top {margin-top: 2em;}
+
+.bg-white {
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+.bg-black {
+  background-color: black;
+  border-radius: 0.5em;
+}
+
+.white {color: white !important;}

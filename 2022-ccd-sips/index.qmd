@@ -1,27 +1,684 @@
 ---
 pagetitle: "Philly Center City District Sips 2022 | Silvia Canelón"
 author: Silvia Canelón, PhD
-date: September 29, 2022
+date: Sept. 29, 2022
 format:
   revealjs:
     self-contained: false 
     theme: ["default", "css/custom.scss"]
     history: false
+    controls: true
+    controls-layout: bottom-right
     code-overflow: wrap
-    df-print: default
+    df-print: kable
     touch: true
-    footer: "[slides.silviacanelon.com/2022-ccd-sips]()"
     preview-links: true
-    code-link: true
+    hash-type: number
+    hash-one-based-index: true
+    footer: "[slides.silviacanelon.com/2022-ccd-sips]()"
 execute: 
   echo: true
 ---
 
-## Philly Center City District Sips 2022:<br> An Interactive Map {.center .center-x background-image="img/map.png" background-color="black"}
+```{r}
+#| include: false
+xfun::pkg_attach("tidyverse",
+                 "here",
+                 "knitr",
+                 "robotstxt",
+                 "rvest",
+                 "tidygeocoder",
+                 "leaflet",
+                 "leaflet.extras")
+```
 
-### R-Ladies Philly &#8226; `r rmarkdown::metadata$date`
+#  {.bg-white .center-x background-image="img/map.png"}
 
-### `r rmarkdown::metadata$author`
+::: {.pad .title-slide}
+<h1>Philly Center City District Sips 2022:<br> An Interactive Map</h1>
 
-(slides coming soon!)
+<h3 style="color: #00857A;">`r rmarkdown::metadata$author`</h3>
 
+<h3 style="color: #00857A;">R-Ladies Philly • `r rmarkdown::metadata$date`</h3>
+:::
+
+## Silvia Canelón {.center .center-x .nostretch background-image="img/map.png" background-opacity="0.5"}
+
+### Data Analyst @ Penn Urban Health Lab
+
+University of Pennsylvania, Philadelphia, PA, US
+
+<img src="https://silviacanelon.com/about/sidebar/avatar.png" alt="smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side" style="border-radius: 50%;" width="200px"/>
+
+[`r fontawesome::fa("link", a11y = "sem")` silviacanelon.com](https://silviacanelon.com)<br/> [`r fontawesome::fa("twitter", a11y = "sem")` \@spcanelon](https://twitter.com/spcanelon)<br/> [`r fontawesome::fa("github", a11y = "sem")` \@spcanelon](https://github.com/spcanelon)
+
+## Welcome! {.center}
+
+This is meant to be a fun and light introduction to webscraping, geocoding, and map-making
+
+- Many thanks to [R-Ladies Philly](https://www.rladiesphilly.org) for inviting me to give this workshop!
+
+- Materials can be found on [GitHub](https://github.com/spcanelon/2022-ccd-sips) and in an [RStudio Cloud project](https://rstudio.cloud/content/4597043)
+
+- Content is adapted from a written [blog tutorial](https://silviacanelon.com/blog/2022-ccd-sips)
+
+::: {.fragment}
+
+- A **table of contents** for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen
+
+- Some slides feature the use of **interactive tabs** to organize content
+
+- Slides were made using the [Quarto revealjs format](https://quarto.org/docs/presentations/revealjs/)
+
+- This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
+:::
+
+## The motivation<br>
+
+::: {layout-ncol="2"}
+### [2022 Center City District Sips](https://centercityphila.org/explore-center-city/ccd-sips)
+
+- Summer event featuring happy hour specials every Wednesday evening
+- Website list all of the restaurants & bars participating in the event
+- There is **no map view** which makes it hard to locate a happy hour special nearby
+
+### {}
+![](img/ccd-sips-site.png){width="475" fig-alt="Grid layout of participating restaurants on the website. Each grid card includes an image, address, and link to the specials"}
+:::
+
+## Our approach {.center}
+
+### We're going to use R tools to build an interactive map!<br><br>
+
+::: {layout-ncol=3 .center-x}
+
+::: {.fragment}
+{{< fa magnifying-glass size=huge >}}<br><br>**1. Scraping the data**<br>Scrape restaurants and addresses from the website with `rvest`
+:::
+
+::: {.fragment .fade-in}
+{{< fa map-pin size=huge >}}<br><br>**2. Geocoding the addresses**<br>Geocode the restaurant addresses to obtain geographical coordinates with `tidygeocoder`
+:::
+
+::: {.fragment .fade-in}
+{{< fa map-location-dot size=huge >}}<br><br>**3. Building the map**<br>Build an interactive map with `leaflet`
+:::
+
+:::
+<!--end layout-->
+
+## Packages {.center}
+
+| Package          | Purpose                                        | Version  |
+|------------------|------------------------------------------------|----------|
+| `tidyverse`      | Data manipulation and iteration functions      | 1.3.2.90 |
+| `here`           | File referencing in project-oriented workflows | 0.7.13   |
+| `knitr`          | Style data frame output into formatted table   | 1.40     |
+| `robotstxt`      | Check website for scraping permissions         | 0.7.13   |
+| `rvest`          | Scrape the information off of the website      | 1.0.3    |
+| `tidygeocoder`   | Geocode the restaurant addresses               | 1.0.5    |
+| `leaflet`        | Build the interactive map                      | 2.1.1    |
+| `leaflet.extras` | Add extra functionality to map                 | 1.0.0    |
+
+#  {.center-x background-image="img/map.png" background-opacity="0.4"}
+
+::: {.pad .h3-size layout-ncol="3"}
+
+{{< fa magnifying-glass size=huge >}}<br><br>**1. Scraping the data**<br>Scrape restaurants and addresses from the website with `rvest`
+
+::: fade
+{{< fa map-pin size=huge >}}<br><br>**2. Geocoding the addresses**<br>Geocode the restaurant addresses to obtain geographical coordinates with `tidygeocoder`
+:::
+
+::: fade
+{{< fa map-location-dot size=huge >}}<br><br>**3. Building the map**<br>Build an interactive map with `leaflet`
+:::
+:::
+
+## Checking site permissions
+
+We wil use the [robotstxt](https://docs.ropensci.org/robotstxt/) package to check the site's terms of service
+
+We want to look for whether any pages are **not allowed** to be crawled by bots/scrapers. In our case there aren't any, indicated by `Allow: /`
+
+```{r check-permissions}
+get_robotstxt("https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view")
+```
+
+## Harvesting data from the first page
+
+We will use the [rvest](https://rvest.tidyverse.org) package to scrape all the information we need from [each webpage](https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1)
+
+::: panel-tabset
+### Defining the page
+
+```{r}
+# define the page
+url <- "https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1"
+
+# read the page html
+html1 <- read_html(url)
+
+html1
+```
+
+### Table info
+
+```{r}
+#| code-line-numbers: "|4-5"
+# extract table info
+table1 <- 
+  html1 |> 
+  html_node("table") |> 
+  html_table()
+table1 |> head(3)
+```
+
+### Links to specials
+
+```{r}
+#| code-line-numbers: "|4-5"
+# extract hyperlinks to specific restaurant/bar specials
+links <- 
+  html1 |> 
+  html_elements(".o-table__tag.ccd-text-link") |> 
+  html_attr("href") |> 
+  as_tibble()
+links |> head(3)
+```
+
+### Creating full hyperlinks
+
+```{r}
+#| code-line-numbers: "|3|4|5"
+# add full hyperlinks to the table info
+table1Mod <-
+  bind_cols(table1, links) |> 
+  mutate(Specials = paste0(url, value)) |> 
+  select(-c(`CCD SIPS Specials`, value))
+table1Mod |> head(3)
+```
+:::
+
+<!--end panel-->
+
+## Harvesting data from the remaining pages
+
+::: panel-tabset
+### Function
+
+```{r}
+#| code-line-numbers: "1,29|3-4|6-9|11-15|17-22|24-28"
+getTables <- function(pageNumber) {
+ 
+  # wait 2 seconds between each scrape
+  Sys.sleep(2)
+  
+  url <- paste0("https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=", pageNumber)
+  
+  # read the page html
+  html <- read_html(url)
+  
+  # extract table info
+  table <- 
+    html |> 
+    html_node("table") |>
+    html_table()
+  
+  # extract hyperlinks to specific restaurant/bar specials
+  links <- 
+    html |> 
+    html_elements(".o-table__tag.ccd-text-link") |> 
+    html_attr("href") |> 
+    as_tibble()
+  
+  # add full hyperlinks to the table info
+  tableSpecials <<-
+    bind_cols(table, links) |> 
+    mutate(Specials = paste0(url, value)) |> 
+    select(-c(`CCD SIPS Specials`, value))
+}
+```
+
+### Scraping pages 2-3
+
+```{r}
+#| eval: false
+#| code-line-numbers: "1-2|4-5"
+# get remaining tables
+table2 <- map_df(2:3, getTables) 
+
+# combine all tables
+table <- bind_rows(table1Mod, table2)
+table |> head(3)
+```
+
+```{r}
+#| echo: false
+table <- read_rds(here("2022-ccd-sips", "data", "specialsScraped.Rds"))
+
+table |> head(3) 
+```
+
+### {{< fa lightbulb >}} Shortcut
+
+Skip this step and load the data from the `data/` folder:
+
+```{r}
+#| eval: false
+#| code-line-numbers: "1"
+table <- read_rds(here("data", "specialsScraped.Rds"))
+table |> head(3)
+```
+
+```{r}
+#| echo: false
+table <- read_rds(here("2022-ccd-sips", "data", "specialsScraped.Rds"))
+table |> head(3)
+```
+:::
+
+<!--end panel-->
+
+#  {.center-x background-image="img/map.png" background-opacity="0.75"}
+
+::: {.pad .h3-size layout-ncol="3"}
+
+{{< fa magnifying-glass size=huge >}}<br><br>**1. Scraping the data**<br>Scrape restaurants and addresses from the website with `rvest`
+
+{{< fa map-pin size=huge >}}<br><br>**2. Geocoding the addresses**<br>Geocode the restaurant addresses to obtain geographical coordinates with `tidygeocoder`
+
+::: fade
+{{< fa map-location-dot size=huge >}}<br><br>**3. Building the map**<br>Build an interactive map with `leaflet`
+:::
+:::
+
+## Geocoding
+
+We will use the [tidygeocoder](https://jessecambon.github.io/tidygeocoder/) package to help us convert the addresses to geographical coordinates, and we will specify we want to use the ArcGIS service
+
+```{r}
+#| eval: false
+#| code-line-numbers: "|4|5|6-7"
+# Geocoding the addresses
+specials <- 
+  table |> 
+  geocode(address = Address,
+          method = "arcgis", 
+          long = "Longitude",
+          lat = "Latitude")
+
+specials |> head(3)
+```
+
+::: {.fragment}
+```{r}
+#| echo: false
+specials <- read_rds(here("2022-ccd-sips", "data", "specialsGeocoded.Rds"))
+specials |> head(3)
+```
+:::
+
+```{r}
+#| eval: false
+# save table with geocoded addresses to file
+write_rds(specials,
+          file = here("data", "specialsGeocoded.Rds"))
+```
+
+## What about other geocoding services?
+
+I found some variation between different geocoding services!
+
+::: {.panel-tabset}
+
+### Comparison
+
+I tried 3 services that don't require an API key and one for which I already had an API key.
+
+| Service           | API key required | Time to run | Unmatched addresses |
+|-------------------|------------------|-------------|---------------------|
+| ArcGIS (`arcgis`) | No               | 22.4 secs   | 0/60                |
+| Nominatum (`osm`) | No               | 60.2 secs   | 4/60                |
+| Census (`census`) | No               | 4.6 secs    | 2/60                |
+| Google (`google`) | Yes              | 9 secs      | 0/60                |
+
+### Nominatum (`osm`)
+
+```{r}
+#| echo: false
+#| cache: true
+table |> 
+  select(Name, Address) |> 
+  geocode(address = Address,
+          method = 'osm',
+          long = "Longitude",
+          lat = "Latitude") |>
+  filter(is.na(Latitude))
+```
+
+### Census (`census`)
+
+```{r}
+#| echo: false
+#| cache: true
+table |> 
+  select(Name, Address) |> 
+  geocode(address = Address,
+          method = 'census',
+          long = "Longitude",
+          lat = "Latitude") |> 
+  filter(is.na(Latitude))
+```
+
+:::
+
+#  {.center-x background-image="img/map.png" background-opacity="0.4"}
+
+::: {.pad .h3-size layout-ncol="3"}
+
+{{< fa magnifying-glass size=huge >}}<br><br>**1. Scraping the data**<br>Scrape restaurants and addresses from the website with `rvest`
+
+{{< fa map-pin size=huge >}}<br><br>**2. Geocoding the addresses**<br>Geocode the restaurant addresses to obtain geographical coordinates with `tidygeocoder`
+
+{{< fa map-location-dot size=huge >}}<br><br>**3. Building the map**<br>Build an interactive map with `leaflet`
+
+:::
+
+## Building the map {.center}
+
+We can build the interactive map with the [leaflet](https://rstudio.github.io/leaflet/) package
+
+- interactive
+- highly customizable
+- mobile-friendly
+
+::: {.fragment}
+### {{< fa lightbulb >}} CSS tip
+
+Use a `css` chunk in your Quarto (**.qmd**) or R Markdown (**.Rmd**) file to import the font face(s) and weights you want your map to use (e.g. Red Hat Text)
+
+<!--issue: could not place css chunk in the second column (same issue with R chunk) -->
+```css
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+```
+:::
+
+## Plotting the restaurants/bars
+
+```{r}
+#| output-location: column-fragment
+#| code-line-numbers: "1-4|5-10|11-17"
+leaflet(
+  data = specials,
+  options = tileOptions(minZoom = 15,
+                        maxZoom = 19)) |> 
+  # add map markers
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude,
+    popup = specials$Address,
+    label = ~ Name,
+    # customize labels
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )
+    )
+```
+
+## Adding the map background
+
+```{r}
+#| output-location: column-fragment
+#| code-line-numbers: "18-19"
+leaflet(
+  data = specials, 
+  options = tileOptions(minZoom = 15,
+                        maxZoom = 19)) |> 
+  # add map markers
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    popup = specials$Address,
+    label = ~ Name,
+    # customize labels
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )
+    ) |>
+  # add map tiles in the background
+  addProviderTiles(providers$CartoDB.Positron)
+```
+
+## Setting the map view
+
+```{r}
+#| output-location: column-fragment
+#| code-line-numbers: "20-23"
+leaflet(
+  data = specials, 
+  options = tileOptions(minZoom = 15,
+                        maxZoom = 19)) |>
+  # add map markers
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    popup = specials$Address,
+    label = ~ Name,
+    # customize labels
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )
+    ) |>
+  # add map tiles in the background
+  addProviderTiles(providers$CartoDB.Positron) |>
+  # set the map view
+  setView(mean(specials$Longitude), 
+          mean(specials$Latitude), 
+          zoom = 16)
+```
+
+## Adding fullscreen control
+
+```{r}
+#| output-location: column-fragment
+#| code-line-numbers: "24-25"
+leaflet(
+  data = specials,
+  options = tileOptions(minZoom = 15,
+                        maxZoom = 19)) |>
+  # add map markers
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    popup = specials$Address,
+    label = ~ Name,
+    # customize labels
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )
+    ) |>
+  # add map tiles in the background
+  addProviderTiles(providers$CartoDB.Positron) |>
+  # set the map view
+  setView(mean(specials$Longitude), 
+          mean(specials$Latitude), 
+          zoom = 16) |>
+  # add fullscreen control button
+  leaflet.extras::addFullscreenControl()
+```
+
+## Customizing map markers: styling
+
+```{r}
+#| code-line-numbers: "|3|4|5"
+# marker for the restaurants/bars
+popInfoCircles <- paste(
+  "<h2 style='font-family: Red Hat Text, sans-serif; font-size: 1.6em; color:#43464C;'>", 
+  "<a style='color: #00857A;' href=", specials$Specials, ">", specials$Name, "</a></h2>",
+  "<p style='font-family: Red Hat Text, sans-serif; font-weight: normal; font-size: 1.5em; color:#9197A6;'>", specials$Address, "</p>"
+  )
+```
+
+::: {.fragment}
+### In formatted HTML
+
+```{html}
+#| eval: false
+#| code-line-numbers: "2,3,9|5-8|12-15"
+<!--heading: restaurant/bar name-->
+<h2 
+style="font-family: Red Hat Text, sans-serif; font-size: 1.6em; color:#43464C;">
+  <!--hyperlinks: link to the special-->
+  <a style="color: #00857A;" 
+  href="https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1028-yamitsuki-sushi-ramen">
+  1028 Yamitsuki Sushi &amp; Ramen 
+  </a>
+</h2>
+
+<!--paragraph: address-->
+<p 
+style="font-family: Red Hat Text, sans-serif; font-weight: normal; font-size: 1.5em; color:#9197A6;">
+1028 Arch Street, Philadelphia, PA 19107  
+</p>
+```
+:::
+
+## Customizing map markers: map
+
+```{r}
+#| output-location: column-fragment
+#| code-line-numbers: "13-14"
+leaflet(data = specials, 
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) |>
+  # add map markers
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude,
+    # customize markers
+    fillColor = "#009E91",
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12,
+    # customize pop-ups
+    popup = popInfoCircles,
+    label = ~ Name,
+    # customize labels
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )
+    ) |>
+  # add map tiles in the background
+  addProviderTiles(providers$CartoDB.Positron) |>
+  # set the map view
+  setView(mean(specials$Longitude), 
+          mean(specials$Latitude), 
+          zoom = 16) |> 
+  # add fullscreen control button
+  leaflet.extras::addFullscreenControl()
+```
+
+## Adding a marker at the center: styling
+
+```{r}
+#| code-line-numbers: "3,6|4-5|7-8"
+# marker for the center of the map
+popInfoMarker <- paste(
+  "<h1 style='padding-top: 0.5em; margin-top: 1em; margin-bottom: 0.5em; font-family: Red Hat Text, sans-serif; font-size: 1.8em; color:#43464C;'>", 
+  "<a style='color: #00857A;' href='https://centercityphila.org/explore-center-city/ccdsips'>",
+  "Center City District Sips 2022", "</a>",
+  "</h1>",
+  "<p style='color:#9197A6; font-family: Red Hat Text, sans-serif; font-size: 1.5em; padding-bottom: 1em;'>", 
+  "Philadelphia, PA", "</p>"
+  )
+```
+
+::: {.fragment}
+### Making an [awesome icon](https://rstudio.github.io/leaflet/markers.html#awesome-icons) for the center
+
+```{r}
+# custom icon for the center of the map
+centerIcon <-
+  makeAwesomeIcon(
+    icon = "map-pin",
+    iconColor = "#FFFFFF",
+    markerColor = "darkblue", # accepts HTML colors
+    library = "fa"
+  )
+```
+:::
+
+## Adding a marker at the center: map
+
+```{r}
+#| output-location: column-fragment
+#| code-line-numbers: "31-41|42-43"
+leaflet(data = specials, 
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) |>
+  # add map markers
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    # customize markers
+    fillColor = "#009E91",
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12,
+    # customize pop-ups
+    popup = popInfoCircles,
+    label = ~ Name,
+    # customize labels
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )
+    ) |>
+  # add map tiles in the background
+  addProviderTiles(providers$CartoDB.Positron) |>
+  # set the map view
+  setView(mean(specials$Longitude), 
+          mean(specials$Latitude), 
+          zoom = 16) |> 
+  # add fullscreen control button
+  leaflet.extras::addFullscreenControl() |> 
+  # add marker at the center
+  addAwesomeMarkers(
+    icon = centerIcon,
+    lng = mean(specials$Longitude), 
+    lat = mean(specials$Latitude), 
+    label = "Center City District Sips 2022",
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      ),
+    popup = popInfoMarker,
+    popupOptions = popupOptions(maxWidth = 250))
+```
+
+# Estimated map use {.center-x}
+
+<h3>Nearly 3200 views from 2300 U.S. visitors!  🤯</h3> 
+
+![[Umami](https://umami.is) dashboard for [silviacanelon.com](https://silviacanelon.com)](img/umami.png){fig-alt="Analytics dashboard showing the time period of Center City Sips 2022, June 1, 2022 to August 31. Data is filtered down to show only visits to the blog post hosting the Center Sips map, and to visitors from the US. There were close to 3200 views from 2300 visitors. Most visits were in June, followed by July, and finally August."}
+
+## Thanks for joining me for this<br>map-making adventure! {.center .center-x background-image="img/map.png" background-opacity="0.4"}
+
+### [`r fontawesome::fa("link", a11y = "sem")` silviacanelon.com](https://silviacanelon.com)<br/>
+
+### [`r fontawesome::fa("twitter", a11y = "sem")` \@spcanelon](https://twitter.com/spcanelon)<br/>
+
+### [`r fontawesome::fa("github", a11y = "sem")` \@spcanelon](https://github.com/spcanelon)

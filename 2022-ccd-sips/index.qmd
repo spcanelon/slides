@@ -246,12 +246,20 @@ getTables <- function(pageNumber) {
 #| eval: false
 #| code-line-numbers: "1-2|4-5"
 # get remaining tables
-table2 <- map_df(2:3, getTables) 
+table2 <- map_df(2:4, getTables) 
 
 # combine all tables
 table <- bind_rows(table1Mod, table2)
 table |> head(3)
 ```
+
+```{r}
+#| eval: false
+# save table with scraped addresses to file
+write_rds(table,
+          file = here("2022-ccd-sips", "data", "specialsScraped.Rds"))
+```
+
 
 ```{r}
 #| echo: false
@@ -323,7 +331,7 @@ specials |> head(3)
 #| eval: false
 # save table with geocoded addresses to file
 write_rds(specials,
-          file = here("data", "specialsGeocoded.Rds"))
+          file = here("2022-ccd-sips", "data", "specialsGeocoded.Rds"))
 ```
 
 ## What about other geocoding services?
@@ -556,7 +564,7 @@ style="font-family: Red Hat Text, sans-serif; font-weight: normal; font-size: 1.
 
 ```{r}
 #| output-location: column-fragment
-#| code-line-numbers: "13-14"
+#| code-line-numbers: "8-12|13-14"
 leaflet(data = specials, 
         options = tileOptions(minZoom = 15,
                               maxZoom = 19)) |>

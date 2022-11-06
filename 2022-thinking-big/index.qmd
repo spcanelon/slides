@@ -1,0 +1,46 @@
+---
+pagetitle: "[Thinking Big with Maps in R](https://silviacanelon.com/talk/2022-thinking-big/)"
+subtitle: "Tips on Wrangling Large Vector Data into Interactive Maps"
+author: Silvia Canelón, PhD
+location: "CANSSI Ontario Statistical Software Conference"
+date: Nov. 10, 2022
+format:
+  revealjs:
+    self-contained: false 
+    #theme: ["default", "css/custom.scss"]
+    history: false
+    controls: true
+    controls-layout: bottom-right
+    code-overflow: wrap
+    df-print: kable
+    touch: true
+    preview-links: true
+    hash-type: number
+    hash-one-based-index: true
+    #footer: "[slides.silviacanelon.com/2022-thinking-big]()"
+    footer: "Slides coming soon!"
+    navigation-mode: linear
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+xfun::pkg_attach("tidyverse",
+                 "here",
+                 "knitr",
+                 "robotstxt",
+                 "rvest",
+                 "tidygeocoder",
+                 "leaflet",
+                 "leaflet.extras")
+```
+
+## `r rmarkdown::metadata$pagetitle` {.center background-color="#002642"}
+
+### `r rmarkdown::metadata$subtitle`
+
+#### `r rmarkdown::metadata$author`
+
+#### [`r rmarkdown::metadata$location`](https://canssiontario.utoronto.ca/event/statistical-software-conference/)<br>`r rmarkdown::metadata$date`
+

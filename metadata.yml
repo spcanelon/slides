@@ -1,4 +1,12 @@
 # Internal slide decks
+- title: "Thinking Big with Maps in R: Tips on Wrangling Large Vector Data into Interactive Maps"
+  subtitle: "2022 CANSSI Ontario Statistical Software Conference"
+  author: "Silvia Canelón, PhD"
+  date: 2022-11-10
+  image: /2022-thinking-big/img/featured.png
+  path: /2022-thinking-big/index.qmd
+  categories:
+   - revealjs
 - title: "Philly Center City District Sips 2022: An Interactive Map"
   subtitle: "R-Ladies Philly"
   author: "Silvia Canelón, PhD"

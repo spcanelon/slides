@@ -10,7 +10,7 @@ project:
     - "!tour-of-the-tidyverse/"
 
 website:
-  title: "Slides | Silvia Canelón"
+  title: "Silvia Canelón"
   search: false
   favicon: img/logo_rounded.ico
   navbar:
@@ -28,7 +28,7 @@ website:
   site-url: https://slides.silviacanelon.com
   description: 'Collection of publicly available slide decks created by Silvia Canelón.'
 
-  opengraph: true
+  #opengraph: true
   twitter-card:
     creator: "@spcanelon"
     image: "/img/social-card.png"

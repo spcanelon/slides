@@ -6,7 +6,7 @@ location: "CANSSI Ontario Statistical Software Conference"
 date: Nov. 10, 2022
 format:
   revealjs:
-    self-contained: false 
+    self-contained: false
     #theme: ["default", "css/custom.scss"]
     history: false
     controls: true
@@ -17,8 +17,7 @@ format:
     preview-links: true
     hash-type: number
     hash-one-based-index: true
-    #footer: "[slides.silviacanelon.com/2022-thinking-big]()"
-    footer: "Slides coming soon!"
+    footer: "[slides.silviacanelon.com/2022-thinking-big]()"
     navigation-mode: linear
 execute: 
   echo: true
@@ -44,3 +43,99 @@ xfun::pkg_attach("tidyverse",
 
 #### [`r rmarkdown::metadata$location`](https://canssiontario.utoronto.ca/event/statistical-software-conference/)<br>`r rmarkdown::metadata$date`
 
+## Problem
+
+::: {layout-ncol=2}
+
+Plotting Open Data Philly source of 2008 tree canopy
+
+[Map on Azavea](https://phillytrees.azavea.com/)
+
+:::
+
+## Plotting with `geom_sf()`
+
+Looked like the entire county was covered by tree canopy
+
+In retrospect, could have modified line width to get more context
+
+
+## Asking for help on Twitter
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Plotting with `mapview`
+
+- verticle strips of the map weren't plotting. Too many features
+- RStudio would crash
+- VSCode was marginally better
+
+:::
+
+::: {.column width="50%"}
+{{< tweet user=spcanelon id=1572234491426443265 >}}
+:::
+
+::::
+
+## Simplify geometry -- Sharla
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Text
+:::
+
+::: {.column width="50%"}
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">e.g.<br><br>pts &lt;- mapview::npts(feature)<br><br>if (pts &gt; 10000) {<br> rmapshaper::ms_simplify(feature, keep = 0.1, keep_shapes = TRUE)<br>} else if (pts &gt; 5000) {<br> ms_simplify(feature, keep = 0.3, keep_shapes = TRUE)<br>} else {<br> feature<br>}</p>&mdash; Sharla Gelfand (@sharlagelfand) <a href="https://twitter.com/sharlagelfand/status/1572239009367080960?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+:::
+
+::::
+
+## Open in QGIS -- Michael
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Text
+:::
+
+::: {.column width="50%"}
+<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">In such situations I usually export the layer, and explore it in QGIS</p>&mdash; Michael Dorman (@MichaelDorman84) <a href="https://twitter.com/MichaelDorman84/status/1572488090572435458?ref_src=twsrc%5Etfw">September 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+:::
+
+::::
+
+## `rdeck` -- Miles
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Text
+:::
+
+::: {.column width="50%"}
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger.<a href="https://t.co/XERX4yjXLW">https://t.co/XERX4yjXLW</a></p>&mdash; Miles McBain (@MilesMcBain) <a href="https://twitter.com/MilesMcBain/status/1573042782000009216?ref_src=twsrc%5Etfw">September 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+:::
+
+::::
+
+## `tmap` -- Ana
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Test
+:::
+
+::: {.column width="50%"}
+<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">I use the package tmap, it works great. You have 2 viewing options the static one and the one you can zoom in and out.</p>&mdash; Ana Ortega-Avila, PhD (@a_ortega_a) <a href="https://twitter.com/a_ortega_a/status/1572238986852159489?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+:::
+
+::::
+
+## Bonus tips
+
+- large GFS

@@ -148,8 +148,8 @@ ggplot() +
 ## Which package to use? {.center}
 
 ::: {.incremental}
-- `leaflet` is best for datasets with <50,000 features...my tree canopy dataset had **193,418** multipolygons
-- `leaf.gl` is [recommended](https://twitter.com/TimSalabim3/status/1572256658088407042?s=20&t=pXBu5LYTEn5sUueDnlOFTw) in concert with `leaflet` (spoiler: it didn't work for me)
+- [`leaflet`](https://rstudio.github.io/leaflet/) is best for datasets with <50,000 features...my tree canopy dataset had **193,418** multipolygons
+- [`leafgl`](https://github.com/r-spatial/leafgl) is [recommended](https://twitter.com/TimSalabim3/status/1572256658088407042?s=20&t=pXBu5LYTEn5sUueDnlOFTw) in concert with `leaflet` (spoiler: it didn't work for me)
 - settled on `mapview`
 :::
 
@@ -163,7 +163,8 @@ ggplot() +
 
 ::: {.incremental}
 - Vertical strips of data missing
-- RStudio would crash
+- Non-functional interactivity
+- RStudio would crash, 
 - VSCode was hit-or-miss
 :::
 
@@ -206,6 +207,8 @@ ggplot() +
 
 ## QGIS rendering<br>in action {background-image="img/philly-qgis-dark-wide.gif"}
 
+<span role="img" aria-label="Gif showing QGIS rendering the tree canopy map over a matter of seconds."></span>
+
 ---
 
 :::: {.columns}
@@ -246,6 +249,8 @@ ggplot() +
 ::::
 
 ## {background-image="img/tmap.jpg" background-size="contain"}
+
+<span role="img" aria-label="Map of Philadelphia containing all expected tree canopy data. No missing pieces like in the map from slide 6 created with mapview."></span>
 
 ---
 
@@ -288,6 +293,14 @@ ggplot() +
 :::
 
 ::::
+
+## Bonus slide! {.center}
+
+This slide was added after the presentation to include feedback from talk attendees
+
+- Rendering issues might come from maxing out the RAM
+- To reduce the size of the dataset, one could adjust the precision because sometimes the features contain more digits than you need or can meaningfully rely on
+- The [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html) package might be another one to try. It's powerful and sits on Mapbox which lets you pull in nice basemaps as well
 
 ## Silvia Canelón {.center .center-x .nostretch background-image="img/map-pins.jpg" background-opacity="0.3"}
 

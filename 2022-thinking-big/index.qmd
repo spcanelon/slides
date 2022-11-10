@@ -1,5 +1,5 @@
 ---
-pagetitle: "[Thinking Big with Maps in R](https://silviacanelon.com/talk/2022-thinking-big/)"
+pagetitle: "Thinking Big with Maps in R"
 subtitle: "Tips on Wrangling Large Vector Data into Interactive Maps"
 author: Silvia Canelón, PhD
 location: "CANSSI Ontario Statistical Software Conference"
@@ -7,7 +7,8 @@ date: Nov. 10, 2022
 format:
   revealjs:
     self-contained: false
-    #theme: ["default", "css/custom.scss"]
+    # theme: dark
+    theme: ["dark", "css/custom.scss"]
     history: false
     controls: true
     controls-layout: bottom-right
@@ -19,23 +20,51 @@ format:
     hash-one-based-index: true
     footer: "[slides.silviacanelon.com/2022-thinking-big]()"
     navigation-mode: linear
-execute: 
-  echo: true
+    incremental: true
+# title-slide-attributes: 
+#   data-background-image: img/map-pins.jpg
+#   data-background-size: cover
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
 ---
 
-```{r}
+```{r setup}
 #| include: false
 xfun::pkg_attach("tidyverse",
                  "here",
-                 "knitr",
-                 "robotstxt",
-                 "rvest",
-                 "tidygeocoder",
-                 "leaflet",
-                 "leaflet.extras")
+                 "sf",
+                 "mapview",
+                 "tmap",
+                 "rmapshaper",
+                 "rdeck")
+
+talk <- here("2022-thinking-big")
 ```
 
-## `r rmarkdown::metadata$pagetitle` {.center background-color="#002642"}
+```{r import-data}
+#| include: false
+treeCanopy2015 <- read_sf(here(talk, "data", "TreeCanopyOutlines2015.gpkg"))
+phillyZips <- st_read(here(talk, "data", "PhillyZips.gpkg"))
+```
+
+# {.center-x background-image="img/map-pins.jpg"}
+
+::: {.bg-box}
+<h1>`r rmarkdown::metadata$pagetitle`</h1>
+
+<h2>`r rmarkdown::metadata$subtitle`</h2>
+
+----
+
+<h3>`r rmarkdown::metadata$author`</h3>
+
+:::
+
+<a href='https://canssiontario.utoronto.ca/event/statistical-software-conference'><img src='img/CANSSI-logo.png' height="75" style="padding: 0em 1em 0em 5em; float: left;" alt='CANSSI Ontario logo featuring a radial bar chart'/></a><p style="font-size: 0.6em;" align="left">`r rmarkdown::metadata$location`</p><p style="font-size: 0.6em" align="left">`r rmarkdown::metadata$date`</p>
+
+## `r rmarkdown::metadata$pagetitle` {background-image="img/map-pins.jpg" background-opacity="0.2" .center .center-x visibility="hidden"}
 
 ### `r rmarkdown::metadata$subtitle`
 
@@ -43,92 +72,157 @@ xfun::pkg_attach("tidyverse",
 
 #### [`r rmarkdown::metadata$location`](https://canssiontario.utoronto.ca/event/statistical-software-conference/)<br>`r rmarkdown::metadata$date`
 
-## Problem
+## Silvia Canelón {.center .center-x .nostretch background-image="img/map-pins.jpg" background-opacity="0.3"}
 
-::: {layout-ncol=2}
+### Data Analyst @ Penn Urban Health Lab
 
-Plotting Open Data Philly source of 2008 tree canopy
+University of Pennsylvania, Philadelphia, PA, US
 
-[Map on Azavea](https://phillytrees.azavea.com/)
+<img src="https://silviacanelon.com/about/sidebar/avatar.png" alt="smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side" style="border-radius: 50%;" width="200px"/>
 
-:::
+[`r fontawesome::fa("link", a11y = "sem")` silviacanelon.com](https://silviacanelon.com)<br/>[`r fontawesome::fa("mastodon", a11y = "sem")` fosstodon.org/\@spcanelon](https://fosstodon.org/@spcanelon)<br/> [`r fontawesome::fa("twitter", a11y = "sem")` \@spcanelon](https://twitter.com/spcanelon)<br/> [`r fontawesome::fa("github", a11y = "sem")` \@spcanelon](https://github.com/spcanelon)
 
-## Plotting with `geom_sf()`
-
-Looked like the entire county was covered by tree canopy
-
-In retrospect, could have modified line width to get more context
+## {background-iframe="https://phillytrees.azavea.com/"}
 
 
-## Asking for help on Twitter
+## Problem {background-image="img/philly-azavea.png" background-position="right" background-size="contain" visibility="hidden"}
+
+<span role="img" aria-label="Philadelphia map published by Azavea, showing tree canopy in 2018 overlaid over a Philadelphia County basemap"></span>
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="39%"}
+Plotting Open Data Philly source of 2008 tree canopy
 
-### Plotting with `mapview`
+Fairmount Park Conservancy & Philadelphia Parks and Recreation
 
-- verticle strips of the map weren't plotting. Too many features
-- RStudio would crash
-- VSCode was marginally better
+<https://treephilly.org>
 
+Interactive map: [Azavea](https://phillytrees.azavea.com/)
 :::
 
-::: {.column width="50%"}
-{{< tweet user=spcanelon id=1572234491426443265 >}}
+::: {.column width="61%"}
+
 :::
 
 ::::
 
-## Simplify geometry -- Sharla
+## Static map {background-image="img/plotTreeCanopy2015.png" background-position="right" background-size="contain"}
+
+<span role="img" aria-label="Static map of Philadelphia tree canopy in 2015. There are a lot of lines and some polygons covering the entire county."></span>
+
+### Plotting with [geom_sf()](https://ggplot2.tidyverse.org/reference/ggsf.html)
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-Text
+
+::: {.incremental .center}
+- A lot of lines
+- Some large polygons?
+- Seems like the entire county was covered by tree canopy
+:::
+
+::: {.fragment}
+I needed an interactive map to take a closer look at the data
+:::
+
 :::
 
 ::: {.column width="50%"}
+```{r}
+#| eval: false
+ggplot() +
+  geom_sf(data = treeCanopy2015,
+          color = "#c7d36f") +
+  theme_void() +
+  theme(
+    panel.background = element_rect(fill = "transparent"),
+    aspect.ratio = 5/4
+  )
+```
+:::
+
+::::
+
+## Plotting with [mapview](https://r-spatial.github.io/mapview/)
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+![](img/mapview.jpg){fig-alt="Map of Philadelphia overlaid with tree canopy data, some of which is missing in distinct vertical bands" fig-align="center"}
+
+::: {.incremental}
+- Vertical strips of data missing
+- RStudio would crash
+- VSCode was hit-or-miss
+:::
+
+:::
+
+::: {.column width="40%" .fragment}
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/RSpatial?src=hash&amp;ref_src=twsrc%5Etfw">#RSpatial</a> friends, do you have any tips for working with datasets that have 200k+ features (e.g. multipolygons)?<br><br>I tried using the <a href="https://twitter.com/hashtag/mapview?src=hash&amp;ref_src=twsrc%5Etfw">#mapview</a> package and it struggled. It couldn&#39;t render the full map 👇and I wasn&#39;t able to use the zoom controls. What am I missing? <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://t.co/EjV6HTiOBp">pic.twitter.com/EjV6HTiOBp</a></p>&mdash; Silvia Canelón is on Mastodon (@spcanelon) <a href="https://twitter.com/spcanelon/status/1572234491426443265?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+:::
+
+::::
+<!--end of columns-->
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%" .center}
+
+<h2>Suggestion</h2>
+
+### Open in [QGIS](https://www.qgis.org/en/site/)
+<br>
+
+<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">In such situations I usually export the layer, and explore it in QGIS</p>&mdash; Michael Dorman (@MichaelDorman84) <a href="https://twitter.com/MichaelDorman84/status/1572488090572435458?ref_src=twsrc%5Etfw">September 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+:::
+
+::: {.column width="50%" .center-x .center}
+
+::: {.fragment}
+{{< iconify exploding-head size=5x >}}
+:::
+
+
+:::
+
+::::
+
+## QGIS rendering<br>in action {background-image="img/philly-qgis-dark-wide.gif"}
+
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
 <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">e.g.<br><br>pts &lt;- mapview::npts(feature)<br><br>if (pts &gt; 10000) {<br> rmapshaper::ms_simplify(feature, keep = 0.1, keep_shapes = TRUE)<br>} else if (pts &gt; 5000) {<br> ms_simplify(feature, keep = 0.3, keep_shapes = TRUE)<br>} else {<br> feature<br>}</p>&mdash; Sharla Gelfand (@sharlagelfand) <a href="https://twitter.com/sharlagelfand/status/1572239009367080960?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 :::
 
-::::
+::: {.column width="60%"}
+<h2>Suggestion</h2>
 
-## Open in QGIS -- Michael
+### Simplify geometry with [rmapshaper](https://github.com/ateucher/rmapshaper#rmapshaper)
 
-:::: {.columns}
-
-::: {.column width="50%"}
-Text
+::: {.incremental}
+- super complicated multipolygons {{< fa check >}} 
+- simplifying {{< fa not-equal >}} eliminating geometries {{< fa check >}}
 :::
 
-::: {.column width="50%"}
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">In such situations I usually export the layer, and explore it in QGIS</p>&mdash; Michael Dorman (@MichaelDorman84) <a href="https://twitter.com/MichaelDorman84/status/1572488090572435458?ref_src=twsrc%5Etfw">September 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-:::
-
-::::
-
-## `rdeck` -- Miles
-
-:::: {.columns}
-
-::: {.column width="50%"}
-Text
-:::
-
-::: {.column width="50%"}
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger.<a href="https://t.co/XERX4yjXLW">https://t.co/XERX4yjXLW</a></p>&mdash; Miles McBain (@MilesMcBain) <a href="https://twitter.com/MilesMcBain/status/1573042782000009216?ref_src=twsrc%5Etfw">September 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
 :::
 
 ::::
 
-## `tmap` -- Ana
+## Suggestion
+
+### Try the `tmap` package
 
 :::: {.columns}
-
-::: {.column width="50%"}
-Test
-:::
 
 ::: {.column width="50%"}
 <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">I use the package tmap, it works great. You have 2 viewing options the static one and the one you can zoom in and out.</p>&mdash; Ana Ortega-Avila, PhD (@a_ortega_a) <a href="https://twitter.com/a_ortega_a/status/1572238986852159489?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -136,6 +230,22 @@ Test
 
 ::::
 
-## Bonus tips
+## {background-image="img/tmap.jpg" background-size="contain"}
 
-- large GFS
+## Suggestion
+
+### Try the [`rdeck` package](https://qfes.github.io/rdeck/articles/rdeck.html#scatterplot-map)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger.<a href="https://t.co/XERX4yjXLW">https://t.co/XERX4yjXLW</a></p>&mdash; Miles McBain (@MilesMcBain) <a href="https://twitter.com/MilesMcBain/status/1573042782000009216?ref_src=twsrc%5Etfw">September 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+:::
+
+::::
+
+## Silvia Canelón {.center .center-x .nostretch background-image="img/map-pins.jpg" background-opacity="0.3"}
+
+<img src="https://silviacanelon.com/about/sidebar/avatar.png" alt="smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side" style="border-radius: 50%;" width="200px"/>
+
+[`r fontawesome::fa("link", a11y = "sem")` silviacanelon.com](https://silviacanelon.com)<br/>[`r fontawesome::fa("mastodon", a11y = "sem")` fosstodon.org/\@spcanelon](https://fosstodon.org/@spcanelon)<br/> [`r fontawesome::fa("twitter", a11y = "sem")` \@spcanelon](https://twitter.com/spcanelon)<br/> [`r fontawesome::fa("github", a11y = "sem")` \@spcanelon](https://github.com/spcanelon)

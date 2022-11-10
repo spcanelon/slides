@@ -1,0 +1,18 @@
+{
+  "hash": "38d4347724d05bfa5e18520aed4de9fb",
+  "result": {
+    "markdown": "---\npagetitle: \"[Thinking Big with Maps in R](https://silviacanelon.com/talk/2022-thinking-big/)\"\nsubtitle: \"Tips on Wrangling Large Vector Data into Interactive Maps\"\nauthor: Silvia Canelón, PhD\nlocation: \"CANSSI Ontario Statistical Software Conference\"\ndate: Nov. 10, 2022\nformat:\n  revealjs:\n    self-contained: false\n    #theme: [\"default\", \"css/custom.scss\"]\n    history: false\n    controls: true\n    controls-layout: bottom-right\n    code-overflow: wrap\n    df-print: kable\n    touch: true\n    preview-links: true\n    hash-type: number\n    hash-one-based-index: true\n    footer: \"[slides.silviacanelon.com/2022-thinking-big]()\"\n    navigation-mode: linear\nexecute: \n  echo: true\n---\n\n\n\n\n## [Thinking Big with Maps in R](https://silviacanelon.com/talk/2022-thinking-big/) {.center background-color=\"#002642\"}\n\n### Tips on Wrangling Large Vector Data into Interactive Maps\n\n#### Silvia Canelón, PhD\n\n#### [CANSSI Ontario Statistical Software Conference](https://canssiontario.utoronto.ca/event/statistical-software-conference/)<br>Nov. 10, 2022\n\n## Problem\n\nPlotting Open Data Philly source of tree canopy 2008\n\nPlot on Azavea\n\n## Plotting with `geom_sf()`\n\nLooked like the entire county was covered by tree canopy\n\nIn retrospect, could have modified line width to get more context\n\n## Plotting with `tmap`\n\nSuggestion from Sharon Machlis? To try tmap\n\nProblem: verticle strips of the map weren't plotting. Too many features\n- RStudio would crash\n- VSCode was marginally better\n\n## Asking for help on Twitter\n\n### Solutions\n\n- Simplify geometry -- Sharla\n- Open in QGIS -- Michael\n- `rdeck` -- Miles\n- `tmap` -- Ana ?\n\n## Bonus tips\n\n- large GFS",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    function fireSlideChanged(previousSlide, currentSlide) {\n\n      // dispatch for htmlwidgets\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for reveal\n    if (window.Reveal) {\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\n        fireSlideChanged(event.previousSlide, event.currentSlide);\n      });\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

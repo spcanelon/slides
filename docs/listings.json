@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/2022-thinking-big/index.html",
       "/2022-ccd-sips/index.html",
       "/tour-of-the-tidyverse-v2/index.html"
     ]

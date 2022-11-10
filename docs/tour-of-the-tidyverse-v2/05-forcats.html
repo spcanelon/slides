@@ -10,9 +10,9 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+  <meta name="generator" content="quarto-1.1.251">
 
-  <title>Slides | Silvia Canelón – forcats</title>
+  <title>Silvia Canelón – forcats</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -21,10 +21,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -389,7 +394,7 @@
 
 <section id="section" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
 <h2></h2>
-<p><img data-src="images/drawio/05-forcats.png" class="absolute" alt="Our illustrated penguins have reached the forcats package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers" style="top: 30px; left: 30px; width: 100%; "></p>
+<p><img data-src="images/drawio/05-forcats.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the forcats package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
@@ -406,7 +411,7 @@
 <p>These are variables that have a fixed and known set of possible values, like <strong>species</strong>, <strong>island</strong>, and <strong>sex</strong> in our <code>penguins</code> dataset</p>
 </div>
 <div id="tabset-1-2">
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <a href="https://github.com/rstudio/cheatsheets/raw/main/factors.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/factors.pdf</a> <img data-src="images/cheatsheet/05-forcats.png" alt="forcats cheatsheet" style="width:60.0%"></p>
+<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <a href="https://github.com/rstudio/cheatsheets/raw/main/factors.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/factors.pdf</a> <img data-src="images/cheatsheet/05-forcats.png" style="width:60.0%" alt="forcats cheatsheet"></p>
 </div>
 <div id="tabset-1-3">
 <!--start columns-->
@@ -823,7 +828,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

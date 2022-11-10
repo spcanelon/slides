@@ -17,7 +17,7 @@ format:
     hash-one-based-index: true
     footer: "[slides.silviacanelon.com/2022-ccd-sips]()"
 execute: 
-  echo: true
+  echo: false
 ---
 
 ```{r}

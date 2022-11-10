@@ -1,30 +1,26 @@
 /*-- scss:defaults --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap');
-
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 
 // fonts
-$font-family-sans-serif: "Red Hat Text", sans-serif !default;
+$font-family-sans-serif: "Nunito Sans", sans-serif !default;
 $font-family-monospace: "Roboto Mono", "Noto Sans Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 // colors
 
-// R-Ladies color palette
-$rl-black: #181818;
-$rl-gray: #d3d3d3;
-$rl-purple-bright: #88398A;
-$primary: #114264;
+$primary: #FFFBF2;
 $primary-light: #cfd9e0;
-$secondary: #00857A;
-$secondary-light: #E5F2F1;
-$secondary-dark: #004F49;
+$secondary: #D96E34; // #A23E02
+$secondary-light: #A23E02; // #D96E34
+$secondary-dark: #640D00;
 
-$body-bg: #ffffff !default;
-$body-color: black !default;
-$link-color:  $secondary; // darken($primary, 5) !default;
+$body-bg: #101921 !default;
+$body-color: white !default;
+$link-color: $secondary; // darken($primary, 5) !default;
 
 // alternate colors for when the background changes
 $dark-bg-text-color: #fff !default;
@@ -32,16 +28,16 @@ $dark-bg-link-color: #42affa !default;
 $dark-bg-code-color: #ffa07a !default;
 
 // headings
-$presentation-heading-font: "Noto Serif", serif !default;
+$presentation-heading-font: "Nunito Sans", serif !default;
 $presentation-heading-color: $primary !default;
-$presentation-h1-font-size: 2.2em !default; //2.5em
-$presentation-h2-font-size: 1.8em !default; //1.6em
-$presentation-h3-font-size: 1.2em !default; //1.3em
-$presentation-h4-font-size: 1.15em !default; //1.3em
+// $presentation-h1-font-size: 2.6em !default; //2.5em 2.2em
+// $presentation-h2-font-size: 1.6em !default; //1.6em 1.8em
+// $presentation-h3-font-size: 1.3em !default; //1.3em 1.2em
+// $presentation-h4-font-size: 1.3em !default; //1.3em 1.15em
 
-$presentation-font-size-root: 25px !default;
-$presentation-font-smaller: 0.7 !default;
-$presentation-line-height: 1.25em !default;
+// $presentation-font-size-root: 25px !default;
+// $presentation-font-smaller: 0.7 !default;
+// $presentation-line-height: 1.25em !default;
 
 // code blocks
 $code-block-bg: $body-bg !default;
@@ -57,13 +53,11 @@ $selection-bg: $primary;
 
 // title slide
 .title-slide {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   //opacity: .85 !important;  issue: carries over to rest of section
   //padding: 1em 1em 1em 1em; issue: adds padding to background img
-  border-radius: 0.5em;
-  h2 {font-size: 2em;}
-  h3 {font-size: 1.5em;}
 }
+
 
 // links
 .reveal a {
@@ -76,11 +70,11 @@ $selection-bg: $primary;
 
 .reveal {
   h2 {
-    font-family: "Noto Serif", serif;
+    font-family: $font-family-sans-serif;
   }
 
   h3, h4 {
-  font-family: "Red Hat Text", "Fira Sans", sans-serif;
+  font-family: $font-family-sans-serif;
   color: $secondary;
   }
 
@@ -89,7 +83,7 @@ $selection-bg: $primary;
   //}
 
   h3 {
-    color: black;
+    color: $primary;
   }
 
 }
@@ -104,8 +98,10 @@ $selection-bg: $primary;
 
 // inline code
 .reveal code {
-  color: $primary;
-  background-color: $primary-light;
+  color: $secondary-dark;
+  background-color: lighten($secondary, 20) !important;
+  padding: 0.05em 0.15em 0.05em 0.15em !important;
+  border-radius: 5px !important;
 }
 
 // smaller text
@@ -160,8 +156,11 @@ div.sourceCode {
 }
 
 // footer
-.reveal .footer a {
-  color: $secondary !important;
+.reveal .footer {
+  font-size: 1em !important;
+  a {
+    color: $secondary !important;
+  }
 }
 
 // odds & ends
@@ -174,9 +173,21 @@ div.sourceCode {
 
 .margin-top {margin-top: 2em;}
 
-.bg-white {
-  background-color: white;
-  border-radius: 0.5em;
+.bg-box {
+  //background-color: $body-bg;
+  // background: rgba(100, 13, 0, 0.5);
+  background: rgba(16, 25, 33, 0.6) !important;
+  border-radius: 0em;
+  padding: 1em 1em 1em 1em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  h1 {text-transform: uppercase; letter-spacing: 0.09em; font-size: 1.3em !important;}
+  h2 {font-size: 1.1em !important;}
+  h3 {font-size: 0.9em !important;}
+  .reveal p {font-size: 0.2em !important; color: red !important}
+  // position: relative;
+  // max-width: 600px;
+  // padding: 50px;
+  // background: red;
 }
 
 .bg-black {

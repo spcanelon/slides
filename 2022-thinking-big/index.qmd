@@ -43,6 +43,7 @@ xfun::pkg_attach("tidyverse",
 talk <- here("2022-thinking-big")
 ```
 
+
 ```{r import-data}
 #| include: false
 treeCanopy2015 <- read_sf(here(talk, "data", "TreeCanopyOutlines2015.gpkg"))
@@ -72,6 +73,13 @@ phillyZips <- st_read(here(talk, "data", "PhillyZips.gpkg"))
 
 #### [`r rmarkdown::metadata$location`](https://canssiontario.utoronto.ca/event/statistical-software-conference/)<br>`r rmarkdown::metadata$date`
 
+## Navigation {.center .center-x}
+
+- A **table of contents** for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen
+- You can navigate the deck:
+  - Using the left/right or up/down arrow keys on your keyboard
+  - Clicking on the up/down controls in the bottom right corner of the screen
+
 ## Silvia Canelón {.center .center-x .nostretch background-image="img/map-pins.jpg" background-opacity="0.3"}
 
 ### Data Analyst @ Penn Urban Health Lab
@@ -84,28 +92,9 @@ University of Pennsylvania, Philadelphia, PA, US
 
 ## {background-iframe="https://phillytrees.azavea.com/"}
 
-
-## Problem {background-image="img/philly-azavea.png" background-position="right" background-size="contain" visibility="hidden"}
-
-<span role="img" aria-label="Philadelphia map published by Azavea, showing tree canopy in 2018 overlaid over a Philadelphia County basemap"></span>
-
-:::: {.columns}
-
-::: {.column width="39%"}
-Plotting Open Data Philly source of 2008 tree canopy
-
-Fairmount Park Conservancy & Philadelphia Parks and Recreation
-
-<https://treephilly.org>
-
-Interactive map: [Azavea](https://phillytrees.azavea.com/)
+<!--this blank footer div removes the footer from this slide-->
+::: footer
 :::
-
-::: {.column width="61%"}
-
-:::
-
-::::
 
 ## Static map {background-image="img/plotTreeCanopy2015.png" background-position="right" background-size="contain"}
 
@@ -164,14 +153,14 @@ ggplot() +
 ::: {.incremental}
 - Vertical strips of data missing
 - Non-functional interactivity
-- RStudio would crash, 
+- RStudio would crash
 - VSCode was hit-or-miss
 :::
 
 :::
 
 ::: {.column width="40%" .fragment}
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/RSpatial?src=hash&amp;ref_src=twsrc%5Etfw">#RSpatial</a> friends, do you have any tips for working with datasets that have 200k+ features (e.g. multipolygons)?<br><br>I tried using the <a href="https://twitter.com/hashtag/mapview?src=hash&amp;ref_src=twsrc%5Etfw">#mapview</a> package and it struggled. It couldn&#39;t render the full map 👇and I wasn&#39;t able to use the zoom controls. What am I missing? <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://t.co/EjV6HTiOBp">pic.twitter.com/EjV6HTiOBp</a></p>&mdash; Silvia Canelón is on Mastodon (@spcanelon) <a href="https://twitter.com/spcanelon/status/1572234491426443265?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![](img/tweet-1-help.png){fig-alt="Tweet with text: #RSpatial friends, do you have any tips for working with datasets that have 200k+ features (e.g. multipolygons)? I tried using the #mapview package and it struggled. It couldn't render the full map 👇and I wasn't able to use the zoom controls. What am I missing? #RStats. Tweet fig alt: Map of Philadelphia overlaid with tree canopy data, some of which is missing in distinct vertical bands"}](https://twitter.com/spcanelon/status/1572234491426443265)
 :::
 
 ::::
@@ -188,8 +177,7 @@ ggplot() +
 ### Open in [QGIS](https://www.qgis.org/en/site/)
 <br>
 
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">In such situations I usually export the layer, and explore it in QGIS</p>&mdash; Michael Dorman (@MichaelDorman84) <a href="https://twitter.com/MichaelDorman84/status/1572488090572435458?ref_src=twsrc%5Etfw">September 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
+[![](img/tweet-2-qgis.png){fig-alt="Tweet text: In such situations I usually export the layer, and explore it in QGIS"}](https://twitter.com/michaeldorman84/status/1572488090572435458)
 :::
 
 ::: {.column width="50%" .center-x .center}
@@ -209,12 +197,13 @@ ggplot() +
 
 <span role="img" aria-label="Gif showing QGIS rendering the tree canopy map over a matter of seconds."></span>
 
+
 ---
 
 :::: {.columns}
 
 ::: {.column width="40%"}
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">e.g.<br><br>pts &lt;- mapview::npts(feature)<br><br>if (pts &gt; 10000) {<br> rmapshaper::ms_simplify(feature, keep = 0.1, keep_shapes = TRUE)<br>} else if (pts &gt; 5000) {<br> ms_simplify(feature, keep = 0.3, keep_shapes = TRUE)<br>} else {<br> feature<br>}</p>&mdash; Sharla Gelfand (@sharlagelfand) <a href="https://twitter.com/sharlagelfand/status/1572239009367080960?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![](img/tweet-3-simplify.png){fig-alt="Tweet text: recently i've counted the number of points in a feature (esp super complicated multipolygons) and simplified the geometry based on that (next tweet!). Next tweet text: e.g. pts <- mapview::npts(feature) if (pts > 10000) {rmapshaper::ms_simplify(feature, keep = 0.1, keep_shapes = TRUE)} else if (pts > 5000) {ms_simplify(feature, keep = 0.3, keep_shapes = TRUE)} else {feature}"}](https://twitter.com/sharlagelfand/status/1572238838969286658)
 :::
 
 ::: {.column width="60%"}
@@ -237,7 +226,7 @@ ggplot() +
 :::: {.columns}
 
 ::: {.column width="40%"}
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">I use the package tmap, it works great. You have 2 viewing options the static one and the one you can zoom in and out.</p>&mdash; Ana Ortega-Avila, PhD (@a_ortega_a) <a href="https://twitter.com/a_ortega_a/status/1572238986852159489?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![](img/tweet-4-tmap.png){fig-alt="I use the package tmap, it works great. You have 2 viewing options the static one and the one you can zoom in and out."}](https://twitter.com/a_ortega_a/status/1572238986852159489)
 :::
 
 ::: {.column width="60%"}
@@ -257,7 +246,7 @@ ggplot() +
 :::: {.columns}
 
 ::: {.column width="40%"}
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger.<a href="https://t.co/XERX4yjXLW">https://t.co/XERX4yjXLW</a></p>&mdash; Miles McBain (@MilesMcBain) <a href="https://twitter.com/MilesMcBain/status/1573042782000009216?ref_src=twsrc%5Etfw">September 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![](img/tweet-5-rdeck.png){fig-alt="Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger."}](https://twitter.com/MilesMcBain/status/1573042782000009216)
 :::
 
 ::: {.column width="60%"}
@@ -285,11 +274,11 @@ ggplot() +
 
 :::
 
+
 :::
 
 ::: {.column width="50%"}
-
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Update: I’ve got a functional map! Many thanks to all the lovely people that contributed to this thread ✨ <br><br>I simplified the geometries from 193k features to 149k using <a href="https://twitter.com/hashtag/rmapshaper?src=hash&amp;ref_src=twsrc%5Etfw">#rmapshaper</a> <a href="https://t.co/pxbYeW76mp">https://t.co/pxbYeW76mp</a> and created the map using <a href="https://twitter.com/hashtag/tmap?src=hash&amp;ref_src=twsrc%5Etfw">#tmap</a> <a href="https://t.co/FVEjRRleZV">https://t.co/FVEjRRleZV</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://twitter.com/hashtag/RSpatial?src=hash&amp;ref_src=twsrc%5Etfw">#RSpatial</a> <a href="https://t.co/svXhyiAKpx">https://t.co/svXhyiAKpx</a> <a href="https://t.co/Tney4QeNzH">pic.twitter.com/Tney4QeNzH</a></p>&mdash; Silvia Canelón is on Mastodon (@spcanelon) <a href="https://twitter.com/spcanelon/status/1572386094720720896?ref_src=twsrc%5Etfw">September 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![](img/tweet-6-thanks.png){fig-alt="Tweet quoting the original tweet asking for help. Text reads: Update: I’ve got a functional map! Many thanks to all the lovely people that contributed to this thread ✨ I simplified the geometries from 193k features to 149k using #rmapshaper and created the map using #tmap #RStats #RSpatial"}](https://twitter.com/spcanelon/status/1572386094720720896)
 :::
 
 ::::

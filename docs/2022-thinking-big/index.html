@@ -361,6 +361,17 @@ Nov.&nbsp;10, 2022
 </p>
 </section>
 
+<section class="slide level2 center center-x">
+<h2>Navigation</h2>
+<ul>
+<li class="fragment">A <strong>table of contents</strong> for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen</li>
+<li class="fragment">You can navigate the deck:
+<ul>
+<li class="fragment">Using the left/right or up/down arrow keys on your keyboard</li>
+<li class="fragment">Clicking on the up/down controls in the bottom right corner of the screen</li>
+</ul></li>
+</ul>
+</section>
 <section class="slide level2 center center-x nostretch" data-background-image="img/map-pins.jpg" data-background-opacity="0.3">
 <h2>Silvia Canelón</h2>
 <h3>Data Analyst @ Penn Urban Health Lab</h3>
@@ -370,8 +381,11 @@ Nov.&nbsp;10, 2022
 </section>
 <section class="slide level2" data-background-iframe="https://phillytrees.azavea.com/">
 <h2></h2>
-</section>
+<!--this blank footer div removes the footer from this slide-->
+<div class="footer">
 
+</div>
+</section>
 <section class="slide level2" data-background-image="img/plotTreeCanopy2015.png" data-background-position="right" data-background-size="contain">
 <h2>Static map</h2>
 <p><span role="img" aria-label="Static map of Philadelphia tree canopy in 2015. There are a lot of lines and some polygons covering the entire county."></span></p>
@@ -418,18 +432,16 @@ Nov.&nbsp;10, 2022
 <ul>
 <li class="fragment">Vertical strips of data missing</li>
 <li class="fragment">Non-functional interactivity</li>
-<li class="fragment">RStudio would crash,</li>
+<li class="fragment">RStudio would crash</li>
 <li class="fragment">VSCode was hit-or-miss</li>
 </ul>
 </div>
 </div><div class="column fragment" style="width:40%;">
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark">
-<p lang="en" dir="ltr">
-<a href="https://twitter.com/hashtag/RSpatial?src=hash&amp;ref_src=twsrc%5Etfw">#RSpatial</a> friends, do you have any tips for working with datasets that have 200k+ features (e.g.&nbsp;multipolygons)?<br><br>I tried using the <a href="https://twitter.com/hashtag/mapview?src=hash&amp;ref_src=twsrc%5Etfw">#mapview</a> package and it struggled. It couldn't render the full map 👇and I wasn't able to use the zoom controls. What am I missing? <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://t.co/EjV6HTiOBp">pic.twitter.com/EjV6HTiOBp</a>
-</p>
-— Silvia Canelón is on Mastodon (<span class="citation" data-cites="spcanelon">@spcanelon</span>) <a href="https://twitter.com/spcanelon/status/1572234491426443265?ref_src=twsrc%5Etfw">September 20, 2022</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://twitter.com/spcanelon/status/1572234491426443265"><img data-src="img/tweet-1-help.png" alt="Tweet with text: #RSpatial friends, do you have any tips for working with datasets that have 200k+ features (e.g. multipolygons)? I tried using the #mapview package and it struggled. It couldn't render the full map 👇and I wasn't able to use the zoom controls. What am I missing? #RStats. Tweet fig alt: Map of Philadelphia overlaid with tree canopy data, some of which is missing in distinct vertical bands"></a></p>
+</figure>
+</div>
 </div>
 </div>
 <!--end of columns-->
@@ -443,13 +455,11 @@ Suggestion
 </h2>
 <h3>Open in <a href="https://www.qgis.org/en/site/">QGIS</a></h3>
 <p><br></p>
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark">
-<p lang="en" dir="ltr">
-In such situations I usually export the layer, and explore it in QGIS
-</p>
-— Michael Dorman (<span class="citation" data-cites="MichaelDorman84">@MichaelDorman84</span>) <a href="https://twitter.com/MichaelDorman84/status/1572488090572435458?ref_src=twsrc%5Etfw">September 21, 2022</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://twitter.com/michaeldorman84/status/1572488090572435458"><img data-src="img/tweet-2-qgis.png" alt="Tweet text: In such situations I usually export the layer, and explore it in QGIS"></a></p>
+</figure>
+</div>
 </div><div class="column center-x center" style="width:50%;">
 <p><br><br><br></p>
 <div class="fragment">
@@ -466,13 +476,11 @@ In such situations I usually export the layer, and explore it in QGIS
 
 <div class="columns">
 <div class="column" style="width:40%;">
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark">
-<p lang="en" dir="ltr">
-e.g.<br><br>pts &lt;- mapview::npts(feature)<br><br>if (pts &gt; 10000) {<br> rmapshaper::ms_simplify(feature, keep = 0.1, keep_shapes = TRUE)<br>} else if (pts &gt; 5000) {<br> ms_simplify(feature, keep = 0.3, keep_shapes = TRUE)<br>} else {<br> feature<br>}
-</p>
-— Sharla Gelfand (<span class="citation" data-cites="sharlagelfand">@sharlagelfand</span>) <a href="https://twitter.com/sharlagelfand/status/1572239009367080960?ref_src=twsrc%5Etfw">September 20, 2022</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://twitter.com/sharlagelfand/status/1572238838969286658"><img data-src="img/tweet-3-simplify.png" alt="Tweet text: recently i've counted the number of points in a feature (esp super complicated multipolygons) and simplified the geometry based on that (next tweet!). Next tweet text: e.g. pts <- mapview::npts(feature) if (pts > 10000) {rmapshaper::ms_simplify(feature, keep = 0.1, keep_shapes = TRUE)} else if (pts > 5000) {ms_simplify(feature, keep = 0.3, keep_shapes = TRUE)} else {feature}"></a></p>
+</figure>
+</div>
 </div><div class="column" style="width:60%;">
 <h2>
 Suggestion
@@ -494,13 +502,11 @@ Suggestion
 
 <div class="columns">
 <div class="column" style="width:40%;">
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark">
-<p lang="en" dir="ltr">
-I use the package tmap, it works great. You have 2 viewing options the static one and the one you can zoom in and out.
-</p>
-— Ana Ortega-Avila, PhD (<span class="citation" data-cites="a_ortega_a">@a_ortega_a</span>) <a href="https://twitter.com/a_ortega_a/status/1572238986852159489?ref_src=twsrc%5Etfw">September 20, 2022</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://twitter.com/a_ortega_a/status/1572238986852159489"><img data-src="img/tweet-4-tmap.png" alt="I use the package tmap, it works great. You have 2 viewing options the static one and the one you can zoom in and out."></a></p>
+</figure>
+</div>
 </div><div class="column" style="width:60%;">
 <h2>
 Suggestion
@@ -517,13 +523,11 @@ Suggestion
 
 <div class="columns">
 <div class="column" style="width:40%;">
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true" data-theme="dark">
-<p lang="en" dir="ltr">
-Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger.<a href="https://t.co/XERX4yjXLW">https://t.co/XERX4yjXLW</a>
-</p>
-— Miles McBain (<span class="citation" data-cites="MilesMcBain">@MilesMcBain</span>) <a href="https://twitter.com/MilesMcBain/status/1573042782000009216?ref_src=twsrc%5Etfw">September 22, 2022</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://twitter.com/MilesMcBain/status/1573042782000009216"><img data-src="img/tweet-5-rdeck.png" alt="Try {rdeck}. Handles datasets of that size and orders of magnitude larger without hassles. Can also use vector tiles if you need to larger."></a></p>
+</figure>
+</div>
 </div><div class="column" style="width:60%;">
 <h2>
 Suggestion (WIP)
@@ -545,13 +549,11 @@ Thank you #RStats!
 <p><lord-icon speed="0.5" colors="primary:#D96E34" scale="50" src="https://cdn.lordicon.com/rjzlnunf.json" trigger="loop"></lord-icon></p>
 </div>
 </div><div class="column" style="width:50%;">
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark">
-<p lang="en" dir="ltr">
-Update: I’ve got a functional map! Many thanks to all the lovely people that contributed to this thread ✨ <br><br>I simplified the geometries from 193k features to 149k using <a href="https://twitter.com/hashtag/rmapshaper?src=hash&amp;ref_src=twsrc%5Etfw">#rmapshaper</a> <a href="https://t.co/pxbYeW76mp">https://t.co/pxbYeW76mp</a> and created the map using <a href="https://twitter.com/hashtag/tmap?src=hash&amp;ref_src=twsrc%5Etfw">#tmap</a> <a href="https://t.co/FVEjRRleZV">https://t.co/FVEjRRleZV</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://twitter.com/hashtag/RSpatial?src=hash&amp;ref_src=twsrc%5Etfw">#RSpatial</a> <a href="https://t.co/svXhyiAKpx">https://t.co/svXhyiAKpx</a> <a href="https://t.co/Tney4QeNzH">pic.twitter.com/Tney4QeNzH</a>
-</p>
-— Silvia Canelón is on Mastodon (<span class="citation" data-cites="spcanelon">@spcanelon</span>) <a href="https://twitter.com/spcanelon/status/1572386094720720896?ref_src=twsrc%5Etfw">September 21, 2022</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://twitter.com/spcanelon/status/1572386094720720896"><img data-src="img/tweet-6-thanks.png" alt="Tweet quoting the original tweet asking for help. Text reads: Update: I’ve got a functional map! Many thanks to all the lovely people that contributed to this thread ✨ I simplified the geometries from 193k features to 149k using #rmapshaper and created the map using #tmap #RStats #RSpatial"></a></p>
+</figure>
+</div>
 </div>
 </div>
 </section>

@@ -9,17 +9,17 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
-<meta name="author" content="Silvia Canelón, PhD">
-<title>Silvia Canelón - An Antarctic Tour of the Tidyverse</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.269">
+
+  <meta name="author" content="Silvia Canelón, PhD">
+  <title>Silvia Canelón - An Antarctic Tour of the Tidyverse</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -96,12 +96,12 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -298,7 +298,7 @@
   }
 
   </style>
-<style type="text/css">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -386,7 +386,7 @@
     }
   </style>
 <meta name="twitter:title" content="Silvia Canelón - An Antarctic Tour of the Tidyverse">
-<meta name="twitter:description" content="v2.0 – Quarto RevealJS Remix">
+<meta name="twitter:description" content="v2.0 -- Quarto RevealJS Remix">
 <meta name="twitter:image" content="https://slides.silviacanelon.com/img/social-card.png">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:image-height" content="1376">
@@ -397,21 +397,32 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#562457" data-background-image="images/lter_penguins.png" data-background-position="50% 15%" data-background-size="35%" class="center"><h1 class="title">An Antarctic Tour of the Tidyverse</h1>
+<section id="title-slide" data-background-color="#562457" data-background-image="images/lter_penguins.png" data-background-position="50% 15%" data-background-size="35%" class="quarto-title-block center">
+  <h1 class="title">An Antarctic Tour of the Tidyverse</h1>
   <p class="subtitle">v2.0 – Quarto RevealJS Remix</p>
-  <p class="author">Silvia Canelón, PhD</p>
-</section><section id="silvia-canelón" class="slide level2 center center-x nostretch" data-background-image="https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80" data-background-size="cover"><h2>Silvia Canelón</h2>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Silvia Canelón, PhD 
+</div>
+</div>
+</div>
+
+</section>
+
+<section id="silvia-canelón" class="slide level2 center center-x nostretch" data-background-image="https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80" data-background-size="cover">
+<h2>Silvia Canelón</h2>
 <p>Data Analyst @ Penn Urban Health Lab</p>
 <p>University of Pennsylvania, Philadelphia, PA, USA</p>
 <p><img style="border-radius: 50%;" src="https://www.silviacanelon.com/about/sidebar/avatar.png" width="200px" alt="smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side"></p>
-<p><a href="https://www.silviacanelon.com"><svg aria-label="Link" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Link</title>
-<path d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"></path></svg> silviacanelon.com</a><br><a href="https://twitter.com/spcanelon"><svg aria-label="Twitter" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title>
-<path d="M459.4 151.7c.325 4.548 .325 9.097 .325 13.65 0 138.7-105.6 298.6-298.6 298.6-59.45 0-114.7-17.22-161.1-47.11 8.447 .974 16.57 1.299 25.34 1.299 49.06 0 94.21-16.57 130.3-44.83-46.13-.975-84.79-31.19-98.11-72.77 6.498 .974 12.99 1.624 19.82 1.624 9.421 0 18.84-1.3 27.61-3.573-48.08-9.747-84.14-51.98-84.14-102.1v-1.299c13.97 7.797 30.21 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.197-37.36 14.29-52.95 51.65 63.67 129.3 105.3 216.4 109.8-1.624-7.797-2.599-15.92-2.599-24.04 0-57.83 46.78-104.9 104.9-104.9 30.21 0 57.5 12.67 76.67 33.14 23.72-4.548 46.46-13.32 66.6-25.34-7.798 24.37-24.37 44.83-46.13 57.83 21.12-2.273 41.58-8.122 60.43-16.24-14.29 20.79-32.16 39.31-52.63 54.25z"></path></svg><span class="citation" data-cites="spcanelon">@spcanelon</span></a><br><a href="https://github.com/spcanelon"><svg aria-label="GitHub" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title>
-<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span class="citation" data-cites="spcanelon">@spcanelon</span></a></p>
+<p><a href="https://www.silviacanelon.com"><svg aria-label="Link" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Link</title><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"></path></svg> silviacanelon.com</a><br> <a href="https://twitter.com/spcanelon"><svg aria-label="Twitter" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg> <span class="citation" data-cites="spcanelon">@spcanelon</span></a><br> <a href="https://github.com/spcanelon"><svg aria-label="GitHub" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> <span class="citation" data-cites="spcanelon">@spcanelon</span></a></p>
 <div class="footer">
 <p>Photo by <a href="https://unsplash.com/@lukehuff?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Lucas Huffman</a> on <a href="https://unsplash.com/s/photos/antarctica?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 </div>
-</section><section id="before-we-begin" class="slide level2 center"><h2>Before we begin</h2>
+</section>
+<section id="before-we-begin" class="slide level2 center">
+<h2>Before we begin</h2>
 <ul>
 <li><p>Slides adapted from xaringan slides created for an <a href="https://github.com/spcanelon/tour-of-the-tidyverse">R-Ladies Chicago tutorial</a></p></li>
 <li><p>Slides made using the <a href="https://quarto.org/docs/presentations/revealjs/">Quarto revealjs format</a></p></li>
@@ -419,20 +430,24 @@
 <li><p><a href="https://github.com/allisonhorst/stats-illustrations">Penguin illustrations by Allison Horst</a></p></li>
 <li><p>Photographs from various photographers on Unsplash, and noted on the relevant slide</p></li>
 <li><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p></li>
-</ul></section><section id="slide-navigation" class="slide level2 center"><h2>Slide navigation</h2>
+</ul>
+</section>
+<section id="slide-navigation" class="slide level2 center">
+<h2>Slide navigation</h2>
 <h3 id="welcome-to-the-antarctic-tour-of-the-tidyverse-v2.0">Welcome to the Antarctic Tour of the Tidyverse v2.0!</h3>
 <p>This is meant to be a fun and light introduction to each of the core <a href="tidyverse.org">tidyverse</a> packages</p>
 <ul>
 <li><p>A <strong>table of contents</strong> for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen</p></li>
-<li>
-<p>Many of these slides feature the use of <strong>interactive tabs</strong> to organize content. For each core package in the tidyverse, you will find two groups of tabs:</p>
+<li><p>Many of these slides feature the use of <strong>interactive tabs</strong> to organize content. For each core package in the tidyverse, you will find two groups of tabs:</p>
 <ul>
 <li>The <strong>first</strong> group is information about the package and includes an overview, cheatsheet, and reading suggestion</li>
 <li>The <strong>second</strong> group includes exercises using the package and displays code chunks along with their respective outputs</li>
-</ul>
-</li>
+</ul></li>
 <li><p>If you prefer to read a longform <strong>tutorial</strong> with the same information, you can find one alongside these slides at <a href="tutorial/">tour-of-the-tidyverse-v2/tutorial</a></p></li>
-</ul></section><section id="meet-our-penguin-friends" class="slide level2"><h2>Meet our penguin friends!</h2>
+</ul>
+</section>
+<section id="meet-our-penguin-friends" class="slide level2">
+<h2>Meet our penguin friends!</h2>
 <p><br></p>
 <div class="columns center-x">
 <div class="column" style="width:30%;">
@@ -449,23 +464,27 @@
 <div class="footer">
 <p>🐧<span> Photos by <a href="https://unsplash.com/@longmaspirit?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Long Ma</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="collection-of-r-packages-including-these-9-core-packages-and-more" class="slide level2 right" data-background-image="images/drawio/tidyverse.png" data-background-size="80%" data-background-position="50% 35%" alt="schematic including hex logos for the 9 tidyverse packages, readr, ggplot2, forcats, tidyr, tibble, dplyr, stringr, purrr, and lubridate"><h2>Collection of R packages, including <br> these 9 core packages (and more!)</h2>
+</section>
+<section id="collection-of-r-packages-including-these-9-core-packages-and-more" class="slide level2 right" data-background-image="images/drawio/tidyverse.png" data-background-size="80%" data-background-position="50% 35%" alt="schematic including hex logos for the 9 tidyverse packages, readr, ggplot2, forcats, tidyr, tibble, dplyr, stringr, purrr, and lubridate">
+<h2>Collection of R packages, including <br> these 9 core packages (and more!)</h2>
 <div class="footer">
 <p><code>lubridate</code> was welcomed into the <code>tidyverse</code> as a core package on <a href="https://github.com/tidyverse/tidyverse/commit/3be82832a4982d6d10e25e375cedeb8c3161be35">August 12, 2022</a><br>You may need to install the development version with <code>remotes::install_github("tidyverse/tidyverse")</code></p>
 </div>
-</section><section><section id="section" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section>
+<section>
+
+<section id="section" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/01-readr.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins are starting their tour with the readr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="readr-info" class="slide level2" data-background-image="images/hex/readr.png" data-background-size="8%" data-background-position="98% 4%"><h2>readr: info</h2>
+</section>
+<section id="readr-info" class="slide level2" data-background-image="images/hex/readr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>readr: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">Overview</a></li>
-<li><a href="#tabset-1-2">Cheatsheet</a></li>
-<li><a href="#tabset-1-3">Reading</a></li>
-</ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Overview</a></li><li><a href="#tabset-1-2">Cheatsheet</a></li><li><a href="#tabset-1-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <p><br><br></p>
@@ -477,18 +496,12 @@
 </div><div class="column" style="width:50%;">
 <h3 id="you-can-import">You can import…</h3>
 <ul>
-<li>comma separated (CSV) files with <code>read_csv()</code>
-</li>
-<li>tab separated files with <code>read_tsv()</code>
-</li>
-<li>general delimited files with <code>read_delim()</code>
-</li>
-<li>fixed width files with <code>read_fwf()</code>
-</li>
-<li>tabular files where columns are separated by white-space with <code>read_table()</code>
-</li>
-<li>web log files with <code>read_log()</code>
-</li>
+<li>comma separated (CSV) files with <code>read_csv()</code></li>
+<li>tab separated files with <code>read_tsv()</code></li>
+<li>general delimited files with <code>read_delim()</code></li>
+<li>fixed width files with <code>read_fwf()</code></li>
+<li>tabular files where columns are separated by white-space with <code>read_table()</code></li>
+<li>web log files with <code>read_log()</code></li>
 </ul>
 </div>
 </div>
@@ -504,10 +517,8 @@
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h3 id="r-for-data-science-ch-11-data-import">R for Data Science: <a href="https://r4ds.had.co.nz/data-import.html">Ch 11 Data import</a>
-</h3>
-<h3 id="package-documentation-httpsreadr.tidyverse.org">Package documentation: <a href="https://readr.tidyverse.org" class="uri">https://readr.tidyverse.org</a>
-</h3>
+<h3 id="r-for-data-science-ch-11-data-import">R for Data Science: <a href="https://r4ds.had.co.nz/data-import.html">Ch 11 Data import</a></h3>
+<h3 id="package-documentation-httpsreadr.tidyverse.org">Package documentation: <a href="https://readr.tidyverse.org" class="uri">https://readr.tidyverse.org</a></h3>
 </div>
 </div>
 <!--end columns-->
@@ -515,14 +526,12 @@
 </div>
 </div>
 <!--end panels-->
-</section><section id="readr-exercise" class="slide level2" data-background-image="images/hex/readr.png" data-background-size="8%" data-background-position="98% 4%"><h2>readr: exercise</h2>
+</section>
+<section id="readr-exercise" class="slide level2" data-background-image="images/hex/readr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>readr: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">Read data in</a></li>
-<li><a href="#tabset-2-2">Clean data</a></li>
-<li><a href="#tabset-2-3">Raw data</a></li>
-</ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Read data in</a></li><li><a href="#tabset-2-2">Clean data</a></li><li><a href="#tabset-2-3">Raw data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <h4 class="center-x" id="options-1-2-below-will-get-you-the-same-raw-dataset-for-adélie-penguins.-try-it-out">Options 1 &amp; 2 below will get you the same raw dataset for Adélie penguins. Try it out!</h4>
@@ -591,19 +600,21 @@
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-1" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-1" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/02-tibble.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the tibble package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="tibble-info" class="slide level2" data-background-image="images/hex/tibble.png" data-background-size="8%" data-background-position="98% 4%"><h2>tibble: info</h2>
+</section>
+<section id="tibble-info" class="slide level2" data-background-image="images/hex/tibble.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>tibble: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">Overview</a></li>
-<li><a href="#tabset-3-2">Cheatsheet</a></li>
-<li><a href="#tabset-3-3">Reading</a></li>
-</ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Overview</a></li><li><a href="#tabset-3-2">Cheatsheet</a></li><li><a href="#tabset-3-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="center">
 <p><br><br></p>
@@ -619,10 +630,8 @@
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h3 id="r-for-data-science-ch-10-tibbles">R for Data Science: <a href="https://r4ds.had.co.nz/tibbles.html">Ch 10 Tibbles</a>
-</h3>
-<h3 id="package-documentation-httpstibble.tidyverse.org">Package documentation: <a href="https://tibble.tidyverse.org" class="uri">https://tibble.tidyverse.org</a>
-</h3>
+<h3 id="r-for-data-science-ch-10-tibbles">R for Data Science: <a href="https://r4ds.had.co.nz/tibbles.html">Ch 10 Tibbles</a></h3>
+<h3 id="package-documentation-httpstibble.tidyverse.org">Package documentation: <a href="https://tibble.tidyverse.org" class="uri">https://tibble.tidyverse.org</a></h3>
 </div>
 </div>
 <!--end columns-->
@@ -630,15 +639,12 @@
 </div>
 </div>
 <!--end panels-->
-</section><section id="tibble-exercise" class="slide level2" data-background-image="images/hex/tibble.png" data-background-size="8%" data-background-position="98% 4%"><h2>tibble: exercise</h2>
+</section>
+<section id="tibble-exercise" class="slide level2" data-background-image="images/hex/tibble.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>tibble: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">Code</a></li>
-<li><a href="#tabset-4-2">Result</a></li>
-<li><a href="#tabset-4-3">Chat</a></li>
-<li><a href="#tabset-4-4">More</a></li>
-</ul>
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Code</a></li><li><a href="#tabset-4-2">Result</a></li><li><a href="#tabset-4-3">Chat</a></li><li><a href="#tabset-4-4">More</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
 <h4 class="center-x" id="lets-take-a-look-at-the-differences">Let’s take a look at the differences!</h4>
@@ -688,8 +694,7 @@
 <li>variable classes</li>
 <li>only 10 rows</li>
 <li>only as many columns as can fit on the screen</li>
-<li>
-<code>NA</code>s are highlighted in console so they’re easy to spot (font highlighting and styling in <code>tibble</code>)</li>
+<li><code>NA</code>s are highlighted in console so they’re easy to spot (font highlighting and styling in <code>tibble</code>)</li>
 </ul>
 <p>Not so much a concern in an R Markdown file, but noticeable in the console</p>
 <p>This enhanced print method makes it easier to work with large datasets</p>
@@ -704,24 +709,25 @@
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-2" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-2" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/03-ggplot2.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the ggplot2 package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="ggplot2-info" class="slide level2" data-background-image="images/hex/ggplot2.png" data-background-size="8%" data-background-position="98% 4%"><h2>ggplot2: info</h2>
+</section>
+<section id="ggplot2-info" class="slide level2" data-background-image="images/hex/ggplot2.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>ggplot2: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-5-1">Overview</a></li>
-<li><a href="#tabset-5-2">Cheatsheet</a></li>
-<li><a href="#tabset-5-3">Reading</a></li>
-</ul>
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Overview</a></li><li><a href="#tabset-5-2">Cheatsheet</a></li><li><a href="#tabset-5-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="center">
 <p><br><br></p>
-<h4 id="ggplot2-uses-the-grammar-of-graphics-and-layers-graphical-components-together-to-help-us-create-a-plot">
-<code>ggplot2</code> uses the “Grammar of Graphics” and layers graphical components together to help us create a plot</h4>
+<h4 id="ggplot2-uses-the-grammar-of-graphics-and-layers-graphical-components-together-to-help-us-create-a-plot"><code>ggplot2</code> uses the “Grammar of Graphics” and layers graphical components together to help us create a plot</h4>
 <p>Let’s start by making a simple plot of our data!</p>
 </div>
 <div id="tabset-5-2">
@@ -734,10 +740,8 @@
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h3 id="r-for-data-science-ch-3-data-visualization">R for Data Science: <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualization</a>
-</h3>
-<h3 id="package-documentation-httpsggplot2.tidyverse.org">Package documentation: <a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a>
-</h3>
+<h3 id="r-for-data-science-ch-3-data-visualization">R for Data Science: <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualization</a></h3>
+<h3 id="package-documentation-httpsggplot2.tidyverse.org">Package documentation: <a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a></h3>
 </div>
 </div>
 <!--end columns-->
@@ -745,16 +749,12 @@
 </div>
 </div>
 <!--end panels-->
-</section><section id="ggplot2-exercise" class="slide level2" data-background-image="images/hex/ggplot2.png" data-background-size="8%" data-background-position="98% 4%"><h2>ggplot2: exercise</h2>
+</section>
+<section id="ggplot2-exercise" class="slide level2" data-background-image="images/hex/ggplot2.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>ggplot2: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-6-1">View the data</a></li>
-<li><a href="#tabset-6-2">Scatterplot</a></li>
-<li><a href="#tabset-6-3">Boxplot</a></li>
-<li><a href="#tabset-6-4">By Species</a></li>
-<li><a href="#tabset-6-5">Chat</a></li>
-</ul>
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">View the data</a></li><li><a href="#tabset-6-2">Scatterplot</a></li><li><a href="#tabset-6-3">Boxplot</a></li><li><a href="#tabset-6-4">By Species</a></li><li><a href="#tabset-6-5">Chat</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
 <p>Get a full view of the dataset:</p>
@@ -825,19 +825,21 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-3" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-3" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/04-dplyr.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the dplyr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="dplyr-info" class="slide level2" data-background-image="images/hex/dplyr.png" data-background-size="8%" data-background-position="98% 4%"><h2>dplyr: info</h2>
+</section>
+<section id="dplyr-info" class="slide level2" data-background-image="images/hex/dplyr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>dplyr: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-7-1">Overview</a></li>
-<li><a href="#tabset-7-2">Cheatsheet</a></li>
-<li><a href="#tabset-7-3">Reading</a></li>
-</ul>
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Overview</a></li><li><a href="#tabset-7-2">Cheatsheet</a></li><li><a href="#tabset-7-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1" class="center">
 <div class="columns">
@@ -853,13 +855,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </ul>
 </div><div class="column">
 <ul>
-<li>Pick observations by their values with <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code>.</li>
+<li>Pick observations by their values with <code>filter()</code>.</li>
 <li>Reorder the rows with <code>arrange()</code>.</li>
 <li>Pick variables by their names <code>select()</code>.</li>
 <li>Create new variables with functions of existing variables with <code>mutate()</code>.</li>
 <li>Collapse many values down to a single summary with <code>summarize()</code>.</li>
-<li>
-<code>group_by()</code> gets the above functions to operate group-by-group rather than on the entire dataset.</li>
+<li><code>group_by()</code> gets the above functions to operate group-by-group rather than on the entire dataset.</li>
 <li>and <code>count()</code> + <code>add_count()</code> simplify <code>group_by()</code> + <code>summarize()</code> when you just want to count</li>
 </ul>
 </div>
@@ -876,10 +877,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h3 id="r-for-data-science-ch-11-data-transformation">R for Data Science: <a href="https://r4ds.had.co.nz/transform.html">Ch 11 Data transformation</a>
-</h3>
-<h3 id="package-documentation-httpsdplyr.tidyverse.org">Package documentation: <a href="https://dplyr.tidyverse.org" class="uri">https://dplyr.tidyverse.org</a>
-</h3>
+<h3 id="r-for-data-science-ch-11-data-transformation">R for Data Science: <a href="https://r4ds.had.co.nz/transform.html">Ch 11 Data transformation</a></h3>
+<h3 id="package-documentation-httpsdplyr.tidyverse.org">Package documentation: <a href="https://dplyr.tidyverse.org" class="uri">https://dplyr.tidyverse.org</a></h3>
 </div>
 </div>
 <!--end columns-->
@@ -887,18 +886,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="dplyr-exercise" class="slide level2" data-background-image="images/hex/dplyr.png" data-background-size="8%" data-background-position="98% 4%"><h2>dplyr: exercise</h2>
+</section>
+<section id="dplyr-exercise" class="slide level2" data-background-image="images/hex/dplyr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>dplyr: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-8" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-8-1">Select</a></li>
-<li><a href="#tabset-8-2">Arrange</a></li>
-<li><a href="#tabset-8-3">Group By &amp; Summarize</a></li>
-<li><a href="#tabset-8-4">Count 1</a></li>
-<li><a href="#tabset-8-5">Count 2</a></li>
-<li><a href="#tabset-8-6">Mutate</a></li>
-<li><a href="#tabset-8-7">Filter</a></li>
-</ul>
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">Select</a></li><li><a href="#tabset-8-2">Arrange</a></li><li><a href="#tabset-8-3">Group By &amp; Summarize</a></li><li><a href="#tabset-8-4">Count 1</a></li><li><a href="#tabset-8-5">Count 2</a></li><li><a href="#tabset-8-6">Mutate</a></li><li><a href="#tabset-8-7">Filter</a></li></ul>
 <div class="tab-content">
 <div id="tabset-8-1">
 <h4 class="center-x" id="can-you-spot-the-difference-in-these-operations">Can you spot the difference in these operations?</h4>
@@ -1133,7 +1126,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div id="tabset-8-7">
 <div class="columns">
 <div class="column" style="width:45%;">
-<p>Finally, we can filter rows to only show us <strong>Chinstrap</strong> penguin summaries by adding <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code> to our pipeline</p>
+<p>Finally, we can filter rows to only show us <strong>Chinstrap</strong> penguin summaries by adding <code>filter()</code> to our pipeline</p>
 </div><div class="column" style="width:55%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>penguins <span class="sc">|&gt;</span></span>
@@ -1157,24 +1150,25 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-4" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-4" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/05-forcats.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the forcats package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="forcats-info" class="slide level2" data-background-image="images/hex/forcats.png" data-background-size="8%" data-background-position="98% 4%"><h2>forcats: info</h2>
+</section>
+<section id="forcats-info" class="slide level2" data-background-image="images/hex/forcats.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>forcats: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-9" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-9-1">Overview</a></li>
-<li><a href="#tabset-9-2">Cheatsheet</a></li>
-<li><a href="#tabset-9-3">Reading</a></li>
-</ul>
+<ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Overview</a></li><li><a href="#tabset-9-2">Cheatsheet</a></li><li><a href="#tabset-9-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-9-1" class="center">
 <p><br><br></p>
-<h4 id="forcats-helps-us-work-with-categorical-variables-or-factors">
-<code>forcats</code> helps us work with <strong>categorical variables</strong> or factors</h4>
+<h4 id="forcats-helps-us-work-with-categorical-variables-or-factors"><code>forcats</code> helps us work with <strong>categorical variables</strong> or factors</h4>
 <p>These are variables that have a fixed and known set of possible values, like <strong>species</strong>, <strong>island</strong>, and <strong>sex</strong> in our <code>penguins</code> dataset</p>
 </div>
 <div id="tabset-9-2">
@@ -1187,10 +1181,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h4 id="r-for-data-science-ch-15-factors">R for Data Science: <a href="https://r4ds.had.co.nz/factors.html">Ch 15 Factors</a>
-</h4>
-<h4 id="package-documentation-httpsforcats.tidyverse.org">Package documentation: <a href="https://forcats.tidyverse.org" class="uri">https://forcats.tidyverse.org</a>
-</h4>
+<h4 id="r-for-data-science-ch-15-factors">R for Data Science: <a href="https://r4ds.had.co.nz/factors.html">Ch 15 Factors</a></h4>
+<h4 id="package-documentation-httpsforcats.tidyverse.org">Package documentation: <a href="https://forcats.tidyverse.org" class="uri">https://forcats.tidyverse.org</a></h4>
 </div>
 </div>
 <!--end columns-->
@@ -1198,18 +1190,17 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="forcats-exercise" class="slide level2" data-background-image="images/hex/forcats.png" data-background-size="8%" data-background-position="98% 4%"><h2>forcats: exercise</h2>
+</section>
+<section id="forcats-exercise" class="slide level2" data-background-image="images/hex/forcats.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>forcats: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-10" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-10-1">Code</a></li>
-<li><a href="#tabset-10-2">Result</a></li>
-</ul>
+<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">Code</a></li><li><a href="#tabset-10-2">Result</a></li></ul>
 <div class="tab-content">
 <div id="tabset-10-1">
 <p>Currently the <strong>year</strong> variable in <code>penguins</code> is continuous from 2007 to 2009</p>
 <p>Usually this isn’t what we want and we might want to turn it into a categorical variable instead</p>
-<p>The <code><a href="https://rdrr.io/r/base/factor.html">factor()</a></code> function is perfect for this</p>
+<p>The <code>factor()</code> function is perfect for this</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">year_factor =</span> <span class="fu">factor</span>(year, <span class="at">levels =</span> <span class="fu">unique</span>(year)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1272,26 +1263,27 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-5" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-5" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/06-stringr.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the stringr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="stringr-info" class="slide level2" data-background-image="images/hex/stringr.png" data-background-size="8%" data-background-position="98% 4%"><h2>stringr: info</h2>
+</section>
+<section id="stringr-info" class="slide level2" data-background-image="images/hex/stringr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>stringr: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-11" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-11-1">Overview</a></li>
-<li><a href="#tabset-11-2">Cheatsheet</a></li>
-<li><a href="#tabset-11-3">Reading</a></li>
-</ul>
+<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">Overview</a></li><li><a href="#tabset-11-2">Cheatsheet</a></li><li><a href="#tabset-11-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-11-1" class="center">
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<h4 id="stringr-helps-us-manipulate-strings">
-<code>stringr</code> helps us manipulate strings!</h4>
+<h4 id="stringr-helps-us-manipulate-strings"><code>stringr</code> helps us manipulate strings!</h4>
 <p>The package includes many functions to help us with <strong>regular expressions</strong>, which are a concise language for describing patterns in strings.</p>
 </div><div class="column" style="width:50%;">
 <h3 id="these-functions-help-us">These functions help us</h3>
@@ -1317,10 +1309,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br><br></p>
-<h4 id="r-for-data-science-ch-14-strings">R for Data Science: <a href="https://r4ds.had.co.nz/strings.html">Ch 14 Strings</a>
-</h4>
-<h4 id="package-documentation-httpsstringr.tidyverse.org">Package documentation: <a href="https://stringr.tidyverse.org" class="uri">https://stringr.tidyverse.org</a>
-</h4>
+<h4 id="r-for-data-science-ch-14-strings">R for Data Science: <a href="https://r4ds.had.co.nz/strings.html">Ch 14 Strings</a></h4>
+<h4 id="package-documentation-httpsstringr.tidyverse.org">Package documentation: <a href="https://stringr.tidyverse.org" class="uri">https://stringr.tidyverse.org</a></h4>
 </div>
 </div>
 <!--end columns-->
@@ -1328,13 +1318,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="stringr-exercise" class="slide level2" data-background-image="images/hex/stringr.png" data-background-size="8%" data-background-position="98% 4%"><h2>stringr: exercise</h2>
+</section>
+<section id="stringr-exercise" class="slide level2" data-background-image="images/hex/stringr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>stringr: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-12" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-12-1">Mutate</a></li>
-<li><a href="#tabset-12-2">Join</a></li>
-</ul>
+<ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">Mutate</a></li><li><a href="#tabset-12-2">Join</a></li></ul>
 <div class="tab-content">
 <div id="tabset-12-1">
 <h4 id="what-does-this-chunk-do">What does this chunk do?</h4>
@@ -1388,19 +1377,21 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-6" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-6" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/07-tidyr.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the tidyr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="tidyr-info" class="slide level2" data-background-image="images/hex/tidyr.png" data-background-size="8%" data-background-position="98% 4%"><h2>tidyr: info</h2>
+</section>
+<section id="tidyr-info" class="slide level2" data-background-image="images/hex/tidyr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>tidyr: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-13" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-13-1">Overview</a></li>
-<li><a href="#tabset-13-2">Cheatsheet</a></li>
-<li><a href="#tabset-13-3">Reading</a></li>
-</ul>
+<ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">Overview</a></li><li><a href="#tabset-13-2">Cheatsheet</a></li><li><a href="#tabset-13-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-13-1" class="center">
 <p><code>tidyr</code> helps us transform our dataset into a <a href="https://r4ds.had.co.nz/tidy-data.html">tidy format</a></p>
@@ -1409,8 +1400,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <ul>
 <li>Each variable must have its own column.</li>
 <li>Each observation must have its own row.</li>
-<li>Each value must have its own cell. <img data-src="https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png" alt="schematic representing the 3 earlier points">
-</li>
+<li>Each value must have its own cell. <img data-src="https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png" alt="schematic representing the 3 earlier points"></li>
 </ul>
 </blockquote>
 </div>
@@ -1424,10 +1414,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br><br></p>
-<h4 id="r-for-data-science-ch-12-tidy-data">R for Data Science: <a href="https://r4ds.had.co.nz/tidy-data.html">Ch 12 Tidy data</a>
-</h4>
-<h4 id="package-documentation-httpstidyr.tidyverse.org">Package documentation: <a href="https://tidyr.tidyverse.org" class="uri">https://tidyr.tidyverse.org</a>
-</h4>
+<h4 id="r-for-data-science-ch-12-tidy-data">R for Data Science: <a href="https://r4ds.had.co.nz/tidy-data.html">Ch 12 Tidy data</a></h4>
+<h4 id="package-documentation-httpstidyr.tidyverse.org">Package documentation: <a href="https://tidyr.tidyverse.org" class="uri">https://tidyr.tidyverse.org</a></h4>
 </div>
 </div>
 <!--end columns-->
@@ -1435,13 +1423,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="tidyr-exercise" class="slide level2" data-background-image="images/hex/tidyr.png" data-background-size="8%" data-background-position="98% 4%"><h2>tidyr: exercise</h2>
+</section>
+<section id="tidyr-exercise" class="slide level2" data-background-image="images/hex/tidyr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>tidyr: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-14" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-14-1">Un-tidying</a></li>
-<li><a href="#tabset-14-2">Re-tidying</a></li>
-</ul>
+<ul id="tabset-14" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-14-1">Un-tidying</a></li><li><a href="#tabset-14-2">Re-tidying</a></li></ul>
 <div class="tab-content">
 <div id="tabset-14-1">
 <h4 id="both-penguin-datasets-are-already-tidy">Both penguin datasets are already tidy!</h4>
@@ -1498,19 +1485,21 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-7" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-7" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/08-purrr.png" class="absolute" style="top: 30px; left: 30px; width: 100%; " alt="Our illustrated penguins have reached the purrr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="purrr-info" class="slide level2" data-background-image="images/hex/purrr.png" data-background-size="8%" data-background-position="98% 4%"><h2>purrr: info</h2>
+</section>
+<section id="purrr-info" class="slide level2" data-background-image="images/hex/purrr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>purrr: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-15" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-15-1">Overview</a></li>
-<li><a href="#tabset-15-2">Cheatsheet</a></li>
-<li><a href="#tabset-15-3">Reading</a></li>
-</ul>
+<ul id="tabset-15" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-15-1">Overview</a></li><li><a href="#tabset-15-2">Cheatsheet</a></li><li><a href="#tabset-15-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-15-1" class="center">
 <p><br><br></p>
@@ -1521,16 +1510,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div><div class="column" style="width:50%;">
 <h4 id="with-purrr-you-can">With <code>purrr</code> you can</h4>
 <ul>
-<li>Iterate over a single input with <code>map()</code>
-</li>
-<li>Iterate over two inputs in parallel with <code>map2()</code>
-</li>
-<li>Iterate with multiple arguments with <code>pmap()</code>
-</li>
-<li>Iterate with multiple arguments and functions with <code>invoke_map()</code>
-</li>
-<li>Call a function for its side-effects with <code>walk()</code>, <code>walk2()</code>, and <code>pwalk()</code>
-</li>
+<li>Iterate over a single input with <code>map()</code></li>
+<li>Iterate over two inputs in parallel with <code>map2()</code></li>
+<li>Iterate with multiple arguments with <code>pmap()</code></li>
+<li>Iterate with multiple arguments and functions with <code>invoke_map()</code></li>
+<li>Call a function for its side-effects with <code>walk()</code>, <code>walk2()</code>, and <code>pwalk()</code></li>
 </ul>
 </div>
 </div>
@@ -1546,10 +1530,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><img data-src="images/r4ds-cover.png" width="300">{fig-alt=“R4DS book cover”}</p>
 </div><div class="column" style="width:60%;">
 <p><br><br></p>
-<h4 id="r-for-data-science-ch-21-iteration">R for Data Science: <a href="https://r4ds.had.co.nz/iteration.html">Ch 21 Iteration</a>
-</h4>
-<h4 id="package-documentation-httpspurrr.tidyverse.org">Package documentation: <a href="https://purrr.tidyverse.org" class="uri">https://purrr.tidyverse.org</a>
-</h4>
+<h4 id="r-for-data-science-ch-21-iteration">R for Data Science: <a href="https://r4ds.had.co.nz/iteration.html">Ch 21 Iteration</a></h4>
+<h4 id="package-documentation-httpspurrr.tidyverse.org">Package documentation: <a href="https://purrr.tidyverse.org" class="uri">https://purrr.tidyverse.org</a></h4>
 </div>
 </div>
 <!--end columns-->
@@ -1557,17 +1539,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="purrr-exercise" class="slide level2" data-background-image="images/hex/purrr.png" data-background-size="8%" data-background-position="98% 4%"><h2>purrr: exercise</h2>
+</section>
+<section id="purrr-exercise" class="slide level2" data-background-image="images/hex/purrr.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>purrr: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-16" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-16-1">Time for a change?</a></li>
-<li><a href="#tabset-16-2">Goal</a></li>
-<li><a href="#tabset-16-3">Option 1</a></li>
-<li><a href="#tabset-16-4">Options 2 &amp; 3</a></li>
-<li><a href="#tabset-16-5">Purrr?</a></li>
-<li><a href="#tabset-16-6">More palettes!</a></li>
-</ul>
+<ul id="tabset-16" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-16-1">Time for a change?</a></li><li><a href="#tabset-16-2">Goal</a></li><li><a href="#tabset-16-3">Option 1</a></li><li><a href="#tabset-16-4">Options 2 &amp; 3</a></li><li><a href="#tabset-16-5">Purrr?</a></li><li><a href="#tabset-16-6">More palettes!</a></li></ul>
 <div class="tab-content">
 <div id="tabset-16-1">
 <div class="columns">
@@ -1707,34 +1684,32 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section></section><section><section id="section-8" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover"><h2></h2>
+</section></section>
+<section>
+
+<section id="section-8" class="slide level2" data-background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=4350&amp;q=80" data-background-position="52% 5%" data-background-size="cover">
+<h2></h2>
 <p><img data-src="images/drawio/09-lubridate.png" class="absolute" style="top: 50px; left: 50px; width: 100%; " alt="Our illustrated penguins are ending their tour with the lubridate package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"></p>
 <div class="footer">
 <p><span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </div>
-</section><section id="lubridate-info" class="slide level2" data-background-image="images/hex/lubridate.png" data-background-size="8%" data-background-position="98% 4%"><h2>lubridate: info</h2>
+</section>
+<section id="lubridate-info" class="slide level2" data-background-image="images/hex/lubridate.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>lubridate: info</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-17" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-17-1">Overview</a></li>
-<li><a href="#tabset-17-2">Cheatsheet</a></li>
-<li><a href="#tabset-17-3">Reading</a></li>
-</ul>
+<ul id="tabset-17" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-17-1">Overview</a></li><li><a href="#tabset-17-2">Cheatsheet</a></li><li><a href="#tabset-17-3">Reading</a></li></ul>
 <div class="tab-content">
 <div id="tabset-17-1">
 <p><br><br></p>
 <!--start columns-->
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="lubridate-helps-us-work-with-dates-and-times-including">
-<code>lubridate</code> helps us work with dates and times, including</h3>
+<h3 id="lubridate-helps-us-work-with-dates-and-times-including"><code>lubridate</code> helps us work with dates and times, including</h3>
 <ul>
-<li>a <strong>date</strong> like <code>August 31, 2022</code>
-</li>
-<li>a <strong>time</strong> like <code>10:35 am</code>
-</li>
-<li>a <strong>date-time</strong> like <code>2022-08-31 10:35:00</code>
-</li>
+<li>a <strong>date</strong> like <code>August 31, 2022</code></li>
+<li>a <strong>time</strong> like <code>10:35 am</code></li>
+<li>a <strong>date-time</strong> like <code>2022-08-31 10:35:00</code></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="you-can">You can…</h3>
@@ -1760,10 +1735,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><img data-src="images/r4ds-cover.png" alt="R4DS book cover" width="300"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h3 id="r-for-data-science-ch-16-dates-and-times">R for Data Science: <a href="https://r4ds.had.co.nz/dates-and-times.html">Ch 16 Dates and times</a>
-</h3>
-<h3 id="package-documentation-httpslubridate.tidyverse.org">Package documentation: <a href="https://lubridate.tidyverse.org" class="uri">https://lubridate.tidyverse.org</a>
-</h3>
+<h3 id="r-for-data-science-ch-16-dates-and-times">R for Data Science: <a href="https://r4ds.had.co.nz/dates-and-times.html">Ch 16 Dates and times</a></h3>
+<h3 id="package-documentation-httpslubridate.tidyverse.org">Package documentation: <a href="https://lubridate.tidyverse.org" class="uri">https://lubridate.tidyverse.org</a></h3>
 </div>
 </div>
 <!--end columns-->
@@ -1771,14 +1744,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="lubridate-exercise" class="slide level2" data-background-image="images/hex/lubridate.png" data-background-size="8%" data-background-position="98% 4%"><h2>lubridate: exercise</h2>
+</section>
+<section id="lubridate-exercise" class="slide level2" data-background-image="images/hex/lubridate.png" data-background-size="8%" data-background-position="98% 4%">
+<h2>lubridate: exercise</h2>
 <!--start panels-->
 <div class="panel-tabset">
-<ul id="tabset-18" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-18-1">Read data in</a></li>
-<li><a href="#tabset-18-2">View date-times</a></li>
-<li><a href="#tabset-18-3">Get date components</a></li>
-</ul>
+<ul id="tabset-18" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-18-1">Read data in</a></li><li><a href="#tabset-18-2">View date-times</a></li><li><a href="#tabset-18-3">Get date components</a></li></ul>
 <div class="tab-content">
 <div id="tabset-18-1">
 <p>Recall that <code>palmperpenguins</code> includes raw data as well</p>
@@ -1860,26 +1831,37 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div>
 <!--end panels-->
-</section><section id="thanks-for-following-along" class="slide level2 center" data-background-image="https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80" data-background-size="cover"><h2>Thanks for following along!</h2>
-<h3 id="silviacanelon.com">
-<a href="https://www.silviacanelon.com"><svg aria-label="Link" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Link</title>
-<path d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"></path></svg> silviacanelon.com</a><br>
-</h3>
-<h3 id="spcanelon">
-<a href="https://twitter.com/spcanelon"><svg aria-label="Twitter" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title>
-<path d="M459.4 151.7c.325 4.548 .325 9.097 .325 13.65 0 138.7-105.6 298.6-298.6 298.6-59.45 0-114.7-17.22-161.1-47.11 8.447 .974 16.57 1.299 25.34 1.299 49.06 0 94.21-16.57 130.3-44.83-46.13-.975-84.79-31.19-98.11-72.77 6.498 .974 12.99 1.624 19.82 1.624 9.421 0 18.84-1.3 27.61-3.573-48.08-9.747-84.14-51.98-84.14-102.1v-1.299c13.97 7.797 30.21 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.197-37.36 14.29-52.95 51.65 63.67 129.3 105.3 216.4 109.8-1.624-7.797-2.599-15.92-2.599-24.04 0-57.83 46.78-104.9 104.9-104.9 30.21 0 57.5 12.67 76.67 33.14 23.72-4.548 46.46-13.32 66.6-25.34-7.798 24.37-24.37 44.83-46.13 57.83 21.12-2.273 41.58-8.122 60.43-16.24-14.29 20.79-32.16 39.31-52.63 54.25z"></path></svg><span class="citation" data-cites="spcanelon">@spcanelon</span></a><br>
-</h3>
-<h3 id="spcanelon-1"><a href="https://github.com/spcanelon"><svg aria-label="GitHub" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title>
-<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span class="citation" data-cites="spcanelon">@spcanelon</span></a></h3>
+</section>
+<section id="thanks-for-following-along" class="slide level2 center" data-background-image="https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80" data-background-size="cover">
+<h2>Thanks for following along!</h2>
+<h3 id="silviacanelon.com"><a href="https://www.silviacanelon.com"><svg aria-label="Link" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Link</title><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"></path></svg> silviacanelon.com</a><br></h3>
+<h3 id="spcanelon"><a href="https://twitter.com/spcanelon"><svg aria-label="Twitter" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg> <span class="citation" data-cites="spcanelon">@spcanelon</span></a><br></h3>
+<h3 id="spcanelon-1"><a href="https://github.com/spcanelon"><svg aria-label="GitHub" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> <span class="citation" data-cites="spcanelon">@spcanelon</span></a></h3>
 
 <div class="footer footer-default">
 <p><a href="">slides.silviacanelon.com/tour-of-the-tidyverse-v2</a></p>
 </div>
 </section></section>
-</div>
+    </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -2070,17 +2052,22 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+    <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -2093,13 +2080,6 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
           }
         }
 
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
         // hookup for slidy
         if (window.w3c_slidy) {
           window.w3c_slidy.add_observer(function (slide_num) {
@@ -2109,7 +2089,9 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
         }
 
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -2147,7 +2129,24 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -2185,27 +2184,45 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
-
+    
 
 </body></html>

@@ -12,7 +12,7 @@ format:
     touch: true
     footer: "[slides.silviacanelon.com/tour-of-the-tidyverse-v2]()"
     preview-links: true
-    code-link: true
+    #code-link: true
 execute: 
   echo: true
 title-slide-attributes: 

@@ -5,7 +5,7 @@ date: Sept. 29, 2022
 format:
   revealjs:
     self-contained: false 
-    theme: ["default", "css/custom.scss"]
+    theme: ["default", "css/2022-ccd-sips.scss"]
     history: false
     controls: true
     controls-layout: bottom-right

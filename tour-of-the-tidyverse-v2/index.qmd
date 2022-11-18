@@ -4,7 +4,7 @@ subtitle: v2.0 -- Quarto RevealJS Remix
 author: Silvia Canelón, PhD
 format:
   revealjs:
-    self-contained: false 
+    self-contained: true
     theme: ["default", "css/rladies-spc.scss"]
     history: false
     code-overflow: wrap
@@ -15,6 +15,7 @@ format:
     #code-link: true
 execute: 
   echo: true
+  freeze: true
 title-slide-attributes: 
   data-background-image: "images/lter_penguins.png"
   data-background-size: "35%"

@@ -4,7 +4,7 @@ author: Silvia Canelón, PhD
 date: Sept. 29, 2022
 format:
   revealjs:
-    self-contained: false 
+    self-contained: true 
     theme: ["default", "css/custom.scss"]
     history: false
     controls: true

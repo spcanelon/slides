@@ -13,6 +13,14 @@ page-layout: full
 include-in-header: assets/umami.html
 ---
 
+::: {.callout-caution collapse="true"}
+## Under construction
+
+I've just noticed an issue with slide decks unintentionally sharing RevealJS theming across this site. This means some RevealJS slide decks are not styled as intended and may not be easy to read.
+
+Thanks for your patience while I figure out what's going on!
+:::
+
 <p class="f6 measure lh-copy tc center">This gallery features a collection of slide decks made with<br>a variety of publishing tools</p>
 
 <p class="f7 measure lh-copy tc center i">Written by Silvia Canelón</p>

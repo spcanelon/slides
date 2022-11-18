@@ -6,8 +6,8 @@ location: "CANSSI Ontario Statistical Software Conference"
 date: Nov. 10, 2022
 format:
   revealjs:
-    self-contained: false
-    theme: ["dark", "css/custom.scss"]
+    self-contained: true
+    theme: ["default", "css/2022-thinking-big.scss"]
     history: false
     controls: true
     controls-layout: bottom-right

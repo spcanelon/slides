@@ -13,6 +13,7 @@ page-layout: full
 include-in-header: assets/umami.html
 ---
 
+<!--
 ::: {.callout-caution collapse="true"}
 ## Under construction
 
@@ -20,6 +21,7 @@ I've just noticed an issue with slide decks unintentionally sharing RevealJS the
 
 Thanks for your patience while I figure out what's going on!
 :::
+-->
 
 <p class="f6 measure lh-copy tc center">This gallery features a collection of slide decks made with<br>a variety of publishing tools</p>
 

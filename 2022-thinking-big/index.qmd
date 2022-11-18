@@ -7,7 +7,7 @@ date: Nov. 10, 2022
 format:
   revealjs:
     self-contained: false
-    theme: ["dark", "css/2022-thinking-big.scss"]
+    theme: ["dark", "css/custom.scss"]
     history: false
     controls: true
     controls-layout: bottom-right

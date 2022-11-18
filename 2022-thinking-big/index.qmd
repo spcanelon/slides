@@ -34,11 +34,7 @@ editor_options:
 #| include: false
 xfun::pkg_attach("tidyverse",
                  "here",
-                 "sf",
-                 "mapview",
-                 "tmap",
-                 "rmapshaper",
-                 "rdeck")
+                 "sf")
 
 talk <- here("2022-thinking-big")
 ```

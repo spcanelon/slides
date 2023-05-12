@@ -57,6 +57,13 @@
     - xaringan
 
 # External slide decks
+- title: "Data Analytics 101"
+  subtitle: "Penn Community Scholars Program"
+  date: 2023-03-09
+  image: https://github.com/spcanelon/silvia/blob/main/content/talk/2023-03-09-penn-community-scholars/featured.png?raw=true
+  path: https://silviacanelon.com/talk/2023-penn-community-scholars/Penn%20Community%20Scholars%20Program_final.pptx
+  categories:
+    - pptx
 - title: "Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records"
   subtitle: "2022 DBEI & CCEB Research Day"
   date: 2022-04-27

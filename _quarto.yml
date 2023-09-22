@@ -50,3 +50,5 @@ format:
 
 execute:
   freeze: auto
+
+include-in-header: assets/umami.html

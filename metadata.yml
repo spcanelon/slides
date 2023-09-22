@@ -60,15 +60,15 @@
 - title: "Data Analytics 101"
   subtitle: "Penn Community Scholars Program"
   date: 2023-03-09
-  image: https://github.com/spcanelon/silvia/blob/main/content/talk/2023-03-09-penn-community-scholars/featured.png?raw=true
-  path: https://silviacanelon.com/talk/2023-penn-community-scholars/Penn%20Community%20Scholars%20Program_final.pptx
+  image: https://silviacanelon.com/talk/2023-03-09-penn-community-scholars/featured.png
+  path: https://silviacanelon.com/talk/2023-03-09-penn-community-scholars/Penn Community Scholars Program_final.pptx
   categories:
     - pptx
 - title: "Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records"
   subtitle: "2022 DBEI & CCEB Research Day"
   date: 2022-04-27
-  image: https://github.com/spcanelon/silvia/blob/main/content/talk/2022-04-27-dbei-research-day/featured.png?raw=true
-  path: https://www.silviacanelon.com/talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
+  image: https://silviacanelon.com/talk/2022-04-27-dbei-research-day/featured.png
+  path: https://silviacanelon.com/talk/2022-04-27-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
   categories:
     - pptx
 - title: "Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"

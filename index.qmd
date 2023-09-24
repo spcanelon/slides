@@ -1,5 +1,9 @@
 ---
 title: "Slides"
+description: |
+  This gallery features a collection of slide decks made with a variety of publishing tools.
+  
+  Accompanying talks can be found at [silviacanelon.com](https://silviacanelon.com/talk).
 listing:
   contents:
     - "metadata.yml"
@@ -14,7 +18,14 @@ include-in-header: assets/umami.html
 execute: 
   freeze: false
   warning: false
-  echo: false 
+  echo: false
+
+title-block-banner: false
+
+header-includes: >
+  <link rel="stylesheet" href="assets/listing-default.css">
+resources:
+  - assets/listing-default.css
 ---
 
 <!--
@@ -26,10 +37,6 @@ I've just noticed an issue with slide decks unintentionally sharing RevealJS the
 Thanks for your patience while I figure out what's going on!
 :::
 -->
-
-<p class="f6 measure lh-copy tc center">This gallery features a collection of slide decks made with<br>a variety of publishing tools</p>
-
-<p class="f7 measure lh-copy tc center i">Written by Silvia Canelón</p>
 
 ```{r import-manual-redirects}
 

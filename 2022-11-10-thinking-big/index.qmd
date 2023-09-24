@@ -4,10 +4,12 @@ subtitle: "Tips on Wrangling Large Vector Data into Interactive Maps"
 author: Silvia Canelón, PhD
 location: "CANSSI Ontario Statistical Software Conference"
 date: Nov. 10, 2022
+aliases: 
+  - 2022-thinking-big
 format:
   revealjs:
     self-contained: true
-    theme: ["default", "css/2022-thinking-big.scss"]
+    theme: ["default", "css/theme.scss"]
     history: false
     controls: true
     controls-layout: bottom-right
@@ -35,14 +37,13 @@ xfun::pkg_attach("tidyverse",
                  "here",
                  "sf")
 
-talk <- here("2022-thinking-big")
+talk <- here("2022-11-10-thinking-big")
 ```
 
 
 ```{r import-data}
 #| include: false
 treeCanopy2015 <- read_sf(here(talk, "data", "TreeCanopyOutlines2015.gpkg"))
-phillyZips <- st_read(here(talk, "data", "PhillyZips.gpkg"))
 ```
 
 # {.center-x background-image="img/map-pins.jpg"}

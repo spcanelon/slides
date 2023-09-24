@@ -1,13 +1,15 @@
 project:
   type: website
+  post-render: 
+    - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
   output-dir: docs
   render:
     - "*.qmd"
     - "*.Rmd"
-    - "!2021-amia-informatics-summit/"
-    - "!2022-tdw-ehr-lessons/"
-    - "!introduccion-xaringan/"
-    - "!tour-of-the-tidyverse/"
+    - "!2021-03-23-amia-informatics-summit/"
+    - "!2022-02-11-tdw-ehr-lessons/"
+    - "!2020-12-17-introduccion-xaringan/"
+    - "!2020-08-31-tour-of-the-tidyverse/"
 
 website:
   title: "Silvia Canelón"

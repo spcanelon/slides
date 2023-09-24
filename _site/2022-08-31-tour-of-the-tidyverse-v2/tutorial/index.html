@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Silvia Canelón - An Antarctic Tour of the Tidyverse v2.0</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/silvia/img/logo_rounded.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><!-- umami.js --><script async="" defer="" data-website-id="899678ce-ec02-4123-ae63-4fc931bec899" src="https://umami.silviacanelon.com/umami.js" data-domains="slides.silviacanelon.com" data-do-not-track="true">
+</script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="9b25af5d-c2ab-4efd-a449-ba99df05faea" data-do-not-track="true">
+</script><link rel="stylesheet" href="../../assets/silvia.scss">
+<meta name="twitter:title" content="Silvia Canelón - An Antarctic Tour of the Tidyverse v2.0">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://slides.silviacanelon.com//img/social-card.png">
+<meta name="twitter:creator" content="@spcanelon">
+<meta name="twitter:image-height" content="1376">
+<meta name="twitter:image-width" content="2626">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="Home" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools ms-auto">
+    <a href="https://www.github.com/spcanelon/slides" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">In this tutorial</h2>
+   
+  <ul>
+<li><a href="#before-we-begin" id="toc-before-we-begin" class="nav-link active" data-scroll-target="#before-we-begin">Before we begin</a></li>
+  <li><a href="#meet-our-penguin-friends" id="toc-meet-our-penguin-friends" class="nav-link" data-scroll-target="#meet-our-penguin-friends">Meet our penguin friends!</a></li>
+  <li><a href="#meet-the-tidyverse" id="toc-meet-the-tidyverse" class="nav-link" data-scroll-target="#meet-the-tidyverse">Meet the tidyverse!</a></li>
+  <li>
+<a href="#readr" id="toc-readr" class="nav-link" data-scroll-target="#readr">readr <img src="../images/hex/readr.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet" id="toc-cheatsheet" class="nav-link" data-scroll-target="#cheatsheet">Cheatsheet</a></li>
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#tibble" id="toc-tibble" class="nav-link" data-scroll-target="#tibble">tibble <img src="../images/hex/tibble.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-1" id="toc-cheatsheet-1" class="nav-link" data-scroll-target="#cheatsheet-1">Cheatsheet</a></li>
+  <li><a href="#reading-1" id="toc-reading-1" class="nav-link" data-scroll-target="#reading-1">Reading</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2">ggplot2 <img src="../images/hex/ggplot2.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-2" id="toc-cheatsheet-2" class="nav-link" data-scroll-target="#cheatsheet-2">Cheatsheet</a></li>
+  <li><a href="#reading-2" id="toc-reading-2" class="nav-link" data-scroll-target="#reading-2">Reading</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#dplyr" id="toc-dplyr" class="nav-link" data-scroll-target="#dplyr">dplyr <img src="../images/hex/dplyr.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-3" id="toc-cheatsheet-3" class="nav-link" data-scroll-target="#cheatsheet-3">Cheatsheet</a></li>
+  <li><a href="#reading-3" id="toc-reading-3" class="nav-link" data-scroll-target="#reading-3">Reading</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#forcats" id="toc-forcats" class="nav-link" data-scroll-target="#forcats">forcats <img src="../images/hex/forcats.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-4" id="toc-cheatsheet-4" class="nav-link" data-scroll-target="#cheatsheet-4">Cheatsheet</a></li>
+  <li><a href="#reading-4" id="toc-reading-4" class="nav-link" data-scroll-target="#reading-4">Reading</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#stringr" id="toc-stringr" class="nav-link" data-scroll-target="#stringr">stringr <img src="../images/hex/stringr.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-5" id="toc-cheatsheet-5" class="nav-link" data-scroll-target="#cheatsheet-5">Cheatsheet</a></li>
+  <li><a href="#reading-5" id="toc-reading-5" class="nav-link" data-scroll-target="#reading-5">Reading</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#tidyr" id="toc-tidyr" class="nav-link" data-scroll-target="#tidyr">tidyr <img src="../images/hex/tidyr.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-6" id="toc-cheatsheet-6" class="nav-link" data-scroll-target="#cheatsheet-6">Cheatsheet</a></li>
+  <li><a href="#reading-6" id="toc-reading-6" class="nav-link" data-scroll-target="#reading-6">Reading</a></li>
+  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#purrr" id="toc-purrr" class="nav-link" data-scroll-target="#purrr">purrr <img src="../images/hex/purrr.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-7" id="toc-cheatsheet-7" class="nav-link" data-scroll-target="#cheatsheet-7">Cheatsheet</a></li>
+  <li><a href="#reading-7" id="toc-reading-7" class="nav-link" data-scroll-target="#reading-7">Reading</a></li>
+  <li><a href="#exercise-7" id="toc-exercise-7" class="nav-link" data-scroll-target="#exercise-7">Exercise</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#lubridate" id="toc-lubridate" class="nav-link" data-scroll-target="#lubridate">lubridate <img src="../images/hex/lubridate.png" style="float:right;" width="10%"></a>
+  <ul class="collapse">
+<li><a href="#cheatsheet-8" id="toc-cheatsheet-8" class="nav-link" data-scroll-target="#cheatsheet-8">Cheatsheet</a></li>
+  <li><a href="#reading-8" id="toc-reading-8" class="nav-link" data-scroll-target="#reading-8">Reading</a></li>
+  <li><a href="#exercise-8" id="toc-exercise-8" class="nav-link" data-scroll-target="#exercise-8">Exercise</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">An Antarctic Tour of the Tidyverse v2.0</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/spcanelon/slides/tree/main/tour-of-the-tidyverse-v2/tutorial/index.qmd"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../images/lter_penguins.png" class="img-fluid figure-img" style="width:75.0%" alt="Beautiful illustration of three penguins, Chinstrap, Gentoo, and Adélie, each labeled with their species. The Chinstrap penguin has a magenta background, the Gentoo penguin a teal background, and the Adélie penguin an orange background"></p>
+<figcaption class="figure-caption">Illustration by Allison Horst</figcaption></figure>
+</div>
+<section id="before-we-begin" class="level2"><h2 class="anchored" data-anchor-id="before-we-begin">Before we begin</h2>
+<ul>
+<li><p>This written tutorial is an alternative to the slide content in <a href="https://slides.silviacanelon.com/tour-of-the-tidyverse-v2">slides.silviacanelon.com/tour-of-the-tidyverse-v2</a></p></li>
+<li><p><a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html">palmerpenguins</a> 📦 developed by Drs. <a href="https://www.allisonhorst.com">Allison Horst</a>, <a href="https://apreshill.com">Alison Hill</a>, and <a href="https://gormankb.github.io">Kristen Gorman</a>.</p></li>
+<li><p><a href="https://github.com/allisonhorst/stats-illustrations">Penguin illustrations by Allison Horst</a></p></li>
+<li><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p></li>
+</ul></section><section id="meet-our-penguin-friends" class="level2"><h2 class="anchored" data-anchor-id="meet-our-penguin-friends">Meet our penguin friends!</h2>
+<div id="penguins" class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_chinstrap.jpg?raw=true" class="img-fluid figure-img" alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"></p>
+<figcaption class="figure-caption">Chinstrap</figcaption></figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_gentoo.jpg?raw=true" class="img-fluid figure-img" alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"></p>
+<figcaption class="figure-caption">Gentoo</figcaption></figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_adelie.jpg?raw=true" class="img-fluid figure-img" alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"></p>
+<figcaption class="figure-caption">Adélie</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<!--end layout-->
+</section><section id="meet-the-tidyverse" class="level2"><h2 class="anchored" data-anchor-id="meet-the-tidyverse">Meet the tidyverse!</h2>
+<p>A collection of R packages, including these 9 core packages (and more!)</p>
+<p><img src="../images/drawio/tidyverse.png" class="img-fluid" alt="schematic including hex logos for the 9 tidyverse packages, readr, ggplot2, forcats, tidyr, tibble, dplyr, stringr, purrr, and lubridate"></p>
+<p><code>lubridate</code> was welcomed into the <code>tidyverse</code> as a core package on <a href="https://github.com/tidyverse/tidyverse/commit/3be82832a4982d6d10e25e375cedeb8c3161be35">August 12, 2022</a>. You may need to install the development version:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"tidyverse/tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="readr" class="level2"><h2 class="anchored" data-anchor-id="readr">readr <img src="../images/hex/readr.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends are starting their tour with the <code>readr</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/01-readr.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>Importing data is the very first step!</p>
+<p>You can use <code>readr</code> to import rectangular data.</p>
+<p>You can import…</p>
+<ul>
+<li>comma separated (CSV) files with <code>read_csv()</code>
+</li>
+<li>tab separated files with <code>read_tsv()</code>
+</li>
+<li>general delimited files with <code>read_delim()</code>
+</li>
+<li>fixed width files with <code>read_fwf()</code>
+</li>
+<li>tabular files where columns are separated by white-space with <code>read_table()</code>
+</li>
+<li>web log files with <code>read_log()</code>
+</li>
+</ul>
+<section id="cheatsheet" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf</a> <img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png" class="img-fluid" alt="readr cheatsheet"></p>
+</section><section id="reading" class="level3"><h3 class="anchored" data-anchor-id="reading">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/data-import.html">Ch 11 Data import</a>
+</li>
+<li>Package documentation: <a href="https://readr.tidyverse.org" class="uri">https://readr.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise" class="level3"><h3 class="anchored" data-anchor-id="exercise">Exercise</h3>
+<section id="read-data-in" class="level4"><h4 class="anchored" data-anchor-id="read-data-in">Read data in</h4>
+<p>Options 1 &amp; 2 below will get you the same raw dataset for Adélie penguins. Try it out!</p>
+<p>Option 1: load using URL</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">read_csv</span>(<span class="st">"https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.219.3&amp;entityid=002f3893385f710df69eeebe893144ff"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Option 2: load using filepath</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">read_csv</span>(<span class="st">"tutorial/raw_adelie.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Option 3: Lucky for us, the <code>palmerpenguins</code> 📦 compiles data from all three species together! Check the clean data and raw data tabs to learn more.</p>
+</section><section id="clean-data" class="level4"><h4 class="anchored" data-anchor-id="clean-data">Clean data</h4>
+<p><code>penguins</code> contains a clean dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>penguins <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins</span>
+<span id="cb4-2"><a href="#cb4-2"></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 334 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+</section><section id="raw-data" class="level4"><h4 class="anchored" data-anchor-id="raw-data">Raw data</h4>
+<p><code>penguins_raw</code> contains the raw data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>palmerpenguins<span class="sc">::</span>penguins_raw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 17
+   studyName `Sample Number` Species         Region Island Stage `Individual ID`
+   &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;          
+ 1 PAL0708                 1 Adelie Penguin… Anvers Torge… Adul… N1A1           
+ 2 PAL0708                 2 Adelie Penguin… Anvers Torge… Adul… N1A2           
+ 3 PAL0708                 3 Adelie Penguin… Anvers Torge… Adul… N2A1           
+ 4 PAL0708                 4 Adelie Penguin… Anvers Torge… Adul… N2A2           
+ 5 PAL0708                 5 Adelie Penguin… Anvers Torge… Adul… N3A1           
+ 6 PAL0708                 6 Adelie Penguin… Anvers Torge… Adul… N3A2           
+ 7 PAL0708                 7 Adelie Penguin… Anvers Torge… Adul… N4A1           
+ 8 PAL0708                 8 Adelie Penguin… Anvers Torge… Adul… N4A2           
+ 9 PAL0708                 9 Adelie Penguin… Anvers Torge… Adul… N5A1           
+10 PAL0708                10 Adelie Penguin… Anvers Torge… Adul… N5A2           
+# ℹ 334 more rows
+# ℹ 10 more variables: `Clutch Completion` &lt;chr&gt;, `Date Egg` &lt;date&gt;,
+#   `Culmen Length (mm)` &lt;dbl&gt;, `Culmen Depth (mm)` &lt;dbl&gt;,
+#   `Flipper Length (mm)` &lt;dbl&gt;, `Body Mass (g)` &lt;dbl&gt;, Sex &lt;chr&gt;,
+#   `Delta 15 N (o/oo)` &lt;dbl&gt;, `Delta 13 C (o/oo)` &lt;dbl&gt;, Comments &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section></section></section><section id="tibble" class="level2"><h2 class="anchored" data-anchor-id="tibble">tibble <img src="../images/hex/tibble.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>tibble</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/02-tibble.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>A <code>tibble</code> is much like the <code>dataframe</code> in base R, but optimized for use in the Tidyverse.</p>
+<section id="cheatsheet-1" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-1">Cheatsheet</h3>
+<p>The tibble package shares a cheatsheet with the tidyr package</p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a></p>
+<p><img src="../images/cheatsheet/02-tibble-tidyr.png" class="img-fluid" style="width:65.0%" alt="tidyr/tibble cheatsheet"></p>
+</section><section id="reading-1" class="level3"><h3 class="anchored" data-anchor-id="reading-1">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/tibbles.html">Ch 10 Tibbles</a>
+</li>
+<li>Package documentation: <a href="https://tibble.tidyverse.org" class="uri">https://tibble.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-1" class="level3"><h3 class="anchored" data-anchor-id="exercise-1">Exercise</h3>
+<section id="code" class="level4"><h4 class="anchored" data-anchor-id="code">Code</h4>
+<p>Let’s take a look at the differences!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># try each of these commands in the console and see if </span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="co"># you can spot the differences!</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="fu">as_tibble</span>(penguins)</span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">as.data.frame</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="result" class="level4"><h4 class="anchored" data-anchor-id="result">Result</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">as_tibble</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 334 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">as.data.frame</span>(penguins) <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+1  Adelie Torgersen           39.1          18.7               181        3750
+2  Adelie Torgersen           39.5          17.4               186        3800
+3  Adelie Torgersen           40.3          18.0               195        3250
+4  Adelie Torgersen             NA            NA                NA          NA
+5  Adelie Torgersen           36.7          19.3               193        3450
+6  Adelie Torgersen           39.3          20.6               190        3650
+     sex year
+1   male 2007
+2 female 2007
+3 female 2007
+4   &lt;NA&gt; 2007
+5 female 2007
+6   male 2007</code></pre>
+</div>
+</div>
+<p>What differences do you notice?</p>
+<p>You might see a <code>tibble</code> prints:</p>
+<ul>
+<li>variable classes</li>
+<li>only 10 rows</li>
+<li>only as many columns as can fit on the screen</li>
+<li>
+<code>NA</code>s are highlighted in console so they’re easy to spot (font highlighting and styling in <code>tibble</code>)</li>
+</ul>
+<p>Not so much a concern in an R Markdown file, but noticeable in the console</p>
+<p>This enhanced print method makes it easier to work with large datasets</p>
+<p>There are a couple of other main differences, namely in <strong>subsetting</strong> and <strong>recycling</strong></p>
+<p>Check them out in <a href="https://tibble.tidyverse.org/articles/tibble.html"><code>vignette("tibble")</code></a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">vignette</span>(<span class="st">"tibble"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section></section><section id="ggplot2" class="level2"><h2 class="anchored" data-anchor-id="ggplot2">ggplot2 <img src="../images/hex/ggplot2.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>ggplot2</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/03-ggplot2.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p><code>ggplot2</code> uses the “Grammar of Graphics” and layers graphical components together to help us create a plot</p>
+<p>Let’s start by making a simple plot of our data!</p>
+<section id="cheatsheet-2" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-2">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf</a> <img src="../images/cheatsheet/03-ggplot2.png" class="img-fluid" alt="ggplot2 cheatsheet"></p>
+</section><section id="reading-2" class="level3"><h3 class="anchored" data-anchor-id="reading-2">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualization</a>
+</li>
+<li>Package documentation: <a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-2" class="level3"><h3 class="anchored" data-anchor-id="exercise-2">Exercise</h3>
+<section id="view-the-data" class="level4"><h4 class="anchored" data-anchor-id="view-the-data">View the data</h4>
+<p>Get a full view of the dataset:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">View</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Or catch a <code>glimpse</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">glimpse</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+</div>
+</div>
+</section><section id="scatterplot" class="level4"><h4 class="anchored" data-anchor-id="scatterplot">Scatterplot</h4>
+<p>Let’s see if body mass varies by penguin sex using <code>geom_point()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="at">data =</span> penguins, </span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/scatterplot-1.png" class="img-fluid" alt="A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable." width="672"></p>
+</div>
+</div>
+</section><section id="boxplot" class="level4"><h4 class="anchored" data-anchor-id="boxplot">Boxplot</h4>
+<p>Let’s see if body mass varies by penguin sex, this time with <code>geom_boxplot()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="at">data =</span> penguins, </span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/boxplot-1.png" class="img-fluid" alt="A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers." width="672"></p>
+</div>
+</div>
+</section><section id="by-species" class="level4"><h4 class="anchored" data-anchor-id="by-species">By Species</h4>
+<p>Let’s see if body mass varies by penguin sex, and now fill the boxplots according to penguin species</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="at">data =</span> penguins, </span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/by-species-1.png" class="img-fluid" alt="A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category." width="672"></p>
+</div>
+</div>
+<p>The boxplot filled by species helps us see…</p>
+<ul>
+<li>Gentoo penguins have higher body mass than Adélie and Chinstrap penguins</li>
+<li>Higher body mass among male Gentoo penguins compared to female penguins</li>
+<li>Pattern not as discernible when comparing Adélie and Chinstrap penguins</li>
+<li>No <code>NA</code>s among Chinstrap penguin data points! <strong>sex</strong> was available for each observation</li>
+</ul></section></section></section><section id="dplyr" class="level2"><h2 class="anchored" data-anchor-id="dplyr">dplyr <img src="../images/hex/dplyr.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>dplyr</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/04-dplyr.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>Data transformation helps you get the data in exactly the right form you need</p>
+<p>With <code>dplyr</code> you can:</p>
+<ul>
+<li>create new variables</li>
+<li>create summaries</li>
+<li>rename variables</li>
+<li>reorder observations</li>
+<li>…and more!</li>
+</ul>
+<p>This is possible thanks to intuitive functions:</p>
+<ul>
+<li>Pick observations by their values with <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code>.</li>
+<li>Reorder the rows with <code>arrange()</code>.</li>
+<li>Pick variables by their names <code>select()</code>.</li>
+<li>Create new variables with functions of existing variables with <code>mutate()</code>.</li>
+<li>Collapse many values down to a single summary with <code>summarize()</code>.</li>
+<li>
+<code>group_by()</code> gets the above functions to operate group-by-group rather than on the entire dataset.</li>
+<li>and <code>count()</code> + <code>add_count()</code> simplify <code>group_by()</code> + <code>summarize()</code> when you just want to count</li>
+</ul>
+<section id="cheatsheet-3" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-3">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf</a> <img src="../images/cheatsheet/04-dplyr.png" class="img-fluid" alt="dplyr cheatsheet"></p>
+</section><section id="reading-3" class="level3"><h3 class="anchored" data-anchor-id="reading-3">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/transform.html">Ch 11 Data transformation</a>
+</li>
+<li>Package documentation: <a href="https://dplyr.tidyverse.org" class="uri">https://dplyr.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-3" class="level3"><h3 class="anchored" data-anchor-id="exercise-3">Exercise</h3>
+<section id="select" class="level4"><h4 class="anchored" data-anchor-id="select">Select</h4>
+<p>Can you spot the difference in the following two operations?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">select</span>(penguins, </span>
+<span id="cb20-2"><a href="#cb20-2"></a>       species,</span>
+<span id="cb20-3"><a href="#cb20-3"></a>       sex,</span>
+<span id="cb20-4"><a href="#cb20-4"></a>       body_mass_g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   species sex    body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;        &lt;int&gt;
+ 1 Adelie  male          3750
+ 2 Adelie  female        3800
+ 3 Adelie  female        3250
+ 4 Adelie  &lt;NA&gt;            NA
+ 5 Adelie  female        3450
+ 6 Adelie  male          3650
+ 7 Adelie  female        3625
+ 8 Adelie  male          4675
+ 9 Adelie  &lt;NA&gt;          3475
+10 Adelie  &lt;NA&gt;          4250
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">select</span>(species,</span>
+<span id="cb22-3"><a href="#cb22-3"></a>         sex,</span>
+<span id="cb22-4"><a href="#cb22-4"></a>         body_mass_g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   species sex    body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;        &lt;int&gt;
+ 1 Adelie  male          3750
+ 2 Adelie  female        3800
+ 3 Adelie  female        3250
+ 4 Adelie  &lt;NA&gt;            NA
+ 5 Adelie  female        3450
+ 6 Adelie  male          3650
+ 7 Adelie  female        3625
+ 8 Adelie  male          4675
+ 9 Adelie  &lt;NA&gt;          3475
+10 Adelie  &lt;NA&gt;          4250
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<p>The first defines the penguins dataset with the <code>select()</code> function, while the second uses the pipe <code>|&gt;</code> to pass the penguins dataset along to <code>select()</code></p>
+</section><section id="arrange" class="level4"><h4 class="anchored" data-anchor-id="arrange">Arrange</h4>
+<p>We can use <code>arrange()</code> to arrange our data in descending order by <strong>body_mass_g</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">select</span>(species, sex, body_mass_g) <span class="sc">|&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   species sex   body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;       &lt;int&gt;
+ 1 Gentoo  male         6300
+ 2 Gentoo  male         6050
+ 3 Gentoo  male         6000
+ 4 Gentoo  male         6000
+ 5 Gentoo  male         5950
+ 6 Gentoo  male         5950
+ 7 Gentoo  male         5850
+ 8 Gentoo  male         5850
+ 9 Gentoo  male         5850
+10 Gentoo  male         5800
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+</section><section id="group-by-summarize" class="level4"><h4 class="anchored" data-anchor-id="group-by-summarize">Group By &amp; Summarize</h4>
+<p>We can use <code>group_by()</code> to group our data by <strong>species</strong> and <strong>sex</strong></p>
+<p>We can use <code>summarize()</code> to calculate the average <strong>body_mass_g</strong> for each grouping</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">select</span>(species, sex, body_mass_g) <span class="sc">|&gt;</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">|&gt;</span>         </span>
+<span id="cb26-4"><a href="#cb26-4"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 3
+# Groups:   species [3]
+  species   sex     mean
+  &lt;fct&gt;     &lt;fct&gt;  &lt;dbl&gt;
+1 Adelie    female 3369.
+2 Adelie    male   4043.
+3 Adelie    &lt;NA&gt;     NA 
+4 Chinstrap female 3527.
+5 Chinstrap male   3939.
+6 Gentoo    female 4680.
+7 Gentoo    male   5485.
+8 Gentoo    &lt;NA&gt;     NA </code></pre>
+</div>
+</div>
+</section><section id="count-option-1" class="level4"><h4 class="anchored" data-anchor-id="count-option-1">Count option 1</h4>
+<p>If we’re just interested in <em>counting</em> the observations in each grouping, we can group and summarize with special functions <code>count()</code> and <code>add_count()</code>.</p>
+<p>Counting can be done with <code>group_by()</code> and <code>summarize()</code>, but it’s a little cumbersome.</p>
+<p>It involves…</p>
+<ol type="1">
+<li>using <code>mutate()</code> to create an intermediate variable <strong>n_species</strong> that adds up all observations per <strong>species</strong>, and</li>
+<li>an <code>ungroup()</code>-ing step</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">mutate</span>(<span class="at">n_species =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb28-4"><a href="#cb28-4"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb28-5"><a href="#cb28-5"></a>  <span class="fu">group_by</span>(species, sex, n_species) <span class="sc">|&gt;</span></span>
+<span id="cb28-6"><a href="#cb28-6"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+# Groups:   species, sex [8]
+  species   sex    n_species     n
+  &lt;fct&gt;     &lt;fct&gt;      &lt;int&gt; &lt;int&gt;
+1 Adelie    female       152    73
+2 Adelie    male         152    73
+3 Adelie    &lt;NA&gt;         152     6
+4 Chinstrap female        68    34
+5 Chinstrap male          68    34
+6 Gentoo    female       124    58
+7 Gentoo    male         124    61
+8 Gentoo    &lt;NA&gt;         124     5</code></pre>
+</div>
+</div>
+</section><section id="count-option-2" class="level4"><h4 class="anchored" data-anchor-id="count-option-2">Count option 2</h4>
+<p>If we’re just interested in <em>counting</em> the observations in each grouping, we can group and summarize with special functions <code>count()</code> and <code>add_count()</code>.</p>
+<p>In contrast, <code>count()</code> and <code>add_count()</code> offer a simplified approach <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">count</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">add_count</span>(species, <span class="at">wt =</span> n, </span>
+<span id="cb30-4"><a href="#cb30-4"></a>            <span class="at">name =</span> <span class="st">"n_species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+  species   sex        n n_species
+  &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;     &lt;int&gt;
+1 Adelie    female    73       152
+2 Adelie    male      73       152
+3 Adelie    &lt;NA&gt;       6       152
+4 Chinstrap female    34        68
+5 Chinstrap male      34        68
+6 Gentoo    female    58       124
+7 Gentoo    male      61       124
+8 Gentoo    &lt;NA&gt;       5       124</code></pre>
+</div>
+</div>
+</section><section id="mutate" class="level4"><h4 class="anchored" data-anchor-id="mutate">Mutate</h4>
+<p>We can add to our counting example by using <code>mutate()</code> to create a new variable <strong>prop</strong></p>
+<p><strong>prop</strong> represents the proportion of penguins of each <strong>sex</strong>, grouped by <strong>species</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">count</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">add_count</span>(species, <span class="at">wt =</span> n, </span>
+<span id="cb32-4"><a href="#cb32-4"></a>            <span class="at">name =</span> <span class="st">"n_species"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-5"><a href="#cb32-5"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n<span class="sc">/</span>n_species<span class="sc">*</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 5
+  species   sex        n n_species  prop
+  &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;     &lt;int&gt; &lt;dbl&gt;
+1 Adelie    female    73       152 48.0 
+2 Adelie    male      73       152 48.0 
+3 Adelie    &lt;NA&gt;       6       152  3.95
+4 Chinstrap female    34        68 50   
+5 Chinstrap male      34        68 50   
+6 Gentoo    female    58       124 46.8 
+7 Gentoo    male      61       124 49.2 
+8 Gentoo    &lt;NA&gt;       5       124  4.03</code></pre>
+</div>
+</div>
+</section><section id="filter" class="level4"><h4 class="anchored" data-anchor-id="filter">Filter</h4>
+<p>Finally, we can filter rows to only show us <strong>Chinstrap</strong> penguin summaries by adding <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code> to our pipeline</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">count</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">add_count</span>(species, <span class="at">wt =</span> n, </span>
+<span id="cb34-4"><a href="#cb34-4"></a>            <span class="at">name =</span> <span class="st">"n_species"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a href="#cb34-5"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n<span class="sc">/</span>n_species<span class="sc">*</span><span class="dv">100</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-6"><a href="#cb34-6"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Chinstrap"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  species   sex        n n_species  prop
+  &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;     &lt;int&gt; &lt;dbl&gt;
+1 Chinstrap female    34        68    50
+2 Chinstrap male      34        68    50</code></pre>
+</div>
+</div>
+</section></section></section><section id="forcats" class="level2"><h2 class="anchored" data-anchor-id="forcats">forcats <img src="../images/hex/forcats.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>forcats</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/05-forcats.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p><code>forcats</code> helps us work with <strong>categorical variables</strong> or factors</p>
+<p>These are variables that have a fixed and known set of possible values, like <strong>species</strong>, <strong>island</strong>, and <strong>sex</strong> in our <code>penguins</code> dataset</p>
+<section id="cheatsheet-4" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-4">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/factors.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/factors.pdf</a> <img src="../images/cheatsheet/05-forcats.png" class="img-fluid" style="width:65.0%" alt="forcats cheatsheet"></p>
+</section><section id="reading-4" class="level3"><h3 class="anchored" data-anchor-id="reading-4">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/factors.html">Ch 15 Factors</a>
+</li>
+<li>Package documentation: <a href="https://forcats.tidyverse.org" class="uri">https://forcats.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-4" class="level3"><h3 class="anchored" data-anchor-id="exercise-4">Exercise</h3>
+<section id="code-1" class="level4"><h4 class="anchored" data-anchor-id="code-1">Code</h4>
+<p>Currently the <strong>year</strong> variable in <code>penguins</code> is continuous from 2007 to 2009</p>
+<p>Usually this isn’t what we want and we might want to turn it into a categorical variable instead</p>
+<p>The <code><a href="https://rdrr.io/r/base/factor.html">factor()</a></code> function is perfect for this</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">mutate</span>(<span class="at">year_factor =</span> <span class="fu">factor</span>(year, <span class="at">levels =</span> <span class="fu">unique</span>(year)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 9
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 334 more rows
+# ℹ 3 more variables: sex &lt;fct&gt;, year &lt;int&gt;, year_factor &lt;fct&gt;</code></pre>
+</div>
+</div>
+</section><section id="result-1" class="level4"><h4 class="anchored" data-anchor-id="result-1">Result</h4>
+<p>The result is a new variable <strong>year_factor</strong> with factor levels <strong>2007</strong>, <strong>2008</strong>, and <strong>2009</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>penguins_new <span class="ot">&lt;-</span> </span>
+<span id="cb38-2"><a href="#cb38-2"></a>  penguins <span class="sc">|&gt;</span> </span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="fu">mutate</span>(<span class="at">year_factor =</span> <span class="fu">factor</span>(year, <span class="at">levels =</span> <span class="fu">unique</span>(year)))</span>
+<span id="cb38-4"><a href="#cb38-4"></a>penguins_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 9
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 334 more rows
+# ℹ 3 more variables: sex &lt;fct&gt;, year &lt;int&gt;, year_factor &lt;fct&gt;</code></pre>
+</div>
+</div>
+<p>We can check our new variable’s class:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">class</span>(penguins_new<span class="sc">$</span>year_factor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "factor"</code></pre>
+</div>
+</div>
+<p>And check its factor levels:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">levels</span>(penguins_new<span class="sc">$</span>year_factor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2007" "2008" "2009"</code></pre>
+</div>
+</div>
+</section></section></section><section id="stringr" class="level2"><h2 class="anchored" data-anchor-id="stringr">stringr <img src="../images/hex/stringr.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>stringr</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/06-stringr.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p><code>stringr</code> helps us manipulate strings!</p>
+<p>The package includes many functions to help us with <strong>regular expressions</strong>, which are a concise language for describing patterns in strings.</p>
+<p>These functions help us:</p>
+<ul>
+<li>detect matches</li>
+<li>subset strings</li>
+<li>manage string lengths</li>
+<li>mutate strings</li>
+<li>join and split strings</li>
+<li>order strings</li>
+<li>…and more!</li>
+</ul>
+<section id="cheatsheet-5" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-5">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/strings.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/strings.pdf</a> <img src="../images/cheatsheet/06-stringr.png" class="img-fluid" alt="stringr cheatsheet"></p>
+</section><section id="reading-5" class="level3"><h3 class="anchored" data-anchor-id="reading-5">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/strings.html">Ch 14 Strings</a>
+</li>
+<li>Package documentation: <a href="https://stringr.tidyverse.org" class="uri">https://stringr.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-5" class="level3"><h3 class="anchored" data-anchor-id="exercise-5">Exercise</h3>
+<section id="mutate-1" class="level4"><h4 class="anchored" data-anchor-id="mutate-1">Mutate</h4>
+<p>What does this chunk do?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">select</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb44-3"><a href="#cb44-3"></a>  <span class="fu">mutate</span>(<span class="at">ISLAND =</span> <span class="fu">str_to_upper</span>(island))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   species island    ISLAND   
+   &lt;fct&gt;   &lt;fct&gt;     &lt;chr&gt;    
+ 1 Adelie  Torgersen TORGERSEN
+ 2 Adelie  Torgersen TORGERSEN
+ 3 Adelie  Torgersen TORGERSEN
+ 4 Adelie  Torgersen TORGERSEN
+ 5 Adelie  Torgersen TORGERSEN
+ 6 Adelie  Torgersen TORGERSEN
+ 7 Adelie  Torgersen TORGERSEN
+ 8 Adelie  Torgersen TORGERSEN
+ 9 Adelie  Torgersen TORGERSEN
+10 Adelie  Torgersen TORGERSEN
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<p>It creates a new variable <code>ISLAND</code> that transforms <code>island</code> observations to uppercase</p>
+</section><section id="join" class="level4"><h4 class="anchored" data-anchor-id="join">Join</h4>
+<p>How about this one?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>  <span class="fu">select</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">mutate</span>(<span class="at">ISLAND =</span> <span class="fu">str_to_upper</span>(island)) <span class="sc">|&gt;</span></span>
+<span id="cb46-4"><a href="#cb46-4"></a>  <span class="fu">mutate</span>(<span class="at">species_island =</span> <span class="fu">str_c</span>(species, ISLAND, <span class="at">sep =</span> <span class="st">"_"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 4
+   species island    ISLAND    species_island  
+   &lt;fct&gt;   &lt;fct&gt;     &lt;chr&gt;     &lt;chr&gt;           
+ 1 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 2 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 3 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 4 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 5 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 6 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 7 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 8 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+ 9 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+10 Adelie  Torgersen TORGERSEN Adelie_TORGERSEN
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<p>It creates a new vaiable <code>species_island</code> that concatenates <code>species</code> and <code>ISLAND</code> strings and places an underscore between them</p>
+</section></section></section><section id="tidyr" class="level2"><h2 class="anchored" data-anchor-id="tidyr">tidyr <img src="../images/hex/tidyr.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>tidyr</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/07-tidyr.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p><code>tidyr</code> helps us transform our dataset into a <a href="https://r4ds.had.co.nz/tidy-data.html">tidy format</a></p>
+<blockquote class="blockquote">
+<p>There are three interrelated rules which make a dataset tidy:</p>
+<ul>
+<li>Each variable must have its own column.</li>
+<li>Each observation must have its own row.</li>
+<li>Each value must have its own cell. <img src="https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png" class="img-fluid" alt="schematic representing the 3 earlier points">
+</li>
+</ul>
+</blockquote>
+<section id="cheatsheet-6" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-6">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a> <img src="../images/cheatsheet/07-tidyr.png" class="img-fluid" alt="tidyr cheatsheet"></p>
+</section><section id="reading-6" class="level3"><h3 class="anchored" data-anchor-id="reading-6">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/tidy-data.html">Ch 12 Tidy data</a>
+</li>
+<li>Package documentation: <a href="https://tidyr.tidyverse.org" class="uri">https://tidyr.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-6" class="level3"><h3 class="anchored" data-anchor-id="exercise-6">Exercise</h3>
+<section id="un-tidying" class="level4"><h4 class="anchored" data-anchor-id="un-tidying">Un-tidying</h4>
+<p>Both penguin datasets are already tidy!</p>
+<p>We can pretend that <code>penguins</code> wasn’t tidy and that it looked instead like <code>untidy_penguins</code> below, where <strong>body_mass_g</strong> was recorded separately for <em>male</em>, <em>female</em>, and <em>NA</em> <strong>sex</strong> penguins.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>untidy_penguins <span class="ot">&lt;-</span> </span>
+<span id="cb48-2"><a href="#cb48-2"></a>  penguins <span class="sc">|&gt;</span> </span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sex, <span class="at">values_from =</span> body_mass_g)</span>
+<span id="cb48-4"><a href="#cb48-4"></a>untidy_penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 9
+   species island    bill_length_mm bill_depth_mm flipper_length_mm  year  male
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt; &lt;int&gt; &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181  2007  3750
+ 2 Adelie  Torgersen           39.5          17.4               186  2007    NA
+ 3 Adelie  Torgersen           40.3          18                 195  2007    NA
+ 4 Adelie  Torgersen           NA            NA                  NA  2007    NA
+ 5 Adelie  Torgersen           36.7          19.3               193  2007    NA
+ 6 Adelie  Torgersen           39.3          20.6               190  2007  3650
+ 7 Adelie  Torgersen           38.9          17.8               181  2007    NA
+ 8 Adelie  Torgersen           39.2          19.6               195  2007  4675
+ 9 Adelie  Torgersen           34.1          18.1               193  2007    NA
+10 Adelie  Torgersen           42            20.2               190  2007    NA
+# ℹ 334 more rows
+# ℹ 2 more variables: female &lt;int&gt;, `NA` &lt;int&gt;</code></pre>
+</div>
+</div>
+</section><section id="re-tidying" class="level4"><h4 class="anchored" data-anchor-id="re-tidying">Re-tidying</h4>
+<p>Now let’s make it tidy again!</p>
+<p>We’ll use the help of <code>pivot_longer()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a>untidy_penguins <span class="sc">|&gt;</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> male<span class="sc">:</span><span class="st">`</span><span class="at">NA</span><span class="st">`</span>,           </span>
+<span id="cb50-3"><a href="#cb50-3"></a>               <span class="at">names_to =</span> <span class="st">"sex"</span>,           </span>
+<span id="cb50-4"><a href="#cb50-4"></a>               <span class="at">values_to =</span> <span class="st">"body_mass_g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,032 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm  year sex   
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt; &lt;int&gt; &lt;chr&gt; 
+ 1 Adelie  Torgersen           39.1          18.7               181  2007 male  
+ 2 Adelie  Torgersen           39.1          18.7               181  2007 female
+ 3 Adelie  Torgersen           39.1          18.7               181  2007 NA    
+ 4 Adelie  Torgersen           39.5          17.4               186  2007 male  
+ 5 Adelie  Torgersen           39.5          17.4               186  2007 female
+ 6 Adelie  Torgersen           39.5          17.4               186  2007 NA    
+ 7 Adelie  Torgersen           40.3          18                 195  2007 male  
+ 8 Adelie  Torgersen           40.3          18                 195  2007 female
+ 9 Adelie  Torgersen           40.3          18                 195  2007 NA    
+10 Adelie  Torgersen           NA            NA                  NA  2007 male  
+# ℹ 1,022 more rows
+# ℹ 1 more variable: body_mass_g &lt;int&gt;</code></pre>
+</div>
+</div>
+</section></section></section><section id="purrr" class="level2"><h2 class="anchored" data-anchor-id="purrr">purrr <img src="../images/hex/purrr.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends have reached the <code>purrr</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/08-purrr.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>This package provides tools for working with functions and vectors</p>
+<p>The <code>purrr</code> family of functions helps us replace for loops, making our code easier to read and more succint.</p>
+<p>With <code>purrr</code> you can:</p>
+<ul>
+<li>Iterate over a single input with <code>map()</code>
+</li>
+<li>Iterate over two inputs in parallel with <code>map2()</code>
+</li>
+<li>Iterate with multiple arguments with <code>pmap()</code>
+</li>
+<li>Iterate with multiple arguments and functions with <code>invoke_map()</code>
+</li>
+<li>Call a function for its side-effects with <code>walk()</code>, <code>walk2()</code>, and <code>pwalk()</code>
+</li>
+</ul>
+<section id="cheatsheet-7" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-7">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf</a> <img src="../images/cheatsheet/08-purrr.png" class="img-fluid" alt="purrr cheatsheet"></p>
+</section><section id="reading-7" class="level3"><h3 class="anchored" data-anchor-id="reading-7">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/iteration.html">Ch 21 Iteration</a>
+</li>
+<li>Package documentation: <a href="https://purrr.tidyverse.org" class="uri">https://purrr.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-7" class="level3"><h3 class="anchored" data-anchor-id="exercise-7">Exercise</h3>
+<section id="time-for-a-change" class="level4"><h4 class="anchored" data-anchor-id="time-for-a-change">Time for a change?</h4>
+<p>Ok, we love our earlier boxplot showing us <strong>body_mass_g</strong> by <strong>sex</strong> and colored by <strong>species</strong>…but let’s change up the colors to keep with our Antarctica theme!</p>
+<p>I’m a big fan of the color palettes in the <code>nord</code> 📦</p>
+<p><img src="https://raw.githubusercontent.com/jkaupp/nord/master/man/figures/README-palettes-1.png" class="img-fluid" alt="16 different nordic color palettes from the Nord package. We will be focusing on the mountain_forms palette which was dark teal, dusty blue, snowy white, dusty purple, and dark purple"></p>
+</section><section id="goal" class="level4"><h4 class="anchored" data-anchor-id="goal">Goal</h4>
+<p>Let’s turn this plot…</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" alt="Our filled boxplot from our earlier ggplot2 exercises! To recap, a boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. There is a boxplot for each species per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green." width="672"></p>
+</div>
+</div>
+<p>…into this one!</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" alt="In contrast to the other filled boxplot referred to in this tab, this one is filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white." width="672"></p>
+</div>
+</div>
+<p>Note: The color choices in this example are meant for demo purposes only. Be sure to consider the <a href="https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility">accessibility of your data viz</a>, including color contrast between different elements.</p>
+</section><section id="option-1" class="level4"><h4 class="anchored" data-anchor-id="option-1">Option 1</h4>
+<p>You can choose colors using the color hex codes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "#184860" "#486078" "#d8d8d8" "#484860" "#181830"</code></pre>
+</div>
+</div>
+<p>And assign them using the <code>scale_fill_manual()</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb54-2"><a href="#cb54-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb54-3"><a href="#cb54-3"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb54-4"><a href="#cb54-4"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb54-5"><a href="#cb54-5"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#184860"</span>, </span>
+<span id="cb54-6"><a href="#cb54-6"></a>               <span class="st">"#D8D8D8"</span>, </span>
+<span id="cb54-7"><a href="#cb54-7"></a>               <span class="st">"#181830"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="options-2-3" class="level4"><h4 class="anchored" data-anchor-id="options-2-3">Options 2 &amp; 3</h4>
+<p>You can also use the palette name, like <strong>mountain_forms</strong>, though the colors assigned may not align with what you want</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb55-2"><a href="#cb55-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb55-3"><a href="#cb55-3"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb55-4"><a href="#cb55-4"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/nord-2-1.png" class="img-fluid" alt="Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white." width="672"></p>
+</div>
+</div>
+<p>And sometimes, color palette packages come with their own functions that assign colors, like <code>scale_fill_nord()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb56-2"><a href="#cb56-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb56-3"><a href="#cb56-3"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb56-4"><a href="#cb56-4"></a>  nord<span class="sc">::</span><span class="fu">scale_fill_nord</span>(<span class="at">palette =</span> <span class="st">"mountain_forms"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" alt="Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white." width="672"></p>
+</div>
+</div>
+</section><section id="purrr-1" class="level4"><h4 class="anchored" data-anchor-id="purrr-1">Purrr?</h4>
+<p>The <code>prismatic</code> 📦 helps us <strong>see</strong> the colors that correspond to each color hex code (mostly), with the <code>color()</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">library</span>(prismatic)</span>
+<span id="cb57-2"><a href="#cb57-2"></a></span>
+<span id="cb57-3"><a href="#cb57-3"></a>prismatic<span class="sc">::</span><span class="fu">color</span>(nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="../images/nord_mountainforms.png" class="img-fluid" style="width:75.0%" alt="hex codes for the 5 colors in the mountain_forms palette, with a background color to match it. Dark teal is #184860, dusty blue is #486078, snowy white is #D8D8D8, purple is #484860, and dark purple is #181830"></p>
+<p><code>purrr</code>’s <code>map()</code> function can help us iterate <code>color()</code> over all palettes in a palette package like <code>nord</code>!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>nord<span class="sc">::</span>nord_palettes <span class="sc">|&gt;</span> </span>
+<span id="cb58-2"><a href="#cb58-2"></a>    <span class="fu">map</span>(prismatic<span class="sc">::</span>color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="../images/nord_multiple.png" class="img-fluid" style="width:75.0%" alt="hex color codes for 4 of the palettes in the nord package, including mountain_forms"></p>
+</section><section id="more-palettes" class="level4"><h4 class="anchored" data-anchor-id="more-palettes">More palettes!</h4>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>🎨 <a href="https://github.com/EmilHvitfeldt/r-color-palettes">r-color-palettes repo</a> from Emil Hvitfeldt<br>Like this Wes Anderson themed one! And many, many others 🤩</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../images/wesanderson_example_cropped.png" class="img-fluid" alt="9 different bright color palettes from the wesanderson color palette package"></p>
+</div>
+</div>
+</div>
+</section></section></section><section id="lubridate" class="level2"><h2 class="anchored" data-anchor-id="lubridate">lubridate <img src="../images/hex/lubridate.png" style="float:right;" width="10%">
+</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Our penguin friends are ending their tour with the <code>lubridate</code> package!</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<p><img src="../images/drawio/09-lubridate.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p><code>lubridate</code> helps us work with dates and times, including</p>
+<ul>
+<li>a <strong>date</strong> like <code>August 31, 2022</code>
+</li>
+<li>a <strong>time</strong> like <code>10:35 am</code>
+</li>
+<li>a <strong>date-time</strong> like <code>2022-08-31 10:35:00</code>
+</li>
+</ul>
+<p>You can…</p>
+<ul>
+<li>convert strings or numbers to date-times</li>
+<li>get and set components of a date-time</li>
+<li>round date-times</li>
+<li>add or subtract periods to model events that happen at specific clock times</li>
+<li>add or substract durations to model a physical process</li>
+<li>work with time intervals</li>
+</ul>
+<section id="cheatsheet-8" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-8">Cheatsheet</h3>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf</a> <img src="../images/cheatsheet/09-lubridate.png" class="img-fluid" alt="lubridate cheatsheet"></p>
+</section><section id="reading-8" class="level3"><h3 class="anchored" data-anchor-id="reading-8">Reading</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>R for Data Science: <a href="https://r4ds.had.co.nz/dates-and-times.html">Ch 16 Dates and times</a>
+</li>
+<li>Package documentation: <a href="https://lubridate.tidyverse.org" class="uri">https://lubridate.tidyverse.org</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="exercise-8" class="level3"><h3 class="anchored" data-anchor-id="exercise-8">Exercise</h3>
+<section id="read-data-in-1" class="level4"><h4 class="anchored" data-anchor-id="read-data-in-1">Read data in</h4>
+<p>Recall that <code>palmperpenguins</code> includes raw data as well</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>penguins_raw <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins_raw</span>
+<span id="cb59-2"><a href="#cb59-2"></a>penguins_raw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 17
+   studyName `Sample Number` Species         Region Island Stage `Individual ID`
+   &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;          
+ 1 PAL0708                 1 Adelie Penguin… Anvers Torge… Adul… N1A1           
+ 2 PAL0708                 2 Adelie Penguin… Anvers Torge… Adul… N1A2           
+ 3 PAL0708                 3 Adelie Penguin… Anvers Torge… Adul… N2A1           
+ 4 PAL0708                 4 Adelie Penguin… Anvers Torge… Adul… N2A2           
+ 5 PAL0708                 5 Adelie Penguin… Anvers Torge… Adul… N3A1           
+ 6 PAL0708                 6 Adelie Penguin… Anvers Torge… Adul… N3A2           
+ 7 PAL0708                 7 Adelie Penguin… Anvers Torge… Adul… N4A1           
+ 8 PAL0708                 8 Adelie Penguin… Anvers Torge… Adul… N4A2           
+ 9 PAL0708                 9 Adelie Penguin… Anvers Torge… Adul… N5A1           
+10 PAL0708                10 Adelie Penguin… Anvers Torge… Adul… N5A2           
+# ℹ 334 more rows
+# ℹ 10 more variables: `Clutch Completion` &lt;chr&gt;, `Date Egg` &lt;date&gt;,
+#   `Culmen Length (mm)` &lt;dbl&gt;, `Culmen Depth (mm)` &lt;dbl&gt;,
+#   `Flipper Length (mm)` &lt;dbl&gt;, `Body Mass (g)` &lt;dbl&gt;, Sex &lt;chr&gt;,
+#   `Delta 15 N (o/oo)` &lt;dbl&gt;, `Delta 13 C (o/oo)` &lt;dbl&gt;, Comments &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section><section id="view-date-times" class="level4"><h4 class="anchored" data-anchor-id="view-date-times">View date-times</h4>
+<p>In the raw data, <code>Date Egg</code> is the date that a penguin nest in the study was observed with 1 egg</p>
+<p>Check out <code>?penguins_raw</code> to learn more about the other variables in this dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>penguins_raw <span class="sc">|&gt;</span> <span class="fu">select</span>(Species, Sex, <span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   Species                             Sex    `Date Egg`
+   &lt;chr&gt;                               &lt;chr&gt;  &lt;date&gt;    
+ 1 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-11
+ 2 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-11
+ 3 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16
+ 4 Adelie Penguin (Pygoscelis adeliae) &lt;NA&gt;   2007-11-16
+ 5 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16
+ 6 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-16
+ 7 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-15
+ 8 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-15
+ 9 Adelie Penguin (Pygoscelis adeliae) &lt;NA&gt;   2007-11-09
+10 Adelie Penguin (Pygoscelis adeliae) &lt;NA&gt;   2007-11-09
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+</section><section id="get-date-components" class="level4"><h4 class="anchored" data-anchor-id="get-date-components">Get date components</h4>
+<p>We can use <code>year()</code>, <code>month()</code>, and <code>day()</code> to extract different components from <code>Date Egg</code></p>
+<p>In addition, <code>month()</code> provides some options to let us decide whether we want the month displayed as a character string, and whether we want that string abbreviated</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>penguins_raw <span class="sc">|&gt;</span> </span>
+<span id="cb63-2"><a href="#cb63-2"></a>  <span class="fu">select</span>(Species, Sex, <span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb63-3"><a href="#cb63-3"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>),</span>
+<span id="cb63-4"><a href="#cb63-4"></a>         <span class="at">Month =</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>, </span>
+<span id="cb63-5"><a href="#cb63-5"></a>                       <span class="at">label =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb63-6"><a href="#cb63-6"></a>                       <span class="at">abbr =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb63-7"><a href="#cb63-7"></a>         <span class="at">Day =</span> <span class="fu">day</span>(<span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 6
+   Species                             Sex    `Date Egg`  Year Month      Day
+   &lt;chr&gt;                               &lt;chr&gt;  &lt;date&gt;     &lt;dbl&gt; &lt;ord&gt;    &lt;int&gt;
+ 1 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-11  2007 November    11
+ 2 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-11  2007 November    11
+ 3 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16  2007 November    16
+ 4 Adelie Penguin (Pygoscelis adeliae) &lt;NA&gt;   2007-11-16  2007 November    16
+ 5 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-16  2007 November    16
+ 6 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-16  2007 November    16
+ 7 Adelie Penguin (Pygoscelis adeliae) FEMALE 2007-11-15  2007 November    15
+ 8 Adelie Penguin (Pygoscelis adeliae) MALE   2007-11-15  2007 November    15
+ 9 Adelie Penguin (Pygoscelis adeliae) &lt;NA&gt;   2007-11-09  2007 November     9
+10 Adelie Penguin (Pygoscelis adeliae) &lt;NA&gt;   2007-11-09  2007 November     9
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<p>That concludes the tutorial, thanks for following along!</p>
+
+
+</section></section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>Example kindly <a href="https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2">contributed by Alison Hill</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
+    <div class="nav-footer-center"><a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="https://silviacanelon.com/accessibility">Accessibility</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://silviacanelon.com/contact">Contact</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://silviacanelon.com/license">License</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

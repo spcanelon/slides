@@ -7,7 +7,7 @@ date: Nov. 10, 2022
 format:
   revealjs:
     self-contained: true
-    theme: ["default", "css/2022-thinking-big.scss"]
+    theme: ["default", "css/theme.scss"]
     history: false
     controls: true
     controls-layout: bottom-right
@@ -35,7 +35,7 @@ xfun::pkg_attach("tidyverse",
                  "here",
                  "sf")
 
-talk <- here("2022-thinking-big")
+talk <- here("2022-11-10-thinking-big")
 ```
 
 

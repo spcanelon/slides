@@ -55,8 +55,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<link href="../../img/logo_rounded.ico" rel="icon">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/silvia/img/logo_rounded.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,7 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -85,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script><link rel="stylesheet" href="../../assets/silvia.scss">
 <meta name="twitter:title" content="Silvia Canelón - An Antarctic Tour of the Tidyverse v2.0">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://slides.silviacanelon.com/img/social-card.png">
+<meta name="twitter:image" content="https://slides.silviacanelon.com//img/social-card.png">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:image-height" content="1376">
 <meta name="twitter:image-width" content="2626">
@@ -97,28 +109,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../img/logo_rounded.png" alt="Home" class="navbar-logo"></a>
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="Home" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
-    <a class="nav-link" href="https://www.silviacanelon.com" rel="" target="">
- <span class="menu-text">Silvia Canelón</span></a>
-  </li>  
-</ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/spcanelon/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-</ul>
-<div class="quarto-navbar-tools">
+        <div class="quarto-navbar-tools ms-auto">
+    <a href="https://www.github.com/spcanelon/slides" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
+          <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
@@ -290,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 </ul>
 <section id="cheatsheet" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf</a> <img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png" class="img-fluid" alt="readr cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf</a> <img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png" class="img-fluid" alt="readr cheatsheet"></p>
 </section><section id="reading" class="level3"><h3 class="anchored" data-anchor-id="reading">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -382,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A <code>tibble</code> is much like the <code>dataframe</code> in base R, but optimized for use in the Tidyverse.</p>
 <section id="cheatsheet-1" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-1">Cheatsheet</h3>
 <p>The tibble package shares a cheatsheet with the tidyr package</p>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a></p>
 <p><img src="../images/cheatsheet/02-tibble-tidyr.png" class="img-fluid" style="width:65.0%" alt="tidyr/tibble cheatsheet"></p>
 </section><section id="reading-1" class="level3"><h3 class="anchored" data-anchor-id="reading-1">Reading</h3>
 <div class="quarto-layout-panel">
@@ -481,7 +480,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>ggplot2</code> uses the “Grammar of Graphics” and layers graphical components together to help us create a plot</p>
 <p>Let’s start by making a simple plot of our data!</p>
 <section id="cheatsheet-2" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-2">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf</a> <img src="../images/cheatsheet/03-ggplot2.png" class="img-fluid" alt="ggplot2 cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf</a> <img src="../images/cheatsheet/03-ggplot2.png" class="img-fluid" alt="ggplot2 cheatsheet"></p>
 </section><section id="reading-2" class="level3"><h3 class="anchored" data-anchor-id="reading-2">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -592,7 +591,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <li>and <code>count()</code> + <code>add_count()</code> simplify <code>group_by()</code> + <code>summarize()</code> when you just want to count</li>
 </ul>
 <section id="cheatsheet-3" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-3">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf</a> <img src="../images/cheatsheet/04-dplyr.png" class="img-fluid" alt="dplyr cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf</a> <img src="../images/cheatsheet/04-dplyr.png" class="img-fluid" alt="dplyr cheatsheet"></p>
 </section><section id="reading-3" class="level3"><h3 class="anchored" data-anchor-id="reading-3">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -810,7 +809,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p><code>forcats</code> helps us work with <strong>categorical variables</strong> or factors</p>
 <p>These are variables that have a fixed and known set of possible values, like <strong>species</strong>, <strong>island</strong>, and <strong>sex</strong> in our <code>penguins</code> dataset</p>
 <section id="cheatsheet-4" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-4">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/factors.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/factors.pdf</a> <img src="../images/cheatsheet/05-forcats.png" class="img-fluid" style="width:65.0%" alt="forcats cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/factors.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/factors.pdf</a> <img src="../images/cheatsheet/05-forcats.png" class="img-fluid" style="width:65.0%" alt="forcats cheatsheet"></p>
 </section><section id="reading-4" class="level3"><h3 class="anchored" data-anchor-id="reading-4">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -917,7 +916,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <li>…and more!</li>
 </ul>
 <section id="cheatsheet-5" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-5">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/strings.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/strings.pdf</a> <img src="../images/cheatsheet/06-stringr.png" class="img-fluid" alt="stringr cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/strings.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/strings.pdf</a> <img src="../images/cheatsheet/06-stringr.png" class="img-fluid" alt="stringr cheatsheet"></p>
 </section><section id="reading-5" class="level3"><h3 class="anchored" data-anchor-id="reading-5">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -1007,7 +1006,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </ul>
 </blockquote>
 <section id="cheatsheet-6" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-6">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a> <img src="../images/cheatsheet/07-tidyr.png" class="img-fluid" alt="tidyr cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a> <img src="../images/cheatsheet/07-tidyr.png" class="img-fluid" alt="tidyr cheatsheet"></p>
 </section><section id="reading-6" class="level3"><h3 class="anchored" data-anchor-id="reading-6">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -1105,7 +1104,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </li>
 </ul>
 <section id="cheatsheet-7" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-7">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf</a> <img src="../images/cheatsheet/08-purrr.png" class="img-fluid" alt="purrr cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf</a> <img src="../images/cheatsheet/08-purrr.png" class="img-fluid" alt="purrr cheatsheet"></p>
 </section><section id="reading-7" class="level3"><h3 class="anchored" data-anchor-id="reading-7">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -1241,7 +1240,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <li>work with time intervals</li>
 </ul>
 <section id="cheatsheet-8" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-8">Cheatsheet</h3>
-<p><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf</a> <img src="../images/cheatsheet/09-lubridate.png" class="img-fluid" alt="lubridate cheatsheet"></p>
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf</a> <img src="../images/cheatsheet/09-lubridate.png" class="img-fluid" alt="lubridate cheatsheet"></p>
 </section><section id="reading-8" class="level3"><h3 class="anchored" data-anchor-id="reading-8">Reading</h3>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -1626,7 +1625,30 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
+    <div class="nav-footer-center"><a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="https://silviacanelon.com/accessibility">Accessibility</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://silviacanelon.com/contact">Contact</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://silviacanelon.com/license">License</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
 
 
 </body></html>

@@ -12,42 +12,59 @@ project:
     - "!2020-08-31-tour-of-the-tidyverse/"
 
 website:
-  title: "Silvia Canelón"
-  search: false
-  favicon: img/logo_rounded.ico
-  navbar:
-    title: false
-    logo: img/logo_rounded.png
-    logo-alt: "Home" #doesn't seem to show up
-    right:
-      - icon: github
-        href: https://github.com/spcanelon/slides
-        aria-label: GitHub repo
-    left:
-      - text: Silvia Canelón
-        href: https://www.silviacanelon.com
-
-  site-url: https://slides.silviacanelon.com
+  title: Silvia Canelón
+  site-url: https://slides.silviacanelon.com/
   description: 'Collection of publicly available slide decks created by Silvia Canelón.'
+
+  search: true
+  favicon: assets/silvia/img/logo_rounded.svg
+  navbar:
+    # title: false
+    logo: assets/silvia/img/logo_noBg.svg
+    logo-alt: "Home" #doesn't seem to show up
+    tools:
+      - icon: github
+        href: https://www.github.com/spcanelon/slides
 
   #opengraph: true
   twitter-card:
     creator: "@spcanelon"
     image: "/img/social-card.png"
 
-format:
-  # https://quarto.org/docs/output-formats/html-themes.html#basic-options
+  page-footer:  
+    left: >-
+     &#169; 2023 [Silvia Canelón](https://silviacanelon.com) &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
+      <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+      <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+
+    right: 
+      - text: "Accessibility"
+        aria-label: "Accessibility Commitment"
+        href: https://silviacanelon.com/accessibility
+      - text: "Contact"
+        aria-label: "Contact Form"
+        href: https://silviacanelon.com/contact
+      - text: "License"
+        aria-label: "License Details"
+        href: https://silviacanelon.com/license
+      - icon: rss
+        href: index.xml
+
+format: 
   html:
     theme:
-      - cosmo
-      - assets/silvia.scss
-    mainfont: "Red Hat Text"
-    fontcolor: "#002642"
-    linkcolor: "#A23E02"
-    monofont: "Consolas"
-    monobackgroundcolor: "#FFFFFF"
-    backgroundcolor: "#fffbf2"
-
+      light:
+        - cosmo
+        # - superhero
+        - assets/silvia-theme.scss
+        - assets/silvia/colors.scss
+        - assets/silvia/fonts.scss
+    highlight-style: a11y
     code-link: true
 
 execute:

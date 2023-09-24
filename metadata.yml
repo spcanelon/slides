@@ -3,56 +3,56 @@
   subtitle: "2022 CANSSI Ontario Statistical Software Conference"
   author: "Silvia Canelón, PhD"
   date: 2022-11-10
-  image: /2022-thinking-big/img/featured.png
-  path: /2022-thinking-big/index.qmd
+  image: 2022-11-10-thinking-big/img/featured.png
+  path: 2022-11-10-thinking-big/index.qmd
   categories:
    - revealjs
 - title: "Philly Center City District Sips 2022: An Interactive Map"
   subtitle: "R-Ladies Philly"
   author: "Silvia Canelón, PhD"
   date: 2022-09-29
-  image: /2022-ccd-sips/img/featured.png
-  path: /2022-ccd-sips/index.qmd
+  image: 2022-09-29-ccd-sips/img/featured.png
+  path: 2022-09-29-ccd-sips/index.qmd
   categories:
    - revealjs
 - title: "An Antarctic Tour of the Tidyverse v2.0"
   subtitle: "Quarto RevealJS Remix"
   author: "Silvia Canelón, PhD"
   date: 2022-08-31
-  image: /tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png
-  path: /tour-of-the-tidyverse-v2/index.qmd
+  image: 2022-08-31-tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png
+  path: 2022-08-31-tour-of-the-tidyverse-v2/index.qmd
   categories:
     - revealjs
 - title: "Lessons Learned from the EHR: Things I've Learned from Working with Electronic Health Records"
   subtitle: "Toronto Data Workshop"
   author: "Silvia Canelón, PhD"
   date: 2022-02-11
-  image: /2022-tdw-ehr-lessons/featured.png
-  path: /2022-tdw-ehr-lessons/index.html
+  image: 2022-02-11-tdw-ehr-lessons/featured.png
+  path: 2022-02-11-tdw-ehr-lessons/index.html
   categories:
     - xaringan
 - title: "The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data"
   subtitle: "2021 AMIA Informatics Summit"
   author: "Silvia Canelón, PhD"
   date: 2021-03-23
-  image: /2021-amia-informatics-summit/featured.png
-  path: /2021-amia-informatics-summit/index.html
+  image: 2021-03-23-amia-informatics-summit/featured.png
+  path: 2021-03-23-amia-informatics-summit/index.html
   categories:
     - xaringan
 - title: "Introducción al paquete xaringan"
   subtitle: "R-Ladies Xalapa"
   author: "Silvia Canelón, PhD"
   date: 2020-12-17
-  image: /introduccion-xaringan/featured.png
-  path: /introduccion-xaringan/index.html
+  image: 2020-12-17-introduccion-xaringan/featured.png
+  path: 2020-12-17-introduccion-xaringan/index.html
   categories:
     - xaringan
 - title: "An Antarctic Tour of the Tidyverse"
   subtitle: "R-Ladies Chicago"
   author: "Silvia Canelón, PhD"
   date: 2020-08-31
-  image: /tour-of-the-tidyverse/featured.png
-  path: /tour-of-the-tidyverse/index.html
+  image: 2020-08-31-tour-of-the-tidyverse/featured.png
+  path: 2020-08-31-tour-of-the-tidyverse/index.html
   categories:
     - xaringan
 

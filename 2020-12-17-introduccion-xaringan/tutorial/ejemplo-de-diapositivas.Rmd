@@ -1,0 +1,249 @@
+---
+title: "Título de la Presentación"
+subtitle: "Subtítulo de la Presentación"
+author: "Nombre de la autora"
+institute: "R-Ladies Xalapa"
+date: "Fecha"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: 
+      - default
+      - rladies
+      - rladies-fonts
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "4:3"
+---
+
+```{r setup, include = FALSE}
+library(knitr)                              # paquete que trae funciones utiles para R Markdown
+library(tidyverse)                          # paquete que trae varios paquetes comunes en el tidyverse
+library(datos)                              # paquete que viene con datos populares traducidos al español :)
+library(icon)                               # paquete para iconos
+library(emo)                                # paquete para emojis
+
+# opciones predeterminadas
+knitr::opts_chunk$set(echo = FALSE,         # FALSE: los bloques de código NO se muestran
+                      dpi = 300,            # asegura gráficos de alta resolución
+                      warning = FALSE,      # los mensajes de advertencia NO se muestran
+                      error = FALSE)        # los mensajes de error NO se muestran
+```
+
+class: left, bottom
+background-image: url(https://raw.githubusercontent.com/rladies/starter-kit/master/stickers/hex-logo-with-text.png)
+background-position: 94% 10%
+background-size: 15%
+
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+
+---
+name: hola
+class: inverse, middle, center
+
+<img style="border-radius: 50%;" src="https://raw.githubusercontent.com/spcanelon/xaringan-rladies-xalapa/master/diapositivas/img/rladies-xalapa.jpg"
+width="150px"
+/>
+
+# R-Ladies Xalapa 
+
+## Capitulo de R-Ladies Global
+
+[`r icon::fa("link")` meetup.com/rladies-xalapa](https://www.meetup.com/rladies-xalapa/)<br/>
+[`r icon::fa("twitter")` @RLadiesXalapa](https://twitter.com/RLadiesXalapa)<br/>
+[`r icon::fa("paper-plane")` xalapa@rladies.org](mailto:xalapa@rladies.org)
+
+???
+¡Hola! Mi nombre es R-Ladies Xalapa y estoy emocionada de estar aqui para promover la diversidad de género en la comunidad de R.
+
+---
+
+.left-column[
+# R-Ladies Xalapa
+]
+
+.right-column[
+
+El capítulo local R-Ladies Xalapa busca promover la diversidad de género en la comunidad de R (un lenguaje de programación para la manipulación y análisis estadístico de datos).
+
+Nuestra prioridad es proporcionar un espacio comunitario seguro para cualquier persona que se identifique como un género minoritario que esté interesada y/o trabaje con R.
+
+
+.footnote[
+----
+Este extracto proviene de la página web: https://www.meetup.com/rladies-xalapa]
+]
+
+---
+class: inverse, middle
+
+# El esquema
+
+----
+
+.pull-left[
+
+Diapositivas utilizadas como esquema se encuentran con frecuencia. Si contienen enlaces pueden servir como tabla de contenido para una presentación.
+
+Otra opción es utilizar algunas diapositivas como transiciones en tu presentación de manera que le indiquen a la audiencia de dónde vienen y a dónde van.
+
+]<!--end of left-column-->
+
+.pull-right[
+
+.left[
+1. [Haciendo listas y enfatizando el texto](#listas)
+
+2. [Tablas y citas](#tablas-citas)
+
+3. [Resaltando lineas de código](#resaltando-lineas)
+
+4. [Diapositiva final e información de contacto](#adios)
+]
+
+] <!--end of right-column-->
+
+---
+name: listas
+# Haciendo listas y enfatizando el texto
+
+--
+
+Algunos de los temas que se abordaran en las sesiones de R-Ladies Xalapa son:
+
+--
+
+* Análisis estadístico
+
+--
+
+* Visualización de datos
+
+--
+
+* Minería de textos
+
+--
+
+* Análisis exploratorio de datos
+
+--
+
+* Aplicaciones en R Shiny
+
+--
+
+-----
+
+Y con al ayuda de Markdown puedes escribir el texto **en negritas** o _en cursiva_
+
+.footnote[
+Este extracto proviene de la página web: https://www.meetup.com/rladies-xalapa
+]
+
+---
+name: tablas-citas
+# Tablas y citas
+
+### Tabla
+
+.pull-left[
+
+`datos::pinguinos`
+
+Los datos `pinguinos` son medidas de tamaño de pingüinos adultos en busca de comida cerca de la estación Palmer en la Antártica.
+
+Medidas como `masa_corporal_g`
+]
+
+.pull-right[
+
+```{r}
+datos::pinguinos %>%
+  select(especie, isla, masa_corporal_g) %>%
+  arrange(masa_corporal_g) %>%
+  head() %>%
+  knitr::kable(format = 'html')
+```
+]
+
+--
+
+### Cita
+
+> El paquete [`datos` ](https://cienciadedatos.github.io/datos/) provee la traducción al español de conjuntos de datos en inglés originalmente disponibles en otros paquetes de R, como [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/)
+
+> La autora principal del paquete `datos` es [Riva Quiroga](https://twitter.com/rivaquiroga) `r emo::ji("clap")`
+
+---
+name: resaltando-lineas
+
+# Resaltando lineas de código
+
+`Asī se ve el código resaltado cuando está ubicado en línea con el texto`
+
+Líneas de  código dentro de fragmentos de código (code chunks), se pueden resaltar usando `#<<`, como se ve a continuación:
+
+### Código
+
+````markdown
+`r ''````{r}
+datos::pinguinos %>%
+  ggplot(aes(x = isla, y = masa_corporal_g)) +
+  geom_boxplot(aes(fill = especie))               #<<
+```
+````
+
+### Salida
+
+```{r eval=FALSE, echo=TRUE}
+datos::pinguinos %>%
+  ggplot(aes(x = especie, y = masa_corporal_g)) +
+  geom_boxplot(aes(fill = isla))               #<<
+```
+
+---
+
+```{r masa-corporal, eval=TRUE, echo=TRUE, fig.height = 4.5}
+datos::pinguinos %>%
+  ggplot(aes(x = especie, y = masa_corporal_g)) +
+  geom_boxplot(aes(fill = isla))               
+```
+
+---
+name: adios
+class: middle, inverse
+
+.pull-left[
+# **¡Gracias!**
+<br/>
+## R-Ladies Xalapa  
+
+### Promoviendo la diversidad de género en la comunidad de R
+
+#### Xalapa, México (¡y a nivel global!)
+]
+
+.pull-right[
+.right[
+<img style="border-radius: 50%;"
+src="https://raw.githubusercontent.com/spcanelon/xaringan-rladies-xalapa/master/diapositivas/img/rladies-xalapa.jpg"
+width="150px" />
+
+[`r icon::fa("link")` meetup.com/rladies-xalapa](https://www.meetup.com/rladies-xalapa/)<br/>
+[`r icon::fa("twitter")` @RLadiesXalapa](https://twitter.com/RLadiesXalapa)<br/>
+[`r icon::fa("paper-plane")` xalapa@rladies.org](mailto:xalapa@rladies.org)
+]
+]
+
+???
+¡Gracias por tu atención! 
+En este momento me encantaría tomar preguntas y si me quieren contactar, en esta diapositiva incluí mi información

@@ -1,0 +1,141 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    df-print: default
+execute: 
+  echo: true
+---
+
+# 01-readr {visibility="hidden"}
+
+```{r include=FALSE}
+library(readr)
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/01-readr.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins are starting their tour with the readr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## readr: info {background-image="images/hex/readr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview
+
+<br><br>
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="50%"}
+### Importing data is the very first step!
+
+You can use `readr` to import rectangular data.
+:::
+
+::: {.column width="50%"}
+### You can import...
+
+- comma separated (CSV) files with `read_csv()`
+- tab separated files with `read_tsv()`
+- general delimited files with `read_delim()`
+- fixed width files with `read_fwf()`
+- tabular files where columns are separated by white-space with `read_table()`
+- web log files with `read_log()` 
+:::
+
+::::
+<!--end columns-->
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf>
+![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png){fig-alt="Screenshot of readr cheatsheet"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300" fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+### R for Data Science: [Ch 11 Data import](https://r4ds.had.co.nz/data-import.html)
+
+### Package documentation: <https://readr.tidyverse.org>
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## readr: exercise {background-image="images/hex/readr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Read data in
+
+#### Options 1 & 2 below will get you the same raw dataset for Adélie penguins. Try it out! {.center-x}
+
+Option 1: load using URL
+
+```{r}
+#| eval: false
+read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.219.3&entityid=002f3893385f710df69eeebe893144ff")
+```
+
+<br>
+Option 2: load using filepath
+
+```{r}
+#| eval: false
+read_csv("tutorial/raw_adelie.csv")
+```
+
+<br>
+
+----
+
+Option 3: Lucky for us, the `palmerpenguins` `r emo::ji("package")` compiles data from all three species together! Check the clean data and raw data tabs to learn more.
+
+### Clean data
+
+`penguins` contains a clean dataset
+
+```{r}
+penguins <- palmerpenguins::penguins
+penguins
+```
+
+
+### Raw data
+
+`penguins_raw` contains the raw data
+
+```{r}
+palmerpenguins::penguins_raw
+```
+
+:::
+<!--end panels-->

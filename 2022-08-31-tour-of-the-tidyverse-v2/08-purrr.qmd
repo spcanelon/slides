@@ -1,0 +1,329 @@
+---
+format: 
+  revealjs:
+    theme: ["default", "css/rladies-spc.scss"]
+    disable-layout: false #https://revealjs.com/config/
+    code-overflow: wrap
+    df-print: default
+execute: 
+  echo: true
+---
+
+# 08-purrr {visibility="hidden"}
+
+```{r}
+#| include: false
+library(tidyverse)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+```
+
+
+## {background-image="https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80" background-position="52% 5%" background-size="cover"}
+
+![](images/drawio/08-purrr.png){.absolute top=30 left=30 width="100%" fig-alt="Our illustrated penguins have reached the purrr package! The photo backdrop is a snowy Antarctic wonderland featuring a Gentoo penguin with outstretched flippers"}
+
+::: footer
+<span>Photo by <a href="https://unsplash.com/@eadesstudio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James Eades</a> on <a href="https://unsplash.com/collections/12240655/palmerpenguins/d5aed8c855e26061e5e651d3f180b76d?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+:::
+
+---
+
+## purrr: info {background-image="images/hex/purrr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Overview {.center}
+
+<br><br>
+
+:::: {.columns}
+
+::: {.column width=48%}
+
+#### Provides tools for working with functions and vectors 
+
+The `purrr` family of functions helps us replace for loops, making our code easier to read and more succint.
+
+:::
+
+::: {.column width=50%}
+
+#### With `purrr` you can
+
+- Iterate over a single input with `map()`
+- Iterate over two inputs in parallel with `map2()`
+- Iterate with multiple arguments with `pmap()`
+- Iterate with multiple arguments and functions with `invoke_map()`
+- Call a function for its side-effects with `walk()`, `walk2()`, and `pwalk()`
+
+:::
+
+::::
+<!--end columns-->
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf>
+![](images/cheatsheet/08-purrr.png){fig-alt="purrr cheatsheet"}
+
+### Reading
+
+<!--start columns-->
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/r4ds-cover.png){width="300"}{fig-alt="R4DS book cover"}
+
+:::
+
+::: {.column width="60%"}
+
+<br><br>
+
+#### R for Data Science: [Ch 21 Iteration](https://r4ds.had.co.nz/iteration.html)
+
+#### Package documentation: <https://purrr.tidyverse.org>
+
+:::
+
+::::
+<!--end columns-->
+
+::: 
+<!--end panels-->
+
+## purrr: exercise {background-image="images/hex/purrr.png" background-size="8%" background-position="98% 4%"}
+
+<!--start panels-->
+::: {.panel-tabset}
+
+### Time for a change?
+
+:::: {.columns}
+
+::: {.column width=30%}
+
+Ok, we love our earlier boxplot showing us **body_mass_g** by **sex** and colored by **species**... 
+
+...but let's change up the colors to keep with our Antarctica theme!
+
+I'm a big fan of the color palettes in the `nord` `r emo::ji("package")`
+
+:::
+
+::: {.column width=5%}
+
+:::
+
+::: {.column width=65%}
+
+![](https://raw.githubusercontent.com/jkaupp/nord/master/man/figures/README-palettes-1.png){fig-alt="16 different nordic color palettes from the Nord package. We will be focusing on the mountain_forms palette which was dark teal, dusty blue, snowy white, dusty purple, and dark purple"}
+
+:::
+
+::::
+<!--end columns-->
+
+### Goal
+
+:::: {.columns}
+
+::: {.column}
+
+Let's turn this plot...
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 7
+#| fig-alt: Our filled boxplot from our earlier ggplot2 exercises! To recap, a boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. There is a boxplot for each species per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species))
+```
+
+:::
+
+::: {.column}
+
+...into this one!
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 7
+#| fig-alt: In contrast to the other filled boxplot referred to in this tab, this one is filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  nord::scale_fill_nord(palette = "mountain_forms")
+```
+
+::: {.small-text}
+Note: The color choices in this example are meant for demo purposes only. Be sure to consider the [accessibility of your data viz](https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility), including color contrast between different elements.
+:::
+
+:::
+
+::::
+<!--end columns-->
+
+### Option 1
+
+:::: {.columns}
+
+::: {.column}
+
+You can choose colors using<br>the color hex codes
+
+```{r}
+nord::nord_palettes$mountain_forms
+```
+
+And assign them using the `scale_fill_manual()` function
+
+```{r nord-1}
+#| fig-show: hide
+#| code-line-numbers: "4-7"
+#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  scale_fill_manual(
+    values = c("#184860", 
+               "#D8D8D8", 
+               "#181830"))
+```
+
+:::
+
+::: {.column}
+
+<br>
+
+```{r ref.label="nord-1"}
+#| echo: false
+#| fig-height: 7
+```
+
+:::
+
+:::: 
+<!--end columns-->
+
+### Options 2 & 3
+
+:::: {.columns}
+
+::: {.column}
+
+You can also use the palette name, like **mountain_forms**, though the colors assigned may not align with what you want
+<br>
+
+```{r, nord-2}
+#| code-line-numbers: "4-6"
+#| fig-height: 3
+#| fig-width: 5
+#| fig-alt: Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  scale_fill_manual(
+    values = nord::nord_palettes$mountain_forms
+    )
+```
+
+:::
+
+::: {.column}
+
+And sometimes, color palette packages come with their own functions that assign colors, like `scale_fill_nord()`
+
+```{r}
+#| code-line-numbers: "4-6"
+#| fig-height: 3
+#| fig-width: 5
+#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  nord::scale_fill_nord(
+    palette = "mountain_forms"
+    )
+```
+
+:::
+
+::::
+<!--end columns-->
+
+### Purrr?
+
+:::: {.columns}
+
+::: {.column}
+
+The `prismatic` `r emo::ji("package")` helps us **see** the colors that correspond to each color hex code (mostly), with the `color()` function
+
+```{r}
+#| include: false
+library(prismatic)
+```
+
+```{r}
+#| eval: false
+library(prismatic)
+
+prismatic::color(
+    nord::nord_palettes$mountain_forms
+    )
+```
+![](images/nord_mountainforms.png){fig-alt="hex codes for the 5 colors in the mountain_forms palette, with a background color to match it. Dark teal is #184860, dusty blue is #486078, snowy white is #D8D8D8, purple is #484860, and dark purple is #181830"}
+
+:::
+
+::: {.column}
+
+`purrr`'s `map()` function can help us iterate `color()` over all palettes in a palette package like `nord`!
+
+```{r}
+#| eval: false
+nord::nord_palettes |> 
+    map(prismatic::color)
+```
+
+![](images/nord_multiple.png){fig-alt="hex color codes for 4 of the palettes in the nord package, including mountain_forms"}
+
+:::
+
+::::
+<!--end columns-->
+
+### More palettes!
+
+:::: {.columns}
+
+::: {.column}
+
+<br><br>
+
+`r emo::ji("art")` [r-color-palettes repo](https://github.com/EmilHvitfeldt/r-color-palettes) from Emil Hvitfeldt
+
+Like this Wes Anderson themed one! And many, many others `r emo::ji("star_struck")`
+
+:::
+
+::: {.column}
+
+![](images/wesanderson_example.png){fig-alt="10 different bright color palettes from the wesanderson color palette package."}
+
+:::
+
+::::
+<!--end columns-->
+
+:::
+<!--end panels-->

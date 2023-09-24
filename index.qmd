@@ -11,6 +11,10 @@ listing:
   #categories: unnumbered
 page-layout: full
 include-in-header: assets/umami.html
+execute: 
+  freeze: false
+  warning: false
+  echo: false 
 ---
 
 <!--
@@ -26,3 +30,51 @@ Thanks for your patience while I figure out what's going on!
 <p class="f6 measure lh-copy tc center">This gallery features a collection of slide decks made with<br>a variety of publishing tools</p>
 
 <p class="f7 measure lh-copy tc center i">Written by Silvia Canelón</p>
+
+```{r import-manual-redirects}
+
+manual_redirects <-
+  readr::read_table(here::here("static", "_manualredirects.txt"),
+                    col_names = FALSE) |> 
+  dplyr::mutate(redirect = paste0(X1, " ", X2, " ", X3))
+
+manual_redirects <- manual_redirects$redirect
+```
+
+```{r write-redirects}
+
+# adapted from Tom Mock: https://github.com/jthomasmock/themockup-blog/blob/master/index.qmd#L27C1-L48C4
+# who adapted from Danielle Navarro: https://blog.djnavarro.net/porting-to-quarto/#netlify-redirects
+
+# obtain list of slides
+slides <-
+    list.dirs(
+    path = c(here::here()),
+    full.names = FALSE,
+    recursive = FALSE
+    ) |> 
+    tibble::as_tibble_col(column_name = "folder")  |> 
+    dplyr::filter(stringr::str_starts(folder, pattern = "[:digit:]"))
+
+# extract slugs and create redirects
+slides <- 
+  slides |> 
+  dplyr::mutate(
+    # extract the year-slugs
+    slugs = stringr::str_remove(folder, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
+    # slugs = stringr::str_remove(folder, "\\d{4}-\\d{2}-\\d{2}-(?!\\d)"),
+    # lines to insert to a netlify _redirect file
+    redirects = paste0("/", slugs, " ", "/", folder)
+    )
+
+# extract redirects
+redirects <- slides$redirects
+
+# combine with manual redirects
+redirects_combined <- c(manual_redirects, redirects)
+
+# write the _redirect file
+writeLines(redirects_combined, here::here("docs", "_redirects"))
+```
+
+

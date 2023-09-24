@@ -1,0 +1,90 @@
+/*-- NOTA: Esta son los valores utilizados por el tema "rladies"---*/
+/*
+https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/rladies.css
+Ve este blog para mas informacion: https://alison.rbind.io/post/2017-12-18-r-ladies-presentation-ninja/
+
+h1, h2, h3 {
+  font-weight: normal;
+  color: #562457;
+}
+a, a > code {
+  color: #88398a;
+}
+.remark-code-line-highlighted { background-color: rgba(136, 57, 138, 0.3); }
+
+.inverse {
+  background-color: #562457;
+}
+.inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, inverse a > code {
+  color: #fff;
+}
+*/
+
+:root{
+/*-- Variables definidas de acuerdo a los colors del tema "rladies" --*/
+--morado-oscuro: #562457;
+--morado-claro: #88398A;
+--gris: #D3D3D3;
+--negro: #181818;
+--blanco: #FFFFFF;
+}
+
+.morado-claro { color: var(--morado-claro) }
+
+.texto-grande {
+    font-size: 2em;
+}
+
+.fondo-blanco { background-color: #FFFFFF }
+
+/*-- ENLACES/ANCLAS --*/
+a {
+  border-bottom:      3px solid var(--morado-claro);
+  line-height:        2rem;
+}
+
+a:hover { border-bottom: none; }
+
+.inverse a {
+  border-bottom:      3px solid var(--blanco);
+  line-height:        2rem;
+}
+
+/*-- CODE CHUNKS --*/
+
+/*-- Code chunk background layer --*/
+pre {
+  /*border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border*/
+  border:             3px solid rgba(136, 57, 138, 0.3);
+  box-shadow:         0px 0px 0px 0px var(--morado-claro);
+  padding:            0.1em;                    /* padding between code chunk and border */
+  background:         none !important;
+  overflow-x:         auto;                     /* enable horizontal scrolling with overflow */
+  border-radius:      1px;                      /* modify rounding of corners*/
+}
+
+/*--  --*/
+pre code {
+  background:         none;
+  font-size:          18px !important;
+}
+
+/*-- BARRA HORIZONTAL --*/
+hr {
+  content:            '';
+  display:            block;
+  border:             none;
+  background-color:   var(--morado-claro);
+  height:             0.1em;
+}
+
+.inverse hr {
+  content:            '';
+  display:            block;
+  border:             none;
+  background-color:   var(--gris);
+  height:             0.1em;
+}
+
+/*-- Esconde el numero de la diapositiva titular --*/
+.titular .remark-slide-number { display: none; }

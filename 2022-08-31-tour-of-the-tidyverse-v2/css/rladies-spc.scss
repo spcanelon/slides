@@ -1,0 +1,218 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css?family=Lora:300,400,500');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
+
+// fonts
+$font-family-sans-serif: "Red Hat Text", "Fira Sans" sans-serif !default;
+$font-family-monospace: "Fira Mono", "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// colors
+
+// R-Ladies color palette
+$rl-black: #181818;
+$rl-gray: #d3d3d3;
+$rl-purple-bright: #88398A;
+$rl-purple-dark: #562457;
+$rl-purple-light: rgba(204, 189, 204, 0.4);
+
+$body-bg: #ffffff !default;
+$body-color: $rl-black !default;
+$link-color: $rl-purple-bright !default;
+
+// alternate colors for when the background changes
+$dark-bg-text-color: #fff !default;
+$dark-bg-link-color: #42affa !default;
+$dark-bg-code-color: #ffa07a !default;
+
+// headings
+$presentation-heading-font: "Lora", sans-serif !default;
+$presentation-heading-color: $rl-purple-dark !default;
+$presentation-h1-font-size: 2.2em !default; //2.5em
+$presentation-h2-font-size: 1.8em !default; //1.6em
+$presentation-h3-font-size: 1.2em !default; //1.3em
+$presentation-h4-font-size: 1.15em !default; //1.3em
+
+$presentation-font-size-root: 25px !default;
+$presentation-font-smaller: 0.7 !default;
+$presentation-line-height: 1.25em !default;
+
+// code blocks
+$code-block-bg: $body-bg !default;
+$code-block-border-color: lighten($body-color, 60%) !default;
+$code-block-font-size: 0.8em !default;
+
+/*-- scss:rules --*/
+
+// links
+.reveal a {
+  text-decoration: underline;
+}
+
+.reveal a:hover {
+  text-decoration: none;
+}
+
+// title slide
+#title-slide {
+  .title  {
+    margin-bottom: 0.5em; // 2.5em
+    margin-top: 5em;
+  }
+  .subtitle {
+    margin-bottom: 0em;
+    font-size: $revealjs-h2-font-size;
+  }
+  .author {
+    margin-bottom: 0em;
+    font-size: $revealjs-h3-font-size;
+  }
+  .date {
+    margin-bottom: 0em;
+    font-size: $revealjs-h3-font-size;
+  }
+}
+
+.reveal {
+  h2 {
+    font-family: "Lora", serif;
+  }
+
+  h3, h4 {
+  font-family: "Red Hat Text", "Fira Sans", sans-serif;
+  }
+
+  //.title-slide h2 {
+  //  font-size: $revealjs-h2-font-size;
+  //}
+
+  .title-slide h1 {
+    margin-top: 10em;
+  }
+
+  h3 {
+    color: $rl-black;
+  }
+
+}
+
+.center-x {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* penguin tour slide */
+.penguin-tour {
+  background-image: url(https://images.unsplash.com/photo-1591792111137-5b8219d5fad6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4350&q=80);
+  background-position: 52% 5%;
+  background-size: cover;
+  background-color: #181830;
+}
+
+// logo
+.reveal .slide-logo {
+  position: absolute;
+  top: 2%;
+  right: 5% !important;
+  max-height: none !important;
+  height: 10% !important;
+}
+
+// wip: code
+//.reveal pre.sourceCode {
+  //display: flex;
+  //flex-wrap: wrap !important;
+//}
+
+// inline code
+.reveal code {
+  color: $rl-purple-bright;
+  background-color: $rl-purple-light;
+}
+
+// smaller text
+.small-text {
+  font-size: 80%;
+}
+
+// horizontal bar
+
+hr {
+  color: $rl-purple-bright;
+}
+
+// panel tabs
+
+// line under tabs
+.panel-tabset [role="tablist"] {
+  border-bottom-width: 1px;
+}
+
+// inactive tabs
+.panel-tabset [role="tab"] {
+  border-color: #fff #fff transparent; // top sides bottom
+}
+
+// hover
+.panel-tabset [role="tab"]:hover:not([aria-selected="true"]) {
+  border-color: #b1b1b1 #b1b1b1 transparent; // top sides bottom
+}
+
+// selected tab
+.panel-tabset [role="tab"][aria-selected="true"] {
+ // border-bottom-color: #fff !important;
+}
+
+// from xaringanExtra
+.panelset .panel-tabs .panel-tab.panel-tab-active {
+  border-top-color: currentColor;
+  color: currentColor;
+  background-color: var(--panel-tab-active-background);
+  opacity: 1;
+}
+
+.panelset .panel-tabs .panel-tab:hover {
+  border-bottom-color: red;
+  color: currentColor;
+  background-color: var(--panel-tab-hover-background);
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.panelset .panel-tabs .panel-tab {
+  min-height: 50px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  font-family: var(--panel-tab-font-family);
+  opacity: var(--panel-tab-inactive-opacity);
+  border-top: transparent;
+    border-top-color: transparent;
+  border-bottom: 2px solid transparent;
+    border-bottom-color: transparent;
+  margin-bottom: -2px;
+  color: currentColor;
+  background-color: var(--panel-tab-background);
+  list-style: none;
+  z-index: 5;
+}
+
+.panelset .panel-tabs * {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.panelset * {
+  box-sizing: border-box;
+}

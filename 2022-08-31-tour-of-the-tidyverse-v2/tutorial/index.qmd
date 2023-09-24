@@ -1,0 +1,941 @@
+---
+title: An Antarctic Tour of the Tidyverse v2.0
+css: ../../assets/silvia.scss 
+toc: true
+toc-location: right
+toc-title: In this tutorial
+code-tools:
+  source: https://github.com/spcanelon/slides/tree/main/tour-of-the-tidyverse-v2/tutorial/index.qmd
+code-copy: true
+code-link: true
+code-overflow: wrap
+code-line-numbers: true
+---
+
+```{r meta, echo=FALSE, eval=FALSE}
+library(metathis)
+meta() |>
+  meta_social(
+    title = "Antarctic Tour of the Tidyverse v2.0 | Silvia Canelón",
+    description = "Written tutorial to learn how to explore and manipulate data with packages from the R tidyverse. Created with Quarto.",
+    url = "https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/tutorial",
+    image = "https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png",
+    image_alt = "",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@spcanelon"
+  )
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.retina = 3,
+                      warning = FALSE,
+                      message = FALSE)
+library(tidyverse)
+library(palmerpenguins)
+library(nord)
+library(prismatic)
+```
+
+![Illustration by Allison Horst](../images/lter_penguins.png){fig-alt="Beautiful illustration of three penguins, Chinstrap, Gentoo, and Adélie, each labeled with their species. The Chinstrap penguin has a magenta background, the Gentoo penguin a teal background, and the Adélie penguin an orange background" width="75%"}
+
+## Before we begin
+
+- This written tutorial is an alternative to the slide content in [slides.silviacanelon.com/tour-of-the-tidyverse-v2](https://slides.silviacanelon.com/tour-of-the-tidyverse-v2)
+
+- [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) `r emo::ji("package")` developed by Drs. [Allison Horst](https://www.allisonhorst.com), [Alison Hill](https://apreshill.com), and [Kristen Gorman](https://gormankb.github.io).
+
+- [Penguin illustrations by Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+
+- This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
+
+## Meet our penguin friends!
+
+::: {#penguins layout-ncol=3}
+
+![Chinstrap](https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_chinstrap.jpg?raw=true){fig-alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"}
+
+![Gentoo](https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_gentoo.jpg?raw=true){fig-alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"}
+
+![Adélie](https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_adelie.jpg?raw=true){fig-alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"}
+
+:::
+<!--end layout-->
+
+## Meet the tidyverse!
+
+A collection of R packages, including these 9 core packages (and more!) 
+
+![](../images/drawio/tidyverse.png){alt="schematic including hex logos for the 9 tidyverse packages, readr, ggplot2, forcats, tidyr, tibble, dplyr, stringr, purrr, and lubridate"}
+
+`lubridate` was welcomed into the `tidyverse` as a core package on [August 12, 2022](https://github.com/tidyverse/tidyverse/commit/3be82832a4982d6d10e25e375cedeb8c3161be35). You may need to install the development version:
+
+```{r}
+#| eval: false
+remotes::install_github("tidyverse/tidyverse")
+```
+
+## readr <img src="../images/hex/readr.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends are starting their tour with the `readr` package!
+
+![](../images/drawio/01-readr.png)
+
+:::
+
+Importing data is the very first step!
+
+You can use `readr` to import rectangular data.
+
+You can import...
+
+- comma separated (CSV) files with `read_csv()`
+- tab separated files with `read_tsv()`
+- general delimited files with `read_delim()`
+- fixed width files with `read_fwf()`
+- tabular files where columns are separated by white-space with `read_table()`
+- web log files with `read_log()` 
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf>
+![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png){fig-alt="readr cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 11 Data import](https://r4ds.had.co.nz/data-import.html)
+- Package documentation: <https://readr.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Read data in
+
+Options 1 & 2 below will get you the same raw dataset for Adélie penguins. Try it out!
+
+Option 1: load using URL
+
+```{r}
+#| eval: false
+read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.219.3&entityid=002f3893385f710df69eeebe893144ff")
+```
+
+Option 2: load using filepath
+
+```{r}
+#| eval: false
+read_csv("tutorial/raw_adelie.csv")
+```
+
+Option 3: Lucky for us, the `palmerpenguins` `r emo::ji("package")` compiles data from all three species together! Check the clean data and raw data tabs to learn more.
+
+#### Clean data
+
+`penguins` contains a clean dataset
+
+```{r}
+penguins <- palmerpenguins::penguins
+penguins
+```
+
+#### Raw data
+
+`penguins_raw` contains the raw data
+
+```{r}
+palmerpenguins::penguins_raw
+```
+
+
+## tibble <img src="../images/hex/tibble.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `tibble` package!
+
+![](../images/drawio/02-tibble.png)
+
+:::
+
+A `tibble` is much like the `dataframe` in base R, but optimized for use in the Tidyverse.
+
+### Cheatsheet
+
+The tibble package shares a cheatsheet with the tidyr package
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf>
+
+![](../images/cheatsheet/02-tibble-tidyr.png){width=65% fig-alt="tidyr/tibble cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 10 Tibbles](https://r4ds.had.co.nz/tibbles.html)
+- Package documentation: <https://tibble.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Code
+
+Let's take a look at the differences!
+
+```{r}
+#| eval: false
+
+# try each of these commands in the console and see if 
+# you can spot the differences!
+
+as_tibble(penguins)
+as.data.frame(penguins)
+```
+
+#### Result
+
+```{r}
+as_tibble(penguins)
+```
+
+```{r}
+as.data.frame(penguins) |> head()
+```
+
+What differences do you notice?
+
+You might see a `tibble` prints:
+
+- variable classes
+- only 10 rows
+- only as many columns as can fit on the screen
+- `NA`s are highlighted in console so they're easy to spot (font highlighting and styling in `tibble`)
+
+Not so much a concern in an R Markdown file, but noticeable in the console
+
+This enhanced print method makes it easier to work with large datasets
+
+There are a couple of other main differences, namely in **subsetting** and **recycling**
+
+Check them out in [`vignette("tibble")`](https://tibble.tidyverse.org/articles/tibble.html)
+
+```{r eval=FALSE}
+vignette("tibble")
+```
+
+## ggplot2 <img src="../images/hex/ggplot2.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `ggplot2` package!
+
+![](../images/drawio/03-ggplot2.png)
+
+:::
+
+`ggplot2` uses the "Grammar of Graphics" and layers graphical components together to help us create a plot
+
+Let's start by making a simple plot of our data!
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf>
+![](../images/cheatsheet/03-ggplot2.png){fig-alt="ggplot2 cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 3 Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+- Package documentation: <https://ggplot2.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### View the data
+
+Get a full view of the dataset:
+
+```{r}
+#| eval: false
+
+View(penguins)
+```
+
+Or catch a `glimpse`:
+
+```{r}
+glimpse(penguins)
+```
+
+#### Scatterplot
+
+Let's see if body mass varies by penguin sex using `geom_point()`
+
+```{r scatterplot}
+#| fig-height: 4.5
+#| fig-alt: A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable.
+ggplot(
+  data = penguins, 
+  aes(x = sex, y = body_mass_g)) + 
+  geom_point()
+```
+
+#### Boxplot
+
+Let's see if body mass varies by penguin sex, this time with `geom_boxplot()`
+
+```{r boxplot}
+#| code-line-numbers: "2"
+#| fig-height: 4.5
+#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers.
+
+ggplot(
+  data = penguins, 
+  aes(x = sex, y = body_mass_g)) +
+  geom_boxplot()
+```
+
+#### By Species
+
+Let's see if body mass varies by penguin sex, and now fill the boxplots according to penguin species
+
+```{r by-species}
+#| code-line-numbers: "2"
+#| fig-height: 4.25
+#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category.
+
+ggplot(
+  data = penguins, 
+  aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species))
+```
+
+The boxplot filled by species helps us see...
+
+- Gentoo penguins have higher body mass than Adélie and Chinstrap penguins
+- Higher body mass among male Gentoo penguins compared to female penguins
+- Pattern not as discernible when comparing Adélie and Chinstrap penguins
+- No `NA`s among Chinstrap penguin data points! **sex** was available for each observation
+
+
+## dplyr <img src="../images/hex/dplyr.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `dplyr` package!
+
+![](../images/drawio/04-dplyr.png)
+
+:::
+
+Data transformation helps you get the data in exactly the right form you need 
+
+With `dplyr` you can:
+
+- create new variables
+- create summaries
+- rename variables
+- reorder observations
+- ...and more!
+
+This is possible thanks to intuitive functions:
+
+- Pick observations by their values with `filter()`.
+- Reorder the rows with `arrange()`.
+- Pick variables by their names `select()`.
+- Create new variables with functions of existing variables with `mutate()`.
+- Collapse many values down to a single summary with `summarize()`.
+- `group_by()` gets the above functions to operate group-by-group rather than on the entire dataset. 
+- and `count()` + `add_count()` simplify `group_by()` + `summarize()` when you just want to count
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf>
+![](../images/cheatsheet/04-dplyr.png){fig-alt="dplyr cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 11 Data transformation](https://r4ds.had.co.nz/transform.html)
+- Package documentation: <https://dplyr.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Select
+
+Can you spot the difference in the following two operations?
+
+```{r}
+select(penguins, 
+       species,
+       sex,
+       body_mass_g)
+```
+
+```{r}
+penguins |> 
+  select(species,
+         sex,
+         body_mass_g)
+```
+
+The first defines the penguins dataset with the `select()` function, while the second uses the pipe `|>` to pass the penguins dataset along to `select()`
+
+#### Arrange
+
+We can use `arrange()` to arrange our data in descending order by **body_mass_g**
+
+```{r}
+#| code-line-numbers: "3"
+penguins |>
+  select(species, sex, body_mass_g) |>
+  arrange(desc(body_mass_g))
+```
+
+#### Group By & Summarize
+
+We can use `group_by()` to group our data by **species** and **sex**
+
+We can use `summarize()` to calculate the average **body_mass_g** for each grouping
+
+```{r}
+#| code-line-numbers: "3|4"
+penguins |>
+  select(species, sex, body_mass_g) |>
+  group_by(species, sex) |>         
+  summarize(mean = mean(body_mass_g))
+```
+
+#### Count option 1
+
+If we're just interested in _counting_ the observations in each grouping, we can group and summarize with special functions `count()` and `add_count()`.
+
+Counting can be done with `group_by()` and `summarize()`, but it's a little cumbersome. 
+
+It involves...
+
+1. using `mutate()` to create an intermediate variable **n_species** that adds up all observations per **species**, and
+1. an `ungroup()`-ing step
+
+```{r}
+#| code-line-numbers: "3-4"
+penguins |> 
+  group_by(species) |>
+  mutate(n_species = n()) |> 
+  ungroup() |> 
+  group_by(species, sex, n_species) |>
+  summarize(n = n())
+```
+
+#### Count option 2
+
+If we're just interested in _counting_ the observations in each grouping, we can group and summarize with special functions `count()` and `add_count()`.
+
+In contrast, `count()` and `add_count()` offer a simplified approach [^1]
+
+```{r}
+#| code-line-numbers: "3-4"
+penguins |>
+  count(species, sex) |>
+  add_count(species, wt = n, 
+            name = "n_species")
+```
+
+#### Mutate
+
+We can add to our counting example by using `mutate()` to create a new variable **prop**
+
+**prop** represents the proportion of penguins of each **sex**, grouped by **species**
+
+```{r}
+#| code-line-numbers: "5"
+penguins |>
+  count(species, sex) |>
+  add_count(species, wt = n, 
+            name = "n_species") |>
+  mutate(prop = n/n_species*100)
+```
+
+#### Filter
+
+Finally, we can filter rows to only show us **Chinstrap** penguin summaries by adding `filter()` to our pipeline
+
+```{r}
+#| code-line-numbers: "6"
+penguins |>
+  count(species, sex) |>
+  add_count(species, wt = n, 
+            name = "n_species") |>
+  mutate(prop = n/n_species*100) |>
+  filter(species == "Chinstrap")
+```
+
+## forcats <img src="../images/hex/forcats.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `forcats` package!
+
+![](../images/drawio/05-forcats.png)
+
+:::
+
+`forcats` helps us work with **categorical variables** or factors 
+
+These are variables that have a fixed and known set of possible values, like **species**, **island**, and **sex** in our `penguins` dataset
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/factors.pdf>
+![](../images/cheatsheet/05-forcats.png){width=65% fig-alt="forcats cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 15 Factors](https://r4ds.had.co.nz/factors.html)
+- Package documentation: <https://forcats.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Code
+
+Currently the **year** variable in `penguins` is continuous from 2007 to 2009
+
+Usually this isn't what we want and we might want to turn it into a categorical variable instead
+
+The `factor()` function is perfect for this
+
+```{r}
+penguins |> 
+  mutate(year_factor = factor(year, levels = unique(year)))
+```
+
+#### Result
+
+The result is a new variable **year_factor** with factor levels **2007**, **2008**, and **2009**
+
+```{r}
+penguins_new <- 
+  penguins |> 
+  mutate(year_factor = factor(year, levels = unique(year)))
+penguins_new
+```
+
+We can check our new variable's class:
+```{r}
+class(penguins_new$year_factor)
+```
+
+And check its factor levels:
+
+```{r}
+levels(penguins_new$year_factor)
+```
+
+
+## stringr <img src="../images/hex/stringr.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `stringr` package!
+
+![](../images/drawio/06-stringr.png)
+
+:::
+
+`stringr` helps us manipulate strings! 
+
+The package includes many functions to help us with **regular expressions**, which are a concise language for describing patterns in strings.
+ 
+These functions help us:  
+
+-  detect matches
+-  subset strings
+-  manage string lengths
+-  mutate strings
+-  join and split strings
+-  order strings
+-  ...and more!
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/strings.pdf>
+![](../images/cheatsheet/06-stringr.png){fig-alt="stringr cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 14 Strings](https://r4ds.had.co.nz/strings.html)
+- Package documentation: <https://stringr.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Mutate
+
+What does this chunk do?
+```{r}
+#| code-line-numbers: "3"
+penguins |>
+  select(species, island) |>
+  mutate(ISLAND = str_to_upper(island))
+```
+
+It creates a new variable `ISLAND` that transforms `island` observations to uppercase
+
+#### Join
+
+How about this one?
+```{r}
+#| code-line-numbers: "4"
+penguins |>
+  select(species, island) |>
+  mutate(ISLAND = str_to_upper(island)) |>
+  mutate(species_island = str_c(species, ISLAND, sep = "_"))
+```
+
+It creates a new vaiable `species_island` that concatenates `species` and `ISLAND` strings and places an underscore between them
+
+## tidyr <img src="../images/hex/tidyr.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `tidyr` package! 
+
+![](../images/drawio/07-tidyr.png)
+
+:::
+
+`tidyr` helps us transform our dataset into a [tidy format](https://r4ds.had.co.nz/tidy-data.html)
+
+> There are three interrelated rules which make a dataset tidy:
+>
+> - Each variable must have its own column.
+> - Each observation must have its own row.
+> - Each value must have its own cell.
+> ![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png){fig-alt="schematic representing the 3 earlier points"}
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf>
+![](../images/cheatsheet/07-tidyr.png){fig-alt="tidyr cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 12 Tidy data](https://r4ds.had.co.nz/tidy-data.html)
+- Package documentation: <https://tidyr.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Un-tidying
+
+Both penguin datasets are already tidy!
+
+We can pretend that `penguins` wasn't tidy and that it looked instead like `untidy_penguins` below, where **body_mass_g** was recorded separately for *male*, *female*, and *NA* **sex** penguins.
+
+```{r}
+untidy_penguins <- 
+  penguins |> 
+  pivot_wider(names_from = sex, values_from = body_mass_g)
+untidy_penguins
+```
+
+#### Re-tidying
+
+Now let's make it tidy again!
+
+We'll use the help of `pivot_longer()`
+
+```{r}
+#| code-line-numbers: "2,3,4"
+untidy_penguins |>
+  pivot_longer(cols = male:`NA`,           
+               names_to = "sex",           
+               values_to = "body_mass_g")
+```
+
+## purrr <img src="../images/hex/purrr.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends have reached the `purrr` package!
+
+![](../images/drawio/08-purrr.png)
+
+:::
+
+This package provides tools for working with functions and vectors 
+
+The `purrr` family of functions helps us replace for loops, making our code easier to read and more succint.
+
+With `purrr` you can:
+
+- Iterate over a single input with `map()`
+- Iterate over two inputs in parallel with `map2()`
+- Iterate with multiple arguments with `pmap()`
+- Iterate with multiple arguments and functions with `invoke_map()`
+- Call a function for its side-effects with `walk()`, `walk2()`, and `pwalk()`
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf>
+![](../images/cheatsheet/08-purrr.png){fig-alt="purrr cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 21 Iteration](https://r4ds.had.co.nz/iteration.html)
+- Package documentation: <https://purrr.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Time for a change?
+
+Ok, we love our earlier boxplot showing us **body_mass_g** by **sex** and colored by **species**...but let's change up the colors to keep with our Antarctica theme!
+
+I'm a big fan of the color palettes in the `nord` `r emo::ji("package")`
+
+![](https://raw.githubusercontent.com/jkaupp/nord/master/man/figures/README-palettes-1.png){fig-alt="16 different nordic color palettes from the Nord package. We will be focusing on the mountain_forms palette which was dark teal, dusty blue, snowy white, dusty purple, and dark purple"}
+
+#### Goal
+
+Let's turn this plot...
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 4
+#| fig-alt: Our filled boxplot from our earlier ggplot2 exercises! To recap, a boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. There is a boxplot for each species per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species))
+```
+
+...into this one!
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 4
+#| fig-alt: In contrast to the other filled boxplot referred to in this tab, this one is filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  nord::scale_fill_nord(palette = "mountain_forms")
+```
+
+Note: The color choices in this example are meant for demo purposes only. Be sure to consider the [accessibility of your data viz](https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility), including color contrast between different elements.
+
+#### Option 1
+
+
+You can choose colors using the color hex codes
+
+```{r}
+nord::nord_palettes$mountain_forms
+```
+
+And assign them using the `scale_fill_manual()` function
+
+```{r nord-1}
+#| fig-show: hide
+#| code-line-numbers: "4-7"
+#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  scale_fill_manual(
+    values = c("#184860", 
+               "#D8D8D8", 
+               "#181830"))
+```
+
+```{r ref.label="nord-1"}
+#| echo: false
+#| fig-height: 4
+```
+
+#### Options 2 & 3
+
+You can also use the palette name, like **mountain_forms**, though the colors assigned may not align with what you want
+
+```{r, nord-2}
+#| code-line-numbers: "4-6"
+#| fig-height: 4
+#| fig-alt: Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  scale_fill_manual(values = nord::nord_palettes$mountain_forms)
+```
+
+And sometimes, color palette packages come with their own functions that assign colors, like `scale_fill_nord()`
+
+```{r}
+#| code-line-numbers: "4-6"
+#| fig-height: 4
+#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.
+penguins |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_boxplot(aes(fill = species)) +
+  nord::scale_fill_nord(palette = "mountain_forms")
+```
+
+#### Purrr?
+
+The `prismatic` `r emo::ji("package")` helps us **see** the colors that correspond to each color hex code (mostly), with the `color()` function
+
+```{r}
+#| include: false
+library(prismatic)
+```
+
+```{r}
+#| eval: false
+library(prismatic)
+
+prismatic::color(nord::nord_palettes$mountain_forms)
+```
+![](../images/nord_mountainforms.png){fig-alt="hex codes for the 5 colors in the mountain_forms palette, with a background color to match it. Dark teal is #184860, dusty blue is #486078, snowy white is #D8D8D8, purple is #484860, and dark purple is #181830" width="75%"}
+
+`purrr`'s `map()` function can help us iterate `color()` over all palettes in a palette package like `nord`!
+
+```{r}
+#| eval: false
+nord::nord_palettes |> 
+    map(prismatic::color)
+```
+
+![](../images/nord_multiple.png){fig-alt="hex color codes for 4 of the palettes in the nord package, including mountain_forms" width="75%"}
+
+#### More palettes!
+
+::: {layout-ncol="2" layout-valign="center"}
+
+`r emo::ji("art")` [r-color-palettes repo](https://github.com/EmilHvitfeldt/r-color-palettes) from Emil Hvitfeldt<br>Like this Wes Anderson themed one! And many, many others `r emo::ji("star_struck")`
+
+![](../images/wesanderson_example_cropped.png){fig-alt="9 different bright color palettes from the wesanderson color palette package"}
+
+:::
+
+## lubridate <img src="../images/hex/lubridate.png" style="float:right;" width="10%">
+
+::: {layout="[1, 2]" layout-valign="center"}
+
+Our penguin friends are ending their tour with the `lubridate` package!
+
+![](../images/drawio/09-lubridate.png)
+
+:::
+
+`lubridate` helps us work with dates and times, including 
+
+- a **date** like `August 31, 2022`
+- a **time** like `10:35 am`
+- a **date-time** like `2022-08-31 10:35:00`  
+
+You can...
+
+- convert strings or numbers to date-times
+- get and set components of a date-time
+- round date-times
+- add or subtract periods to model events that happen at specific clock times
+- add or substract durations to model a physical process
+- work with time intervals
+
+### Cheatsheet
+
+{{< fa file-pdf >}} PDF: <https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf>
+![](../images/cheatsheet/09-lubridate.png){fig-alt="lubridate cheatsheet"}
+
+### Reading
+
+::: {layout=[1,2]}
+
+![](../images/r4ds-cover.png){width="100" fig-alt="R4DS book cover"}
+
+- R for Data Science: [Ch 16 Dates and times](https://r4ds.had.co.nz/dates-and-times.html)
+- Package documentation: <https://lubridate.tidyverse.org>
+
+:::
+
+### Exercise
+
+#### Read data in
+
+Recall that `palmperpenguins` includes raw data as well
+
+```{r}
+penguins_raw <- palmerpenguins::penguins_raw
+penguins_raw
+```
+
+#### View date-times
+
+In the raw data, `Date Egg` is the date that a penguin nest in the study was observed with 1 egg
+
+Check out `?penguins_raw` to learn more about the other variables in this dataset
+
+```{r}
+penguins_raw |> select(Species, Sex, `Date Egg`)
+```
+
+#### Get date components
+
+We can use `year()`, `month()`, and `day()` to extract different components from `Date Egg`
+
+In addition, `month()` provides some options to let us decide whether we want the month displayed as a character string, and whether we want that string abbreviated
+
+```{r}
+#| code-line-numbers: "3-5"
+penguins_raw |> 
+  select(Species, Sex, `Date Egg`) |> 
+  mutate(Year = year(`Date Egg`),
+         Month = month(`Date Egg`, 
+                       label = TRUE,
+                       abbr = FALSE),
+         Day = day(`Date Egg`))
+```
+
+That concludes the tutorial, thanks for following along! 
+
+
+[^1]: Example kindly [contributed by Alison Hill](https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2)

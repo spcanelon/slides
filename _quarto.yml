@@ -52,8 +52,6 @@ website:
       - text: "License"
         aria-label: "License Details"
         href: https://silviacanelon.com/license
-      - icon: rss
-        href: index.xml
 
 format: 
   html:

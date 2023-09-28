@@ -84,7 +84,7 @@ Photo by [Lucas Huffman](https://unsplash.com/@lukehuff?utm_source=unsplash&amp;
 
 ### Welcome to the Antarctic Tour of the Tidyverse v2.0!
 
-This is meant to be a fun and light introduction to each of the core [tidyverse](tidyverse.org) packages
+This is meant to be a fun and light introduction to each of the core [tidyverse](https://tidyverse.org) packages
 
 - A **table of contents** for these slides can be accessed by clicking on the hamburger menu icon on the bottom left corner of the screen
 

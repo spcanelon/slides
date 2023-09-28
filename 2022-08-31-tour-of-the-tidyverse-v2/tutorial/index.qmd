@@ -2,14 +2,17 @@
 title: An Antarctic Tour of the Tidyverse v2.0
 css: ../../assets/silvia.scss 
 toc: true
-toc-location: right
+toc-location: left
 toc-title: In this tutorial
-code-tools:
-  source: https://github.com/spcanelon/slides/tree/main/tour-of-the-tidyverse-v2/tutorial/index.qmd
+code-tools: true
 code-copy: true
 code-link: true
 code-overflow: wrap
 code-line-numbers: true
+format: 
+  html: 
+    grid: 
+      margin-width: 100px
 ---
 
 ```{r meta, echo=FALSE, eval=FALSE}
@@ -53,11 +56,11 @@ library(prismatic)
 
 ::: {#penguins layout-ncol=3}
 
-![Chinstrap](https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_chinstrap.jpg?raw=true){fig-alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"}
+![Chinstrap](../images/penguin_chinstrap.jpg){fig-alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"}
 
-![Gentoo](https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_gentoo.jpg?raw=true){fig-alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"}
+![Gentoo](../images/penguin_gentoo.jpg){fig-alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"}
 
-![Adélie](https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_adelie.jpg?raw=true){fig-alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"}
+![Adélie](../images/penguin_adelie.jpg){fig-alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"}
 
 :::
 <!--end layout-->

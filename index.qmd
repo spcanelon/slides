@@ -81,7 +81,5 @@ redirects <- slides$redirects
 redirects_combined <- c(manual_redirects, redirects)
 
 # write the _redirect file
-writeLines(redirects_combined, here::here("docs", "_redirects"))
+writeLines(redirects_combined, here::here("_site", "_redirects"))
 ```
-
-

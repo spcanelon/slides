@@ -103,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="twitter:image-width" content="2926">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
@@ -121,9 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">In this tutorial</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">In this tutorial</h2>
    
   <ul>
 <li><a href="#before-we-begin" id="toc-before-we-begin" class="nav-link active" data-scroll-target="#before-we-begin">Before we begin</a></li>
@@ -202,10 +200,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </li>
   </ul></nav>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">An Antarctic Tour of the Tidyverse v2.0</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/spcanelon/slides/tree/main/tour-of-the-tidyverse-v2/tutorial/index.qmd"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">An Antarctic Tour of the Tidyverse v2.0</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -233,19 +234,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_chinstrap.jpg?raw=true" class="img-fluid figure-img" alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"></p>
+<figure class="figure"><p><img src="../images/penguin_chinstrap.jpg" class="img-fluid figure-img" alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"></p>
 <figcaption class="figure-caption">Chinstrap</figcaption></figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_gentoo.jpg?raw=true" class="img-fluid figure-img" alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"></p>
+<figure class="figure"><p><img src="../images/penguin_gentoo.jpg" class="img-fluid figure-img" alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"></p>
 <figcaption class="figure-caption">Gentoo</figcaption></figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://github.com/spcanelon/slides/blob/main/tour-of-the-tidyverse/images/penguin_adelie.jpg?raw=true" class="img-fluid figure-img" alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"></p>
+<figure class="figure"><p><img src="../images/penguin_adelie.jpg" class="img-fluid figure-img" alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"></p>
 <figcaption class="figure-caption">Adélie</figcaption></figure>
 </div>
 </div>
@@ -1337,6 +1338,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>That concludes the tutorial, thanks for following along!</p>
 
 
+<!-- -->
+
 </section></section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
 <li id="fn1"><p>Example kindly <a href="https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2">contributed by Alison Hill</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -1623,7 +1626,953 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb65" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb65-1"><a href="#cb65-1"></a><span class="co">---</span></span>
+<span id="cb65-2"><a href="#cb65-2"></a><span class="an">title:</span><span class="co"> An Antarctic Tour of the Tidyverse v2.0</span></span>
+<span id="cb65-3"><a href="#cb65-3"></a><span class="an">css:</span><span class="co"> ../../assets/silvia.scss </span></span>
+<span id="cb65-4"><a href="#cb65-4"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb65-5"><a href="#cb65-5"></a><span class="an">toc-location:</span><span class="co"> left</span></span>
+<span id="cb65-6"><a href="#cb65-6"></a><span class="an">toc-title:</span><span class="co"> In this tutorial</span></span>
+<span id="cb65-7"><a href="#cb65-7"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb65-8"><a href="#cb65-8"></a><span class="an">code-copy:</span><span class="co"> true</span></span>
+<span id="cb65-9"><a href="#cb65-9"></a><span class="an">code-link:</span><span class="co"> true</span></span>
+<span id="cb65-10"><a href="#cb65-10"></a><span class="an">code-overflow:</span><span class="co"> wrap</span></span>
+<span id="cb65-11"><a href="#cb65-11"></a><span class="an">code-line-numbers:</span><span class="co"> true</span></span>
+<span id="cb65-12"><a href="#cb65-12"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb65-13"><a href="#cb65-13"></a><span class="co">  html: </span></span>
+<span id="cb65-14"><a href="#cb65-14"></a><span class="co">    grid: </span></span>
+<span id="cb65-15"><a href="#cb65-15"></a><span class="co">      margin-width: 100px</span></span>
+<span id="cb65-16"><a href="#cb65-16"></a><span class="co">---</span></span>
+<span id="cb65-17"><a href="#cb65-17"></a></span>
+<span id="cb65-18"><a href="#cb65-18"></a><span class="in">```{r meta, echo=FALSE, eval=FALSE}</span></span>
+<span id="cb65-19"><a href="#cb65-19"></a><span class="fu">library</span>(metathis)</span>
+<span id="cb65-20"><a href="#cb65-20"></a><span class="fu">meta</span>() <span class="sc">|&gt;</span></span>
+<span id="cb65-21"><a href="#cb65-21"></a>  <span class="fu">meta_social</span>(</span>
+<span id="cb65-22"><a href="#cb65-22"></a>    <span class="at">title =</span> <span class="st">"Antarctic Tour of the Tidyverse v2.0 | Silvia Canelón"</span>,</span>
+<span id="cb65-23"><a href="#cb65-23"></a>    <span class="at">description =</span> <span class="st">"Written tutorial to learn how to explore and manipulate data with packages from the R tidyverse. Created with Quarto."</span>,</span>
+<span id="cb65-24"><a href="#cb65-24"></a>    <span class="at">url =</span> <span class="st">"https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/tutorial"</span>,</span>
+<span id="cb65-25"><a href="#cb65-25"></a>    <span class="at">image =</span> <span class="st">"https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png"</span>,</span>
+<span id="cb65-26"><a href="#cb65-26"></a>    <span class="at">image_alt =</span> <span class="st">""</span>,</span>
+<span id="cb65-27"><a href="#cb65-27"></a>    <span class="at">twitter_card_type =</span> <span class="st">"summary_large_image"</span>,</span>
+<span id="cb65-28"><a href="#cb65-28"></a>    <span class="at">twitter_creator =</span> <span class="st">"@spcanelon"</span></span>
+<span id="cb65-29"><a href="#cb65-29"></a>  )</span>
+<span id="cb65-30"><a href="#cb65-30"></a><span class="in">```</span></span>
+<span id="cb65-31"><a href="#cb65-31"></a></span>
+<span id="cb65-32"><a href="#cb65-32"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb65-33"><a href="#cb65-33"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.retina =</span> <span class="dv">3</span>,</span>
+<span id="cb65-34"><a href="#cb65-34"></a>                      <span class="at">warning =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb65-35"><a href="#cb65-35"></a>                      <span class="at">message =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb65-36"><a href="#cb65-36"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb65-37"><a href="#cb65-37"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb65-38"><a href="#cb65-38"></a><span class="fu">library</span>(nord)</span>
+<span id="cb65-39"><a href="#cb65-39"></a><span class="fu">library</span>(prismatic)</span>
+<span id="cb65-40"><a href="#cb65-40"></a><span class="in">```</span></span>
+<span id="cb65-41"><a href="#cb65-41"></a></span>
+<span id="cb65-42"><a href="#cb65-42"></a><span class="al">![Illustration by Allison Horst](../images/lter_penguins.png)</span>{fig-alt="Beautiful illustration of three penguins, Chinstrap, Gentoo, and Adélie, each labeled with their species. The Chinstrap penguin has a magenta background, the Gentoo penguin a teal background, and the Adélie penguin an orange background" width="75%"}</span>
+<span id="cb65-43"><a href="#cb65-43"></a></span>
+<span id="cb65-44"><a href="#cb65-44"></a><span class="fu">## Before we begin</span></span>
+<span id="cb65-45"><a href="#cb65-45"></a></span>
+<span id="cb65-46"><a href="#cb65-46"></a><span class="ss">- </span>This written tutorial is an alternative to the slide content in <span class="co">[</span><span class="ot">slides.silviacanelon.com/tour-of-the-tidyverse-v2</span><span class="co">](https://slides.silviacanelon.com/tour-of-the-tidyverse-v2)</span></span>
+<span id="cb65-47"><a href="#cb65-47"></a></span>
+<span id="cb65-48"><a href="#cb65-48"></a><span class="ss">- </span><span class="co">[</span><span class="ot">palmerpenguins</span><span class="co">](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)</span> <span class="in">`r emo::ji("package")`</span> developed by Drs. <span class="co">[</span><span class="ot">Allison Horst</span><span class="co">](https://www.allisonhorst.com)</span>, <span class="co">[</span><span class="ot">Alison Hill</span><span class="co">](https://apreshill.com)</span>, and <span class="co">[</span><span class="ot">Kristen Gorman</span><span class="co">](https://gormankb.github.io)</span>.</span>
+<span id="cb65-49"><a href="#cb65-49"></a></span>
+<span id="cb65-50"><a href="#cb65-50"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Penguin illustrations by Allison Horst</span><span class="co">](https://github.com/allisonhorst/stats-illustrations)</span></span>
+<span id="cb65-51"><a href="#cb65-51"></a></span>
+<span id="cb65-52"><a href="#cb65-52"></a><span class="ss">- </span>This work is licensed under a</span>
+<span id="cb65-53"><a href="#cb65-53"></a><span class="co">[</span><span class="ot">Creative Commons Attribution-ShareAlike 4.0 International License</span><span class="co">](http://creativecommons.org/licenses/by-sa/4.0/)</span></span>
+<span id="cb65-54"><a href="#cb65-54"></a></span>
+<span id="cb65-55"><a href="#cb65-55"></a><span class="fu">## Meet our penguin friends!</span></span>
+<span id="cb65-56"><a href="#cb65-56"></a></span>
+<span id="cb65-57"><a href="#cb65-57"></a>::: {#penguins layout-ncol=3}</span>
+<span id="cb65-58"><a href="#cb65-58"></a></span>
+<span id="cb65-59"><a href="#cb65-59"></a><span class="al">![Chinstrap](../images/penguin_chinstrap.jpg)</span>{fig-alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"}</span>
+<span id="cb65-60"><a href="#cb65-60"></a></span>
+<span id="cb65-61"><a href="#cb65-61"></a><span class="al">![Gentoo](../images/penguin_gentoo.jpg)</span>{fig-alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"}</span>
+<span id="cb65-62"><a href="#cb65-62"></a></span>
+<span id="cb65-63"><a href="#cb65-63"></a><span class="al">![Adélie](../images/penguin_adelie.jpg)</span>{fig-alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"}</span>
+<span id="cb65-64"><a href="#cb65-64"></a></span>
+<span id="cb65-65"><a href="#cb65-65"></a>:::</span>
+<span id="cb65-66"><a href="#cb65-66"></a><span class="co">&lt;!--end layout--&gt;</span></span>
+<span id="cb65-67"><a href="#cb65-67"></a></span>
+<span id="cb65-68"><a href="#cb65-68"></a><span class="fu">## Meet the tidyverse!</span></span>
+<span id="cb65-69"><a href="#cb65-69"></a></span>
+<span id="cb65-70"><a href="#cb65-70"></a>A collection of R packages, including these 9 core packages (and more!) </span>
+<span id="cb65-71"><a href="#cb65-71"></a></span>
+<span id="cb65-72"><a href="#cb65-72"></a><span class="al">![](../images/drawio/tidyverse.png)</span>{alt="schematic including hex logos for the 9 tidyverse packages, readr, ggplot2, forcats, tidyr, tibble, dplyr, stringr, purrr, and lubridate"}</span>
+<span id="cb65-73"><a href="#cb65-73"></a></span>
+<span id="cb65-74"><a href="#cb65-74"></a><span class="in">`lubridate`</span> was welcomed into the <span class="in">`tidyverse`</span> as a core package on <span class="co">[</span><span class="ot">August 12, 2022</span><span class="co">](https://github.com/tidyverse/tidyverse/commit/3be82832a4982d6d10e25e375cedeb8c3161be35)</span>. You may need to install the development version:</span>
+<span id="cb65-75"><a href="#cb65-75"></a></span>
+<span id="cb65-78"><a href="#cb65-78"></a><span class="in">```{r}</span></span>
+<span id="cb65-79"><a href="#cb65-79"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-80"><a href="#cb65-80"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"tidyverse/tidyverse"</span>)</span>
+<span id="cb65-81"><a href="#cb65-81"></a><span class="in">```</span></span>
+<span id="cb65-82"><a href="#cb65-82"></a></span>
+<span id="cb65-83"><a href="#cb65-83"></a><span class="fu">## readr &lt;img src="../images/hex/readr.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-84"><a href="#cb65-84"></a></span>
+<span id="cb65-85"><a href="#cb65-85"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-86"><a href="#cb65-86"></a></span>
+<span id="cb65-87"><a href="#cb65-87"></a>Our penguin friends are starting their tour with the <span class="in">`readr`</span> package!</span>
+<span id="cb65-88"><a href="#cb65-88"></a></span>
+<span id="cb65-89"><a href="#cb65-89"></a><span class="al">![](../images/drawio/01-readr.png)</span></span>
+<span id="cb65-90"><a href="#cb65-90"></a></span>
+<span id="cb65-91"><a href="#cb65-91"></a>:::</span>
+<span id="cb65-92"><a href="#cb65-92"></a></span>
+<span id="cb65-93"><a href="#cb65-93"></a>Importing data is the very first step!</span>
+<span id="cb65-94"><a href="#cb65-94"></a></span>
+<span id="cb65-95"><a href="#cb65-95"></a>You can use <span class="in">`readr`</span> to import rectangular data.</span>
+<span id="cb65-96"><a href="#cb65-96"></a></span>
+<span id="cb65-97"><a href="#cb65-97"></a>You can import...</span>
+<span id="cb65-98"><a href="#cb65-98"></a></span>
+<span id="cb65-99"><a href="#cb65-99"></a><span class="ss">- </span>comma separated (CSV) files with <span class="in">`read_csv()`</span></span>
+<span id="cb65-100"><a href="#cb65-100"></a><span class="ss">- </span>tab separated files with <span class="in">`read_tsv()`</span></span>
+<span id="cb65-101"><a href="#cb65-101"></a><span class="ss">- </span>general delimited files with <span class="in">`read_delim()`</span></span>
+<span id="cb65-102"><a href="#cb65-102"></a><span class="ss">- </span>fixed width files with <span class="in">`read_fwf()`</span></span>
+<span id="cb65-103"><a href="#cb65-103"></a><span class="ss">- </span>tabular files where columns are separated by white-space with <span class="in">`read_table()`</span></span>
+<span id="cb65-104"><a href="#cb65-104"></a><span class="ss">- </span>web log files with <span class="in">`read_log()`</span> </span>
+<span id="cb65-105"><a href="#cb65-105"></a></span>
+<span id="cb65-106"><a href="#cb65-106"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-107"><a href="#cb65-107"></a></span>
+<span id="cb65-108"><a href="#cb65-108"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf&gt;</span></span>
+<span id="cb65-109"><a href="#cb65-109"></a><span class="al">![](https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png)</span>{fig-alt="readr cheatsheet"}</span>
+<span id="cb65-110"><a href="#cb65-110"></a></span>
+<span id="cb65-111"><a href="#cb65-111"></a><span class="fu">### Reading</span></span>
+<span id="cb65-112"><a href="#cb65-112"></a></span>
+<span id="cb65-113"><a href="#cb65-113"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-114"><a href="#cb65-114"></a></span>
+<span id="cb65-115"><a href="#cb65-115"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-116"><a href="#cb65-116"></a></span>
+<span id="cb65-117"><a href="#cb65-117"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 11 Data import</span><span class="co">](https://r4ds.had.co.nz/data-import.html)</span></span>
+<span id="cb65-118"><a href="#cb65-118"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://readr.tidyverse.org&gt;</span></span>
+<span id="cb65-119"><a href="#cb65-119"></a></span>
+<span id="cb65-120"><a href="#cb65-120"></a>:::</span>
+<span id="cb65-121"><a href="#cb65-121"></a></span>
+<span id="cb65-122"><a href="#cb65-122"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-123"><a href="#cb65-123"></a></span>
+<span id="cb65-124"><a href="#cb65-124"></a><span class="fu">#### Read data in</span></span>
+<span id="cb65-125"><a href="#cb65-125"></a></span>
+<span id="cb65-126"><a href="#cb65-126"></a>Options 1 &amp; 2 below will get you the same raw dataset for Adélie penguins. Try it out!</span>
+<span id="cb65-127"><a href="#cb65-127"></a></span>
+<span id="cb65-128"><a href="#cb65-128"></a>Option 1: load using URL</span>
+<span id="cb65-129"><a href="#cb65-129"></a></span>
+<span id="cb65-132"><a href="#cb65-132"></a><span class="in">```{r}</span></span>
+<span id="cb65-133"><a href="#cb65-133"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-134"><a href="#cb65-134"></a><span class="fu">read_csv</span>(<span class="st">"https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.219.3&amp;entityid=002f3893385f710df69eeebe893144ff"</span>)</span>
+<span id="cb65-135"><a href="#cb65-135"></a><span class="in">```</span></span>
+<span id="cb65-136"><a href="#cb65-136"></a></span>
+<span id="cb65-137"><a href="#cb65-137"></a>Option 2: load using filepath</span>
+<span id="cb65-138"><a href="#cb65-138"></a></span>
+<span id="cb65-141"><a href="#cb65-141"></a><span class="in">```{r}</span></span>
+<span id="cb65-142"><a href="#cb65-142"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-143"><a href="#cb65-143"></a><span class="fu">read_csv</span>(<span class="st">"tutorial/raw_adelie.csv"</span>)</span>
+<span id="cb65-144"><a href="#cb65-144"></a><span class="in">```</span></span>
+<span id="cb65-145"><a href="#cb65-145"></a></span>
+<span id="cb65-146"><a href="#cb65-146"></a>Option 3: Lucky for us, the <span class="in">`palmerpenguins`</span> <span class="in">`r emo::ji("package")`</span> compiles data from all three species together! Check the clean data and raw data tabs to learn more.</span>
+<span id="cb65-147"><a href="#cb65-147"></a></span>
+<span id="cb65-148"><a href="#cb65-148"></a><span class="fu">#### Clean data</span></span>
+<span id="cb65-149"><a href="#cb65-149"></a></span>
+<span id="cb65-150"><a href="#cb65-150"></a><span class="in">`penguins`</span> contains a clean dataset</span>
+<span id="cb65-151"><a href="#cb65-151"></a></span>
+<span id="cb65-154"><a href="#cb65-154"></a><span class="in">```{r}</span></span>
+<span id="cb65-155"><a href="#cb65-155"></a>penguins <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins</span>
+<span id="cb65-156"><a href="#cb65-156"></a>penguins</span>
+<span id="cb65-157"><a href="#cb65-157"></a><span class="in">```</span></span>
+<span id="cb65-158"><a href="#cb65-158"></a></span>
+<span id="cb65-159"><a href="#cb65-159"></a><span class="fu">#### Raw data</span></span>
+<span id="cb65-160"><a href="#cb65-160"></a></span>
+<span id="cb65-161"><a href="#cb65-161"></a><span class="in">`penguins_raw`</span> contains the raw data</span>
+<span id="cb65-162"><a href="#cb65-162"></a></span>
+<span id="cb65-165"><a href="#cb65-165"></a><span class="in">```{r}</span></span>
+<span id="cb65-166"><a href="#cb65-166"></a>palmerpenguins<span class="sc">::</span>penguins_raw</span>
+<span id="cb65-167"><a href="#cb65-167"></a><span class="in">```</span></span>
+<span id="cb65-168"><a href="#cb65-168"></a></span>
+<span id="cb65-169"><a href="#cb65-169"></a></span>
+<span id="cb65-170"><a href="#cb65-170"></a><span class="fu">## tibble &lt;img src="../images/hex/tibble.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-171"><a href="#cb65-171"></a></span>
+<span id="cb65-172"><a href="#cb65-172"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-173"><a href="#cb65-173"></a></span>
+<span id="cb65-174"><a href="#cb65-174"></a>Our penguin friends have reached the <span class="in">`tibble`</span> package!</span>
+<span id="cb65-175"><a href="#cb65-175"></a></span>
+<span id="cb65-176"><a href="#cb65-176"></a><span class="al">![](../images/drawio/02-tibble.png)</span></span>
+<span id="cb65-177"><a href="#cb65-177"></a></span>
+<span id="cb65-178"><a href="#cb65-178"></a>:::</span>
+<span id="cb65-179"><a href="#cb65-179"></a></span>
+<span id="cb65-180"><a href="#cb65-180"></a>A <span class="in">`tibble`</span> is much like the <span class="in">`dataframe`</span> in base R, but optimized for use in the Tidyverse.</span>
+<span id="cb65-181"><a href="#cb65-181"></a></span>
+<span id="cb65-182"><a href="#cb65-182"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-183"><a href="#cb65-183"></a></span>
+<span id="cb65-184"><a href="#cb65-184"></a>The tibble package shares a cheatsheet with the tidyr package</span>
+<span id="cb65-185"><a href="#cb65-185"></a></span>
+<span id="cb65-186"><a href="#cb65-186"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf&gt;</span></span>
+<span id="cb65-187"><a href="#cb65-187"></a></span>
+<span id="cb65-188"><a href="#cb65-188"></a><span class="al">![](../images/cheatsheet/02-tibble-tidyr.png)</span>{width=65% fig-alt="tidyr/tibble cheatsheet"}</span>
+<span id="cb65-189"><a href="#cb65-189"></a></span>
+<span id="cb65-190"><a href="#cb65-190"></a><span class="fu">### Reading</span></span>
+<span id="cb65-191"><a href="#cb65-191"></a></span>
+<span id="cb65-192"><a href="#cb65-192"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-193"><a href="#cb65-193"></a></span>
+<span id="cb65-194"><a href="#cb65-194"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-195"><a href="#cb65-195"></a></span>
+<span id="cb65-196"><a href="#cb65-196"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 10 Tibbles</span><span class="co">](https://r4ds.had.co.nz/tibbles.html)</span></span>
+<span id="cb65-197"><a href="#cb65-197"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://tibble.tidyverse.org&gt;</span></span>
+<span id="cb65-198"><a href="#cb65-198"></a></span>
+<span id="cb65-199"><a href="#cb65-199"></a>:::</span>
+<span id="cb65-200"><a href="#cb65-200"></a></span>
+<span id="cb65-201"><a href="#cb65-201"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-202"><a href="#cb65-202"></a></span>
+<span id="cb65-203"><a href="#cb65-203"></a><span class="fu">#### Code</span></span>
+<span id="cb65-204"><a href="#cb65-204"></a></span>
+<span id="cb65-205"><a href="#cb65-205"></a>Let's take a look at the differences!</span>
+<span id="cb65-206"><a href="#cb65-206"></a></span>
+<span id="cb65-209"><a href="#cb65-209"></a><span class="in">```{r}</span></span>
+<span id="cb65-210"><a href="#cb65-210"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-211"><a href="#cb65-211"></a></span>
+<span id="cb65-212"><a href="#cb65-212"></a><span class="co"># try each of these commands in the console and see if </span></span>
+<span id="cb65-213"><a href="#cb65-213"></a><span class="co"># you can spot the differences!</span></span>
+<span id="cb65-214"><a href="#cb65-214"></a></span>
+<span id="cb65-215"><a href="#cb65-215"></a><span class="fu">as_tibble</span>(penguins)</span>
+<span id="cb65-216"><a href="#cb65-216"></a><span class="fu">as.data.frame</span>(penguins)</span>
+<span id="cb65-217"><a href="#cb65-217"></a><span class="in">```</span></span>
+<span id="cb65-218"><a href="#cb65-218"></a></span>
+<span id="cb65-219"><a href="#cb65-219"></a><span class="fu">#### Result</span></span>
+<span id="cb65-220"><a href="#cb65-220"></a></span>
+<span id="cb65-223"><a href="#cb65-223"></a><span class="in">```{r}</span></span>
+<span id="cb65-224"><a href="#cb65-224"></a><span class="fu">as_tibble</span>(penguins)</span>
+<span id="cb65-225"><a href="#cb65-225"></a><span class="in">```</span></span>
+<span id="cb65-226"><a href="#cb65-226"></a></span>
+<span id="cb65-229"><a href="#cb65-229"></a><span class="in">```{r}</span></span>
+<span id="cb65-230"><a href="#cb65-230"></a><span class="fu">as.data.frame</span>(penguins) <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
+<span id="cb65-231"><a href="#cb65-231"></a><span class="in">```</span></span>
+<span id="cb65-232"><a href="#cb65-232"></a></span>
+<span id="cb65-233"><a href="#cb65-233"></a>What differences do you notice?</span>
+<span id="cb65-234"><a href="#cb65-234"></a></span>
+<span id="cb65-235"><a href="#cb65-235"></a>You might see a <span class="in">`tibble`</span> prints:</span>
+<span id="cb65-236"><a href="#cb65-236"></a></span>
+<span id="cb65-237"><a href="#cb65-237"></a><span class="ss">- </span>variable classes</span>
+<span id="cb65-238"><a href="#cb65-238"></a><span class="ss">- </span>only 10 rows</span>
+<span id="cb65-239"><a href="#cb65-239"></a><span class="ss">- </span>only as many columns as can fit on the screen</span>
+<span id="cb65-240"><a href="#cb65-240"></a><span class="ss">- </span><span class="in">`NA`</span>s are highlighted in console so they're easy to spot (font highlighting and styling in <span class="in">`tibble`</span>)</span>
+<span id="cb65-241"><a href="#cb65-241"></a></span>
+<span id="cb65-242"><a href="#cb65-242"></a>Not so much a concern in an R Markdown file, but noticeable in the console</span>
+<span id="cb65-243"><a href="#cb65-243"></a></span>
+<span id="cb65-244"><a href="#cb65-244"></a>This enhanced print method makes it easier to work with large datasets</span>
+<span id="cb65-245"><a href="#cb65-245"></a></span>
+<span id="cb65-246"><a href="#cb65-246"></a>There are a couple of other main differences, namely in **subsetting** and **recycling**</span>
+<span id="cb65-247"><a href="#cb65-247"></a></span>
+<span id="cb65-248"><a href="#cb65-248"></a>Check them out in <span class="co">[</span><span class="ot">`vignette("tibble")`</span><span class="co">](https://tibble.tidyverse.org/articles/tibble.html)</span></span>
+<span id="cb65-249"><a href="#cb65-249"></a></span>
+<span id="cb65-250"><a href="#cb65-250"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb65-251"><a href="#cb65-251"></a><span class="fu">vignette</span>(<span class="st">"tibble"</span>)</span>
+<span id="cb65-252"><a href="#cb65-252"></a><span class="in">```</span></span>
+<span id="cb65-253"><a href="#cb65-253"></a></span>
+<span id="cb65-254"><a href="#cb65-254"></a><span class="fu">## ggplot2 &lt;img src="../images/hex/ggplot2.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-255"><a href="#cb65-255"></a></span>
+<span id="cb65-256"><a href="#cb65-256"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-257"><a href="#cb65-257"></a></span>
+<span id="cb65-258"><a href="#cb65-258"></a>Our penguin friends have reached the <span class="in">`ggplot2`</span> package!</span>
+<span id="cb65-259"><a href="#cb65-259"></a></span>
+<span id="cb65-260"><a href="#cb65-260"></a><span class="al">![](../images/drawio/03-ggplot2.png)</span></span>
+<span id="cb65-261"><a href="#cb65-261"></a></span>
+<span id="cb65-262"><a href="#cb65-262"></a>:::</span>
+<span id="cb65-263"><a href="#cb65-263"></a></span>
+<span id="cb65-264"><a href="#cb65-264"></a><span class="in">`ggplot2`</span> uses the "Grammar of Graphics" and layers graphical components together to help us create a plot</span>
+<span id="cb65-265"><a href="#cb65-265"></a></span>
+<span id="cb65-266"><a href="#cb65-266"></a>Let's start by making a simple plot of our data!</span>
+<span id="cb65-267"><a href="#cb65-267"></a></span>
+<span id="cb65-268"><a href="#cb65-268"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-269"><a href="#cb65-269"></a></span>
+<span id="cb65-270"><a href="#cb65-270"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf&gt;</span></span>
+<span id="cb65-271"><a href="#cb65-271"></a><span class="al">![](../images/cheatsheet/03-ggplot2.png)</span>{fig-alt="ggplot2 cheatsheet"}</span>
+<span id="cb65-272"><a href="#cb65-272"></a></span>
+<span id="cb65-273"><a href="#cb65-273"></a><span class="fu">### Reading</span></span>
+<span id="cb65-274"><a href="#cb65-274"></a></span>
+<span id="cb65-275"><a href="#cb65-275"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-276"><a href="#cb65-276"></a></span>
+<span id="cb65-277"><a href="#cb65-277"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-278"><a href="#cb65-278"></a></span>
+<span id="cb65-279"><a href="#cb65-279"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 3 Data visualization</span><span class="co">](https://r4ds.had.co.nz/data-visualisation.html)</span></span>
+<span id="cb65-280"><a href="#cb65-280"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://ggplot2.tidyverse.org&gt;</span></span>
+<span id="cb65-281"><a href="#cb65-281"></a></span>
+<span id="cb65-282"><a href="#cb65-282"></a>:::</span>
+<span id="cb65-283"><a href="#cb65-283"></a></span>
+<span id="cb65-284"><a href="#cb65-284"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-285"><a href="#cb65-285"></a></span>
+<span id="cb65-286"><a href="#cb65-286"></a><span class="fu">#### View the data</span></span>
+<span id="cb65-287"><a href="#cb65-287"></a></span>
+<span id="cb65-288"><a href="#cb65-288"></a>Get a full view of the dataset:</span>
+<span id="cb65-289"><a href="#cb65-289"></a></span>
+<span id="cb65-292"><a href="#cb65-292"></a><span class="in">```{r}</span></span>
+<span id="cb65-293"><a href="#cb65-293"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-294"><a href="#cb65-294"></a></span>
+<span id="cb65-295"><a href="#cb65-295"></a><span class="fu">View</span>(penguins)</span>
+<span id="cb65-296"><a href="#cb65-296"></a><span class="in">```</span></span>
+<span id="cb65-297"><a href="#cb65-297"></a></span>
+<span id="cb65-298"><a href="#cb65-298"></a>Or catch a <span class="in">`glimpse`</span>:</span>
+<span id="cb65-299"><a href="#cb65-299"></a></span>
+<span id="cb65-302"><a href="#cb65-302"></a><span class="in">```{r}</span></span>
+<span id="cb65-303"><a href="#cb65-303"></a><span class="fu">glimpse</span>(penguins)</span>
+<span id="cb65-304"><a href="#cb65-304"></a><span class="in">```</span></span>
+<span id="cb65-305"><a href="#cb65-305"></a></span>
+<span id="cb65-306"><a href="#cb65-306"></a><span class="fu">#### Scatterplot</span></span>
+<span id="cb65-307"><a href="#cb65-307"></a></span>
+<span id="cb65-308"><a href="#cb65-308"></a>Let's see if body mass varies by penguin sex using <span class="in">`geom_point()`</span></span>
+<span id="cb65-309"><a href="#cb65-309"></a></span>
+<span id="cb65-310"><a href="#cb65-310"></a><span class="in">```{r scatterplot}</span></span>
+<span id="cb65-311"><a href="#cb65-311"></a><span class="co">#| fig-height: 4.5</span></span>
+<span id="cb65-312"><a href="#cb65-312"></a><span class="co">#| fig-alt: A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable.</span></span>
+<span id="cb65-313"><a href="#cb65-313"></a><span class="fu">ggplot</span>(</span>
+<span id="cb65-314"><a href="#cb65-314"></a>  <span class="at">data =</span> penguins, </span>
+<span id="cb65-315"><a href="#cb65-315"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb65-316"><a href="#cb65-316"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb65-317"><a href="#cb65-317"></a><span class="in">```</span></span>
+<span id="cb65-318"><a href="#cb65-318"></a></span>
+<span id="cb65-319"><a href="#cb65-319"></a><span class="fu">#### Boxplot</span></span>
+<span id="cb65-320"><a href="#cb65-320"></a></span>
+<span id="cb65-321"><a href="#cb65-321"></a>Let's see if body mass varies by penguin sex, this time with <span class="in">`geom_boxplot()`</span></span>
+<span id="cb65-322"><a href="#cb65-322"></a></span>
+<span id="cb65-323"><a href="#cb65-323"></a><span class="in">```{r boxplot}</span></span>
+<span id="cb65-324"><a href="#cb65-324"></a><span class="co">#| code-line-numbers: "2"</span></span>
+<span id="cb65-325"><a href="#cb65-325"></a><span class="co">#| fig-height: 4.5</span></span>
+<span id="cb65-326"><a href="#cb65-326"></a><span class="co">#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers.</span></span>
+<span id="cb65-327"><a href="#cb65-327"></a></span>
+<span id="cb65-328"><a href="#cb65-328"></a><span class="fu">ggplot</span>(</span>
+<span id="cb65-329"><a href="#cb65-329"></a>  <span class="at">data =</span> penguins, </span>
+<span id="cb65-330"><a href="#cb65-330"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-331"><a href="#cb65-331"></a>  <span class="fu">geom_boxplot</span>()</span>
+<span id="cb65-332"><a href="#cb65-332"></a><span class="in">```</span></span>
+<span id="cb65-333"><a href="#cb65-333"></a></span>
+<span id="cb65-334"><a href="#cb65-334"></a><span class="fu">#### By Species</span></span>
+<span id="cb65-335"><a href="#cb65-335"></a></span>
+<span id="cb65-336"><a href="#cb65-336"></a>Let's see if body mass varies by penguin sex, and now fill the boxplots according to penguin species</span>
+<span id="cb65-337"><a href="#cb65-337"></a></span>
+<span id="cb65-338"><a href="#cb65-338"></a><span class="in">```{r by-species}</span></span>
+<span id="cb65-339"><a href="#cb65-339"></a><span class="co">#| code-line-numbers: "2"</span></span>
+<span id="cb65-340"><a href="#cb65-340"></a><span class="co">#| fig-height: 4.25</span></span>
+<span id="cb65-341"><a href="#cb65-341"></a><span class="co">#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category.</span></span>
+<span id="cb65-342"><a href="#cb65-342"></a></span>
+<span id="cb65-343"><a href="#cb65-343"></a><span class="fu">ggplot</span>(</span>
+<span id="cb65-344"><a href="#cb65-344"></a>  <span class="at">data =</span> penguins, </span>
+<span id="cb65-345"><a href="#cb65-345"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-346"><a href="#cb65-346"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species))</span>
+<span id="cb65-347"><a href="#cb65-347"></a><span class="in">```</span></span>
+<span id="cb65-348"><a href="#cb65-348"></a></span>
+<span id="cb65-349"><a href="#cb65-349"></a>The boxplot filled by species helps us see...</span>
+<span id="cb65-350"><a href="#cb65-350"></a></span>
+<span id="cb65-351"><a href="#cb65-351"></a><span class="ss">- </span>Gentoo penguins have higher body mass than Adélie and Chinstrap penguins</span>
+<span id="cb65-352"><a href="#cb65-352"></a><span class="ss">- </span>Higher body mass among male Gentoo penguins compared to female penguins</span>
+<span id="cb65-353"><a href="#cb65-353"></a><span class="ss">- </span>Pattern not as discernible when comparing Adélie and Chinstrap penguins</span>
+<span id="cb65-354"><a href="#cb65-354"></a><span class="ss">- </span>No <span class="in">`NA`</span>s among Chinstrap penguin data points! **sex** was available for each observation</span>
+<span id="cb65-355"><a href="#cb65-355"></a></span>
+<span id="cb65-356"><a href="#cb65-356"></a></span>
+<span id="cb65-357"><a href="#cb65-357"></a><span class="fu">## dplyr &lt;img src="../images/hex/dplyr.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-358"><a href="#cb65-358"></a></span>
+<span id="cb65-359"><a href="#cb65-359"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-360"><a href="#cb65-360"></a></span>
+<span id="cb65-361"><a href="#cb65-361"></a>Our penguin friends have reached the <span class="in">`dplyr`</span> package!</span>
+<span id="cb65-362"><a href="#cb65-362"></a></span>
+<span id="cb65-363"><a href="#cb65-363"></a><span class="al">![](../images/drawio/04-dplyr.png)</span></span>
+<span id="cb65-364"><a href="#cb65-364"></a></span>
+<span id="cb65-365"><a href="#cb65-365"></a>:::</span>
+<span id="cb65-366"><a href="#cb65-366"></a></span>
+<span id="cb65-367"><a href="#cb65-367"></a>Data transformation helps you get the data in exactly the right form you need </span>
+<span id="cb65-368"><a href="#cb65-368"></a></span>
+<span id="cb65-369"><a href="#cb65-369"></a>With <span class="in">`dplyr`</span> you can:</span>
+<span id="cb65-370"><a href="#cb65-370"></a></span>
+<span id="cb65-371"><a href="#cb65-371"></a><span class="ss">- </span>create new variables</span>
+<span id="cb65-372"><a href="#cb65-372"></a><span class="ss">- </span>create summaries</span>
+<span id="cb65-373"><a href="#cb65-373"></a><span class="ss">- </span>rename variables</span>
+<span id="cb65-374"><a href="#cb65-374"></a><span class="ss">- </span>reorder observations</span>
+<span id="cb65-375"><a href="#cb65-375"></a><span class="ss">- </span>...and more!</span>
+<span id="cb65-376"><a href="#cb65-376"></a></span>
+<span id="cb65-377"><a href="#cb65-377"></a>This is possible thanks to intuitive functions:</span>
+<span id="cb65-378"><a href="#cb65-378"></a></span>
+<span id="cb65-379"><a href="#cb65-379"></a><span class="ss">- </span>Pick observations by their values with <span class="in">`filter()`</span>.</span>
+<span id="cb65-380"><a href="#cb65-380"></a><span class="ss">- </span>Reorder the rows with <span class="in">`arrange()`</span>.</span>
+<span id="cb65-381"><a href="#cb65-381"></a><span class="ss">- </span>Pick variables by their names <span class="in">`select()`</span>.</span>
+<span id="cb65-382"><a href="#cb65-382"></a><span class="ss">- </span>Create new variables with functions of existing variables with <span class="in">`mutate()`</span>.</span>
+<span id="cb65-383"><a href="#cb65-383"></a><span class="ss">- </span>Collapse many values down to a single summary with <span class="in">`summarize()`</span>.</span>
+<span id="cb65-384"><a href="#cb65-384"></a><span class="ss">- </span><span class="in">`group_by()`</span> gets the above functions to operate group-by-group rather than on the entire dataset. </span>
+<span id="cb65-385"><a href="#cb65-385"></a><span class="ss">- </span>and <span class="in">`count()`</span> + <span class="in">`add_count()`</span> simplify <span class="in">`group_by()`</span> + <span class="in">`summarize()`</span> when you just want to count</span>
+<span id="cb65-386"><a href="#cb65-386"></a></span>
+<span id="cb65-387"><a href="#cb65-387"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-388"><a href="#cb65-388"></a></span>
+<span id="cb65-389"><a href="#cb65-389"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf&gt;</span></span>
+<span id="cb65-390"><a href="#cb65-390"></a><span class="al">![](../images/cheatsheet/04-dplyr.png)</span>{fig-alt="dplyr cheatsheet"}</span>
+<span id="cb65-391"><a href="#cb65-391"></a></span>
+<span id="cb65-392"><a href="#cb65-392"></a><span class="fu">### Reading</span></span>
+<span id="cb65-393"><a href="#cb65-393"></a></span>
+<span id="cb65-394"><a href="#cb65-394"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-395"><a href="#cb65-395"></a></span>
+<span id="cb65-396"><a href="#cb65-396"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-397"><a href="#cb65-397"></a></span>
+<span id="cb65-398"><a href="#cb65-398"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 11 Data transformation</span><span class="co">](https://r4ds.had.co.nz/transform.html)</span></span>
+<span id="cb65-399"><a href="#cb65-399"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://dplyr.tidyverse.org&gt;</span></span>
+<span id="cb65-400"><a href="#cb65-400"></a></span>
+<span id="cb65-401"><a href="#cb65-401"></a>:::</span>
+<span id="cb65-402"><a href="#cb65-402"></a></span>
+<span id="cb65-403"><a href="#cb65-403"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-404"><a href="#cb65-404"></a></span>
+<span id="cb65-405"><a href="#cb65-405"></a><span class="fu">#### Select</span></span>
+<span id="cb65-406"><a href="#cb65-406"></a></span>
+<span id="cb65-407"><a href="#cb65-407"></a>Can you spot the difference in the following two operations?</span>
+<span id="cb65-408"><a href="#cb65-408"></a></span>
+<span id="cb65-411"><a href="#cb65-411"></a><span class="in">```{r}</span></span>
+<span id="cb65-412"><a href="#cb65-412"></a><span class="fu">select</span>(penguins, </span>
+<span id="cb65-413"><a href="#cb65-413"></a>       species,</span>
+<span id="cb65-414"><a href="#cb65-414"></a>       sex,</span>
+<span id="cb65-415"><a href="#cb65-415"></a>       body_mass_g)</span>
+<span id="cb65-416"><a href="#cb65-416"></a><span class="in">```</span></span>
+<span id="cb65-417"><a href="#cb65-417"></a></span>
+<span id="cb65-420"><a href="#cb65-420"></a><span class="in">```{r}</span></span>
+<span id="cb65-421"><a href="#cb65-421"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb65-422"><a href="#cb65-422"></a>  <span class="fu">select</span>(species,</span>
+<span id="cb65-423"><a href="#cb65-423"></a>         sex,</span>
+<span id="cb65-424"><a href="#cb65-424"></a>         body_mass_g)</span>
+<span id="cb65-425"><a href="#cb65-425"></a><span class="in">```</span></span>
+<span id="cb65-426"><a href="#cb65-426"></a></span>
+<span id="cb65-427"><a href="#cb65-427"></a>The first defines the penguins dataset with the <span class="in">`select()`</span> function, while the second uses the pipe <span class="in">`|&gt;`</span> to pass the penguins dataset along to <span class="in">`select()`</span></span>
+<span id="cb65-428"><a href="#cb65-428"></a></span>
+<span id="cb65-429"><a href="#cb65-429"></a><span class="fu">#### Arrange</span></span>
+<span id="cb65-430"><a href="#cb65-430"></a></span>
+<span id="cb65-431"><a href="#cb65-431"></a>We can use <span class="in">`arrange()`</span> to arrange our data in descending order by **body_mass_g**</span>
+<span id="cb65-432"><a href="#cb65-432"></a></span>
+<span id="cb65-435"><a href="#cb65-435"></a><span class="in">```{r}</span></span>
+<span id="cb65-436"><a href="#cb65-436"></a><span class="co">#| code-line-numbers: "3"</span></span>
+<span id="cb65-437"><a href="#cb65-437"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-438"><a href="#cb65-438"></a>  <span class="fu">select</span>(species, sex, body_mass_g) <span class="sc">|&gt;</span></span>
+<span id="cb65-439"><a href="#cb65-439"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(body_mass_g))</span>
+<span id="cb65-440"><a href="#cb65-440"></a><span class="in">```</span></span>
+<span id="cb65-441"><a href="#cb65-441"></a></span>
+<span id="cb65-442"><a href="#cb65-442"></a><span class="fu">#### Group By &amp; Summarize</span></span>
+<span id="cb65-443"><a href="#cb65-443"></a></span>
+<span id="cb65-444"><a href="#cb65-444"></a>We can use <span class="in">`group_by()`</span> to group our data by **species** and **sex**</span>
+<span id="cb65-445"><a href="#cb65-445"></a></span>
+<span id="cb65-446"><a href="#cb65-446"></a>We can use <span class="in">`summarize()`</span> to calculate the average **body_mass_g** for each grouping</span>
+<span id="cb65-447"><a href="#cb65-447"></a></span>
+<span id="cb65-450"><a href="#cb65-450"></a><span class="in">```{r}</span></span>
+<span id="cb65-451"><a href="#cb65-451"></a><span class="co">#| code-line-numbers: "3|4"</span></span>
+<span id="cb65-452"><a href="#cb65-452"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-453"><a href="#cb65-453"></a>  <span class="fu">select</span>(species, sex, body_mass_g) <span class="sc">|&gt;</span></span>
+<span id="cb65-454"><a href="#cb65-454"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">|&gt;</span>         </span>
+<span id="cb65-455"><a href="#cb65-455"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(body_mass_g))</span>
+<span id="cb65-456"><a href="#cb65-456"></a><span class="in">```</span></span>
+<span id="cb65-457"><a href="#cb65-457"></a></span>
+<span id="cb65-458"><a href="#cb65-458"></a><span class="fu">#### Count option 1</span></span>
+<span id="cb65-459"><a href="#cb65-459"></a></span>
+<span id="cb65-460"><a href="#cb65-460"></a>If we're just interested in _counting_ the observations in each grouping, we can group and summarize with special functions <span class="in">`count()`</span> and <span class="in">`add_count()`</span>.</span>
+<span id="cb65-461"><a href="#cb65-461"></a></span>
+<span id="cb65-462"><a href="#cb65-462"></a>Counting can be done with <span class="in">`group_by()`</span> and <span class="in">`summarize()`</span>, but it's a little cumbersome. </span>
+<span id="cb65-463"><a href="#cb65-463"></a></span>
+<span id="cb65-464"><a href="#cb65-464"></a>It involves...</span>
+<span id="cb65-465"><a href="#cb65-465"></a></span>
+<span id="cb65-466"><a href="#cb65-466"></a><span class="ss">1. </span>using <span class="in">`mutate()`</span> to create an intermediate variable **n_species** that adds up all observations per **species**, and</span>
+<span id="cb65-467"><a href="#cb65-467"></a><span class="ss">1. </span>an <span class="in">`ungroup()`</span>-ing step</span>
+<span id="cb65-468"><a href="#cb65-468"></a></span>
+<span id="cb65-471"><a href="#cb65-471"></a><span class="in">```{r}</span></span>
+<span id="cb65-472"><a href="#cb65-472"></a><span class="co">#| code-line-numbers: "3-4"</span></span>
+<span id="cb65-473"><a href="#cb65-473"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb65-474"><a href="#cb65-474"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb65-475"><a href="#cb65-475"></a>  <span class="fu">mutate</span>(<span class="at">n_species =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb65-476"><a href="#cb65-476"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb65-477"><a href="#cb65-477"></a>  <span class="fu">group_by</span>(species, sex, n_species) <span class="sc">|&gt;</span></span>
+<span id="cb65-478"><a href="#cb65-478"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
+<span id="cb65-479"><a href="#cb65-479"></a><span class="in">```</span></span>
+<span id="cb65-480"><a href="#cb65-480"></a></span>
+<span id="cb65-481"><a href="#cb65-481"></a><span class="fu">#### Count option 2</span></span>
+<span id="cb65-482"><a href="#cb65-482"></a></span>
+<span id="cb65-483"><a href="#cb65-483"></a>If we're just interested in _counting_ the observations in each grouping, we can group and summarize with special functions <span class="in">`count()`</span> and <span class="in">`add_count()`</span>.</span>
+<span id="cb65-484"><a href="#cb65-484"></a></span>
+<span id="cb65-485"><a href="#cb65-485"></a>In contrast, <span class="in">`count()`</span> and <span class="in">`add_count()`</span> offer a simplified approach <span class="ot">[^1]</span></span>
+<span id="cb65-486"><a href="#cb65-486"></a></span>
+<span id="cb65-489"><a href="#cb65-489"></a><span class="in">```{r}</span></span>
+<span id="cb65-490"><a href="#cb65-490"></a><span class="co">#| code-line-numbers: "3-4"</span></span>
+<span id="cb65-491"><a href="#cb65-491"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-492"><a href="#cb65-492"></a>  <span class="fu">count</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb65-493"><a href="#cb65-493"></a>  <span class="fu">add_count</span>(species, <span class="at">wt =</span> n, </span>
+<span id="cb65-494"><a href="#cb65-494"></a>            <span class="at">name =</span> <span class="st">"n_species"</span>)</span>
+<span id="cb65-495"><a href="#cb65-495"></a><span class="in">```</span></span>
+<span id="cb65-496"><a href="#cb65-496"></a></span>
+<span id="cb65-497"><a href="#cb65-497"></a><span class="fu">#### Mutate</span></span>
+<span id="cb65-498"><a href="#cb65-498"></a></span>
+<span id="cb65-499"><a href="#cb65-499"></a>We can add to our counting example by using <span class="in">`mutate()`</span> to create a new variable **prop**</span>
+<span id="cb65-500"><a href="#cb65-500"></a></span>
+<span id="cb65-501"><a href="#cb65-501"></a>**prop** represents the proportion of penguins of each **sex**, grouped by **species**</span>
+<span id="cb65-502"><a href="#cb65-502"></a></span>
+<span id="cb65-505"><a href="#cb65-505"></a><span class="in">```{r}</span></span>
+<span id="cb65-506"><a href="#cb65-506"></a><span class="co">#| code-line-numbers: "5"</span></span>
+<span id="cb65-507"><a href="#cb65-507"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-508"><a href="#cb65-508"></a>  <span class="fu">count</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb65-509"><a href="#cb65-509"></a>  <span class="fu">add_count</span>(species, <span class="at">wt =</span> n, </span>
+<span id="cb65-510"><a href="#cb65-510"></a>            <span class="at">name =</span> <span class="st">"n_species"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb65-511"><a href="#cb65-511"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n<span class="sc">/</span>n_species<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb65-512"><a href="#cb65-512"></a><span class="in">```</span></span>
+<span id="cb65-513"><a href="#cb65-513"></a></span>
+<span id="cb65-514"><a href="#cb65-514"></a><span class="fu">#### Filter</span></span>
+<span id="cb65-515"><a href="#cb65-515"></a></span>
+<span id="cb65-516"><a href="#cb65-516"></a>Finally, we can filter rows to only show us **Chinstrap** penguin summaries by adding <span class="in">`filter()`</span> to our pipeline</span>
+<span id="cb65-517"><a href="#cb65-517"></a></span>
+<span id="cb65-520"><a href="#cb65-520"></a><span class="in">```{r}</span></span>
+<span id="cb65-521"><a href="#cb65-521"></a><span class="co">#| code-line-numbers: "6"</span></span>
+<span id="cb65-522"><a href="#cb65-522"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-523"><a href="#cb65-523"></a>  <span class="fu">count</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb65-524"><a href="#cb65-524"></a>  <span class="fu">add_count</span>(species, <span class="at">wt =</span> n, </span>
+<span id="cb65-525"><a href="#cb65-525"></a>            <span class="at">name =</span> <span class="st">"n_species"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb65-526"><a href="#cb65-526"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n<span class="sc">/</span>n_species<span class="sc">*</span><span class="dv">100</span>) <span class="sc">|&gt;</span></span>
+<span id="cb65-527"><a href="#cb65-527"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Chinstrap"</span>)</span>
+<span id="cb65-528"><a href="#cb65-528"></a><span class="in">```</span></span>
+<span id="cb65-529"><a href="#cb65-529"></a></span>
+<span id="cb65-530"><a href="#cb65-530"></a><span class="fu">## forcats &lt;img src="../images/hex/forcats.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-531"><a href="#cb65-531"></a></span>
+<span id="cb65-532"><a href="#cb65-532"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-533"><a href="#cb65-533"></a></span>
+<span id="cb65-534"><a href="#cb65-534"></a>Our penguin friends have reached the <span class="in">`forcats`</span> package!</span>
+<span id="cb65-535"><a href="#cb65-535"></a></span>
+<span id="cb65-536"><a href="#cb65-536"></a><span class="al">![](../images/drawio/05-forcats.png)</span></span>
+<span id="cb65-537"><a href="#cb65-537"></a></span>
+<span id="cb65-538"><a href="#cb65-538"></a>:::</span>
+<span id="cb65-539"><a href="#cb65-539"></a></span>
+<span id="cb65-540"><a href="#cb65-540"></a><span class="in">`forcats`</span> helps us work with **categorical variables** or factors </span>
+<span id="cb65-541"><a href="#cb65-541"></a></span>
+<span id="cb65-542"><a href="#cb65-542"></a>These are variables that have a fixed and known set of possible values, like **species**, **island**, and **sex** in our <span class="in">`penguins`</span> dataset</span>
+<span id="cb65-543"><a href="#cb65-543"></a></span>
+<span id="cb65-544"><a href="#cb65-544"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-545"><a href="#cb65-545"></a></span>
+<span id="cb65-546"><a href="#cb65-546"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/raw/main/factors.pdf&gt;</span></span>
+<span id="cb65-547"><a href="#cb65-547"></a><span class="al">![](../images/cheatsheet/05-forcats.png)</span>{width=65% fig-alt="forcats cheatsheet"}</span>
+<span id="cb65-548"><a href="#cb65-548"></a></span>
+<span id="cb65-549"><a href="#cb65-549"></a><span class="fu">### Reading</span></span>
+<span id="cb65-550"><a href="#cb65-550"></a></span>
+<span id="cb65-551"><a href="#cb65-551"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-552"><a href="#cb65-552"></a></span>
+<span id="cb65-553"><a href="#cb65-553"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-554"><a href="#cb65-554"></a></span>
+<span id="cb65-555"><a href="#cb65-555"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 15 Factors</span><span class="co">](https://r4ds.had.co.nz/factors.html)</span></span>
+<span id="cb65-556"><a href="#cb65-556"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://forcats.tidyverse.org&gt;</span></span>
+<span id="cb65-557"><a href="#cb65-557"></a></span>
+<span id="cb65-558"><a href="#cb65-558"></a>:::</span>
+<span id="cb65-559"><a href="#cb65-559"></a></span>
+<span id="cb65-560"><a href="#cb65-560"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-561"><a href="#cb65-561"></a></span>
+<span id="cb65-562"><a href="#cb65-562"></a><span class="fu">#### Code</span></span>
+<span id="cb65-563"><a href="#cb65-563"></a></span>
+<span id="cb65-564"><a href="#cb65-564"></a>Currently the **year** variable in <span class="in">`penguins`</span> is continuous from 2007 to 2009</span>
+<span id="cb65-565"><a href="#cb65-565"></a></span>
+<span id="cb65-566"><a href="#cb65-566"></a>Usually this isn't what we want and we might want to turn it into a categorical variable instead</span>
+<span id="cb65-567"><a href="#cb65-567"></a></span>
+<span id="cb65-568"><a href="#cb65-568"></a>The <span class="in">`factor()`</span> function is perfect for this</span>
+<span id="cb65-569"><a href="#cb65-569"></a></span>
+<span id="cb65-572"><a href="#cb65-572"></a><span class="in">```{r}</span></span>
+<span id="cb65-573"><a href="#cb65-573"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb65-574"><a href="#cb65-574"></a>  <span class="fu">mutate</span>(<span class="at">year_factor =</span> <span class="fu">factor</span>(year, <span class="at">levels =</span> <span class="fu">unique</span>(year)))</span>
+<span id="cb65-575"><a href="#cb65-575"></a><span class="in">```</span></span>
+<span id="cb65-576"><a href="#cb65-576"></a></span>
+<span id="cb65-577"><a href="#cb65-577"></a><span class="fu">#### Result</span></span>
+<span id="cb65-578"><a href="#cb65-578"></a></span>
+<span id="cb65-579"><a href="#cb65-579"></a>The result is a new variable **year_factor** with factor levels **2007**, **2008**, and **2009**</span>
+<span id="cb65-580"><a href="#cb65-580"></a></span>
+<span id="cb65-583"><a href="#cb65-583"></a><span class="in">```{r}</span></span>
+<span id="cb65-584"><a href="#cb65-584"></a>penguins_new <span class="ot">&lt;-</span> </span>
+<span id="cb65-585"><a href="#cb65-585"></a>  penguins <span class="sc">|&gt;</span> </span>
+<span id="cb65-586"><a href="#cb65-586"></a>  <span class="fu">mutate</span>(<span class="at">year_factor =</span> <span class="fu">factor</span>(year, <span class="at">levels =</span> <span class="fu">unique</span>(year)))</span>
+<span id="cb65-587"><a href="#cb65-587"></a>penguins_new</span>
+<span id="cb65-588"><a href="#cb65-588"></a><span class="in">```</span></span>
+<span id="cb65-589"><a href="#cb65-589"></a></span>
+<span id="cb65-590"><a href="#cb65-590"></a>We can check our new variable's class:</span>
+<span id="cb65-593"><a href="#cb65-593"></a><span class="in">```{r}</span></span>
+<span id="cb65-594"><a href="#cb65-594"></a><span class="fu">class</span>(penguins_new<span class="sc">$</span>year_factor)</span>
+<span id="cb65-595"><a href="#cb65-595"></a><span class="in">```</span></span>
+<span id="cb65-596"><a href="#cb65-596"></a></span>
+<span id="cb65-597"><a href="#cb65-597"></a>And check its factor levels:</span>
+<span id="cb65-598"><a href="#cb65-598"></a></span>
+<span id="cb65-601"><a href="#cb65-601"></a><span class="in">```{r}</span></span>
+<span id="cb65-602"><a href="#cb65-602"></a><span class="fu">levels</span>(penguins_new<span class="sc">$</span>year_factor)</span>
+<span id="cb65-603"><a href="#cb65-603"></a><span class="in">```</span></span>
+<span id="cb65-604"><a href="#cb65-604"></a></span>
+<span id="cb65-605"><a href="#cb65-605"></a></span>
+<span id="cb65-606"><a href="#cb65-606"></a><span class="fu">## stringr &lt;img src="../images/hex/stringr.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-607"><a href="#cb65-607"></a></span>
+<span id="cb65-608"><a href="#cb65-608"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-609"><a href="#cb65-609"></a></span>
+<span id="cb65-610"><a href="#cb65-610"></a>Our penguin friends have reached the <span class="in">`stringr`</span> package!</span>
+<span id="cb65-611"><a href="#cb65-611"></a></span>
+<span id="cb65-612"><a href="#cb65-612"></a><span class="al">![](../images/drawio/06-stringr.png)</span></span>
+<span id="cb65-613"><a href="#cb65-613"></a></span>
+<span id="cb65-614"><a href="#cb65-614"></a>:::</span>
+<span id="cb65-615"><a href="#cb65-615"></a></span>
+<span id="cb65-616"><a href="#cb65-616"></a><span class="in">`stringr`</span> helps us manipulate strings! </span>
+<span id="cb65-617"><a href="#cb65-617"></a></span>
+<span id="cb65-618"><a href="#cb65-618"></a>The package includes many functions to help us with **regular expressions**, which are a concise language for describing patterns in strings.</span>
+<span id="cb65-619"><a href="#cb65-619"></a> </span>
+<span id="cb65-620"><a href="#cb65-620"></a>These functions help us:  </span>
+<span id="cb65-621"><a href="#cb65-621"></a></span>
+<span id="cb65-622"><a href="#cb65-622"></a><span class="ss">-  </span>detect matches</span>
+<span id="cb65-623"><a href="#cb65-623"></a><span class="ss">-  </span>subset strings</span>
+<span id="cb65-624"><a href="#cb65-624"></a><span class="ss">-  </span>manage string lengths</span>
+<span id="cb65-625"><a href="#cb65-625"></a><span class="ss">-  </span>mutate strings</span>
+<span id="cb65-626"><a href="#cb65-626"></a><span class="ss">-  </span>join and split strings</span>
+<span id="cb65-627"><a href="#cb65-627"></a><span class="ss">-  </span>order strings</span>
+<span id="cb65-628"><a href="#cb65-628"></a><span class="ss">-  </span>...and more!</span>
+<span id="cb65-629"><a href="#cb65-629"></a></span>
+<span id="cb65-630"><a href="#cb65-630"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-631"><a href="#cb65-631"></a></span>
+<span id="cb65-632"><a href="#cb65-632"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/raw/main/strings.pdf&gt;</span></span>
+<span id="cb65-633"><a href="#cb65-633"></a><span class="al">![](../images/cheatsheet/06-stringr.png)</span>{fig-alt="stringr cheatsheet"}</span>
+<span id="cb65-634"><a href="#cb65-634"></a></span>
+<span id="cb65-635"><a href="#cb65-635"></a><span class="fu">### Reading</span></span>
+<span id="cb65-636"><a href="#cb65-636"></a></span>
+<span id="cb65-637"><a href="#cb65-637"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-638"><a href="#cb65-638"></a></span>
+<span id="cb65-639"><a href="#cb65-639"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-640"><a href="#cb65-640"></a></span>
+<span id="cb65-641"><a href="#cb65-641"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 14 Strings</span><span class="co">](https://r4ds.had.co.nz/strings.html)</span></span>
+<span id="cb65-642"><a href="#cb65-642"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://stringr.tidyverse.org&gt;</span></span>
+<span id="cb65-643"><a href="#cb65-643"></a></span>
+<span id="cb65-644"><a href="#cb65-644"></a>:::</span>
+<span id="cb65-645"><a href="#cb65-645"></a></span>
+<span id="cb65-646"><a href="#cb65-646"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-647"><a href="#cb65-647"></a></span>
+<span id="cb65-648"><a href="#cb65-648"></a><span class="fu">#### Mutate</span></span>
+<span id="cb65-649"><a href="#cb65-649"></a></span>
+<span id="cb65-650"><a href="#cb65-650"></a>What does this chunk do?</span>
+<span id="cb65-653"><a href="#cb65-653"></a><span class="in">```{r}</span></span>
+<span id="cb65-654"><a href="#cb65-654"></a><span class="co">#| code-line-numbers: "3"</span></span>
+<span id="cb65-655"><a href="#cb65-655"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-656"><a href="#cb65-656"></a>  <span class="fu">select</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb65-657"><a href="#cb65-657"></a>  <span class="fu">mutate</span>(<span class="at">ISLAND =</span> <span class="fu">str_to_upper</span>(island))</span>
+<span id="cb65-658"><a href="#cb65-658"></a><span class="in">```</span></span>
+<span id="cb65-659"><a href="#cb65-659"></a></span>
+<span id="cb65-660"><a href="#cb65-660"></a>It creates a new variable <span class="in">`ISLAND`</span> that transforms <span class="in">`island`</span> observations to uppercase</span>
+<span id="cb65-661"><a href="#cb65-661"></a></span>
+<span id="cb65-662"><a href="#cb65-662"></a><span class="fu">#### Join</span></span>
+<span id="cb65-663"><a href="#cb65-663"></a></span>
+<span id="cb65-664"><a href="#cb65-664"></a>How about this one?</span>
+<span id="cb65-667"><a href="#cb65-667"></a><span class="in">```{r}</span></span>
+<span id="cb65-668"><a href="#cb65-668"></a><span class="co">#| code-line-numbers: "4"</span></span>
+<span id="cb65-669"><a href="#cb65-669"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-670"><a href="#cb65-670"></a>  <span class="fu">select</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb65-671"><a href="#cb65-671"></a>  <span class="fu">mutate</span>(<span class="at">ISLAND =</span> <span class="fu">str_to_upper</span>(island)) <span class="sc">|&gt;</span></span>
+<span id="cb65-672"><a href="#cb65-672"></a>  <span class="fu">mutate</span>(<span class="at">species_island =</span> <span class="fu">str_c</span>(species, ISLAND, <span class="at">sep =</span> <span class="st">"_"</span>))</span>
+<span id="cb65-673"><a href="#cb65-673"></a><span class="in">```</span></span>
+<span id="cb65-674"><a href="#cb65-674"></a></span>
+<span id="cb65-675"><a href="#cb65-675"></a>It creates a new vaiable <span class="in">`species_island`</span> that concatenates <span class="in">`species`</span> and <span class="in">`ISLAND`</span> strings and places an underscore between them</span>
+<span id="cb65-676"><a href="#cb65-676"></a></span>
+<span id="cb65-677"><a href="#cb65-677"></a><span class="fu">## tidyr &lt;img src="../images/hex/tidyr.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-678"><a href="#cb65-678"></a></span>
+<span id="cb65-679"><a href="#cb65-679"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-680"><a href="#cb65-680"></a></span>
+<span id="cb65-681"><a href="#cb65-681"></a>Our penguin friends have reached the <span class="in">`tidyr`</span> package! </span>
+<span id="cb65-682"><a href="#cb65-682"></a></span>
+<span id="cb65-683"><a href="#cb65-683"></a><span class="al">![](../images/drawio/07-tidyr.png)</span></span>
+<span id="cb65-684"><a href="#cb65-684"></a></span>
+<span id="cb65-685"><a href="#cb65-685"></a>:::</span>
+<span id="cb65-686"><a href="#cb65-686"></a></span>
+<span id="cb65-687"><a href="#cb65-687"></a><span class="in">`tidyr`</span> helps us transform our dataset into a <span class="co">[</span><span class="ot">tidy format</span><span class="co">](https://r4ds.had.co.nz/tidy-data.html)</span></span>
+<span id="cb65-688"><a href="#cb65-688"></a></span>
+<span id="cb65-689"><a href="#cb65-689"></a><span class="at">&gt; There are three interrelated rules which make a dataset tidy:</span></span>
+<span id="cb65-690"><a href="#cb65-690"></a><span class="at">&gt;</span></span>
+<span id="cb65-691"><a href="#cb65-691"></a><span class="at">&gt; - Each variable must have its own column.</span></span>
+<span id="cb65-692"><a href="#cb65-692"></a><span class="at">&gt; - Each observation must have its own row.</span></span>
+<span id="cb65-693"><a href="#cb65-693"></a><span class="at">&gt; - Each value must have its own cell.</span></span>
+<span id="cb65-694"><a href="#cb65-694"></a><span class="at">&gt; </span><span class="al">![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)</span><span class="at">{fig-alt="schematic representing the 3 earlier points"}</span></span>
+<span id="cb65-695"><a href="#cb65-695"></a></span>
+<span id="cb65-696"><a href="#cb65-696"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-697"><a href="#cb65-697"></a></span>
+<span id="cb65-698"><a href="#cb65-698"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf&gt;</span></span>
+<span id="cb65-699"><a href="#cb65-699"></a><span class="al">![](../images/cheatsheet/07-tidyr.png)</span>{fig-alt="tidyr cheatsheet"}</span>
+<span id="cb65-700"><a href="#cb65-700"></a></span>
+<span id="cb65-701"><a href="#cb65-701"></a><span class="fu">### Reading</span></span>
+<span id="cb65-702"><a href="#cb65-702"></a></span>
+<span id="cb65-703"><a href="#cb65-703"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-704"><a href="#cb65-704"></a></span>
+<span id="cb65-705"><a href="#cb65-705"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-706"><a href="#cb65-706"></a></span>
+<span id="cb65-707"><a href="#cb65-707"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 12 Tidy data</span><span class="co">](https://r4ds.had.co.nz/tidy-data.html)</span></span>
+<span id="cb65-708"><a href="#cb65-708"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://tidyr.tidyverse.org&gt;</span></span>
+<span id="cb65-709"><a href="#cb65-709"></a></span>
+<span id="cb65-710"><a href="#cb65-710"></a>:::</span>
+<span id="cb65-711"><a href="#cb65-711"></a></span>
+<span id="cb65-712"><a href="#cb65-712"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-713"><a href="#cb65-713"></a></span>
+<span id="cb65-714"><a href="#cb65-714"></a><span class="fu">#### Un-tidying</span></span>
+<span id="cb65-715"><a href="#cb65-715"></a></span>
+<span id="cb65-716"><a href="#cb65-716"></a>Both penguin datasets are already tidy!</span>
+<span id="cb65-717"><a href="#cb65-717"></a></span>
+<span id="cb65-718"><a href="#cb65-718"></a>We can pretend that <span class="in">`penguins`</span> wasn't tidy and that it looked instead like <span class="in">`untidy_penguins`</span> below, where **body_mass_g** was recorded separately for *male*, *female*, and *NA* **sex** penguins.</span>
+<span id="cb65-719"><a href="#cb65-719"></a></span>
+<span id="cb65-722"><a href="#cb65-722"></a><span class="in">```{r}</span></span>
+<span id="cb65-723"><a href="#cb65-723"></a>untidy_penguins <span class="ot">&lt;-</span> </span>
+<span id="cb65-724"><a href="#cb65-724"></a>  penguins <span class="sc">|&gt;</span> </span>
+<span id="cb65-725"><a href="#cb65-725"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sex, <span class="at">values_from =</span> body_mass_g)</span>
+<span id="cb65-726"><a href="#cb65-726"></a>untidy_penguins</span>
+<span id="cb65-727"><a href="#cb65-727"></a><span class="in">```</span></span>
+<span id="cb65-728"><a href="#cb65-728"></a></span>
+<span id="cb65-729"><a href="#cb65-729"></a><span class="fu">#### Re-tidying</span></span>
+<span id="cb65-730"><a href="#cb65-730"></a></span>
+<span id="cb65-731"><a href="#cb65-731"></a>Now let's make it tidy again!</span>
+<span id="cb65-732"><a href="#cb65-732"></a></span>
+<span id="cb65-733"><a href="#cb65-733"></a>We'll use the help of <span class="in">`pivot_longer()`</span></span>
+<span id="cb65-734"><a href="#cb65-734"></a></span>
+<span id="cb65-737"><a href="#cb65-737"></a><span class="in">```{r}</span></span>
+<span id="cb65-738"><a href="#cb65-738"></a><span class="co">#| code-line-numbers: "2,3,4"</span></span>
+<span id="cb65-739"><a href="#cb65-739"></a>untidy_penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-740"><a href="#cb65-740"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> male<span class="sc">:</span><span class="st">`</span><span class="at">NA</span><span class="st">`</span>,           </span>
+<span id="cb65-741"><a href="#cb65-741"></a>               <span class="at">names_to =</span> <span class="st">"sex"</span>,           </span>
+<span id="cb65-742"><a href="#cb65-742"></a>               <span class="at">values_to =</span> <span class="st">"body_mass_g"</span>)</span>
+<span id="cb65-743"><a href="#cb65-743"></a><span class="in">```</span></span>
+<span id="cb65-744"><a href="#cb65-744"></a></span>
+<span id="cb65-745"><a href="#cb65-745"></a><span class="fu">## purrr &lt;img src="../images/hex/purrr.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-746"><a href="#cb65-746"></a></span>
+<span id="cb65-747"><a href="#cb65-747"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-748"><a href="#cb65-748"></a></span>
+<span id="cb65-749"><a href="#cb65-749"></a>Our penguin friends have reached the <span class="in">`purrr`</span> package!</span>
+<span id="cb65-750"><a href="#cb65-750"></a></span>
+<span id="cb65-751"><a href="#cb65-751"></a><span class="al">![](../images/drawio/08-purrr.png)</span></span>
+<span id="cb65-752"><a href="#cb65-752"></a></span>
+<span id="cb65-753"><a href="#cb65-753"></a>:::</span>
+<span id="cb65-754"><a href="#cb65-754"></a></span>
+<span id="cb65-755"><a href="#cb65-755"></a>This package provides tools for working with functions and vectors </span>
+<span id="cb65-756"><a href="#cb65-756"></a></span>
+<span id="cb65-757"><a href="#cb65-757"></a>The <span class="in">`purrr`</span> family of functions helps us replace for loops, making our code easier to read and more succint.</span>
+<span id="cb65-758"><a href="#cb65-758"></a></span>
+<span id="cb65-759"><a href="#cb65-759"></a>With <span class="in">`purrr`</span> you can:</span>
+<span id="cb65-760"><a href="#cb65-760"></a></span>
+<span id="cb65-761"><a href="#cb65-761"></a><span class="ss">- </span>Iterate over a single input with <span class="in">`map()`</span></span>
+<span id="cb65-762"><a href="#cb65-762"></a><span class="ss">- </span>Iterate over two inputs in parallel with <span class="in">`map2()`</span></span>
+<span id="cb65-763"><a href="#cb65-763"></a><span class="ss">- </span>Iterate with multiple arguments with <span class="in">`pmap()`</span></span>
+<span id="cb65-764"><a href="#cb65-764"></a><span class="ss">- </span>Iterate with multiple arguments and functions with <span class="in">`invoke_map()`</span></span>
+<span id="cb65-765"><a href="#cb65-765"></a><span class="ss">- </span>Call a function for its side-effects with <span class="in">`walk()`</span>, <span class="in">`walk2()`</span>, and <span class="in">`pwalk()`</span></span>
+<span id="cb65-766"><a href="#cb65-766"></a></span>
+<span id="cb65-767"><a href="#cb65-767"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-768"><a href="#cb65-768"></a></span>
+<span id="cb65-769"><a href="#cb65-769"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf&gt;</span></span>
+<span id="cb65-770"><a href="#cb65-770"></a><span class="al">![](../images/cheatsheet/08-purrr.png)</span>{fig-alt="purrr cheatsheet"}</span>
+<span id="cb65-771"><a href="#cb65-771"></a></span>
+<span id="cb65-772"><a href="#cb65-772"></a><span class="fu">### Reading</span></span>
+<span id="cb65-773"><a href="#cb65-773"></a></span>
+<span id="cb65-774"><a href="#cb65-774"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-775"><a href="#cb65-775"></a></span>
+<span id="cb65-776"><a href="#cb65-776"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-777"><a href="#cb65-777"></a></span>
+<span id="cb65-778"><a href="#cb65-778"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 21 Iteration</span><span class="co">](https://r4ds.had.co.nz/iteration.html)</span></span>
+<span id="cb65-779"><a href="#cb65-779"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://purrr.tidyverse.org&gt;</span></span>
+<span id="cb65-780"><a href="#cb65-780"></a></span>
+<span id="cb65-781"><a href="#cb65-781"></a>:::</span>
+<span id="cb65-782"><a href="#cb65-782"></a></span>
+<span id="cb65-783"><a href="#cb65-783"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-784"><a href="#cb65-784"></a></span>
+<span id="cb65-785"><a href="#cb65-785"></a><span class="fu">#### Time for a change?</span></span>
+<span id="cb65-786"><a href="#cb65-786"></a></span>
+<span id="cb65-787"><a href="#cb65-787"></a>Ok, we love our earlier boxplot showing us **body_mass_g** by **sex** and colored by **species**...but let's change up the colors to keep with our Antarctica theme!</span>
+<span id="cb65-788"><a href="#cb65-788"></a></span>
+<span id="cb65-789"><a href="#cb65-789"></a>I'm a big fan of the color palettes in the <span class="in">`nord`</span> <span class="in">`r emo::ji("package")`</span></span>
+<span id="cb65-790"><a href="#cb65-790"></a></span>
+<span id="cb65-791"><a href="#cb65-791"></a><span class="al">![](https://raw.githubusercontent.com/jkaupp/nord/master/man/figures/README-palettes-1.png)</span>{fig-alt="16 different nordic color palettes from the Nord package. We will be focusing on the mountain_forms palette which was dark teal, dusty blue, snowy white, dusty purple, and dark purple"}</span>
+<span id="cb65-792"><a href="#cb65-792"></a></span>
+<span id="cb65-793"><a href="#cb65-793"></a><span class="fu">#### Goal</span></span>
+<span id="cb65-794"><a href="#cb65-794"></a></span>
+<span id="cb65-795"><a href="#cb65-795"></a>Let's turn this plot...</span>
+<span id="cb65-796"><a href="#cb65-796"></a></span>
+<span id="cb65-799"><a href="#cb65-799"></a><span class="in">```{r}</span></span>
+<span id="cb65-800"><a href="#cb65-800"></a><span class="co">#| echo: false</span></span>
+<span id="cb65-801"><a href="#cb65-801"></a><span class="co">#| warning: false</span></span>
+<span id="cb65-802"><a href="#cb65-802"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb65-803"><a href="#cb65-803"></a><span class="co">#| fig-alt: Our filled boxplot from our earlier ggplot2 exercises! To recap, a boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. There is a boxplot for each species per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green.</span></span>
+<span id="cb65-804"><a href="#cb65-804"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-805"><a href="#cb65-805"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-806"><a href="#cb65-806"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species))</span>
+<span id="cb65-807"><a href="#cb65-807"></a><span class="in">```</span></span>
+<span id="cb65-808"><a href="#cb65-808"></a></span>
+<span id="cb65-809"><a href="#cb65-809"></a>...into this one!</span>
+<span id="cb65-810"><a href="#cb65-810"></a></span>
+<span id="cb65-813"><a href="#cb65-813"></a><span class="in">```{r}</span></span>
+<span id="cb65-814"><a href="#cb65-814"></a><span class="co">#| echo: false</span></span>
+<span id="cb65-815"><a href="#cb65-815"></a><span class="co">#| warning: false</span></span>
+<span id="cb65-816"><a href="#cb65-816"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb65-817"><a href="#cb65-817"></a><span class="co">#| fig-alt: In contrast to the other filled boxplot referred to in this tab, this one is filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.</span></span>
+<span id="cb65-818"><a href="#cb65-818"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-819"><a href="#cb65-819"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-820"><a href="#cb65-820"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb65-821"><a href="#cb65-821"></a>  nord<span class="sc">::</span><span class="fu">scale_fill_nord</span>(<span class="at">palette =</span> <span class="st">"mountain_forms"</span>)</span>
+<span id="cb65-822"><a href="#cb65-822"></a><span class="in">```</span></span>
+<span id="cb65-823"><a href="#cb65-823"></a></span>
+<span id="cb65-824"><a href="#cb65-824"></a>Note: The color choices in this example are meant for demo purposes only. Be sure to consider the <span class="co">[</span><span class="ot">accessibility of your data viz</span><span class="co">](https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility)</span>, including color contrast between different elements.</span>
+<span id="cb65-825"><a href="#cb65-825"></a></span>
+<span id="cb65-826"><a href="#cb65-826"></a><span class="fu">#### Option 1</span></span>
+<span id="cb65-827"><a href="#cb65-827"></a></span>
+<span id="cb65-828"><a href="#cb65-828"></a></span>
+<span id="cb65-829"><a href="#cb65-829"></a>You can choose colors using the color hex codes</span>
+<span id="cb65-830"><a href="#cb65-830"></a></span>
+<span id="cb65-833"><a href="#cb65-833"></a><span class="in">```{r}</span></span>
+<span id="cb65-834"><a href="#cb65-834"></a>nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms</span>
+<span id="cb65-835"><a href="#cb65-835"></a><span class="in">```</span></span>
+<span id="cb65-836"><a href="#cb65-836"></a></span>
+<span id="cb65-837"><a href="#cb65-837"></a>And assign them using the <span class="in">`scale_fill_manual()`</span> function</span>
+<span id="cb65-838"><a href="#cb65-838"></a></span>
+<span id="cb65-839"><a href="#cb65-839"></a><span class="in">```{r nord-1}</span></span>
+<span id="cb65-840"><a href="#cb65-840"></a><span class="co">#| fig-show: hide</span></span>
+<span id="cb65-841"><a href="#cb65-841"></a><span class="co">#| code-line-numbers: "4-7"</span></span>
+<span id="cb65-842"><a href="#cb65-842"></a><span class="co">#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.</span></span>
+<span id="cb65-843"><a href="#cb65-843"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-844"><a href="#cb65-844"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-845"><a href="#cb65-845"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb65-846"><a href="#cb65-846"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb65-847"><a href="#cb65-847"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#184860"</span>, </span>
+<span id="cb65-848"><a href="#cb65-848"></a>               <span class="st">"#D8D8D8"</span>, </span>
+<span id="cb65-849"><a href="#cb65-849"></a>               <span class="st">"#181830"</span>))</span>
+<span id="cb65-850"><a href="#cb65-850"></a><span class="in">```</span></span>
+<span id="cb65-851"><a href="#cb65-851"></a></span>
+<span id="cb65-852"><a href="#cb65-852"></a><span class="in">```{r ref.label="nord-1"}</span></span>
+<span id="cb65-853"><a href="#cb65-853"></a><span class="co">#| echo: false</span></span>
+<span id="cb65-854"><a href="#cb65-854"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb65-855"><a href="#cb65-855"></a><span class="in">```</span></span>
+<span id="cb65-856"><a href="#cb65-856"></a></span>
+<span id="cb65-857"><a href="#cb65-857"></a><span class="fu">#### Options 2 &amp; 3</span></span>
+<span id="cb65-858"><a href="#cb65-858"></a></span>
+<span id="cb65-859"><a href="#cb65-859"></a>You can also use the palette name, like **mountain_forms**, though the colors assigned may not align with what you want</span>
+<span id="cb65-860"><a href="#cb65-860"></a></span>
+<span id="cb65-861"><a href="#cb65-861"></a><span class="in">```{r, nord-2}</span></span>
+<span id="cb65-862"><a href="#cb65-862"></a><span class="co">#| code-line-numbers: "4-6"</span></span>
+<span id="cb65-863"><a href="#cb65-863"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb65-864"><a href="#cb65-864"></a><span class="co">#| fig-alt: Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white.</span></span>
+<span id="cb65-865"><a href="#cb65-865"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-866"><a href="#cb65-866"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-867"><a href="#cb65-867"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb65-868"><a href="#cb65-868"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms)</span>
+<span id="cb65-869"><a href="#cb65-869"></a><span class="in">```</span></span>
+<span id="cb65-870"><a href="#cb65-870"></a></span>
+<span id="cb65-871"><a href="#cb65-871"></a>And sometimes, color palette packages come with their own functions that assign colors, like <span class="in">`scale_fill_nord()`</span></span>
+<span id="cb65-872"><a href="#cb65-872"></a></span>
+<span id="cb65-875"><a href="#cb65-875"></a><span class="in">```{r}</span></span>
+<span id="cb65-876"><a href="#cb65-876"></a><span class="co">#| code-line-numbers: "4-6"</span></span>
+<span id="cb65-877"><a href="#cb65-877"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb65-878"><a href="#cb65-878"></a><span class="co">#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.</span></span>
+<span id="cb65-879"><a href="#cb65-879"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb65-880"><a href="#cb65-880"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb65-881"><a href="#cb65-881"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb65-882"><a href="#cb65-882"></a>  nord<span class="sc">::</span><span class="fu">scale_fill_nord</span>(<span class="at">palette =</span> <span class="st">"mountain_forms"</span>)</span>
+<span id="cb65-883"><a href="#cb65-883"></a><span class="in">```</span></span>
+<span id="cb65-884"><a href="#cb65-884"></a></span>
+<span id="cb65-885"><a href="#cb65-885"></a><span class="fu">#### Purrr?</span></span>
+<span id="cb65-886"><a href="#cb65-886"></a></span>
+<span id="cb65-887"><a href="#cb65-887"></a>The <span class="in">`prismatic`</span> <span class="in">`r emo::ji("package")`</span> helps us **see** the colors that correspond to each color hex code (mostly), with the <span class="in">`color()`</span> function</span>
+<span id="cb65-888"><a href="#cb65-888"></a></span>
+<span id="cb65-891"><a href="#cb65-891"></a><span class="in">```{r}</span></span>
+<span id="cb65-892"><a href="#cb65-892"></a><span class="co">#| include: false</span></span>
+<span id="cb65-893"><a href="#cb65-893"></a><span class="fu">library</span>(prismatic)</span>
+<span id="cb65-894"><a href="#cb65-894"></a><span class="in">```</span></span>
+<span id="cb65-895"><a href="#cb65-895"></a></span>
+<span id="cb65-898"><a href="#cb65-898"></a><span class="in">```{r}</span></span>
+<span id="cb65-899"><a href="#cb65-899"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-900"><a href="#cb65-900"></a><span class="fu">library</span>(prismatic)</span>
+<span id="cb65-901"><a href="#cb65-901"></a></span>
+<span id="cb65-902"><a href="#cb65-902"></a>prismatic<span class="sc">::</span><span class="fu">color</span>(nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms)</span>
+<span id="cb65-903"><a href="#cb65-903"></a><span class="in">```</span></span>
+<span id="cb65-904"><a href="#cb65-904"></a><span class="al">![](../images/nord_mountainforms.png)</span>{fig-alt="hex codes for the 5 colors in the mountain_forms palette, with a background color to match it. Dark teal is #184860, dusty blue is #486078, snowy white is #D8D8D8, purple is #484860, and dark purple is #181830" width="75%"}</span>
+<span id="cb65-905"><a href="#cb65-905"></a></span>
+<span id="cb65-906"><a href="#cb65-906"></a><span class="in">`purrr`</span>'s <span class="in">`map()`</span> function can help us iterate <span class="in">`color()`</span> over all palettes in a palette package like <span class="in">`nord`</span>!</span>
+<span id="cb65-907"><a href="#cb65-907"></a></span>
+<span id="cb65-910"><a href="#cb65-910"></a><span class="in">```{r}</span></span>
+<span id="cb65-911"><a href="#cb65-911"></a><span class="co">#| eval: false</span></span>
+<span id="cb65-912"><a href="#cb65-912"></a>nord<span class="sc">::</span>nord_palettes <span class="sc">|&gt;</span> </span>
+<span id="cb65-913"><a href="#cb65-913"></a>    <span class="fu">map</span>(prismatic<span class="sc">::</span>color)</span>
+<span id="cb65-914"><a href="#cb65-914"></a><span class="in">```</span></span>
+<span id="cb65-915"><a href="#cb65-915"></a></span>
+<span id="cb65-916"><a href="#cb65-916"></a><span class="al">![](../images/nord_multiple.png)</span>{fig-alt="hex color codes for 4 of the palettes in the nord package, including mountain_forms" width="75%"}</span>
+<span id="cb65-917"><a href="#cb65-917"></a></span>
+<span id="cb65-918"><a href="#cb65-918"></a><span class="fu">#### More palettes!</span></span>
+<span id="cb65-919"><a href="#cb65-919"></a></span>
+<span id="cb65-920"><a href="#cb65-920"></a>::: {layout-ncol="2" layout-valign="center"}</span>
+<span id="cb65-921"><a href="#cb65-921"></a></span>
+<span id="cb65-922"><a href="#cb65-922"></a><span class="in">`r emo::ji("art")`</span> <span class="co">[</span><span class="ot">r-color-palettes repo</span><span class="co">](https://github.com/EmilHvitfeldt/r-color-palettes)</span> from Emil Hvitfeldt<span class="kw">&lt;br&gt;</span>Like this Wes Anderson themed one! And many, many others <span class="in">`r emo::ji("star_struck")`</span></span>
+<span id="cb65-923"><a href="#cb65-923"></a></span>
+<span id="cb65-924"><a href="#cb65-924"></a><span class="al">![](../images/wesanderson_example_cropped.png)</span>{fig-alt="9 different bright color palettes from the wesanderson color palette package"}</span>
+<span id="cb65-925"><a href="#cb65-925"></a></span>
+<span id="cb65-926"><a href="#cb65-926"></a>:::</span>
+<span id="cb65-927"><a href="#cb65-927"></a></span>
+<span id="cb65-928"><a href="#cb65-928"></a><span class="fu">## lubridate &lt;img src="../images/hex/lubridate.png" style="float:right;" width="10%"&gt;</span></span>
+<span id="cb65-929"><a href="#cb65-929"></a></span>
+<span id="cb65-930"><a href="#cb65-930"></a>::: {layout="<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>" layout-valign="center"}</span>
+<span id="cb65-931"><a href="#cb65-931"></a></span>
+<span id="cb65-932"><a href="#cb65-932"></a>Our penguin friends are ending their tour with the <span class="in">`lubridate`</span> package!</span>
+<span id="cb65-933"><a href="#cb65-933"></a></span>
+<span id="cb65-934"><a href="#cb65-934"></a><span class="al">![](../images/drawio/09-lubridate.png)</span></span>
+<span id="cb65-935"><a href="#cb65-935"></a></span>
+<span id="cb65-936"><a href="#cb65-936"></a>:::</span>
+<span id="cb65-937"><a href="#cb65-937"></a></span>
+<span id="cb65-938"><a href="#cb65-938"></a><span class="in">`lubridate`</span> helps us work with dates and times, including </span>
+<span id="cb65-939"><a href="#cb65-939"></a></span>
+<span id="cb65-940"><a href="#cb65-940"></a><span class="ss">- </span>a **date** like <span class="in">`August 31, 2022`</span></span>
+<span id="cb65-941"><a href="#cb65-941"></a><span class="ss">- </span>a **time** like <span class="in">`10:35 am`</span></span>
+<span id="cb65-942"><a href="#cb65-942"></a><span class="ss">- </span>a **date-time** like <span class="in">`2022-08-31 10:35:00`</span>  </span>
+<span id="cb65-943"><a href="#cb65-943"></a></span>
+<span id="cb65-944"><a href="#cb65-944"></a>You can...</span>
+<span id="cb65-945"><a href="#cb65-945"></a></span>
+<span id="cb65-946"><a href="#cb65-946"></a><span class="ss">- </span>convert strings or numbers to date-times</span>
+<span id="cb65-947"><a href="#cb65-947"></a><span class="ss">- </span>get and set components of a date-time</span>
+<span id="cb65-948"><a href="#cb65-948"></a><span class="ss">- </span>round date-times</span>
+<span id="cb65-949"><a href="#cb65-949"></a><span class="ss">- </span>add or subtract periods to model events that happen at specific clock times</span>
+<span id="cb65-950"><a href="#cb65-950"></a><span class="ss">- </span>add or substract durations to model a physical process</span>
+<span id="cb65-951"><a href="#cb65-951"></a><span class="ss">- </span>work with time intervals</span>
+<span id="cb65-952"><a href="#cb65-952"></a></span>
+<span id="cb65-953"><a href="#cb65-953"></a><span class="fu">### Cheatsheet</span></span>
+<span id="cb65-954"><a href="#cb65-954"></a></span>
+<span id="cb65-955"><a href="#cb65-955"></a>{{&lt; fa file-pdf &gt;}} PDF: <span class="ot">&lt;https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf&gt;</span></span>
+<span id="cb65-956"><a href="#cb65-956"></a><span class="al">![](../images/cheatsheet/09-lubridate.png)</span>{fig-alt="lubridate cheatsheet"}</span>
+<span id="cb65-957"><a href="#cb65-957"></a></span>
+<span id="cb65-958"><a href="#cb65-958"></a><span class="fu">### Reading</span></span>
+<span id="cb65-959"><a href="#cb65-959"></a></span>
+<span id="cb65-960"><a href="#cb65-960"></a>::: {layout=<span class="co">[</span><span class="ot">1,2</span><span class="co">]</span>}</span>
+<span id="cb65-961"><a href="#cb65-961"></a></span>
+<span id="cb65-962"><a href="#cb65-962"></a><span class="al">![](../images/r4ds-cover.png)</span>{width="100" fig-alt="R4DS book cover"}</span>
+<span id="cb65-963"><a href="#cb65-963"></a></span>
+<span id="cb65-964"><a href="#cb65-964"></a><span class="ss">- </span>R for Data Science: <span class="co">[</span><span class="ot">Ch 16 Dates and times</span><span class="co">](https://r4ds.had.co.nz/dates-and-times.html)</span></span>
+<span id="cb65-965"><a href="#cb65-965"></a><span class="ss">- </span>Package documentation: <span class="ot">&lt;https://lubridate.tidyverse.org&gt;</span></span>
+<span id="cb65-966"><a href="#cb65-966"></a></span>
+<span id="cb65-967"><a href="#cb65-967"></a>:::</span>
+<span id="cb65-968"><a href="#cb65-968"></a></span>
+<span id="cb65-969"><a href="#cb65-969"></a><span class="fu">### Exercise</span></span>
+<span id="cb65-970"><a href="#cb65-970"></a></span>
+<span id="cb65-971"><a href="#cb65-971"></a><span class="fu">#### Read data in</span></span>
+<span id="cb65-972"><a href="#cb65-972"></a></span>
+<span id="cb65-973"><a href="#cb65-973"></a>Recall that <span class="in">`palmperpenguins`</span> includes raw data as well</span>
+<span id="cb65-974"><a href="#cb65-974"></a></span>
+<span id="cb65-977"><a href="#cb65-977"></a><span class="in">```{r}</span></span>
+<span id="cb65-978"><a href="#cb65-978"></a>penguins_raw <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins_raw</span>
+<span id="cb65-979"><a href="#cb65-979"></a>penguins_raw</span>
+<span id="cb65-980"><a href="#cb65-980"></a><span class="in">```</span></span>
+<span id="cb65-981"><a href="#cb65-981"></a></span>
+<span id="cb65-982"><a href="#cb65-982"></a><span class="fu">#### View date-times</span></span>
+<span id="cb65-983"><a href="#cb65-983"></a></span>
+<span id="cb65-984"><a href="#cb65-984"></a>In the raw data, <span class="in">`Date Egg`</span> is the date that a penguin nest in the study was observed with 1 egg</span>
+<span id="cb65-985"><a href="#cb65-985"></a></span>
+<span id="cb65-986"><a href="#cb65-986"></a>Check out <span class="in">`?penguins_raw`</span> to learn more about the other variables in this dataset</span>
+<span id="cb65-987"><a href="#cb65-987"></a></span>
+<span id="cb65-990"><a href="#cb65-990"></a><span class="in">```{r}</span></span>
+<span id="cb65-991"><a href="#cb65-991"></a>penguins_raw <span class="sc">|&gt;</span> <span class="fu">select</span>(Species, Sex, <span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>)</span>
+<span id="cb65-992"><a href="#cb65-992"></a><span class="in">```</span></span>
+<span id="cb65-993"><a href="#cb65-993"></a></span>
+<span id="cb65-994"><a href="#cb65-994"></a><span class="fu">#### Get date components</span></span>
+<span id="cb65-995"><a href="#cb65-995"></a></span>
+<span id="cb65-996"><a href="#cb65-996"></a>We can use <span class="in">`year()`</span>, <span class="in">`month()`</span>, and <span class="in">`day()`</span> to extract different components from <span class="in">`Date Egg`</span></span>
+<span id="cb65-997"><a href="#cb65-997"></a></span>
+<span id="cb65-998"><a href="#cb65-998"></a>In addition, <span class="in">`month()`</span> provides some options to let us decide whether we want the month displayed as a character string, and whether we want that string abbreviated</span>
+<span id="cb65-999"><a href="#cb65-999"></a></span>
+<span id="cb65-1002"><a href="#cb65-1002"></a><span class="in">```{r}</span></span>
+<span id="cb65-1003"><a href="#cb65-1003"></a><span class="co">#| code-line-numbers: "3-5"</span></span>
+<span id="cb65-1004"><a href="#cb65-1004"></a>penguins_raw <span class="sc">|&gt;</span> </span>
+<span id="cb65-1005"><a href="#cb65-1005"></a>  <span class="fu">select</span>(Species, Sex, <span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb65-1006"><a href="#cb65-1006"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">year</span>(<span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>),</span>
+<span id="cb65-1007"><a href="#cb65-1007"></a>         <span class="at">Month =</span> <span class="fu">month</span>(<span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>, </span>
+<span id="cb65-1008"><a href="#cb65-1008"></a>                       <span class="at">label =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb65-1009"><a href="#cb65-1009"></a>                       <span class="at">abbr =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb65-1010"><a href="#cb65-1010"></a>         <span class="at">Day =</span> <span class="fu">day</span>(<span class="st">`</span><span class="at">Date Egg</span><span class="st">`</span>))</span>
+<span id="cb65-1011"><a href="#cb65-1011"></a><span class="in">```</span></span>
+<span id="cb65-1012"><a href="#cb65-1012"></a></span>
+<span id="cb65-1013"><a href="#cb65-1013"></a>That concludes the tutorial, thanks for following along! </span>
+<span id="cb65-1014"><a href="#cb65-1014"></a></span>
+<span id="cb65-1015"><a href="#cb65-1015"></a></span>
+<span id="cb65-1016"><a href="#cb65-1016"></a><span class="ot">[^1]: </span>Example kindly <span class="co">[</span><span class="ot">contributed by Alison Hill</span><span class="co">](https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2)</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
@@ -1638,12 +2587,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://silviacanelon.com/license">License</a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml">
-      <i class="bi bi-rss" role="img">
-</i> 
-    </a>
   </li>  
 </ul>
 </div>

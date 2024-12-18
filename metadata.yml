@@ -57,6 +57,13 @@
     - xaringan
 
 # External slide decks
+- title: "Considering Equity in Data Visualization"
+  subtitle: "LDI Summer Undergraduate Mentored Research Program"
+  date: 2024-07-10
+  image: https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/featured.png
+  path: https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/EquityandData_LDI_20240710.pdf
+  categories:
+    - pdf
 - title: "Data Analytics 101"
   subtitle: "Penn Community Scholars Program"
   date: 2023-03-09

@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.6.39">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="description" content="This gallery features a collection of slide decks made with a variety of publishing tools.Accompanying talks can be found at silviacanelon.com.">
-<title>Silvia Canelón - Slides</title>
+<title>Slides – Silvia Canelón</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4798f49a90c852830ec6262f6cac104c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8dfd41b2811b9e618c0d6d8245008c19.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -92,8 +99,33 @@ ul.task-list li input[type="checkbox"] {
   </script><!-- umami.js --><script async="" defer="" data-website-id="899678ce-ec02-4123-ae63-4fc931bec899" src="https://umami.silviacanelon.com/umami.js" data-domains="slides.silviacanelon.com" data-do-not-track="true">
 </script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="9b25af5d-c2ab-4efd-a449-ba99df05faea" data-do-not-track="true">
 </script><link rel="stylesheet" href="assets/listing-default.css">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-<meta name="twitter:title" content="Silvia Canelón - Slides">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta name="twitter:title" content="Slides – Silvia Canelón">
 <meta name="twitter:description" content="This gallery features a collection of slide decks made with a variety of publishing tools.
 
 Accompanying talks can be found at [silviacanelon.com](https://silviacanelon.com/talk).">
@@ -106,16 +138,16 @@ Accompanying talks can be found at [silviacanelon.com](https://silviacanelon.com
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./assets/silvia/img/logo_noBg.svg" alt="Home" class="navbar-logo"></a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools ms-auto">
-    <a href="https://www.github.com/spcanelon/slides" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://www.github.com/spcanelon/slides" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
@@ -136,13 +168,14 @@ Accompanying talks can be found at [silviacanelon.com](https://silviacanelon.com
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
     
   </div>
   
+
 
 </header><!--
 ::: {.callout-caution collapse="true"}
@@ -158,11 +191,37 @@ Thanks for your patience while I figure out what's going on!
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="pptx" data-listing-date-sort="1678338000000">
+<div class="g-col-1" data-index="0" data-categories="cGRm" data-listing-date-sort="1720584000000">
+<a href="https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/EquityandData_LDI_20240710.pdf" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Considering Equity in Data Visualization
+</h5>
+<div class="card-subtitle listing-subtitle">
+LDI Summer Undergraduate Mentored Research Program
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('cGRm'); return false;">
+pdf
+</div>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 10, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="cHB0eA==" data-listing-date-sort="1678338000000">
 <a href="https://silviacanelon.com/talk/2023-03-09-penn-community-scholars/Penn%20Community%20Scholars%20Program_final.pptx" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="https://silviacanelon.com/talk/2023-03-09-penn-community-scholars/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="https://silviacanelon.com/talk/2023-03-09-penn-community-scholars/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Data Analytics 101
@@ -171,7 +230,7 @@ Data Analytics 101
 Penn Community Scholars Program
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('pptx'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('cHB0eA=='); return false;">
 pptx
 </div>
 </div>
@@ -184,11 +243,11 @@ Mar 9, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="revealjs" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1695531565194" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="g-col-1" data-index="2" data-categories="cmV2ZWFsanM=" data-listing-date-sort="1668056400000" data-listing-file-modified-sort="1695531565194" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="911">
 <a href="./2022-11-10-thinking-big/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2022-11-10-thinking-big/img/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2022-11-10-thinking-big/img/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Thinking Big with Maps in R: Tips on Wrangling Large Vector Data into Interactive Maps
@@ -197,7 +256,7 @@ Thinking Big with Maps in R: Tips on Wrangling Large Vector Data into Interactiv
 2022 CANSSI Ontario Statistical Software Conference
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('revealjs'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('cmV2ZWFsanM='); return false;">
 revealjs
 </div>
 </div>
@@ -210,11 +269,11 @@ Nov 10, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="revealjs" data-listing-date-sort="1664424000000" data-listing-file-modified-sort="1695531554863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17">
+<div class="g-col-1" data-index="3" data-categories="cmV2ZWFsanM=" data-listing-date-sort="1664424000000" data-listing-file-modified-sort="1695531554863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3318">
 <a href="./2022-09-29-ccd-sips/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2022-09-29-ccd-sips/img/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2022-09-29-ccd-sips/img/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Philly Center City District Sips 2022: An Interactive Map
@@ -223,7 +282,7 @@ Philly Center City District Sips 2022: An Interactive Map
 R-Ladies Philly
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('revealjs'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('cmV2ZWFsanM='); return false;">
 revealjs
 </div>
 </div>
@@ -236,11 +295,11 @@ Sep 29, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="revealjs" data-listing-date-sort="1661918400000" data-listing-file-modified-sort="1696020256602" data-listing-reading-time-sort="4">
+<div class="g-col-1" data-index="4" data-categories="cmV2ZWFsanM=" data-listing-date-sort="1661918400000" data-listing-file-modified-sort="1734547624144" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
 <a href="./2022-08-31-tour-of-the-tidyverse-v2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2022-08-31-tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2022-08-31-tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 An Antarctic Tour of the Tidyverse v2.0
@@ -249,7 +308,7 @@ An Antarctic Tour of the Tidyverse v2.0
 Quarto RevealJS Remix
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('revealjs'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('cmV2ZWFsanM='); return false;">
 revealjs
 </div>
 </div>
@@ -262,11 +321,11 @@ Aug 31, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="pptx" data-listing-date-sort="1651032000000">
+<div class="g-col-1" data-index="5" data-categories="cHB0eA==" data-listing-date-sort="1651032000000">
 <a href="https://silviacanelon.com/talk/2022-04-27-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="https://silviacanelon.com/talk/2022-04-27-dbei-research-day/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="https://silviacanelon.com/talk/2022-04-27-dbei-research-day/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records
@@ -275,7 +334,7 @@ Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health
 2022 DBEI &amp; CCEB Research Day
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('pptx'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('cHB0eA=='); return false;">
 pptx
 </div>
 </div>
@@ -288,11 +347,11 @@ Apr 27, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="xaringan" data-listing-date-sort="1644555600000">
+<div class="g-col-1" data-index="6" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1644555600000">
 <a href="2022-02-11-tdw-ehr-lessons/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2022-02-11-tdw-ehr-lessons/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2022-02-11-tdw-ehr-lessons/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Lessons Learned from the EHR: Things I’ve Learned from Working with Electronic Health Records
@@ -301,7 +360,7 @@ Lessons Learned from the EHR: Things I’ve Learned from Working with Electronic
 Toronto Data Workshop
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -314,11 +373,11 @@ Feb 11, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="xaringan" data-listing-date-sort="1620100800000">
+<div class="g-col-1" data-index="7" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1620100800000">
 <a href="https://spcanelon.github.io/csvConf2021/slides" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="img/2021-data-viz-accessibility.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="img/2021-data-viz-accessibility.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community
@@ -327,7 +386,7 @@ Revealing Room for Improvement in Accessibility within a Social Media Data Visua
 csv, conf, v6
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -340,11 +399,11 @@ May 4, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="xaringan" data-listing-date-sort="1616472000000">
+<div class="g-col-1" data-index="8" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1616472000000">
 <a href="2021-03-23-amia-informatics-summit/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2021-03-23-amia-informatics-summit/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2021-03-23-amia-informatics-summit/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data
@@ -353,7 +412,7 @@ The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic H
 2021 AMIA Informatics Summit
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -366,11 +425,11 @@ Mar 23, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="xaringan" data-listing-date-sort="1615867200000">
+<div class="g-col-1" data-index="9" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1615867200000">
 <a href="https://spcanelon.github.io/RLadies-xaringan-template" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="img/2021-rladies-xaringan-template.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="img/2021-rladies-xaringan-template.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 R-Ladies Themed xaringan Template
@@ -379,7 +438,7 @@ R-Ladies Themed xaringan Template
 R-Ladies Global
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -392,11 +451,11 @@ Mar 16, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="google" data-listing-date-sort="1613624400000">
+<div class="g-col-1" data-index="10" data-categories="Z29vZ2xl" data-listing-date-sort="1613624400000">
 <a href="http://tiny.cc/rladies-phl-teaching-spc" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="img/2021-r-teaching-panel.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="img/2021-r-teaching-panel.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 From Learn-R to Teach-R: An Expert Panel on Effective R Instruction
@@ -405,7 +464,7 @@ From Learn-R to Teach-R: An Expert Panel on Effective R Instruction
 R-Ladies Philly
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('google'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('Z29vZ2xl'); return false;">
 google
 </div>
 </div>
@@ -418,11 +477,11 @@ Feb 18, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="xaringan" data-listing-date-sort="1608181200000">
+<div class="g-col-1" data-index="11" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1608181200000">
 <a href="2020-12-17-introduccion-xaringan/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2020-12-17-introduccion-xaringan/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2020-12-17-introduccion-xaringan/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Introducción al paquete xaringan
@@ -431,7 +490,7 @@ Introducción al paquete xaringan
 R-Ladies Xalapa
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -444,11 +503,11 @@ Dec 17, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="xaringan" data-listing-date-sort="1604552400000">
+<div class="g-col-1" data-index="12" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1604552400000">
 <a href="https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/slides/day-02-cover-image.png?raw=true" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/slides/day-02-cover-image.png?raw=true" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Sharing Your Work with xaringan: The Beyond
@@ -457,7 +516,7 @@ Sharing Your Work with xaringan: The Beyond
 2020 NHS-R Conference
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -470,11 +529,11 @@ Nov 5, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="xaringan" data-listing-date-sort="1604379600000">
+<div class="g-col-1" data-index="13" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1604379600000">
 <a href="https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/slides/day-01-cover-image.png?raw=true" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/slides/day-01-cover-image.png?raw=true" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Sharing Your Work with xaringan: The Basics
@@ -483,7 +542,7 @@ Sharing Your Work with xaringan: The Basics
 2020 NHS-R Conference
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -496,11 +555,11 @@ Nov 3, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="xaringan" data-listing-date-sort="1603425600000">
+<div class="g-col-1" data-index="14" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1603425600000">
 <a href="https://spcanelon.github.io/xaringan-basics-and-beyond/nhsr-theme/sample-16-9.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="img/2020-nhsr-theme.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="img/2020-nhsr-theme.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 NHS-R xaringan Theme
@@ -509,7 +568,7 @@ NHS-R xaringan Theme
 Custom CSS for the NHS-R Community
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -522,11 +581,11 @@ Oct 23, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="14" data-categories="xaringan" data-listing-date-sort="1600315200000">
+<div class="g-col-1" data-index="15" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1600315200000">
 <a href="https://spcanelon.github.io/rit-teaching-exam/#1" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="img/2020-rit-teaching-exam.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="img/2020-rit-teaching-exam.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Using lubridate to work with time intervals
@@ -535,7 +594,7 @@ Using lubridate to work with time intervals
 RStudio Instructor Certification Teaching Exam
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -548,11 +607,11 @@ Sep 17, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="15" data-categories="xaringan" data-listing-date-sort="1598846400000">
+<div class="g-col-1" data-index="16" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1598846400000">
 <a href="2020-08-31-tour-of-the-tidyverse/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="2020-08-31-tour-of-the-tidyverse/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="2020-08-31-tour-of-the-tidyverse/featured.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 An Antarctic Tour of the Tidyverse
@@ -561,7 +620,7 @@ An Antarctic Tour of the Tidyverse
 R-Ladies Chicago
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -574,11 +633,11 @@ Aug 31, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="16" data-categories="xaringan" data-listing-date-sort="1597982400000">
+<div class="g-col-1" data-index="17" data-categories="eGFyaW5nYW4=" data-listing-date-sort="1597982400000">
 <a href="https://r4ds.github.io/bookclub-R_for_Data_Science/Presentations/Week04/Cohort1/Chapter5Slides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="img/2020-r4ds.png" class="thumbnail-image card-img" style="height: 100%;"></p>
+<img loading="lazy" src="img/2020-r4ds.png" class="thumbnail-image card-img" style="height: 100%;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Chapter 5: Data transformation
@@ -587,7 +646,7 @@ Chapter 5: Data transformation
 R for Data Science Book Club
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('xaringan'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('eGFyaW5nYW4='); return false;">
 xaringan
 </div>
 </div>
@@ -639,18 +698,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -682,11 +730,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/slides\.silviacanelon\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -696,8 +781,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -709,7 +803,129 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -753,6 +969,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -778,6 +995,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -839,18 +1082,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
-    <div class="nav-footer-center"><a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-left">
+<p>© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="https://silviacanelon.com/accessibility">Accessibility</a>
+    <a class="nav-link" href="https://silviacanelon.com/accessibility">
+<p>Accessibility</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://silviacanelon.com/contact">Contact</a>
+    <a class="nav-link" href="https://silviacanelon.com/contact">
+<p>Contact</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://silviacanelon.com/license">License</a>
+    <a class="nav-link" href="https://silviacanelon.com/license">
+<p>License</p>
+</a>
   </li>  
 </ul>
 </div>

@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.6.39">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Silvia Canelón - An Antarctic Tour of the Tidyverse v2.0</title>
+<title>An Antarctic Tour of the Tidyverse v2.0 – Silvia Canelón</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,7 +19,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -30,7 +30,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,10 +66,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4798f49a90c852830ec6262f6cac104c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-78d369c015315daf26172be84130bcde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
@@ -79,7 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -88,6 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -95,8 +102,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script><!-- umami.js --><script async="" defer="" data-website-id="899678ce-ec02-4123-ae63-4fc931bec899" src="https://umami.silviacanelon.com/umami.js" data-domains="slides.silviacanelon.com" data-do-not-track="true">
 </script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="9b25af5d-c2ab-4efd-a449-ba99df05faea" data-do-not-track="true">
 </script><link rel="stylesheet" href="../../assets/silvia.scss">
-<meta name="twitter:title" content="Silvia Canelón - An Antarctic Tour of the Tidyverse v2.0">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="An Antarctic Tour of the Tidyverse v2.0 – Silvia Canelón">
+<meta name="twitter:description" content="Collection of publicly available slide decks created by Silvia Canelón.">
 <meta name="twitter:image" content="https://slides.silviacanelon.com//img/social-card.png">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:image-height" content="1531">
@@ -106,22 +113,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../assets/silvia/img/logo_noBg.svg" alt="Home" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools ms-auto">
-    <a href="https://www.github.com/spcanelon/slides" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://www.github.com/spcanelon/slides" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">In this tutorial</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">In this tutorial</h2>
    
   <ul>
 <li><a href="#before-we-begin" id="toc-before-we-begin" class="nav-link active" data-scroll-target="#before-we-begin">Before we begin</a></li>
@@ -200,9 +207,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </li>
   </ul></nav>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -219,9 +226,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/lter_penguins.png" class="img-fluid figure-img" style="width:75.0%" alt="Beautiful illustration of three penguins, Chinstrap, Gentoo, and Adélie, each labeled with their species. The Chinstrap penguin has a magenta background, the Gentoo penguin a teal background, and the Adélie penguin an orange background"></p>
-<figcaption class="figure-caption">Illustration by Allison Horst</figcaption></figure>
+<figcaption>Illustration by Allison Horst</figcaption></figure>
 </div>
 <section id="before-we-begin" class="level2"><h2 class="anchored" data-anchor-id="before-we-begin">Before we begin</h2>
 <ul>
@@ -230,24 +238,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://github.com/allisonhorst/stats-illustrations">Penguin illustrations by Allison Horst</a></p></li>
 <li><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p></li>
 </ul></section><section id="meet-our-penguin-friends" class="level2"><h2 class="anchored" data-anchor-id="meet-our-penguin-friends">Meet our penguin friends!</h2>
-<div id="penguins" class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div>
+
+</div>
+<div id="penguins" class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/penguin_chinstrap.jpg" class="img-fluid figure-img" alt="These penguins have a white face but the top of the head is black with a narrow black band that resembles a chinstrap. The bill is short and black, and like other penguins Chinstraps have a black back and white underside"></p>
-<figcaption class="figure-caption">Chinstrap</figcaption></figure>
+<figcaption>Chinstrap</figcaption></figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/penguin_gentoo.jpg" class="img-fluid figure-img" alt="These penguins have a black face with a white region that begins behind the eyes and extends and narrows towards the top of the head. The bill is orange, and like other penguins Gentoos have a black back and white underside"></p>
-<figcaption class="figure-caption">Gentoo</figcaption></figure>
+<figcaption>Gentoo</figcaption></figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/penguin_adelie.jpg" class="img-fluid figure-img" alt="Black face with some white from the underside that extends into the bottom of the 'cheeks.' The bill is black, and like other penguins Adélies have a black back and white underside"></p>
-<figcaption class="figure-caption">Adélie</figcaption></figure>
+<figcaption>Adélie</figcaption></figure>
 </div>
 </div>
 </div>
@@ -262,9 +273,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section><section id="readr" class="level2"><h2 class="anchored" data-anchor-id="readr">readr <img src="../images/hex/readr.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends are starting their tour with the <code>readr</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -292,12 +306,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="cheatsheet" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-import.pdf</a> <img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/data-import-cheatsheet-thumbs.png" class="img-fluid" alt="readr cheatsheet"></p>
 </section><section id="reading" class="level3"><h3 class="anchored" data-anchor-id="reading">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/data-import.html">Ch 11 Data import</a>
 </li>
@@ -369,9 +386,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section></section></section><section id="tibble" class="level2"><h2 class="anchored" data-anchor-id="tibble">tibble <img src="../images/hex/tibble.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>tibble</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -385,12 +405,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a></p>
 <p><img src="../images/cheatsheet/02-tibble-tidyr.png" class="img-fluid" style="width:65.0%" alt="tidyr/tibble cheatsheet"></p>
 </section><section id="reading-1" class="level3"><h3 class="anchored" data-anchor-id="reading-1">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/tibbles.html">Ch 10 Tibbles</a>
 </li>
@@ -468,9 +491,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section></section></section><section id="ggplot2" class="level2"><h2 class="anchored" data-anchor-id="ggplot2">ggplot2 <img src="../images/hex/ggplot2.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>ggplot2</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -483,12 +509,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="cheatsheet-2" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-2">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-visualization-2.1.pdf</a> <img src="../images/cheatsheet/03-ggplot2.png" class="img-fluid" alt="ggplot2 cheatsheet"></p>
 </section><section id="reading-2" class="level3"><h3 class="anchored" data-anchor-id="reading-2">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualization</a>
 </li>
@@ -528,7 +557,10 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
 <span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/scatterplot-1.png" class="img-fluid" alt="A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/scatterplot-1.png" class="img-fluid figure-img" alt="A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="boxplot" class="level4"><h4 class="anchored" data-anchor-id="boxplot">Boxplot</h4>
@@ -539,7 +571,10 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
 <span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/boxplot-1.png" class="img-fluid" alt="A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/boxplot-1.png" class="img-fluid figure-img" alt="A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="by-species" class="level4"><h4 class="anchored" data-anchor-id="by-species">By Species</h4>
@@ -550,7 +585,10 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
 <span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/by-species-1.png" class="img-fluid" alt="A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/by-species-1.png" class="img-fluid figure-img" alt="A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The boxplot filled by species helps us see…</p>
@@ -561,9 +599,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <li>No <code>NA</code>s among Chinstrap penguin data points! <strong>sex</strong> was available for each observation</li>
 </ul></section></section></section><section id="dplyr" class="level2"><h2 class="anchored" data-anchor-id="dplyr">dplyr <img src="../images/hex/dplyr.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>dplyr</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -594,12 +635,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <section id="cheatsheet-3" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-3">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/data-transformation.pdf</a> <img src="../images/cheatsheet/04-dplyr.png" class="img-fluid" alt="dplyr cheatsheet"></p>
 </section><section id="reading-3" class="level3"><h3 class="anchored" data-anchor-id="reading-3">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/transform.html">Ch 11 Data transformation</a>
 </li>
@@ -797,9 +841,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </section></section></section><section id="forcats" class="level2"><h2 class="anchored" data-anchor-id="forcats">forcats <img src="../images/hex/forcats.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>forcats</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -812,12 +859,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <section id="cheatsheet-4" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-4">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/factors.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/factors.pdf</a> <img src="../images/cheatsheet/05-forcats.png" class="img-fluid" style="width:65.0%" alt="forcats cheatsheet"></p>
 </section><section id="reading-4" class="level3"><h3 class="anchored" data-anchor-id="reading-4">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/factors.html">Ch 15 Factors</a>
 </li>
@@ -894,9 +944,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </section></section></section><section id="stringr" class="level2"><h2 class="anchored" data-anchor-id="stringr">stringr <img src="../images/hex/stringr.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>stringr</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -919,12 +972,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <section id="cheatsheet-5" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-5">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/strings.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/strings.pdf</a> <img src="../images/cheatsheet/06-stringr.png" class="img-fluid" alt="stringr cheatsheet"></p>
 </section><section id="reading-5" class="level3"><h3 class="anchored" data-anchor-id="reading-5">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/strings.html">Ch 14 Strings</a>
 </li>
@@ -986,9 +1042,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>It creates a new vaiable <code>species_island</code> that concatenates <code>species</code> and <code>ISLAND</code> strings and places an underscore between them</p>
 </section></section></section><section id="tidyr" class="level2"><h2 class="anchored" data-anchor-id="tidyr">tidyr <img src="../images/hex/tidyr.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>tidyr</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -1009,12 +1068,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <section id="cheatsheet-6" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-6">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf</a> <img src="../images/cheatsheet/07-tidyr.png" class="img-fluid" alt="tidyr cheatsheet"></p>
 </section><section id="reading-6" class="level3"><h3 class="anchored" data-anchor-id="reading-6">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/tidy-data.html">Ch 12 Tidy data</a>
 </li>
@@ -1079,9 +1141,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </section></section></section><section id="purrr" class="level2"><h2 class="anchored" data-anchor-id="purrr">purrr <img src="../images/hex/purrr.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends have reached the <code>purrr</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -1107,12 +1172,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <section id="cheatsheet-7" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-7">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf" class="uri">https://github.com/rstudio/cheatsheets/raw/main/purrr.pdf</a> <img src="../images/cheatsheet/08-purrr.png" class="img-fluid" alt="purrr cheatsheet"></p>
 </section><section id="reading-7" class="level3"><h3 class="anchored" data-anchor-id="reading-7">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/iteration.html">Ch 21 Iteration</a>
 </li>
@@ -1131,13 +1199,19 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>Let’s turn this plot…</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" alt="Our filled boxplot from our earlier ggplot2 exercises! To recap, a boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. There is a boxplot for each species per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" alt="Our filled boxplot from our earlier ggplot2 exercises! To recap, a boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. There is a boxplot for each species per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>…into this one!</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" alt="In contrast to the other filled boxplot referred to in this tab, this one is filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" alt="In contrast to the other filled boxplot referred to in this tab, this one is filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Note: The color choices in this example are meant for demo purposes only. Be sure to consider the <a href="https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility">accessibility of your data viz</a>, including color contrast between different elements.</p>
@@ -1161,7 +1235,10 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="options-2-3" class="level4"><h4 class="anchored" data-anchor-id="options-2-3">Options 2 &amp; 3</h4>
@@ -1172,7 +1249,10 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <span id="cb55-3"><a href="#cb55-3"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
 <span id="cb55-4"><a href="#cb55-4"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/nord-2-1.png" class="img-fluid" alt="Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/nord-2-1.png" class="img-fluid figure-img" alt="Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>And sometimes, color palette packages come with their own functions that assign colors, like <code>scale_fill_nord()</code></p>
@@ -1182,7 +1262,10 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <span id="cb56-3"><a href="#cb56-3"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
 <span id="cb56-4"><a href="#cb56-4"></a>  nord<span class="sc">::</span><span class="fu">scale_fill_nord</span>(<span class="at">palette =</span> <span class="st">"mountain_forms"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" alt="Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white." width="672"></p>
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" alt="Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white." width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="purrr-1" class="level4"><h4 class="anchored" data-anchor-id="purrr-1">Purrr?</h4>
@@ -1200,9 +1283,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <p><img src="../images/nord_multiple.png" class="img-fluid" style="width:75.0%" alt="hex color codes for 4 of the palettes in the nord package, including mountain_forms"></p>
 </section><section id="more-palettes" class="level4"><h4 class="anchored" data-anchor-id="more-palettes">More palettes!</h4>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p>🎨 <a href="https://github.com/EmilHvitfeldt/r-color-palettes">r-color-palettes repo</a> from Emil Hvitfeldt<br>Like this Wes Anderson themed one! And many, many others 🤩</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1212,9 +1298,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </section></section></section><section id="lubridate" class="level2"><h2 class="anchored" data-anchor-id="lubridate">lubridate <img src="../images/hex/lubridate.png" style="float:right;" width="10%">
 </h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p>Our penguin friends are ending their tour with the <code>lubridate</code> package!</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
@@ -1243,12 +1332,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <section id="cheatsheet-8" class="level3"><h3 class="anchored" data-anchor-id="cheatsheet-8">Cheatsheet</h3>
 <p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF: <a href="https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/lubridate.pdf</a> <img src="../images/cheatsheet/09-lubridate.png" class="img-fluid" alt="lubridate cheatsheet"></p>
 </section><section id="reading-8" class="level3"><h3 class="anchored" data-anchor-id="reading-8">Reading</h3>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,2]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="../images/r4ds-cover.png" class="img-fluid" alt="R4DS book cover" width="100"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>R for Data Science: <a href="https://r4ds.had.co.nz/dates-and-times.html">Ch 16 Dates and times</a>
 </li>
@@ -1378,18 +1470,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1421,7 +1502,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -1473,10 +1574,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/slides\.silviacanelon\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1486,8 +1604,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1499,7 +1626,129 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1543,6 +1792,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1568,6 +1818,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1645,27 +1921,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-16"><a href="#cb65-16"></a><span class="co">---</span></span>
 <span id="cb65-17"><a href="#cb65-17"></a></span>
 <span id="cb65-18"><a href="#cb65-18"></a><span class="in">```{r meta, echo=FALSE, eval=FALSE}</span></span>
-<span id="cb65-19"><a href="#cb65-19"></a><span class="fu">library</span>(metathis)</span>
-<span id="cb65-20"><a href="#cb65-20"></a><span class="fu">meta</span>() <span class="sc">|&gt;</span></span>
-<span id="cb65-21"><a href="#cb65-21"></a>  <span class="fu">meta_social</span>(</span>
-<span id="cb65-22"><a href="#cb65-22"></a>    <span class="at">title =</span> <span class="st">"Antarctic Tour of the Tidyverse v2.0 | Silvia Canelón"</span>,</span>
-<span id="cb65-23"><a href="#cb65-23"></a>    <span class="at">description =</span> <span class="st">"Written tutorial to learn how to explore and manipulate data with packages from the R tidyverse. Created with Quarto."</span>,</span>
-<span id="cb65-24"><a href="#cb65-24"></a>    <span class="at">url =</span> <span class="st">"https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/tutorial"</span>,</span>
-<span id="cb65-25"><a href="#cb65-25"></a>    <span class="at">image =</span> <span class="st">"https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png"</span>,</span>
-<span id="cb65-26"><a href="#cb65-26"></a>    <span class="at">image_alt =</span> <span class="st">""</span>,</span>
-<span id="cb65-27"><a href="#cb65-27"></a>    <span class="at">twitter_card_type =</span> <span class="st">"summary_large_image"</span>,</span>
-<span id="cb65-28"><a href="#cb65-28"></a>    <span class="at">twitter_creator =</span> <span class="st">"@spcanelon"</span></span>
-<span id="cb65-29"><a href="#cb65-29"></a>  )</span>
+<span id="cb65-19"><a href="#cb65-19"></a><span class="in">library(metathis)</span></span>
+<span id="cb65-20"><a href="#cb65-20"></a><span class="in">meta() |&gt;</span></span>
+<span id="cb65-21"><a href="#cb65-21"></a><span class="in">  meta_social(</span></span>
+<span id="cb65-22"><a href="#cb65-22"></a><span class="in">    title = "Antarctic Tour of the Tidyverse v2.0 | Silvia Canelón",</span></span>
+<span id="cb65-23"><a href="#cb65-23"></a><span class="in">    description = "Written tutorial to learn how to explore and manipulate data with packages from the R tidyverse. Created with Quarto.",</span></span>
+<span id="cb65-24"><a href="#cb65-24"></a><span class="in">    url = "https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/tutorial",</span></span>
+<span id="cb65-25"><a href="#cb65-25"></a><span class="in">    image = "https://slides.silviacanelon.com/tour-of-the-tidyverse-v2/images/drawio/tour-overview-feat-sml.png",</span></span>
+<span id="cb65-26"><a href="#cb65-26"></a><span class="in">    image_alt = "",</span></span>
+<span id="cb65-27"><a href="#cb65-27"></a><span class="in">    twitter_card_type = "summary_large_image",</span></span>
+<span id="cb65-28"><a href="#cb65-28"></a><span class="in">    twitter_creator = "@spcanelon"</span></span>
+<span id="cb65-29"><a href="#cb65-29"></a><span class="in">  )</span></span>
 <span id="cb65-30"><a href="#cb65-30"></a><span class="in">```</span></span>
 <span id="cb65-31"><a href="#cb65-31"></a></span>
 <span id="cb65-32"><a href="#cb65-32"></a><span class="in">```{r setup, include=FALSE}</span></span>
-<span id="cb65-33"><a href="#cb65-33"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.retina =</span> <span class="dv">3</span>,</span>
-<span id="cb65-34"><a href="#cb65-34"></a>                      <span class="at">warning =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb65-35"><a href="#cb65-35"></a>                      <span class="at">message =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb65-36"><a href="#cb65-36"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb65-37"><a href="#cb65-37"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb65-38"><a href="#cb65-38"></a><span class="fu">library</span>(nord)</span>
-<span id="cb65-39"><a href="#cb65-39"></a><span class="fu">library</span>(prismatic)</span>
+<span id="cb65-33"><a href="#cb65-33"></a><span class="in">knitr::opts_chunk$set(fig.retina = 3,</span></span>
+<span id="cb65-34"><a href="#cb65-34"></a><span class="in">                      warning = FALSE,</span></span>
+<span id="cb65-35"><a href="#cb65-35"></a><span class="in">                      message = FALSE)</span></span>
+<span id="cb65-36"><a href="#cb65-36"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb65-37"><a href="#cb65-37"></a><span class="in">library(palmerpenguins)</span></span>
+<span id="cb65-38"><a href="#cb65-38"></a><span class="in">library(nord)</span></span>
+<span id="cb65-39"><a href="#cb65-39"></a><span class="in">library(prismatic)</span></span>
 <span id="cb65-40"><a href="#cb65-40"></a><span class="in">```</span></span>
 <span id="cb65-41"><a href="#cb65-41"></a></span>
 <span id="cb65-42"><a href="#cb65-42"></a><span class="al">![Illustration by Allison Horst](../images/lter_penguins.png)</span>{fig-alt="Beautiful illustration of three penguins, Chinstrap, Gentoo, and Adélie, each labeled with their species. The Chinstrap penguin has a magenta background, the Gentoo penguin a teal background, and the Adélie penguin an orange background" width="75%"}</span>
@@ -1861,7 +2137,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-248"><a href="#cb65-248"></a>Check them out in <span class="co">[</span><span class="ot">`vignette("tibble")`</span><span class="co">](https://tibble.tidyverse.org/articles/tibble.html)</span></span>
 <span id="cb65-249"><a href="#cb65-249"></a></span>
 <span id="cb65-250"><a href="#cb65-250"></a><span class="in">```{r eval=FALSE}</span></span>
-<span id="cb65-251"><a href="#cb65-251"></a><span class="fu">vignette</span>(<span class="st">"tibble"</span>)</span>
+<span id="cb65-251"><a href="#cb65-251"></a><span class="in">vignette("tibble")</span></span>
 <span id="cb65-252"><a href="#cb65-252"></a><span class="in">```</span></span>
 <span id="cb65-253"><a href="#cb65-253"></a></span>
 <span id="cb65-254"><a href="#cb65-254"></a><span class="fu">## ggplot2 &lt;img src="../images/hex/ggplot2.png" style="float:right;" width="10%"&gt;</span></span>
@@ -1917,12 +2193,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-308"><a href="#cb65-308"></a>Let's see if body mass varies by penguin sex using <span class="in">`geom_point()`</span></span>
 <span id="cb65-309"><a href="#cb65-309"></a></span>
 <span id="cb65-310"><a href="#cb65-310"></a><span class="in">```{r scatterplot}</span></span>
-<span id="cb65-311"><a href="#cb65-311"></a><span class="co">#| fig-height: 4.5</span></span>
-<span id="cb65-312"><a href="#cb65-312"></a><span class="co">#| fig-alt: A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable.</span></span>
-<span id="cb65-313"><a href="#cb65-313"></a><span class="fu">ggplot</span>(</span>
-<span id="cb65-314"><a href="#cb65-314"></a>  <span class="at">data =</span> penguins, </span>
-<span id="cb65-315"><a href="#cb65-315"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
-<span id="cb65-316"><a href="#cb65-316"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb65-311"><a href="#cb65-311"></a><span class="in">#| fig-height: 4.5</span></span>
+<span id="cb65-312"><a href="#cb65-312"></a><span class="in">#| fig-alt: A scatterplot with categorical penguin sex along the x axis and continuous body mass along the y axis. The three sex categories are female, male, and NA. The body mass appears to range between 2400g and 6500g. Because this is a scatterplot, there are various points scattered along the y axis in a line above each sex category, which doesn't tell us much about these data. There are other types of plots better suited for visualizing the relationship between a continuous variable and a categorical variable.</span></span>
+<span id="cb65-313"><a href="#cb65-313"></a><span class="in">ggplot(</span></span>
+<span id="cb65-314"><a href="#cb65-314"></a><span class="in">  data = penguins, </span></span>
+<span id="cb65-315"><a href="#cb65-315"></a><span class="in">  aes(x = sex, y = body_mass_g)) + </span></span>
+<span id="cb65-316"><a href="#cb65-316"></a><span class="in">  geom_point()</span></span>
 <span id="cb65-317"><a href="#cb65-317"></a><span class="in">```</span></span>
 <span id="cb65-318"><a href="#cb65-318"></a></span>
 <span id="cb65-319"><a href="#cb65-319"></a><span class="fu">#### Boxplot</span></span>
@@ -1930,14 +2206,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-321"><a href="#cb65-321"></a>Let's see if body mass varies by penguin sex, this time with <span class="in">`geom_boxplot()`</span></span>
 <span id="cb65-322"><a href="#cb65-322"></a></span>
 <span id="cb65-323"><a href="#cb65-323"></a><span class="in">```{r boxplot}</span></span>
-<span id="cb65-324"><a href="#cb65-324"></a><span class="co">#| code-line-numbers: "2"</span></span>
-<span id="cb65-325"><a href="#cb65-325"></a><span class="co">#| fig-height: 4.5</span></span>
-<span id="cb65-326"><a href="#cb65-326"></a><span class="co">#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers.</span></span>
+<span id="cb65-324"><a href="#cb65-324"></a><span class="in">#| code-line-numbers: "2"</span></span>
+<span id="cb65-325"><a href="#cb65-325"></a><span class="in">#| fig-height: 4.5</span></span>
+<span id="cb65-326"><a href="#cb65-326"></a><span class="in">#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. Because this is a boxplot, we can visualize the minimum value, first quartile, median, third quartile, and maximum value of penguin body mass, for each penguin sex category. Female penguins have a lower median body mass than male penguins, while the NA sex category is somewhere in between the two. There are no outliers.</span></span>
 <span id="cb65-327"><a href="#cb65-327"></a></span>
-<span id="cb65-328"><a href="#cb65-328"></a><span class="fu">ggplot</span>(</span>
-<span id="cb65-329"><a href="#cb65-329"></a>  <span class="at">data =</span> penguins, </span>
-<span id="cb65-330"><a href="#cb65-330"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb65-331"><a href="#cb65-331"></a>  <span class="fu">geom_boxplot</span>()</span>
+<span id="cb65-328"><a href="#cb65-328"></a><span class="in">ggplot(</span></span>
+<span id="cb65-329"><a href="#cb65-329"></a><span class="in">  data = penguins, </span></span>
+<span id="cb65-330"><a href="#cb65-330"></a><span class="in">  aes(x = sex, y = body_mass_g)) +</span></span>
+<span id="cb65-331"><a href="#cb65-331"></a><span class="in">  geom_boxplot()</span></span>
 <span id="cb65-332"><a href="#cb65-332"></a><span class="in">```</span></span>
 <span id="cb65-333"><a href="#cb65-333"></a></span>
 <span id="cb65-334"><a href="#cb65-334"></a><span class="fu">#### By Species</span></span>
@@ -1945,14 +2221,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-336"><a href="#cb65-336"></a>Let's see if body mass varies by penguin sex, and now fill the boxplots according to penguin species</span>
 <span id="cb65-337"><a href="#cb65-337"></a></span>
 <span id="cb65-338"><a href="#cb65-338"></a><span class="in">```{r by-species}</span></span>
-<span id="cb65-339"><a href="#cb65-339"></a><span class="co">#| code-line-numbers: "2"</span></span>
-<span id="cb65-340"><a href="#cb65-340"></a><span class="co">#| fig-height: 4.25</span></span>
-<span id="cb65-341"><a href="#cb65-341"></a><span class="co">#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category.</span></span>
+<span id="cb65-339"><a href="#cb65-339"></a><span class="in">#| code-line-numbers: "2"</span></span>
+<span id="cb65-340"><a href="#cb65-340"></a><span class="in">#| fig-height: 4.25</span></span>
+<span id="cb65-341"><a href="#cb65-341"></a><span class="in">#| fig-alt: A boxplot with penguin sex along the x axis and body mass along the y axis. Again, the three sex categories are female, male, and NA, and the body mass appears to range between 2400g and 6500g. This time, instead of one boxplot per sex category, there is a boxplot for each species, per sex category, and these are filled with different colors. Gentoo boxplots are blue, Adélie boxplots are reddish, and Chinstrap boxplots are green. Male penguins have higher body mass across species, and Gentoo penguins stand out as having higher body mass than both Chinstrap and Adélie penguins. Low body mass outliers exist for female Chinstrap penguins and NA Gentoo penguins, and high body mass outliers exist for male Chinstrap penguins. There is no boxplot for Chinstrap penguins in the NA sex category.</span></span>
 <span id="cb65-342"><a href="#cb65-342"></a></span>
-<span id="cb65-343"><a href="#cb65-343"></a><span class="fu">ggplot</span>(</span>
-<span id="cb65-344"><a href="#cb65-344"></a>  <span class="at">data =</span> penguins, </span>
-<span id="cb65-345"><a href="#cb65-345"></a>  <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb65-346"><a href="#cb65-346"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species))</span>
+<span id="cb65-343"><a href="#cb65-343"></a><span class="in">ggplot(</span></span>
+<span id="cb65-344"><a href="#cb65-344"></a><span class="in">  data = penguins, </span></span>
+<span id="cb65-345"><a href="#cb65-345"></a><span class="in">  aes(x = sex, y = body_mass_g)) +</span></span>
+<span id="cb65-346"><a href="#cb65-346"></a><span class="in">  geom_boxplot(aes(fill = species))</span></span>
 <span id="cb65-347"><a href="#cb65-347"></a><span class="in">```</span></span>
 <span id="cb65-348"><a href="#cb65-348"></a></span>
 <span id="cb65-349"><a href="#cb65-349"></a>The boxplot filled by species helps us see...</span>
@@ -2408,21 +2684,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-837"><a href="#cb65-837"></a>And assign them using the <span class="in">`scale_fill_manual()`</span> function</span>
 <span id="cb65-838"><a href="#cb65-838"></a></span>
 <span id="cb65-839"><a href="#cb65-839"></a><span class="in">```{r nord-1}</span></span>
-<span id="cb65-840"><a href="#cb65-840"></a><span class="co">#| fig-show: hide</span></span>
-<span id="cb65-841"><a href="#cb65-841"></a><span class="co">#| code-line-numbers: "4-7"</span></span>
-<span id="cb65-842"><a href="#cb65-842"></a><span class="co">#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.</span></span>
-<span id="cb65-843"><a href="#cb65-843"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb65-844"><a href="#cb65-844"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb65-845"><a href="#cb65-845"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb65-846"><a href="#cb65-846"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb65-847"><a href="#cb65-847"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#184860"</span>, </span>
-<span id="cb65-848"><a href="#cb65-848"></a>               <span class="st">"#D8D8D8"</span>, </span>
-<span id="cb65-849"><a href="#cb65-849"></a>               <span class="st">"#181830"</span>))</span>
+<span id="cb65-840"><a href="#cb65-840"></a><span class="in">#| fig-show: hide</span></span>
+<span id="cb65-841"><a href="#cb65-841"></a><span class="in">#| code-line-numbers: "4-7"</span></span>
+<span id="cb65-842"><a href="#cb65-842"></a><span class="in">#| fig-alt: Our boxplot filled with nordic colors. Gentoo boxplots are a dark purple, Adélie boxplots are a dark teal, and Chinstrap boxplots are a snowy white.</span></span>
+<span id="cb65-843"><a href="#cb65-843"></a><span class="in">penguins |&gt;</span></span>
+<span id="cb65-844"><a href="#cb65-844"></a><span class="in">  ggplot(aes(x = sex, y = body_mass_g)) +</span></span>
+<span id="cb65-845"><a href="#cb65-845"></a><span class="in">  geom_boxplot(aes(fill = species)) +</span></span>
+<span id="cb65-846"><a href="#cb65-846"></a><span class="in">  scale_fill_manual(</span></span>
+<span id="cb65-847"><a href="#cb65-847"></a><span class="in">    values = c("#184860", </span></span>
+<span id="cb65-848"><a href="#cb65-848"></a><span class="in">               "#D8D8D8", </span></span>
+<span id="cb65-849"><a href="#cb65-849"></a><span class="in">               "#181830"))</span></span>
 <span id="cb65-850"><a href="#cb65-850"></a><span class="in">```</span></span>
 <span id="cb65-851"><a href="#cb65-851"></a></span>
 <span id="cb65-852"><a href="#cb65-852"></a><span class="in">```{r ref.label="nord-1"}</span></span>
-<span id="cb65-853"><a href="#cb65-853"></a><span class="co">#| echo: false</span></span>
-<span id="cb65-854"><a href="#cb65-854"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb65-853"><a href="#cb65-853"></a><span class="in">#| echo: false</span></span>
+<span id="cb65-854"><a href="#cb65-854"></a><span class="in">#| fig-height: 4</span></span>
 <span id="cb65-855"><a href="#cb65-855"></a><span class="in">```</span></span>
 <span id="cb65-856"><a href="#cb65-856"></a></span>
 <span id="cb65-857"><a href="#cb65-857"></a><span class="fu">#### Options 2 &amp; 3</span></span>
@@ -2430,13 +2706,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-859"><a href="#cb65-859"></a>You can also use the palette name, like **mountain_forms**, though the colors assigned may not align with what you want</span>
 <span id="cb65-860"><a href="#cb65-860"></a></span>
 <span id="cb65-861"><a href="#cb65-861"></a><span class="in">```{r, nord-2}</span></span>
-<span id="cb65-862"><a href="#cb65-862"></a><span class="co">#| code-line-numbers: "4-6"</span></span>
-<span id="cb65-863"><a href="#cb65-863"></a><span class="co">#| fig-height: 4</span></span>
-<span id="cb65-864"><a href="#cb65-864"></a><span class="co">#| fig-alt: Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white.</span></span>
-<span id="cb65-865"><a href="#cb65-865"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb65-866"><a href="#cb65-866"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb65-867"><a href="#cb65-867"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb65-868"><a href="#cb65-868"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> nord<span class="sc">::</span>nord_palettes<span class="sc">$</span>mountain_forms)</span>
+<span id="cb65-862"><a href="#cb65-862"></a><span class="in">#| code-line-numbers: "4-6"</span></span>
+<span id="cb65-863"><a href="#cb65-863"></a><span class="in">#| fig-height: 4</span></span>
+<span id="cb65-864"><a href="#cb65-864"></a><span class="in">#| fig-alt: Our boxplot filled with nordic colors though the scale_fill_manual function has automatically selected a different combination of colors from the palette. Gentoo boxplots are snowy white intead of dark purple, Adélie boxplots are a still a dark teal, and Chinstrap boxplots are a dusty blue intead of snowy white.</span></span>
+<span id="cb65-865"><a href="#cb65-865"></a><span class="in">penguins |&gt;</span></span>
+<span id="cb65-866"><a href="#cb65-866"></a><span class="in">  ggplot(aes(x = sex, y = body_mass_g)) +</span></span>
+<span id="cb65-867"><a href="#cb65-867"></a><span class="in">  geom_boxplot(aes(fill = species)) +</span></span>
+<span id="cb65-868"><a href="#cb65-868"></a><span class="in">  scale_fill_manual(values = nord::nord_palettes$mountain_forms)</span></span>
 <span id="cb65-869"><a href="#cb65-869"></a><span class="in">```</span></span>
 <span id="cb65-870"><a href="#cb65-870"></a></span>
 <span id="cb65-871"><a href="#cb65-871"></a>And sometimes, color palette packages come with their own functions that assign colors, like <span class="in">`scale_fill_nord()`</span></span>
@@ -2482,7 +2758,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-919"><a href="#cb65-919"></a></span>
 <span id="cb65-920"><a href="#cb65-920"></a>::: {layout-ncol="2" layout-valign="center"}</span>
 <span id="cb65-921"><a href="#cb65-921"></a></span>
-<span id="cb65-922"><a href="#cb65-922"></a><span class="in">`r emo::ji("art")`</span> <span class="co">[</span><span class="ot">r-color-palettes repo</span><span class="co">](https://github.com/EmilHvitfeldt/r-color-palettes)</span> from Emil Hvitfeldt<span class="kw">&lt;br&gt;</span>Like this Wes Anderson themed one! And many, many others <span class="in">`r emo::ji("star_struck")`</span></span>
+<span id="cb65-922"><a href="#cb65-922"></a><span class="in">`r emo::ji("art")`</span> <span class="co">[</span><span class="ot">r-color-palettes repo</span><span class="co">](https://github.com/EmilHvitfeldt/r-color-palettes)</span> from Emil Hvitfeldt&lt;br&gt;Like this Wes Anderson themed one! And many, many others <span class="in">`r emo::ji("star_struck")`</span></span>
 <span id="cb65-923"><a href="#cb65-923"></a></span>
 <span id="cb65-924"><a href="#cb65-924"></a><span class="al">![](../images/wesanderson_example_cropped.png)</span>{fig-alt="9 different bright color palettes from the wesanderson color palette package"}</span>
 <span id="cb65-925"><a href="#cb65-925"></a></span>
@@ -2571,22 +2847,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb65-1014"><a href="#cb65-1014"></a></span>
 <span id="cb65-1015"><a href="#cb65-1015"></a></span>
 <span id="cb65-1016"><a href="#cb65-1016"></a><span class="ot">[^1]: </span>Example kindly <span class="co">[</span><span class="ot">contributed by Alison Hill</span><span class="co">](https://github.com/spcanelon/2020-rladies-chi-tidyverse/issues/2)</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
-    <div class="nav-footer-center"><a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-left">
+<p>© 2023 <a href="https://silviacanelon.com">Silvia Canelón</a> ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="https://silviacanelon.com/accessibility" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="https://silviacanelon.com/accessibility">Accessibility</a>
+    <a class="nav-link" href="https://silviacanelon.com/accessibility">
+<p>Accessibility</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://silviacanelon.com/contact">Contact</a>
+    <a class="nav-link" href="https://silviacanelon.com/contact">
+<p>Contact</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://silviacanelon.com/license">License</a>
+    <a class="nav-link" href="https://silviacanelon.com/license">
+<p>License</p>
+</a>
   </li>  
 </ul>
 </div>

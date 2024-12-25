@@ -1,7 +1,7 @@
 project:
   type: website
-  post-render: 
-    - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
+  # post-render:
+  #   - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
   render:
     - "*.qmd"
@@ -10,6 +10,7 @@ project:
     - "!2022-02-11-tdw-ehr-lessons/"
     - "!2020-12-17-introduccion-xaringan/"
     - "!2020-08-31-tour-of-the-tidyverse/"
+    - "!2020-09-17-rit-teaching-exam/"
 
 website:
   title: Silvia Canelón
@@ -31,7 +32,7 @@ website:
     creator: "@spcanelon"
     image: "/img/social-card.png"
 
-  page-footer:  
+  page-footer:
     left: >-
      &#169; 2023 [Silvia Canelón](https://silviacanelon.com) &#8729; Made with [Quarto](https://quarto.org)
     center: |
@@ -42,7 +43,7 @@ website:
       <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
       <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
 
-    right: 
+    right:
       - text: "Accessibility"
         aria-label: "Accessibility Commitment"
         href: https://silviacanelon.com/accessibility
@@ -53,7 +54,7 @@ website:
         aria-label: "License Details"
         href: https://silviacanelon.com/license
 
-format: 
+format:
   html:
     theme:
       light:
